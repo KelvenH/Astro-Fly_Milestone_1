@@ -1,7 +1,7 @@
-# Astrofly : Milestone Project 1
+# Astro:Fly - Milestone Project 1
 ---
 ## Overview
-Astrofly is a fictional company set to offer space tourism flights. In this scenario, the service is under development and a web site is being launched to garner public interest, provide information and register details of potential clientele.  This project has been undertaken for educational purposes to demonstrate HTML and CSS essential skills (Code Institute Milestone Project 1).
+Astro:Fly is a fictional company set to offer space tourism flights. In this scenario, the service is under development and a web site is being launched to garner public interest, provide information and register details of potential clientele. Any referrences to technologies are purely fictional and are not based on scientifc fact.  This project has been undertaken for educational purposes to demonstrate HTML and CSS essential skills (Code Institute Milestone Project 1).
 
 ### Personal Goals (Actual)
 Through this project I am looking to; 
@@ -14,7 +14,7 @@ Through this project I am looking to;
 - Be proud of the final output!
 
 ### Business Goals (Fictional Scenario)
-Astrofly require a site which;
+Astro:Fly require a site which;
 - generates buzz and excitement to the general public and media
 - conveys image of a safe and ethical brand (despite the slight irony the service could have on planet earth / airspace)
 - provides prospective clients with summary of planned voyages tus leading to the registration of potential clientele
@@ -139,4 +139,5 @@ Futuristic | Yes | Expect these to be more easily available and achieved through
 ### Content
 ### Media
 ### Acknowledgements
+- Balsamiq introduction tutorials for wireframes
 ### Disclaimer
