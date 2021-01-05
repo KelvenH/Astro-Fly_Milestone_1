@@ -120,7 +120,7 @@ Group | Considered | Selected | Notes |
 
 Considered | Selected| Notes|
 -----------|---------|------|
-Steampunk | No | Whilst preferred to style selected, expect this would require additional resources, time to incorporate which would detract from primary objectives for the project
+Cyberpunk | No | Whilst preferred to style selected, expect this would require additional resources, time to incorporate which would detract from primary objectives for the project
 Vintage (e.g. 70's prediction of future) | No | For same reasons as given above.
 Futuristic | Yes | Expect these to be more easily available and achieved through basic shapes / easily available images |
 
