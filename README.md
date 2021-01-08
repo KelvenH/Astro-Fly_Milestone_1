@@ -31,7 +31,16 @@ Site visitors are expected to fall into 1 of 3 categories;
 #|Date|Key Changes|Notes
 -|----|-----------|-----
 1|4/01/21|Initial outline of README content| Outline to be discussed with mentor
-1.1 |04/01/21|Added personal, business and client goals || 
+1.1 |04/01/21|Added personal, business and client goals ||
+1.2 |XX/XX/21|XXXXXXXXXX||
+1.4 |XX/XX/21|XXXXXXXXXX||
+1.5 |XX/XX/21|XXXXXXXXXX||
+1.6 |XX/XX/21|XXXXXXXXXX||
+1.7 |XX/XX/21|XXXXXXXXXX||
+1.8 |XX/XX/21|XXXXXXXXXX||
+1.9 |XX/XX/21|XXXXXXXXXX||
+1.10 |XX/XX/21|XXXXXXXXXX||
+1.11 |XX/XX/21|XXXXXXXXXX||
 
 
 ---
@@ -40,25 +49,42 @@ Record of key outcomes from discussions with mentor
 
 Session # | Date | Key Questions / Points to Raise | Key Points of Feedback |
 --------- | ---- | ------------------------------- | ---------------------- |
-1 | Kelv to schedule | TBC | - |
+1 | 20/01/21 | Review wireframes, UX & README | - |
 2 | Kelv to schedule | TBC | - |
 3 | Kelv to schedule | TBC | - |
 
 ---
+*Note: High Level Plan and Key Tasks are captured to keep central record & track activities during design and development and will not be present in the final documentation.*
+
+## High Level Plan
+
+Wk | Focus |
+---|-------|
+1 | Preparation (Plan, Research, Review further materials) |
+1 | Initiate documentation (ReadMe, Wireframes, UX) |
+2 | Build core structure of site |
+2 | Style enhancements |
+3 | Test, Feedback, Finalisation  |
+4 | Deploy |
+
+---
 ## Key Tasks 
-*Note: this table is to record & track activities during the design and development and will not be present in the final documentation.*
+
 
 Task | Additional Details | Status| Notes
 -----|--------------------|-------|------
 UX Design | Revisit 5 planes of UX design prior to progressing ideas | Done | Additional sub-headings added to UX section in README - may opt to truncate these when finalising materials |
-Initiate Repository and README file | - | Done | -
+Initiate Repository and README file | - | Done | - |
 Determine Project Subject | Considertions and outcome tabled below | Done | Opted for ficticiuous space tourism company site|  
-Conduct Research | Refer to existing sites for examples of content structure and features | In Progress | - |
-Develop Wireframe / Balsamiq | Review course materials / Slack guides prior to commencing | Not Started | - |
-Schedule sessions with mentor | To take place after wireframes developed, mid-development and towards end of final build | Not Started | - |
-Revisit course materials, projects and assessment criteria to ensure requirements addressed | - | Not Started | - |
-Further actions TBD as activity progresses
-
+Conduct Research | Refer to existing sites for examples of content structure and features | Done | - |
+Develop Wireframes / Balsamiq | Review course materials / Slack guides prior to commencing | In Progress | - |
+Schedule sessions with mentor | To take place after wireframes developed, mid-development and towards end of final build | In Progress | - |
+Revisit course materials, projects and assessment criteria to ensure requirements addressed | - | Weekly CheckPoint (On-going) | - |
+Initiate site skeleton based on wireframes | - | In Progress | - |
+Futher actions to be added as activity progresses | - | - | - |
+- | - | - | - |
+- | - | - | - |
+- | - | - | - |
 
 ---
 ## UX
