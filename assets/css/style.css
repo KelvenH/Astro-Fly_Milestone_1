@@ -1,0 +1,90 @@
+.temporary {
+    color: red;
+    font-style: bold;
+}
+
+/*-------------------------Colors-----------------*/
+
+
+/*-------------------------Fonts-----------------*/
+body {
+    font-family:'Goldman', sans-serif;
+}
+
+.brand_name {
+    font-family:'Baumans', sans-serif;
+    font-size: 70px;
+}
+
+/*-------------------------Heading-----------------*/
+
+
+.heading {
+    color: rgb(255, 127, 0);
+    font-size: 50px;
+    height: 120px;
+    background-color: #242424;
+    text-align: center;
+    margin-top:0px;
+    border-bottom:10px solid;
+    border-color: rgb(255, 127, 0);
+    padding-bottom:150px;
+}
+
+.heading .brand_name {
+    font-weight:700;
+    font-size: 100px;
+}
+
+
+/*-------------------------Nav Menu-----------------*/
+
+
+/*-------------------------Special Margins, Paddings, Gutters ----*/
+
+
+/*-------------------------Footer-----------------*/
+
+
+/*-------------------------Home-----------------*/
+
+.welcome {
+background: url("../images/planet_earth-lg.jpg");
+transition-property: width 150%, height 150%;
+transition-duration:2s;
+width: 100%;
+height:50vh;
+background-size: cover;
+background-repeat: no-repeat;
+align-items: center;
+justify-content: center;
+position: relative;
+}
+
+.welcome h3 {
+    color: rgb(255, 127, 0);
+    text-align:center;
+    font-family: 'Goldman', sans-serif;
+    font-size: 50px;
+}
+
+/*background: url("../images/rosie.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+
+/*-------------------------Services-----------------*/
+
+
+/*-------------------------Gallery-----------------*/
+
+
+/*-------------------------Registration-----------------*/
+
+
+/*-------------------------404 Error-----------------*/
+
