@@ -65,7 +65,7 @@ Wk | Focus |
 2 | Build core structure of site |
 2 | Style enhancements |
 3 | Test, Feedback, Finalisation  |
-4 | Deploy |
+4 | Finalise Documentation and Deploy |
 
 ---
 ## Key Tasks 
