@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Aldrich&family=Baumans&family=Goldman:wght@400;700&family=Orbitron:wght@400;700&family=Syncopate:wght@700&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d01fd203b5.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Astro:Fly (Home)</title>
@@ -27,21 +28,21 @@ Nav Menu -->
 
     <header>
 
-        <div class="container-fluid header-main">
+        <div class="container-fluid justify-content-md-center header-main">
 
-            <div class="row header-row">
+            <div class="row no-gutters header-row">
 
-                <div class="col-4 logo">
-                    <span class="iconify" data-icon="fa-solid:space-shuttle" data-inline="false"></span>
+                <div class="col logo">
+                    <img src="assets/images/hex-pattern.png" id="logo-img">
                 </div>
 
-                <div class="col-4 brand-name">
-                    <h1>Astr<span class="iconify icon-planet" data-icon="bx:bxs-planet" data-inline="false"></span>:Fly
-                    </h1>
+                <div class="col-8 brand-name">
+                    <h3>Astr<span class="iconify icon-planet" data-icon="bx:bxs-planet" data-inline="false"></span>:Fly
+                    </h3>
                 </div>
 
-                <div class="col-4 menu">
-                    <span class="iconify" data-icon="whh:menu" data-inline="false"></span>
+                <div class="col menu">
+                    <i class="fas fa-bars fa-3x"></i>
                 </div>
 
             </div>
@@ -52,9 +53,9 @@ Nav Menu -->
 
 
 
-    <section>
 
-        <!-- Main Body
+
+    <!-- Main Body
 
 sections;
     background image
@@ -66,17 +67,17 @@ sections;
     Countdown
 
 -->
-
+    <section>
         <div class="container-fluid home-main">
             <div class="row">
                 <div class="col welcome">
-                    <img src="assets/images/planet_earth-lg.jpg" id="welcome-img">
-                    <h3>Bringing You a New Dawn in Space Travel</h3>
+                    <img src="assets/images/planet_earth-lg.jpg" class="img-fluid" alt="planet earth">
+                    <h5>A New Dawn in Space Travel Has Arrived</h5>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col mission">
+                <div class="col mission home-content">
                     <h3>Our Mission</h3>
                     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                         Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
@@ -85,7 +86,13 @@ sections;
             </div>
 
             <div class="row">
-                <div class="col pitch">
+                <div class="col break">
+                    <br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col pitch home-content">
                     <h3>Sales Pitch</h3>
                     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                         Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
@@ -94,24 +101,47 @@ sections;
             </div>
 
             <div class="row">
-                <div class="col quote">
+                <div class="col break">
+                    <br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col quote home-content">
                     <h3>Quote</h3>
                     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col mini-gallery">
+                <div class="col break">
+                    <br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col mini-gallery home-content">
                     <h3>Mini-Gallery</h3>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col">
-                    <h3>Timer</h3>
+                <div class="col break">
+                    <br>
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col countdown home-content">
+                    <h3>Countdown</h3>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col break">
+                    <br>
+                </div>
+            </div>
         </div>
 
     </section>
@@ -123,7 +153,27 @@ sections;
     social media links
 
 -->
+        <div class="container-fluid fixed-bottom footer-main">
+            <div class="row">
+                <div class="col facebook">
+                    <i class="fab fa-facebook-square fa-3x"></i>
+                </div>
 
+                <div class="col twitter">
+                    <i class="fab fa-twitter-square fa-3x"></i>
+                </div>
+
+                <div class="col instagram">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </div>
+
+                <div class="col YouTube">
+                    <i class="fab fa-youtube fa-3x"></i>
+                </div>
+
+            </div>
+
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
