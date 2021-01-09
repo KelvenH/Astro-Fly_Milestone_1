@@ -1,41 +1,56 @@
-.temporary {
-    color: red;
-    font-style: bold;
+@font-face {
+    font-family: 'ethnocentric_rg';
+    src: 
+    url(../fonts/ethnocentric_rg-webfont.woff2) format('woff2'),
+    url(../fonts/ethnocentric_rg-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ethnocentric_el';
+    src: 
+    url('../fonts/ethnocentric_el-webfont.woff2') format('woff2'),
+    url('../fonts/ethnocentric_el-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /*-------------------------Colors-----------------*/
 
-
-/*-------------------------Fonts-----------------*/
-body {
-    font-family:'Goldman', sans-serif;
-}
-
-.brand_name {
-    font-family:'Baumans', sans-serif;
-    font-size: 70px;
-}
-
 /*-------------------------Heading-----------------*/
 
-
-.heading {
-    color: rgb(255, 127, 0);
-    font-size: 50px;
-    height: 120px;
+.header-main {
+    font-family:'ethnocentric_rg', sans-serif;
+    font-size: 3em;
     background-color: #242424;
-    text-align: center;
-    margin-top:0px;
+    color: rgb(255, 127, 0);
     border-bottom:10px solid;
     border-color: rgb(255, 127, 0);
-    padding-bottom:150px;
+    min-height: 110px;
+    max-height: 120px;
+    text-align: center;
+    margin:none;
+    padding-top:10px;
+    padding-bottom:80px; 
 }
 
-.heading .brand_name {
-    font-weight:700;
-    font-size: 100px;
+/*------font-size: 60px;
+    max-height: 200px;
+  
+
+
+    
+    
+    padding-top:20px;
+    padding-bottom:80px; 
 }
 
+.brand-name {
+    font-family:'ethnocentric_rg', sans-serif;
+    font-weight:400;
+    font-size: 50;
+}
 
 /*-------------------------Nav Menu-----------------*/
 
@@ -47,35 +62,32 @@ body {
 
 
 /*-------------------------Home-----------------*/
+.home-main {
+    text-align: center;
+    color: rgb(255, 127, 0);
+    font-family: 'Goldman', sans-serif;
+    margin:none;
+}
 
-.welcome {
-background: url("../images/planet_earth-lg.jpg");
-transition-property: width 150%, height 150%;
-transition-duration:2s;
+.welcome h3 { 
+    font-size: 20px;
+    position: absolute;
+    top: 15%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+#welcome-img {
 width: 100%;
-height:50vh;
+height: auto;
 background-size: cover;
 background-repeat: no-repeat;
+margin: 0;
 align-items: center;
 justify-content: center;
 position: relative;
 }
 
-.welcome h3 {
-    color: rgb(255, 127, 0);
-    text-align:center;
-    font-family: 'Goldman', sans-serif;
-    font-size: 50px;
-}
-
-/*background: url("../images/rosie.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 360px;
-    transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
 
 /*-------------------------Services-----------------*/
 
@@ -88,3 +100,4 @@ position: relative;
 
 /*-------------------------404 Error-----------------*/
 
+/*-------------------------Media Queries-----------------*/
