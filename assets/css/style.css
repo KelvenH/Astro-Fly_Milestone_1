@@ -16,28 +16,55 @@
     font-style: normal;
 }
 
+
 /*-------------------------Colors-----------------*/
 
-/*-------------------------Heading-----------------*/
+/*-------------------------Heading-----------------
+
+Issues;
+
+1. can't remove right hand margin for small devices
+
+
+*/
+.body {
+    width:100vw;
+}
 
 .header-main {
     font-family:'ethnocentric_rg', sans-serif;
-    background-color: #242424;
+    width:100vw;
+    line-height:50px;
+    font-size: 100%;
     text-align:center;
-    margin:0;
-    padding-top:20px;
-    padding-bottom:20px;
+    background-color: #242424;
+    padding-top:10px;
+    padding-bottom:10px;
     color: rgb(255, 127, 0);
     border-bottom:10px solid;
     border-color: rgb(255, 127, 0);
 }
 
-#logo-img {
-    max-height:3.5em;
-    width:auto;
+.brand-name h1 {
+padding-left:2px;
+padding-right:2px;
 }
 
-/*-----
+.menu {
+    padding-left:2px;
+    padding-right:2px;
+    padding-top:5px;
+}
+
+/*--
+.header-main .icon-planet{
+    height:1em;
+}
+
+/*---------
+
+
+
 .menu-icon {
 
 }
@@ -62,7 +89,7 @@
     color: rgb(255, 127, 0);
     border-top:10px solid;
     border-color: rgb(255, 127, 0);
-    padding-top:12px;
+    padding-top:1px;
     padding-bottom:12px;
     padding-left:5px;
     padding-right:5px;
@@ -95,15 +122,9 @@ padding-left:0;
 padding-right:0;
 }
 -------*/
-
 .welcome img{
-    background-size: cover;
     background-repeat: no-repeat;
-    width: 100vw;
     position:relative;
-
-    
-
 }
 
 .welcome h5 {
@@ -115,6 +136,42 @@ padding-right:0;
     right:50px;
 
 }
+
+.welcome {
+    animation-name:fadein;
+    animation-delay:0.5s;
+    animation-fill-mode: both;
+    animation-duration:10s;
+    animation-timing-function: ease;
+}
+
+@keyframes fadein {
+    from {filter: brightness(0);
+        height:150%;
+         }
+
+    to {filter: brightness(1);
+        height:100%;
+    }
+}
+
+/*----
+.zoomin {
+    animation-name:zoomin;
+    animation-delay:0.5s;
+    animation-fill-mode: both;
+    animation-duration:10s;
+    animation-timing-function: ease;
+}
+
+
+@keyframes zoomin {
+    from {transform: scale(50%);
+        }
+     to {background-size: (100%);
+        };
+    }
+
 
 
 /*------#welcome-img {
