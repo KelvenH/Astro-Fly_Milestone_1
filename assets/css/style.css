@@ -25,11 +25,10 @@ Issues;
 
 1. can't remove right hand margin for small devices
 
-
 */
-.body {
-    width:100vw;
-}
+
+
+
 
 .header-main {
     font-family:'ethnocentric_rg', sans-serif;
@@ -56,28 +55,20 @@ padding-right:2px;
     padding-top:5px;
 }
 
-/*--
-.header-main .icon-planet{
-    height:1em;
-}
-
-/*---------
-
-
-
-.menu-icon {
-
-}
-
-.brand-name {
-
-}
-
 /*-------------------------Sub-Headers-----------------*/
 
 
 /*-------------------------Nav Menu-----------------*/
 
+.navbar-main {
+    background-color:rgb(97, 94, 94);
+    font-family:'ethnocentric_rg', sans-serif;
+    
+}
+
+.navbar-main  .navbar-brand, .navbar-text .navbar-toggler-icon { 
+    color: rgb(255, 127, 0);
+} 
 
 /*-------------------------Special Margins, Paddings, Gutters ----*/
 
@@ -95,15 +86,17 @@ padding-right:2px;
     padding-right:5px;
 }
 
+
 /*-------------------------Home-----------------*/
 
 .home-main {
     text-align: center;
     color: rgb(255, 127, 0);
-     font-family: 'Goldman', sans-serif;
+    font-family: 'Goldman', sans-serif;
     margin:none;
     padding-left:5px;
     padding-right:5px;
+    width:100%;
     height:auto;
 }
 
@@ -117,85 +110,73 @@ padding-right:2px;
     opacity:0;
 }
 
-/*-------.welcome {
-padding-left:0;
-padding-right:0;
-}
--------*/
-.welcome img{
-    background-repeat: no-repeat;
-    position:relative;
+/*-------welcome---*/
+.welcome {
+height:30vh;
+position:relative;
+
 }
 
-.welcome h5 {
+
+
+.welcome-planet-img {
+    background:url(../images/planet_earth-lg.jpg);
+    margin:0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    padding:0;
+    animation-name:imgfadein;
+    animation-delay:0.5s;
+    animation-fill-mode: both;
+    animation-duration:4s;
+    animation-timing-function: linear;  
+}
+
+/*-------welcome animtaion------- desired effect - breaking new dawn*/
+
+@keyframes imgfadein {
+    0%      {filter: brightness(0) blur(10px);}
+    10%     {filter: brightness(0.15) blur(5px);}
+    20%     {filter: brightness(0.3) blur(2px);}
+    30%     {filter: brightness(0.45) blur(1px);}
+    40%     {filter: brightness(0.6) blur(0px);}
+    50%     {filter: brightness(0.75) blur(0px);}
+    60%     {filter: brightness(1.0) blur(0);}
+    86%     {filter: brightness(1.25) blur(0);}
+    88%     {filter: brightness(1.5) blur(0);}
+    89%     {filter: brightness(1.4) blur(0);}
+    90%     {filter: brightness(1.4) blur(0);}
+    95%     {filter: brightness(1.2) blur(0);}
+    100%    {filter: brightness(1.0) blur(0);}
+    }   
+
+       
+
+#welcome-strapline {
     font-family:'ethnocentric_rg', sans-serif;
     color: rgb(255, 127, 0);
     position:absolute;
     text-align:right;
     top:5px;
     right:50px;
-
-}
-
-.welcome {
-    animation-name:fadein;
+    animation-name:txtfadein;
     animation-delay:0.5s;
     animation-fill-mode: both;
-    animation-duration:10s;
-    animation-timing-function: ease;
+    animation-duration:5s;
+    animation-timing-function: ease-out;  
 }
 
-@keyframes fadein {
-    from {filter: brightness(0);
-        height:150%;
-         }
-
-    to {filter: brightness(1);
-        height:100%;
-    }
-}
-
-/*----
-.zoomin {
-    animation-name:zoomin;
-    animation-delay:0.5s;
-    animation-fill-mode: both;
-    animation-duration:10s;
-    animation-timing-function: ease;
-}
-
-
-@keyframes zoomin {
-    from {transform: scale(50%);
-        }
-     to {background-size: (100%);
-        };
-    }
+@keyframes txtfadein {
+  0% {visibility: hidden;}
+  90% {visibility: visible;}
+  100% {visibility: visible;}
+  }
 
 
 
-/*------#welcome-img {
-width: 100vw;
-height: auto;
 
-
-align-items: center;
-justify-content: center;
-position: relative;
-}
-
-.welcome h3 { 
-   text-align:center;
-   position:absolute;
-   bottom:85%;
-   left:50%;
-}
- 
-/*-
-position: absolute;
-    top: 15%;
-    left: 65%;
-    transform: translate(-50%, -50%);
 /*-------------------------Services-----------------*/
 
 
