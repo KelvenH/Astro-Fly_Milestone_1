@@ -24,35 +24,42 @@
 Logo
 background colour
 Company Name
-Nav Menu -->
+Nav Menu 
+
+navbar-expand-sm
+
+ -->
 
     <header>
-
-        <div class="container-fluid justify-content-md-center header-main">
-
-            <div class="row no-gutters header-row">
-
-                <div class="col-11 no-gutters brand-name">
-                    <h1>Astr<span class="iconify icon-planet" data-icon="bx:bxs-planet" data-inline="false"></span>:Fly
-                    </h1>
-                </div>
-
-                <div class="col no-gutters menu">
-                    <i class="fas fa-bars fa-2x"></i>
-                </div>
-
+        <nav class="navbar navbar-default">
+            <a href="/" class="navbar-brand">Astr<span class="iconify icon-planet" data-icon="bx:bxs-planet"
+                    data-inline="false"></span>:Fly</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        </a>
+                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"><i class="fas fa-bars fa-2x"></i></div>
+                            <span id="menu-sub-heading">Mission Control</span>
+                            <div class="dropdown-divider"></div>
+                            <a class="btn btn-lg" href="#">Home</a>
+                            <a class="btn btn-lg" href="#">Adventures</a>
+                            <a class="btn btn-lg" href="#">Gallery</a>
+                            <a class="btn btn-lg" href="#">Register</a>
+                            <a class="btn btn-lg" href="#">News [Inactive]</a>
+                            <a class="btn btn-lg" href="#">Careers [Inactive]</a>
+                    </li>
+                </ul>
             </div>
-
-        </div>
-
+        </nav>
     </header>
 
-
-
-
-
     <!-- Main Body
-
+<i class="fab fa-app-store-ios"></i>
 sections;
     background image
     welcome & Strapline
@@ -88,8 +95,8 @@ sections;
             </div>
 
             <div class="row no-gutters">
-                <div class="col pitch home-content">
-                    <h3>Sales Pitch</h3>
+                <div class="col flights home-content">
+                    <h3>Space Flights</h3>
                     <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                         Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero
                         sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>

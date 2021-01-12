@@ -19,56 +19,107 @@
 
 /*-------------------------Colors-----------------*/
 
-/*-------------------------Heading-----------------
+
+
+/*-------------------------Navbar-----------------
+
+
+
 
 Issues;
 
 1. can't remove right hand margin for small devices
 
-*/
+------------*/
 
-
-
-
-.header-main {
+.navbar {
     font-family:'ethnocentric_rg', sans-serif;
-    width:100vw;
-    line-height:50px;
-    font-size: 100%;
-    text-align:center;
     background-color: #242424;
-    padding-top:10px;
-    padding-bottom:10px;
     color: rgb(255, 127, 0);
     border-bottom:10px solid;
     border-color: rgb(255, 127, 0);
+    padding:0px;
+    margin:0px;
+    text-align:right;
 }
 
-.brand-name h1 {
-padding-left:2px;
-padding-right:2px;
-}
+.navbar-brand {
+    color: inherit;
+    Font-size: 32px;
+    padding-right:10px;
+   }
 
-.menu {
-    padding-left:2px;
-    padding-right:2px;
-    padding-top:5px;
-}
-
-/*-------------------------Sub-Headers-----------------*/
-
-
-/*-------------------------Nav Menu-----------------*/
-
-.navbar-main {
-    background-color:rgb(97, 94, 94);
-    font-family:'ethnocentric_rg', sans-serif;
-    
-}
-
-.navbar-main  .navbar-brand, .navbar-text .navbar-toggler-icon { 
+#navbarDropdownMenuLink{
     color: rgb(255, 127, 0);
-} 
+    text-align:right;
+}
+
+.dropdown-divider {
+    border-top:3px solid rgb(255, 127, 0);
+}
+
+.dropdown-menu {
+    background-color: grey;
+     color: rgb(255, 127, 0);   
+     text-align:center;
+     border: 10px solid;
+     border-color: rgb(255, 127, 0);
+
+}
+
+.dropdown-menu .btn {
+        color: rgb(255, 127, 0);
+        font-size:12px;   
+}
+
+
+      /*--
+        border: 10px solid;
+        border-color: rgb(255, 127, 0);
+        min-width:75%x;
+        max-height:80vh;
+        padding-top:5px;
+        padding-bottom:5px;
+
+
+.dropdown-menu .btn {
+    display: block;
+}
+
+}
+-------*/
+
+
+
+
+/*-------
+        background-color: grey;
+        color: rgb(255, 127, 0);
+        border: 5px solid;
+        border-color: rgb(255, 127, 0);
+        margin:5%;
+        padding:5%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+
+
+.dropdown-menu a {
+    vertical-align:middle;
+}
+
+
+.dropdown-menu .btn-lft{
+right:0;
+}
+
+.dropdown-menu .btn-rgt{
+left:0;
+}
+
+
+
+------------*/
 
 /*-------------------------Special Margins, Paddings, Gutters ----*/
 
@@ -93,9 +144,9 @@ padding-right:2px;
     text-align: center;
     color: rgb(255, 127, 0);
     font-family: 'Goldman', sans-serif;
-    margin:none;
-    padding-left:5px;
-    padding-right:5px;
+    margin:0;
+    padding-left:0;
+    padding-right:0;
     width:100%;
     height:auto;
 }
@@ -120,13 +171,13 @@ position:relative;
 
 
 .welcome-planet-img {
-    background:url(../images/planet_earth-lg.jpg);
-    margin:0;
+    background:url(/assets/images/planet_earth-xs.jpg);
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
     width:100%;
     padding:0;
+    margin:0;
     animation-name:imgfadein;
     animation-delay:0.5s;
     animation-fill-mode: both;
@@ -177,7 +228,7 @@ position:relative;
 
 
 
-/*-------------------------Services-----------------*/
+/*-------------------------Flights-----------------*/
 
 
 /*-------------------------Gallery-----------------*/
