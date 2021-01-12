@@ -17,114 +17,70 @@
 }
 
 
-/*-------------------------Colors-----------------*/
+/*-------------------------Test-----------------*/
 
 
 
-/*-------------------------Navbar-----------------
+/*-------------------------Navbar----------------*/
 
-
-
-
-Issues;
-
-1. can't remove right hand margin for small devices
-
-------------*/
-
-
-.navbar {
-    font-family:'ethnocentric_rg', sans-serif;
+.nav-menu {
+    width: 100%;
+    height:80px;
     background-color: #242424;
+}
+
+.brand {
+    font-family:'ethnocentric_rg', sans-serif;
+    font-size: 32px;
     color: rgb(255, 127, 0);
-    border-bottom:10px solid;
-    border-color: rgb(255, 127, 0);
-    padding:0px;
-    margin:0px;
-    text-align:right;
-}
-
-/*---
-.navbar-brand {
-    color: inherit;
-    Font-size: 32px;
-    padding-right:10px;
-   }
-
-#navbarDropdownMenuLink{
-    color: rgb(255, 127, 0);
-    text-align:right;
-}
-
-.dropdown-divider {
-    border-top:3px solid rgb(255, 127, 0);
-}
-
-.dropdown-menu {
-    background-color: grey;
-     color: rgb(255, 127, 0);   
-     text-align:center;
-     border: 10px solid;
-     border-color: rgb(255, 127, 0);
+    line-height: 55px;
+    float:left;
+    padding:5px 20px;
 
 }
 
-.dropdown-menu .btn {
-        color: rgb(255, 127, 0);
-        font-size:12px;   
+.menu-list{
+    float:left;
 }
 
+.dropdown-list {
+    float:left;
+    list-style:none;
+    position: relative;
+}
 
-      /*--
-        border: 10px solid;
-        border-color: rgb(255, 127, 0);
-        min-width:75%x;
-        max-height:80vh;
-        padding-top:5px;
-        padding-bottom:5px;
-
-
-.dropdown-menu .btn {
+.dropdown-icon{
     display: block;
+    font-size: 22px;
+    color: rgb(255, 127, 0);
+    padding:10px;
+    text-decoration: none;
 }
 
-}
--------*/
-
-
-
-
-/*-------
-        background-color: grey;
-        color: rgb(255, 127, 0);
-        border: 5px solid;
-        border-color: rgb(255, 127, 0);
-        margin:5%;
-        padding:5%;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-
-
-.dropdown-menu a {
-    vertical-align:middle;
+.dropdown-items {
+   display: none;
+   position:absolute;
+   background:rgb(80, 66, 207);
+   padding: 10px;
+   border-radius:0px 0px 14px 14px;
 }
 
-
-.dropdown-menu .btn-lft{
-right:0;
+.dropdown-list:hover .dropdown-items {
+display: block;
 }
 
-.dropdown-menu .btn-rgt{
-left:0;
+.dropdown-items li {
+   width:180px;
+   border-radius:14px;
 }
 
+.dropdown-items li a {
+   padding:16px 14px;
+}
 
-
-------------*/
-
-/*-------------------------Special Margins, Paddings, Gutters ----*/
-
+.dropdown-items li a:hover {
+   background-color: red;
+}
 
 /*-------------------------Footer-----------------*/
 
@@ -146,7 +102,7 @@ left:0;
     text-align: center;
     color: rgb(255, 127, 0);
     font-family: 'Goldman', sans-serif;
-    margin:0;
+    margin-top:80px;
     padding-left:0;
     padding-right:0;
     width:100%;
@@ -181,9 +137,9 @@ position:relative;
     padding:0;
     margin:0;
     animation-name:imgfadein;
-    animation-delay:0.5s;
+    animation-delay:1.5;
     animation-fill-mode: both;
-    animation-duration:4s;
+    animation-duration:10s;
     animation-timing-function: linear;  
 }
 
@@ -215,16 +171,16 @@ position:relative;
     top:5px;
     right:50px;
     animation-name:txtfadein;
-    animation-delay:0.5s;
+    animation-delay:2s;
     animation-fill-mode: both;
-    animation-duration:5s;
-    animation-timing-function: ease-out;  
+    animation-duration:6s;
+    animation-timing-function: ease;  
 }
 
 @keyframes txtfadein {
-  0% {visibility: hidden;}
-  90% {visibility: visible;}
-  100% {visibility: visible;}
+  0% {visibility: hidden; opacity: 0%;}
+  50% {visibility: hidden; opacity:1%;}
+  100% {visibility: visible; opacity:100%;}
   }
 
 
