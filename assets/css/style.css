@@ -32,6 +32,7 @@ Issues;
 
 ------------*/
 
+
 .navbar {
     font-family:'ethnocentric_rg', sans-serif;
     background-color: #242424;
@@ -43,6 +44,7 @@ Issues;
     text-align:right;
 }
 
+/*---
 .navbar-brand {
     color: inherit;
     Font-size: 32px;
