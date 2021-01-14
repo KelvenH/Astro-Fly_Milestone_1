@@ -16,18 +16,25 @@
     font-style: normal;
 }
 
+/*-------------------------Remove default margins and padding----------------*/
 
-/*-------------------------Navbar----------------*/
+.container {
+    margin:0;
+    padding:0;
+}
 
 .container-fluid {
     padding:0;
     margin:0;
 }
 
+/*-------------------------Navbar----------------*/
+
 .nav-menu {
     width: 100%;
     height:10vh;
     background-color: #242424;
+    border-bottom: 5px solid rgb(255, 127, 0);
 }
 
 .brand {
@@ -78,29 +85,21 @@ display: block;
 }
 
 
-
-
-.container {
-    margin:0;
-    padding:0;
-}
-
 /*-------------------------Welcome-----------------*/
+
 .welcome {
-margin-top:10vh;
-height:30vh;
-font-size: clamp(16px, 4vw, 40px);
-padding-right: clamp(8px, 16px, 32px);
-border:1px solid;
+    margin-top:10vh;
+    height:50vh;
+    font-size: clamp(16px, 4vw, 40px);
+    padding-right: clamp(8px, 16px, 32px);
+    border-bottom: 5px solid rgb(255, 127, 0);
 }
 
 .welcome-strapline {
     font-family:'ethnocentric_rg', sans-serif;
     color: rgb(255, 127, 0);
-    text-align: right;
-    margin-left: 50%;
-    margin-right: 5px;
-    margin-top:5px;
+    vertical-align: bottom;
+    padding-bottom:10%;
     animation-name:txtfadein;
     animation-delay:2s;
     animation-fill-mode: both;
@@ -111,7 +110,7 @@ border:1px solid;
 .welcome-planet-img {
     background:url(/assets/images/planet_earth-xs.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: 30%;
     background-repeat: no-repeat;
     width:100%;
     animation-name:imgfadein;
@@ -146,12 +145,65 @@ border:1px solid;
   100% {visibility: visible; opacity:100%;}
   }
 
+/*-------------------------Spacer-----------------*/
 
+.box {
+    background-color: #242424;
+    height:150px;
+    text-align: center;
+    padding-top:5vh;
+}
+
+.text {
+    font-family: 'Goldman', sans-serif;
+    font-size: clamp(16px, 2vw, 28px);
+    color: orange;
+    text-align: left;
+    margin: auto;
+    width: 60%;
+}
+
+.intro .text {
+    padding-left:5vw;
+    margin-right:50vw;
+    text-align:left
+}
+
+
+.quote .text {
+    font-style:oblique;
+    text-align: center;
+}
+
+.tbd {
+    background-color: #242424;
+    height:150px;
+    text-align: center;
+    padding-top:40px;
+}
+
+.tbd-content {
+    font-family: 'Goldman', sans-serif;
+    font-size: clamp(16px, 2vw, 32px);
+    color: orange;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
 
 /*-------------------------Home-----------------*/
 
+
+.nebula-img {
+    background:url(/assets/images/nebula.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:100%;  
+}
+
+
 .home-main {
-    height:50vw;
     text-align: center;
     color: rgb(255, 127, 0);
     font-family: 'Goldman', sans-serif;
@@ -161,13 +213,6 @@ border:1px solid;
     
 }
 
-.nebula-img {
-    background:url(/assets/images/Nebula.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width:100%;  
-}
 
 .home-main .home-content {
     background-color:rgb(97, 94, 94);

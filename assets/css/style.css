@@ -17,43 +17,40 @@
 }
 
 
-/*-------------------------Test-----------------*/
-
-
-
 /*-------------------------Navbar----------------*/
+
+.container-fluid {
+    padding:0;
+    margin:0;
+}
 
 .nav-menu {
     width: 100%;
-    height:10%;
+    height:10vh;
     background-color: #242424;
+    border-bottom: 5px solid rgb(255, 127, 0);
 }
 
 .brand {
     font-family:'ethnocentric_rg', sans-serif;
-    font-size: 32px;
+    font-size: clamp(30px, 8vw, 60px);
     color: rgb(255, 127, 0);
-    line-height: 55px;
     float:left;
-    padding:5px 20px;
-
-}
-
-.menu-list{
-    float:left;
+    margin-left: 5%;
 }
 
 .dropdown-list {
-    float:left;
     list-style:none;
+    line-height: 10vh;
+    float:right;
+    margin-right: 5%;
     position: relative;
 }
 
 .dropdown-icon{
     display: block;
-    font-size: 22px;
+    font-size: clamp(30px, 8vw, 60px);
     color: rgb(255, 127, 0);
-    padding:10px;
     text-decoration: none;
 }
 
@@ -61,7 +58,6 @@
    display: none;
    position:absolute;
    background:rgb(80, 66, 207);
-   padding: 10px;
    border-radius:0px 0px 14px 14px;
 }
 
@@ -82,46 +78,41 @@ display: block;
    background-color: red;
 }
 
-/*-------------------------Footer-----------------*/
 
-.footer-main {
-    background-color: #242424;
-    color: rgb(255, 127, 0);
-    height: 10%;
-    border-top:10px solid;
-    border-color: rgb(255, 127, 0);
-    padding-top:1px;
-    padding-bottom:12px;
-    padding-left:5px;
-    padding-right:5px;
+
+
+.container {
+    margin:0;
+    padding:0;
 }
 
-
-/*-------------------------Home-----------------*/
-
-.home-main {
-    text-align: center;
-    color: rgb(255, 127, 0);
-    font-family: 'Goldman', sans-serif;
-    padding-left:0;
-    padding-right:0;
-    width:100%;
-    
-}
-
+/*-------------------------Welcome-----------------*/
 .welcome {
-margin-top: 10%;
-position:absolute;
+    margin-top:10vh;
+    height:50vh;
+    font-size: clamp(16px, 4vw, 40px);
+    padding-right: clamp(8px, 16px, 32px);
+    border-bottom: 5px solid rgb(255, 127, 0);
+}
+
+.welcome-strapline {
+    font-family:'ethnocentric_rg', sans-serif;
+    color: rgb(255, 127, 0);
+    text-align: center;
+    padding:60% 10% 10%;
+    animation-name:txtfadein;
+    animation-delay:2s;
+    animation-fill-mode: both;
+    animation-duration:6s;
+    animation-timing-function: ease;  
 }
 
 .welcome-planet-img {
     background:url(/assets/images/planet_earth-xs.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: 30%;
     background-repeat: no-repeat;
     width:100%;
-    padding:0;
-    margin:0;
     animation-name:imgfadein;
     animation-delay:1.5;
     animation-fill-mode: both;
@@ -147,21 +138,6 @@ position:absolute;
     100%    {filter: brightness(1.0) blur(0);}
     }   
 
-       
-
-#welcome-strapline {
-    font-family:'ethnocentric_rg', sans-serif;
-    color: rgb(255, 127, 0);
-    position:absolute;
-    text-align:right;
-    top:5px;
-    right:50px;
-    animation-name:txtfadein;
-    animation-delay:2s;
-    animation-fill-mode: both;
-    animation-duration:6s;
-    animation-timing-function: ease;  
-}
 
 @keyframes txtfadein {
   0% {visibility: hidden; opacity: 0%;}
@@ -169,9 +145,73 @@ position:absolute;
   100% {visibility: visible; opacity:100%;}
   }
 
+/*-------------------------Spacer-----------------*/
+
+.box {
+    background-color: #242424;
+    height:150px;
+    text-align: center;
+    padding-top:5vh;
+}
+
+.text {
+    font-family: 'Goldman', sans-serif;
+    font-size: clamp(16px, 2vw, 28px);
+    color: orange;
+    text-align: left;
+    margin: auto;
+    width: 60%;
+}
+
+.intro .text {
+    padding-left:5vw;
+    margin-right:50vw;
+    text-align:left
+}
 
 
+.quote .text {
+    font-style:oblique;
+    text-align: center;
+}
 
+.tbd {
+    background-color: #242424;
+    height:150px;
+    text-align: center;
+    padding-top:40px;
+}
+
+.tbd-content {
+    font-family: 'Goldman', sans-serif;
+    font-size: clamp(16px, 2vw, 32px);
+    color: orange;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+/*-------------------------Home-----------------*/
+
+
+.nebula-img {
+    background:url(/assets/images/nebula.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:100%;  
+}
+
+
+.home-main {
+    text-align: center;
+    color: rgb(255, 127, 0);
+    font-family: 'Goldman', sans-serif;
+    padding-left:0;
+    padding-right:0;
+    width:100%;
+    
+}
 
 
 .home-main .home-content {
@@ -183,20 +223,17 @@ position:absolute;
 }
 
 
+/*-------------------------Footer-----------------*/
 
+.footer-main {
+    background-color: #242424;
+    font-size: clamp(30px, 8vw, 60px);
+    color: rgb(255, 127, 0);
+    height: 10vh;
+    display:inline-block;
+    text-align:center;
+    border-top:10px solid;
+    border-color: rgb(255, 127, 0);
+  
+}
 
-
-
-
-/*-------------------------Flights-----------------*/
-
-
-/*-------------------------Gallery-----------------*/
-
-
-/*-------------------------Registration-----------------*/
-
-
-/*-------------------------404 Error-----------------*/
-
-/*-------------------------Media Queries-----------------*/
