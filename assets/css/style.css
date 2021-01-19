@@ -16,11 +16,24 @@
     font-style: normal;
 }
 
-/*-------------------------Remove default margins and padding----------------*/
+/*-------------------------General Settings-----------------*/
+
+* {
+    margin:0;
+    padding:0;
+}
 
 .container {
     margin:0;
     padding:0;
+}
+
+p {
+    margin-bottom:0;
+}
+
+html, body {
+    height:100%;
 }
 
 .container-fluid {
@@ -28,6 +41,9 @@
     margin:0;
 }
 
+h3 {
+    font-size: clamp(28px, 2vw, 36px);
+}
 /*-------------------------Navbar----------------*/
 
 .nav-menu {
@@ -39,17 +55,22 @@
 
 .brand {
     font-family:'ethnocentric_rg', sans-serif;
-    font-size: clamp(30px, 8vw, 60px);
     color: rgb(255, 127, 0);
-    float:left;
-    margin-left: 5%;
+}
+
+
+.brand.large {
+    font-size: clamp(30px, 8vw, 60px);
+    line-height:10vh;
+}
+
+.brand.norm {
+    font-size: clamp(28px, 2vw, 36px);
 }
 
 .dropdown-list {
     list-style:none;
     line-height: 10vh;
-    float:right;
-    margin-right: 5%;
     position: relative;
 }
 
@@ -84,6 +105,22 @@ display: block;
    background-color: red;
 }
 
+/*-------------------------Footer-----------------*/
+
+.footer-main {
+    background-color: #242424;
+    font-size: clamp(30px, 8vw, 60px);
+    color: rgb(255, 127, 0);
+    height: 10vh;
+    position:sticky;
+    display:inline-block;
+    text-align:center;
+    border-top:10px solid;
+    border-color: rgb(255, 127, 0);
+  
+}
+
+/*-------------------------HOME PAGE-----------------*/
 
 /*-------------------------Welcome-----------------*/
 
@@ -91,20 +128,8 @@ display: block;
     margin-top:10vh;
     height:50vh;
     font-size: clamp(16px, 4vw, 40px);
-    padding-right: clamp(8px, 16px, 32px);
+   /*------ padding-right: clamp(8px, 16px, 32px);-----*/
     border-bottom: 5px solid rgb(255, 127, 0);
-}
-
-.welcome-strapline {
-    font-family:'ethnocentric_rg', sans-serif;
-    color: rgb(255, 127, 0);
-    vertical-align: bottom;
-    padding-bottom:10%;
-    animation-name:txtfadein;
-    animation-delay:2s;
-    animation-fill-mode: both;
-    animation-duration:6s;
-    animation-timing-function: ease;  
 }
 
 .welcome-planet-img {
@@ -112,12 +137,25 @@ display: block;
     background-size: cover;
     background-position: 30%;
     background-repeat: no-repeat;
-    width:100%;
     animation-name:imgfadein;
     animation-delay:1.5;
     animation-fill-mode: both;
     animation-duration:10s;
     animation-timing-function: linear;  
+}
+
+.welcome-strapline {
+    font-family:'ethnocentric_rg', sans-serif;
+    color: rgb(255, 127, 0);
+    text-align:right;
+    padding-top: 5vw;
+    padding-left:50vw;
+    padding-right:10vw;
+    animation-name:txtfadein;
+    animation-delay:2s;
+    animation-fill-mode: both;
+    animation-duration:6s;
+    animation-timing-function: ease;  
 }
 
 /*-------welcome animtaion------- desired effect - breaking new dawn*/
@@ -145,95 +183,57 @@ display: block;
   100% {visibility: visible; opacity:100%;}
   }
 
-/*-------------------------Spacer-----------------*/
+    /*-------------------------HOME CONTENT-----------------*/
 
-.box {
+  .box {
+    min-height: 20vh;
+    width:100vw;
+    border-bottom:5px solid;
+    border-color: rgb(255, 127, 0);
+    display:inline;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 3vh 3vw;
+    }
+
+.box-light{
+    background-color: rgb(97, 94, 94);
+    }
+
+.box-dark{
     background-color: #242424;
-    height:150px;
-    text-align: center;
-    padding-top:5vh;
+    }
+
+.box.intro {
+    background-color:none;
+    background:url(/assets/images/metal-grille.jpg);
+    background-size: contain;
+
 }
 
 .text {
     font-family: 'Goldman', sans-serif;
-    font-size: clamp(16px, 2vw, 28px);
+    font-size: clamp(16px, 2vw, 36px);
+    width:90vw;
     color: orange;
-    text-align: left;
-    margin: auto;
-    width: 60%;
-}
-
-.intro .text {
-    padding-left:5vw;
-    margin-right:50vw;
-    text-align:left
-}
-
-
-.quote .text {
-    font-style:oblique;
-    text-align: center;
-}
-
-.tbd {
-    background-color: #242424;
-    height:150px;
-    text-align: center;
-    padding-top:40px;
-}
-
-.tbd-content {
-    font-family: 'Goldman', sans-serif;
-    font-size: clamp(16px, 2vw, 32px);
-    color: orange;
-    text-align: center;
-    margin: auto;
-    width: 80%;
-}
-
-/*-------------------------Home-----------------*/
-
-
-.nebula-img {
-    background:url(/assets/images/nebula.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width:100%;  
-}
-
-
-.home-main {
-    text-align: center;
-    color: rgb(255, 127, 0);
-    font-family: 'Goldman', sans-serif;
-    padding-left:0;
-    padding-right:0;
-    width:100%;
-    
-}
-
-
-.home-main .home-content {
-    background-color:rgb(97, 94, 94);
-    font-size:12px;
-    border:5px solid;
-    border-color: rgb(255, 127, 0);
-    padding: 10px;
-}
-
-
-/*-------------------------Footer-----------------*/
-
-.footer-main {
-    background-color: #242424;
-    font-size: clamp(30px, 8vw, 60px);
-    color: rgb(255, 127, 0);
-    height: 10vh;
-    display:inline-block;
     text-align:center;
-    border-top:10px solid;
-    border-color: rgb(255, 127, 0);
-  
+    padding:2vh 2vw;
+    }
+
+.intro-reg {
+    width: 40vw;
+background-color: rgb(255, 127, 0);
+transform: skew(0, -40deg);
+
 }
 
+.intro-img {
+    object-fit:cover;
+    width: 40vw;
+}
+
+.quote.text {
+    font-style:oblique;
+    width:80vw;
+    text-align:center;
+}
