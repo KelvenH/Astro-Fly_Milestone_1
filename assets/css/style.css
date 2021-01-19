@@ -16,13 +16,19 @@
     font-style: normal;
 }
 
+/*-------------------------Remove default margins and padding----------------*/
 
-/*-------------------------Navbar----------------*/
+.container {
+    margin:0;
+    padding:0;
+}
 
 .container-fluid {
     padding:0;
     margin:0;
 }
+
+/*-------------------------Navbar----------------*/
 
 .nav-menu {
     width: 100%;
@@ -79,14 +85,8 @@ display: block;
 }
 
 
-
-
-.container {
-    margin:0;
-    padding:0;
-}
-
 /*-------------------------Welcome-----------------*/
+
 .welcome {
     margin-top:10vh;
     height:50vh;
@@ -98,8 +98,8 @@ display: block;
 .welcome-strapline {
     font-family:'ethnocentric_rg', sans-serif;
     color: rgb(255, 127, 0);
-    text-align: center;
-    padding:60% 10% 10%;
+    vertical-align: bottom;
+    padding-bottom:10%;
     animation-name:txtfadein;
     animation-delay:2s;
     animation-fill-mode: both;
