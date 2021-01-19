@@ -1,29 +1,8 @@
 # Astro:Fly - Milestone Project 1
 ---
 ## Overview
-Astro:Fly is a fictional company set to offer space tourism flights. In this scenario, the service is under development and a web site is being launched to garner public interest, provide information and register details of potential clientele. Any referrences to technologies are purely fictional and are not based on scientifc fact.  This project has been undertaken for educational purposes to demonstrate HTML and CSS essential skills (Code Institute Milestone Project 1).
+Astro:Fly is a fictional company set to offer space tourism / commercial flights. In this scenario, the service is under development and a web site is being launched to garner public interest, provide information and register details of potential clientele. This project has been undertaken for educational purposes to demonstrate HTML and CSS essential skills (Code Institute Milestone Project 1). Any referrences to technologies are purely fictional and are not based on scientifc fact.  
 
-### Personal Goals (Actual)
-Through this project I am looking to; 
-- Demonstrate understanding and application of HTML and CSS essential skills.
-- Broaden personal awareness of further capabilities of HTML and CSS which go beyond those covered in module 1.
-- Experience challenges, bugs, errors and frustrations through which problem solving will be a huge value-add / personal learn.
-- Understand the limit of my current capabilities - looking to stretch myself without trying to achieve the impossible for a coding noob! 
-- Serve as an example for a future portfolio of web site design and development which will also be used as an entry point which future projects can be assessed against to demonstrate improvements.
-- The subject chosen for this project is to be fun, engaging but also on an area where broad range of dramatic / exaggerated design elements can be employed and have relevance - as opposed to a more traditional retail site where these would be out of place (e.g. use of transitional effects, fonts, color palette).
-- Be proud of the final output!
-
-### Business Goals (Fictional Scenario)
-Astro:Fly require a site which;
-- generates buzz and excitement to the general public and media
-- conveys image of a safe and ethical brand (despite the slight irony the service could have on planet earth / airspace)
-- provides prospective clients with summary of planned voyages tus leading to the registration of potential clientele
-
-### Client Goals (Fictional Scenario)
-Site visitors are expected to fall into 1 of 3 categories;
-- media; the new service is expected to create attention due to this being an extreme niche service / limited rivals
-- general public; seeking latest information on the planned service such as timelines, what services will be offered and images 
-- prospective clients; to whet the appetite for client base who would need to have pockets as deep as their enthusiasm for deep space! 
 
 
 ---
@@ -32,7 +11,7 @@ Site visitors are expected to fall into 1 of 3 categories;
 -|----|-----------|-----
 1|4/01/21|Initial outline of README content| Outline to be discussed with mentor
 1.1 |04/01/21|Added personal, business and client goals ||
-1.2 |XX/XX/21|XXXXXXXXXX||
+1.2 |19/01/21|General updates to reflect ongoing development through initial build of core||
 1.4 |XX/XX/21|XXXXXXXXXX||
 1.5 |XX/XX/21|XXXXXXXXXX||
 1.6 |XX/XX/21|XXXXXXXXXX||
@@ -62,10 +41,10 @@ Wk | Focus |
 ---|-------|
 1 | Preparation (Plan, Research, Review further materials) |
 1 | Initiate documentation (ReadMe, Wireframes, UX) |
-2 | Build core structure of site |
-2 | Style enhancements |
-3 | Test, Feedback, Finalisation  |
-4 | Finalise Documentation and Deploy |
+2-4 | Build core structure of site |
+2-4 | Style enhancements |
+5 | Test, Feedback, Finalisation  |
+6 | Finalise Documentation and Deploy |
 
 ---
 ## Key Tasks 
@@ -77,14 +56,13 @@ UX Design | Revisit 5 planes of UX design prior to progressing ideas | Done | Ad
 Initiate Repository and README file | - | Done | - |
 Determine Project Subject | Considertions and outcome tabled below | Done | Opted for ficticiuous space tourism company site|  
 Conduct Research | Refer to existing sites for examples of content structure and features | Done | - |
-Develop Wireframes / Balsamiq | Review course materials / Slack guides prior to commencing | In Progress | - |
+Develop Wireframes / Balsamiq | Review course materials / Slack guides prior to commencing | In Progress | Largely complete, but adjustments in initial build will require adjustments to the final documentation |
 Schedule sessions with mentor | To take place after wireframes developed, mid-development and towards end of final build | In Progress | - |
 Revisit course materials, projects and assessment criteria to ensure requirements addressed | - | Weekly CheckPoint (On-going) | - |
 Initiate site skeleton based on wireframes | - | In Progress | - |
 Futher actions to be added as activity progresses | - | - | - |
 - | - | - | - |
-- | - | - | - |
-- | - | - | - |
+
 
 ---
 ## UX
@@ -93,17 +71,62 @@ Futher actions to be added as activity progresses | - | - | - |
 
 Form should follow function- intuitive and simple to use delivers positive emotional experience
 
-- Strategy - what am i aiming to achieve, goals, initial idea
-- Scope - what's on the table for inclusion (or not)
-- Structure - how is information structured and logically grouped
-- Skeleton - how information will be presented / navigated
-- Surface - what will the finished product look like; color palette, fonts, images and other design elements
+### Strategy / Purpose;
+
+#### Personal Goals (Actual)
+Through this project I am looking to; 
+- Demonstrate understanding and application of HTML and CSS essential skills.
+- Broaden personal awareness of further capabilities of HTML and CSS which go beyond those covered in module 1.
+- Experience challenges, bugs, errors and frustrations through which problem solving will be a huge value-add / personal learn.
+- Understand the limit of my current capabilities - looking to stretch myself without trying to achieve the impossible for a coding noob! 
+- Serve as an example for a future portfolio of web site design and development which will also be used as an entry point which future projects can be assessed against to demonstrate improvements.
+- The subject chosen for this project is to be fun, engaging but also on an area where broad range of dramatic / exaggerated design elements can be employed and have relevance - as opposed to a more traditional retail site where these would be out of place (e.g. use of transitional effects, fonts, color palette).
+- Be proud of the final output!
+
+#### Business Goals (Fictional Scenario)
+Astro:Fly require a site which;
+- generates buzz and excitement to the general public and media
+- conveys image of a safe and ethical brand (despite the slight irony the service could have on planet earth / airspace)
+- provides prospective clients with summary of planned voyages tus leading to the registration of potential clientele
+
+#### Client Goals (Fictional Scenario)
+Site visitors are expected to fall into 1 of 3 categories;
+- media; the new service is expected to create attention due to this being an extreme niche service / limited rivals
+- general public; seeking latest information on the planned service such as timelines, what services will be offered and images 
+- prospective clients; to whet the appetite for client base who would need to have pockets as deep as their enthusiasm for deep space! 
+
+### Scope - what's on the table for inclusion (or not)
+  - landing / home page - welcome, intro and flavour
+  - detail of services - what, where, where.
+  - gallery - images
+  - client registration (modal form)
+  
+### Structure - how is information structured and logically grouped
+  - consistent theme across sites
+  - header / navigation menu and footer mirrored across all pages
+  - central / main content to remain same theme / branding but adapted to suit requirements of that page and be interesting / exciting to the users.
+
+### Skeleton - how information will be presented / navigated
+ - all pages must be responsive 
+ - navigation will primarily be through the menu (to appear as drop down on small screen devices and potentially permanent sidebar for larger screens)
+ - additional links added to act as shortcuts 
+
+### Surface - what will the finished product look like; color palette, fonts, images and other design elements
+  - refer to balsamiq documentation during development
 
 ### User Stories
+The business (Astro:Fly) require a site which;
+- generates brand awareness, buzz and excitement to the general public and media.
+- lead to sales through enticing prospective clients to register for further information.
+
+The customer goals are;
+- able to find information about the services provided
+- clear and easy navigation through the site
+- easy registration of personal details for more information / booking. 
 
 ### Links to wireframes
 
-
+Links to be added
 
 
 ---
@@ -113,7 +136,7 @@ Content & features initially considered and indication where incorporated into b
 Page | Content | Features | In Build | Comments |
 -----|---------|----------|----------|----------|
 Home | About, Navigation Bar | static background image, interactive Nav bar, transition effects | TBC | - |
-Home| Timeline conception to launch| TBC | TBC | - |
+Home| Timeline conception to launch| TBC | No | Dropped as requires additional development - viewed as nice to have and not neccessity to the site  |
 Home | Countdown Timer to maiden launch| TBC | TBC | -
 Voyage Overview| Pre-voyage (medical, training, quarantine)  | Expandable List | TBC | - |
 Voyage Overview| Voyage Route | Map | TBC | - |
@@ -153,6 +176,10 @@ Futuristic | Yes | Expect these to be more easily available and achieved through
 
 ---
 ## Technologies Used
+Bootstrap 4
+Google Fonts
+Font Awesome
+
 
 ---
 ## Testing
@@ -165,5 +192,13 @@ Futuristic | Yes | Expect these to be more easily available and achieved through
 ### Content
 ### Media
 ### Acknowledgements
+- slack community 
 - Balsamiq introduction tutorials for wireframes
-### Disclaimer
+- getbootstrap.com
+- csstricks.com
+- codepen.io
+- w3schools.com
+- Github community
+- YouTube (Kevin Powell and Dani Krossing) - 
+- image sources - Shutterstock, Pexels and Depositphotos?
+
