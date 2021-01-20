@@ -128,7 +128,7 @@ display: block;
     margin-top:10vh;
     height:50vh;
     font-size: clamp(16px, 4vw, 40px);
-   /*------ padding-right: clamp(8px, 16px, 32px);-----*/
+   /*------ padding-right: clamp(8px, 16px, 32px?);-----*/
     border-bottom: 5px solid rgb(255, 127, 0);
 }
 
@@ -148,7 +148,7 @@ display: block;
     font-family:'ethnocentric_rg', sans-serif;
     color: rgb(255, 127, 0);
     text-align:right;
-    padding-top: 5vw;
+    padding-top: 3vw;
     padding-left:50vw;
     padding-right:10vw;
     animation-name:txtfadein;
@@ -158,7 +158,7 @@ display: block;
     animation-timing-function: ease;  
 }
 
-/*-------welcome animtaion------- desired effect - breaking new dawn*/
+/*-------welcome animtaion------- desired effect - break of new dawn*/
 
 @keyframes imgfadein {
     0%      {filter: brightness(0) blur(10px);}
@@ -220,11 +220,51 @@ display: block;
     padding:2vh 2vw;
     }
 
-.intro-reg {
-    width: 40vw;
-background-color: rgb(255, 127, 0);
-transform: skew(0, -40deg);
+    /*-------------------------HOME CONTENT-----------------*/
 
+.intro-ticker {
+    /*------------ background-image: url(/assets/images/Metal-plate-orange.jpg);
+    background-size: stretch;
+    background-repeat: repeat;
+    background-clip: border-box;-------------*/
+    background-color: black;
+    font-family:'Aldrich', sans-serif;
+    font-size: clamp(14px, 2vw, 32px);
+    color: orange;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    width:100vw;
+    height: 5vh;
+    overflow:hidden;
+}
+
+.intro-ticker-news {
+    list-style:none;
+    width: 100%;
+    display:flex;
+    background-color: none;
+    animation: animate 240s linear infinite;
+    }
+
+.intro-ticker-news li {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    white-space: pre-wrap;
+    padding-left:1vw;
+    padding-top:2vh;
+
+    }
+
+.break-news {
+    background-color: orange;
+    color: black;
+}
+
+@keyframes animate {
+     0%  {transform: translateX(120%);}
+    100%  {transform: translateX(-3500%);}
 }
 
 .intro-img {
