@@ -220,13 +220,8 @@ display: block;
     padding:2vh 2vw;
     }
 
-    /*-------------------------HOME CONTENT-----------------*/
-
+    
 .intro-ticker {
-    /*------------ background-image: url(/assets/images/Metal-plate-orange.jpg);
-    background-size: stretch;
-    background-repeat: repeat;
-    background-clip: border-box;-------------*/
     background-color: black;
     font-family:'Baumans', sans-serif;
     font-size: clamp(14px, 2vw, 32px);
@@ -235,7 +230,7 @@ display: block;
     display:flex;
     justify-content: center;
     width:100vw;
-    height: 5vh;
+    height: 4vh;
     overflow:hidden;
 }
 
@@ -262,6 +257,7 @@ display: block;
     background-color: orange;
     color: black;
 }
+
 
 @keyframes animate {
      0%  {transform: translateX(120%);}

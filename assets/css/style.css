@@ -89,7 +89,7 @@ h3 {
 }
 
 .dropdown-list:hover .dropdown-items {
-display: block;
+    display: block;
 }
 
 .dropdown-items li {
@@ -223,43 +223,38 @@ display: block;
     /*-------------------------HOME CONTENT-----------------*/
 
 .intro-ticker {
-    /*------------ background-image: url(/assets/images/Metal-plate-orange.jpg);
-    background-size: stretch;
-    background-repeat: repeat;
-    background-clip: border-box;-------------*/
     background-color: black;
     font-family:'Aldrich', sans-serif;
     font-size: clamp(14px, 2vw, 32px);
     color: orange;
-    align-items: center;
-    display:flex;
-    justify-content: center;
     width:100vw;
-    height: 5vh;
+    height: 4vh;
     overflow:hidden;
+
 }
 
 .intro-ticker-news {
     list-style:none;
     width: 100%;
-    display:flex;
     background-color: none;
     animation: animate 240s linear infinite;
+    padding-top: 50%;
+    padding-bottom: 50%;
     }
 
 .intro-ticker-news li {
-    display: flex;
     justify-content: center;
     flex-shrink: 0;
     white-space: pre-wrap;
     padding-left:1vw;
-    padding-top:2vh;
 
     }
 
 .break-news {
+    display:flex;
     background-color: orange;
     color: black;
+    
 }
 
 @keyframes animate {
