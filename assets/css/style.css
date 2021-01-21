@@ -28,6 +28,17 @@
     padding:0;
 }
 
+.container-fluid {
+    margin:0;
+    padding:0;
+}
+
+.row {
+    margin:0;
+    padding:0;
+}
+
+
 p {
     margin-bottom:0;
 }
@@ -36,10 +47,7 @@ html, body {
     height:100%;
 }
 
-.container-fluid {
-    padding:0;
-    margin:0;
-}
+
 
 h3 {
     font-size: clamp(28px, 2vw, 36px);
@@ -150,7 +158,7 @@ h3 {
     text-align:right;
     padding-top: 3vw;
     padding-left:50vw;
-    padding-right:10vw;
+    padding-right:2vw;
     animation-name:txtfadein;
     animation-delay:2s;
     animation-fill-mode: both;
@@ -193,7 +201,7 @@ h3 {
     display:inline;
     flex-wrap: wrap;
     position: relative;
-    padding: 3vh 3vw;
+    
     }
 
 .box-light{
@@ -230,19 +238,24 @@ h3 {
     width:100vw;
     height: 4vh;
     overflow:hidden;
+    margin:0,3vh,0,3vh;
 
 }
 
 .intro-ticker-news {
+    display:inline-block;
+    height:4vh;
     list-style:none;
     width: 100%;
     background-color: none;
     animation: animate 240s linear infinite;
-    padding-top: 50%;
-    padding-bottom: 50%;
+    margin-bottom:0;
+    padding-inline-start:0;
+ 
     }
 
 .intro-ticker-news li {
+    display:inline-block;
     justify-content: center;
     flex-shrink: 0;
     white-space: pre-wrap;
