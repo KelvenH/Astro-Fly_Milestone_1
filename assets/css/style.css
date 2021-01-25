@@ -250,6 +250,7 @@ h3 {
     background-color: none;
     animation: animate 240s linear infinite;
     margin-bottom:0;
+    margin-top:2vh;
     padding-inline-start:0;
  
     }
