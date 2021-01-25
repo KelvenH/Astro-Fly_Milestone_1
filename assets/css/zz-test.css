@@ -54,6 +54,7 @@ html, body {
 h3 {
     font-size: clamp(28px, 2vw, 36px);
     font-family:'ethnocentric_rg', sans-serif;
+    color: orange;
 }
 /*-------------------------Navbar----------------*/
 
@@ -137,7 +138,7 @@ h3 {
 
 .welcome {
     margin-top:10vh;
-    height:50vh;
+    height:30vh;
     font-size: clamp(16px, 4vw, 40px);
    /*------ padding-right: clamp(8px, 16px, 32px?);-----*/
     border-bottom: 5px solid rgb(255, 127, 0);
@@ -197,8 +198,7 @@ h3 {
 /*-------------------------Home Page - Intro-----------------*/
 
   #intro-box {
-    min-height: 20vh;
-   
+    padding:4vh 1vh;
     border-bottom:5px solid;
     border-color: rgb(255, 127, 0);
     display:inline;
@@ -207,12 +207,6 @@ h3 {
     background-color:none;
     background:url(/assets/images/metal-grille.jpg);
     background-size: cover;
-
-}
-
-.box.intro.p {
-    width:90vw;
-    padding:2vh 2vw;
     }
 
   /*-------------------------Home Page - Intro / Ticker-----------------*/
@@ -225,7 +219,8 @@ h3 {
     width:100vw;
     height: 4vh;
     overflow:hidden;
-    margin:0,3vh,0,3vh;
+    margin:4vh 3vh 0 3vh;
+    border-style:inset;
 
 }
 
@@ -267,13 +262,56 @@ h3 {
 /*-------------------------Home Page - main accordian-----------------*/
 
 #home-accordian {
-    background-color:rgb(106, 103, 103);
+    padding-bottom:10vh;
 }
 
 .card {
-    background-color:rgb(106, 103, 103);
-    color: rgb(255, 127, 0);
+    margin: 1vh 0;
 }
+
+.btn-link {
+    font-family:'ethnocentric_rg', sans-serif;
+    color: orange;
+    }
+
+.card-header {
+    border:0.25rem solid;
+    border-color: rgb(255, 127, 0);
+    border-top-left-radius:0.5rem;
+    border-top-right-radius:0.5rem;
+    background-color: #242424;
+}
+
+.card-header:visited {
+    text-decoration:none;
+    background: orange;
+    color:black;
+}
+
+.card-header:hover {
+    text-decoration:none;
+    background: orange;
+    color:black;
+}
+
+.card-header:active {
+    text-decoration:none;
+    background: orange;
+    color:black;
+}
+
+
+
+
+.card-body {
+    border-style: solid;
+    border-width: 0 0.25rem 0.25rem 0.25rem;
+    border-color: rgb(255, 127, 0);
+    border-bottom-left-radius:0.5rem;
+    border-bottom-right-radius:0.5rem;
+    background-color:rgb(106, 103, 103);
+}
+
 
 
 
