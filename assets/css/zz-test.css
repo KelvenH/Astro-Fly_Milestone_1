@@ -45,12 +45,15 @@ p {
 
 html, body {
     height:100%;
+    font-family: 'Goldman', sans-serif;
+    font-size: clamp(16px, 2vw, 36px);
+    color: orange;
+    text-align: center;
 }
-
-
 
 h3 {
     font-size: clamp(28px, 2vw, 36px);
+    font-family:'ethnocentric_rg', sans-serif;
 }
 /*-------------------------Navbar----------------*/
 
@@ -130,7 +133,7 @@ h3 {
 
 /*-------------------------HOME PAGE-----------------*/
 
-/*-------------------------Welcome-----------------*/
+/*-------------------------Home Page - Welcome-----------------*/
 
 .welcome {
     margin-top:10vh;
@@ -191,44 +194,28 @@ h3 {
   100% {visibility: visible; opacity:100%;}
   }
 
-    /*-------------------------HOME CONTENT-----------------*/
+/*-------------------------Home Page - Intro-----------------*/
 
-  .box {
+  #intro-box {
     min-height: 20vh;
-    width:100vw;
+   
     border-bottom:5px solid;
     border-color: rgb(255, 127, 0);
     display:inline;
     flex-wrap: wrap;
     position: relative;
-    
-    }
-
-.box-light{
-    background-color: rgb(97, 94, 94);
-    }
-
-.box-dark{
-    background-color: #242424;
-    }
-
-.box.intro {
     background-color:none;
     background:url(/assets/images/metal-grille.jpg);
-    background-size: contain;
+    background-size: cover;
 
 }
 
-.text {
-    font-family: 'Goldman', sans-serif;
-    font-size: clamp(16px, 2vw, 36px);
+.box.intro.p {
     width:90vw;
-    color: orange;
-    text-align:center;
     padding:2vh 2vw;
     }
 
-    /*-------------------------HOME CONTENT-----------------*/
+  /*-------------------------Home Page - Intro / Ticker-----------------*/
 
 .intro-ticker {
     background-color: black;
@@ -276,6 +263,22 @@ h3 {
     100%  {transform: translateX(-3500%);}
 }
 
+
+/*-------------------------Home Page - main accordian-----------------*/
+
+#home-accordian {
+    background-color:rgb(106, 103, 103);
+}
+
+.card {
+    background-color:rgb(106, 103, 103);
+    color: rgb(255, 127, 0);
+}
+
+
+
+/*----
+
 .intro-img {
     object-fit:cover;
     width: 40vw;
@@ -286,3 +289,4 @@ h3 {
     width:80vw;
     text-align:center;
 }
+----------*/
