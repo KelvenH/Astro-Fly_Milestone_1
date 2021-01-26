@@ -43,7 +43,7 @@ p {
     margin-bottom:0;
 }
 
-html, body {
+    html, body {
     height:100%;
     font-family: 'Goldman', sans-serif;
     font-size: clamp(16px, 2vw, 36px);
@@ -58,34 +58,33 @@ h3 {
 }
 /*-------------------------Navbar----------------*/
 
-.nav-menu {
-    width: 100%;
-    height:10vh;
-    background-color: #242424;
-    border-bottom: 5px solid rgb(255, 127, 0);
-}
+.navbar {
 
-.brand {
+   background-color: #242424;
+   border-bottom: 5px solid rgb(255, 127, 0);
     font-family:'ethnocentric_rg', sans-serif;
     color: rgb(255, 127, 0);
+    line-height:10vh;
+    
 }
 
+.navbar-brand {
+    
+    color: rgb(255, 127, 0);
+    font-size:2rem;
+}
 
-.brand.large {
-    font-size: clamp(30px, 8vw, 60px);
-    line-height:10vh;
+.navbar-toggler {
+
 }
 
 .brand.norm {
     font-size: clamp(28px, 2vw, 36px);
 }
 
-.dropdown-list {
-    list-style:none;
-    line-height: 10vh;
-    position: relative;
-}
 
+}
+/*-----
 .dropdown-icon{
     display: block;
     font-size: clamp(30px, 8vw, 60px);
@@ -93,12 +92,17 @@ h3 {
     text-decoration: none;
 }
 
-.dropdown-items {
+.dropdown-menu {
+    list-style:none;
+    position: relative;
+
+.dropdown-item {
    display: none;
    position:absolute;
    background:rgb(80, 66, 207);
    border-radius:0px 0px 14px 14px;
 }
+
 
 .dropdown-list:hover .dropdown-items {
     display: block;
@@ -116,6 +120,9 @@ h3 {
 .dropdown-items li a:hover {
    background-color: red;
 }
+---*/
+
+
 
 /*-------------------------Footer-----------------*/
 
