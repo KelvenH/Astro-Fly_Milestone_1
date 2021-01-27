@@ -64,19 +64,34 @@ h3 {
    border-bottom: 5px solid rgb(255, 127, 0);
     font-family:'ethnocentric_rg', sans-serif;
     color: rgb(255, 127, 0);
-    line-height:10vh;
+    line-height: 7vh;
+    
     
 }
 
-.navbar-brand {
+.navbar-brand, .navbar-toggler {
     
     color: rgb(255, 127, 0);
     font-size:2rem;
 }
 
-.navbar-toggler {
 
-}
+
+/*-----
+.navbar-toggler-icon {
+    color: rgb(255, 127, 0);
+    border: 1px solid;
+    border-color: rgb(255, 127, 0);
+    background-color:white;
+   display: block;
+    font-size: clamp(30px, 8vw, 60px);
+    color: rgb(255, 127, 0);
+    text-decoration: none;
+    
+
+.navbar-toggler {
+    color: rgb(255, 127, 0);
+    font-size:2rem;
 
 .brand.norm {
     font-size: clamp(28px, 2vw, 36px);
