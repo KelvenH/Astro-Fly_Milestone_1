@@ -49,6 +49,7 @@ p {
     font-size: clamp(16px, 2vw, 36px);
     color: orange;
     text-align: center;
+    background-color:transparent;
 }
 
 h3 {
@@ -56,6 +57,23 @@ h3 {
     font-family:'ethnocentric_rg', sans-serif;
     color: orange;
 }
+
+/*-------------------------Custom Shaped Boxes----------------*/
+
+
+.clip-box-one-outer {
+    clip-path:polygon(1% 6%, 6% 1%, 54% 1%, 60% 4%, 92% 4%, 95% 10%, 95% 10%, 95% 10%, 95% 10%, 95% 38%, 94% 42%, 94% 50%, 95% 50%, 95% 60%, 95% 90%, 91% 99%, 53% 99%, 50% 95%, 40% 95%, 40% 99%, 11% 99%, 2% 90%, 2% 40%, 1% 36%, 1% 20%, 1% 6%);   
+    background-color:rgb(255, 127, 0);
+    
+   
+}
+
+.clip-box-one-inner {
+    clip-path:polygon(2% 7%, 7% 2%, 54% 2%, 60% 5%, 67% 5%, 91% 5%, 94% 10%, 94% 38%, 92% 38%, 92% 15%, 91% 20%, 91% 39%, 93% 39%, 93% 52%, 94% 52%, 94% 90%, 91% 97%, 85% 97%, 53% 97%, 50% 93%, 39% 93%, 39% 98%, 11% 98%, 11% 96%, 38% 96%, 38% 95%, 9% 95%, 6% 92%, 50% 92%, 50% 91%, 5% 91%, 3% 90%, 3% 40%, 2% 36%, 2% 8%, 5% 8%, 5% 34%, 5% 7%, 2% 7%); 
+    background-color:#242424;
+   
+}
+
 /*-------------------------Navbar----------------*/
 
 .navbar {
@@ -65,51 +83,36 @@ h3 {
     font-family:'ethnocentric_rg', sans-serif;
     color: rgb(255, 127, 0);
     line-height: 7vh;
-    
-    
 }
 
 .navbar-brand, .navbar-toggler {
-    
-    color: rgb(255, 127, 0);
-    font-size:2rem;
-}
-
-
-
-/*-----
-.navbar-toggler-icon {
-    color: rgb(255, 127, 0);
-    border: 1px solid;
-    border-color: rgb(255, 127, 0);
-    background-color:white;
-   display: block;
+        color: rgb(255, 127, 0);
     font-size: clamp(30px, 8vw, 60px);
-    color: rgb(255, 127, 0);
-    text-decoration: none;
-    
-
-.navbar-toggler {
-    color: rgb(255, 127, 0);
-    font-size:2rem;
-
-.brand.norm {
-    font-size: clamp(28px, 2vw, 36px);
 }
 
-
-}
-/*-----
-.dropdown-icon{
-    display: block;
-    font-size: clamp(30px, 8vw, 60px);
-    color: rgb(255, 127, 0);
-    text-decoration: none;
-}
 
 .dropdown-menu {
-    list-style:none;
-    position: relative;
+    background-color:#242424;
+    padding-top:0;
+}
+
+.dropdown-header {
+    color: rgb(255, 127, 0);
+    font-weight: 600;
+        
+    }
+
+.dropdown-item {
+   background:#242424;
+   color: rgb(255, 127, 0);
+
+
+ 
+}
+
+
+/*-----
+
 
 .dropdown-item {
    display: none;
@@ -159,7 +162,6 @@ h3 {
 /*-------------------------Home Page - Welcome-----------------*/
 
 .welcome {
-    margin-top:10vh;
     height:30vh;
     font-size: clamp(16px, 4vw, 40px);
    /*------ padding-right: clamp(8px, 16px, 32px?);-----*/
@@ -280,15 +282,32 @@ h3 {
     100%  {transform: translateX(-3500%);}
 }
 
+/*-------------------------Home Page - background-----------------*/
+
+#main-window-image {
+    background-image:url("/assets/images/main_background.jpg"); 
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    border-top:none;
+    background-attachment: fixed;
+
+}
 
 /*-------------------------Home Page - main accordian-----------------*/
 
 #home-accordian {
     padding-bottom:10vh;
+    width:75%;
+    margin:15%;
+    margin-top:0%;
 }
 
 .card {
-    margin: 1vh 0;
+    background-color:transparent;
+    padding-top:10%;
+    text-align:center;
 }
 
 .btn-link {
@@ -315,6 +334,7 @@ h3 {
     border-top-left-radius:0.5rem;
     border-top-right-radius:0.5rem;
     background-color: #242424;
+    text-align:center;
 }
 
 .card-body {
@@ -324,6 +344,7 @@ h3 {
     border-bottom-left-radius:0.5rem;
     border-bottom-right-radius:0.5rem;
     background-color:rgb(106, 103, 103);
+    
 }
 
 
