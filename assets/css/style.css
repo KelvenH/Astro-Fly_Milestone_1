@@ -126,6 +126,13 @@ h3 {
   
 }
 
+
+.footer-main a {
+    color:inherit;
+    text-decoration:none;
+}
+
+
 /*-------------------------HOME PAGE-----------------*/
 
 /*-------------------------Home Page - Welcome-----------------*/
