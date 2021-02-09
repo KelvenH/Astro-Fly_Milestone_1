@@ -12,7 +12,7 @@
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/d01fd203b5.js" crossorigin="anonymous"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
 
     <title>Astro:Fly (Home)</title>
 
@@ -20,31 +20,44 @@
 
 <body>
 
- <header>
+    <header>
 
-        <nav class="nav-menu container-fluid fixed-top d-inline-flex justify-content-around">
-            <p class="brand large">Astr<span class="iconify icon-planet align-self-center" data-icon="bx:bxs-planet"
-                    data-inline="true"></span>:Fly</p>
-            <ul class="menu-list">
-                <li class="dropdown-list"><a class="dropdown-icon" href="#"><i class="fas fa-bars"></i></a>
-                    <ul class="dropdown-items">
-                        <li><a class="btn btn-lg" href="#" title="Home" target="_blank" rel="nofollow"><i
-                                    class="fa fa-allergies"></i><span>Home</span></a></li>
-                        <li><a class="btn btn-lg" href="#" title="Exploration" target="_blank" rel="nofollow"><i
-                                    class="fa fa-allergies"></i><span>Exploration</span></a></li>
-                        <li><a class="btn btn-lg" href="#" title="Viewing Port" target="_blank" rel="nofollow"><i
-                                    class="fa fa-allergies"></i><span>Viewing Port</span></a></li>
-                        <li><a class="btn btn-lg" href="#" title="Register" target="_blank" rel="nofollow"><i
-                                    class="fa fa-allergies"></i><span>Register</span></a></li>
-                        <li><a class="btn btn-lg" href="#" title="News" target="_blank" rel="nofollow"><i
-                                    class="fa fa-allergies"></i><span>News [Inactive]</span></a></li>
-                        <li><a class="btn btn-lg" href="#" title="Careers" target="_blank" rel="nofollow"><i
-                                    class="fa fa-allergies"></i><span>Careers [Inactive]</span></a></li>
-                    </ul>
-                </li>
-            </ul>
+        <nav class="navbar align-items-center">
+
+            <a class="navbar-brand mx-auto" href="#">Astr<span class="iconify icon-planet align-self-center"
+                    data-icon="bx:bxs-planet" data-inline="true"></span>:Fly</a>
+            <button class="navbar-toggler justify-self-end" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Dropdown menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <div class="clip-box-one-outer">
+                    <p class="dropdown-header clip-box-one-inner">MISSION CONTROL</p>
+                </div>
+                <div class="clip-box-one-outer">
+                    <a class="clip-box-one-inner dropdown-item" href="#">HOME</a>
+                </div>
+                <div class="clip-box-one-outer">
+                    <a class="clip-box-one-inner dropdown-item" href="#">EXPLORATION</a>
+                </div>
+                <div class="clip-box-one-outer">
+                    <a class="clip-box-one-inner dropdown-item" href="#">VIEWING PORT</a>
+                </div>
+                <div class="clip-box-one-outer">
+                    <a class="clip-box-one-inner dropdown-item" href="#">SIGN-UP</a>
+                </div>
+                <div class="clip-box-one-outer">
+                    <a class="clip-box-one-inner dropdown-item" href="#">NEWS</a>
+                </div>
+                <div class="clip-box-one-outer">
+                    <a class="clip-box-one-inner dropdown-item" href="#">HOME</a>
+                </div>
+                <div class="clip-box-one-outer">
+                    <a class="clip-box-one-inner dropdown-item" href="#">ASTRO CAREERS</a>
+                </div>
+            </div>
+
         </nav>
-
 
     </header>
 
@@ -57,7 +70,7 @@
         </div>
 
         <div class="row">
-            <div class="col-12 intro box d-flex justify-content-center">
+            <div class="col-12 d-flex justify-content-center" id="intro-box">
                 <article class="intro text">
                     <h3>Welcome to <p class="brand norm">Astr<span class="iconify icon-planet align-self-center"
                                 data-icon="bx:bxs-planet" data-inline="true"></span>:Fly</p>
@@ -65,93 +78,171 @@
                     <p>Pioneering commerical space travel</p>
                 </article>
                 <div class="d-flex align-items-center intro-ticker">
-                    <ul class="d-flex intro-ticker-news"> 
-                       
-                        <li class="Astro-news"> //  Astro:NEWS  // </li>
-                        <li class="news-item">  Registration open for phase 1 commercial flights to Lunar Base 5.   Hurry - only 50 seats remaining!  Take one small step today towards a giant leap into other worldly adventures!  </li>
-                       
-                        <li class="break-news"> //  BREAKING:NEWS  // </li>
-                        <li class="news-item">  Astro:CORP wins case on appeal brought by US Federal Reserve. Supreme Court makes landmark ruling declaring financial affairs of Astro:CORP as being 'exempt from all national regulatory and taxation schemes’. The ruling brings an end to the saga following the company’s move to register Head Office on Lunar Base 5 and the formation of Astro:FINANCE which manages the groups monetary affairs including ‘off-planetary’ banking facilities of staff and investors.  </li> 
-                        
-                        <li class="Astro-news"> //  Astro:NEWS  // </li>
-                        <li class="news-item">  Registration open for phase 1 commercial flights to Lunar Base 5.   Hurry - only 23 seats remaining!  -   Take one small step today towards a giant leap into other worldly adventures!  </li>
-                        
-                        <li class="Astro-news"> //  Astro:NEWS  // </li>
-                        <li class="news-item">  Looking to launch a new career? Head to the careers portal to discover the exciting opportunities currently available at Astro:FLY and the wider Astro:CORP Group. You’ll find a fantastic range of roles offering benefits which are ‘out of this world!’.  </li> 
-                      
-                        <li class="break-news"> //  BREAKING:NEWS  // </li>
-                        <li class="news-item">  Huge reactions from the cities following today’s ruling -  all global market activities suspended - Bank of England appeals for calm. Spokesman for Astro:Corp said the company was hopeful today’s ruling would not lead to a financial crash and also confirmed financial services of Astro:FINANCE remain unaffected and are ‘open for business’.  </li> 
-                       
-                        <li class="Astro-news"> //  Astro:NEWS  // </li>
-                        <li class="news-item">  Registration for phase 1 commercial flights to Lunar Base 5 have now sold out! But don’t worry, an additional 50 seats are being made available and will be offered on the site soon.  </li>
-                        
-                        <li class="Astro-news"> //  Astro:NEWS  // </li>
-                        <li class="news-item">  Details for next year’s Astro:FLY Space Safari have been announced. The initial pre-registration will be by exclusive invitation only to VIP members. Any remaining availability will be offered to the general public – make sure you follow Astro:FLY on social media for further announcements.  </li> 
-                        
-                       <li class="Astro-news"> //  Astro:NEWS  // </li>
-                        <li class="news-item">  Scientific tests on element-X - identified by Astro:MINE’s exploratory drilling on XXXXXX, indicate ‘unique qualities’ unparalleled with known precious metals.  </li>
-                    </ul>    
+                    <ul class="d-flex intro-ticker-news">
+
+                        <li class="Astro-news"> // Astro:NEWS // </li>
+                        <li class="news-item"> Registration open for phase 1 commercial flights to Lunar Base 5. Hurry -
+                            only 50 seats remaining! Take one small step today towards a giant leap into other worldly
+                            adventures! </li>
+
+                        <li class="break-news"> // BREAKING:NEWS // </li>
+                        <li class="news-item"> Astro:CORP wins case on appeal brought by US Federal Reserve. Supreme
+                            Court makes landmark ruling declaring financial affairs of Astro:CORP as being 'exempt from
+                            all national regulatory and taxation schemes’. The ruling brings an end to the saga
+                            following the company’s move to register Head Office on Lunar Base 5 and the formation of
+                            Astro:FINANCE which manages the groups monetary affairs including ‘off-planetary’ banking
+                            facilities of staff and investors. </li>
+
+                        <li class="Astro-news"> // Astro:NEWS // </li>
+                        <li class="news-item"> Registration open for phase 1 commercial flights to Lunar Base 5. Hurry -
+                            only 23 seats remaining! - Take one small step today towards a giant leap into other worldly
+                            adventures! </li>
+
+                        <li class="Astro-news"> // Astro:NEWS // </li>
+                        <li class="news-item"> Looking to launch a new career? Head to the careers portal to discover
+                            the exciting opportunities currently available at Astro:FLY and the wider Astro:CORP Group.
+                            You’ll find a fantastic range of roles offering benefits which are ‘out of this world!’.
+                        </li>
+
+                        <li class="break-news"> // BREAKING:NEWS // </li>
+                        <li class="news-item"> Huge reactions from the cities following today’s ruling - all global
+                            market activities suspended - Bank of England appeals for calm. Spokesman for Astro:Corp
+                            said the company was hopeful today’s ruling would not lead to a financial crash and also
+                            confirmed financial services of Astro:FINANCE remain unaffected and are ‘open for business’.
+                        </li>
+
+                        <li class="Astro-news"> // Astro:NEWS // </li>
+                        <li class="news-item"> Registration for phase 1 commercial flights to Lunar Base 5 have now sold
+                            out! But don’t worry, an additional 50 seats are being made available and will be offered on
+                            the site soon. </li>
+
+                        <li class="Astro-news"> // Astro:NEWS // </li>
+                        <li class="news-item"> Details for next year’s Astro:FLY Space Safari have been announced. The
+                            initial pre-registration will be by exclusive invitation only to VIP members. Any remaining
+                            availability will be offered to the general public – make sure you follow Astro:FLY on
+                            social media for further announcements. </li>
+
+                        <li class="Astro-news"> // Astro:NEWS // </li>
+                        <li class="news-item"> Scientific tests on element-X - identified by Astro:MINE’s exploratory
+                            drilling on XXXXXX, indicate ‘unique qualities’ unparalleled with known precious metals.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid align-items-center home-main">
-        <div class="row">
-            <div class="col-12 mission box box-dark box-arrow d-flex justify-content-center align-items-center">
-                <article class="mission text">
-                    <h3>Our Mission</h3>
-                    <p>Astro:Fly believes space exploration should be a possibilty for all - no longer limited to
+    <div id="main-window-image">
+
+        <div class="accordion" id="home-accordian">
+
+            <div class="card">
+                <div class="card-header" id="heading-mission">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapse-mission" aria-expanded="false" aria-controls="collapse-mission">
+                            Our Mission
+                        </button>
+                    </h3>
+                </div>
+
+                <div id="collapse-mission" class="collapse text-mission" aria-labelledby="heading-mission"
+                    data-parent="#home-accordian">
+                    <div class="card-body">
+                        Astro:Fly believes space exploration should be a possibilty for all - no longer limited to
                         national space agencies. Not only will you be able to follow in the footsteps of astro-nautical
                         pioneers but take an even greater leap and venture beyond to places no human has been before.
                         <br>The new dawn of space adventure has arrived!
-                       <!---- <img class="intro-img" src="/assets/images/intro-img-small.png" alt="space departure lounge ">
-                    --->
-                    </p>
-                </article>
+                    </div>
+                </div>
             </div>
-        </div>
 
-     
 
-        
-        <div class="row">
-            <div class="col-12 quote box box-dark box-arrow justify-content-center align-items-center">
-                <h3 class="quote text"> "The Earth is a very small stage in a vast cosmic arena"<span> - Carl
-                        Sagan</span>
-                </h3>
+
+            <div class="card">
+                <div class="card-header" id="heading-quote">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapse-quote" aria-expanded="false" aria-controls="collapse-quote">
+                            Quote
+                        </button>
+                    </h3>
+                </div>
+
+                <div id="collapse-quote" class="collapse text-quote" aria-labelledby="heading-quote"
+                    data-parent="#home-accordian">
+                    <div class="card-body">
+                        "The Earth is a very small stage in a vast cosmic arena"<span> - Carl Sagan</span>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12 flights box box-dark box-arrow justify-content-center align-items-center">
-                <article class="flights text">
-                    <h3>Space Flights</h3>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+
+            <div class="card">
+                <div class="card-header" id="heading-trips">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapse-trips" aria-expanded="false" aria-controls="collapse-trips">
+                            Space Flights
+                        </button>
+                    </h3>
+                </div>
+
+
+                <div id="collapse-trips" class="collapse text-trips" aria-labelledby="heading-trips"
+                    data-parent="#home-accordian">
+                    <div class="card-body">
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                         Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
                         libero
                         sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
-                    </p>
-                </article>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12 mini-gallery box box-dark box-arrow justify-content-center align-items-center">
-                <article class="flights text">
-                    <h3>Mini-Gallery</h3>
-                </article>
+
+
+            <div class="card">
+                <div class="card-header" id="heading-mini-gallery">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapse-mini-gallery" aria-expanded="false"
+                            aria-controls="collapse-mini-gallery">
+                            Mini-Gallery
+                        </button>
+                    </h3>
+                </div>
+
+                <div id="collapse-mini-gallery" class="collapse text-mini-gallery"
+                    aria-labelledby="heading-mini-gallery" data-parent="#home-accordian">
+                    <div class="card-body">
+                        Images to be added here
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-12 countdown box box-dark box-arrow justify-content-center align-items-center ">
-                <article class="countdown text">
-                    <h3>Countdown Timer</h3>
-                </article>
+
+            <div class="card">
+                <div class="card-header" id="heading-countdown">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapse-countdown" aria-expanded="false" aria-controls="collapse-countdown" href="#collapse-countdown">
+                            Countdown
+                        </button>
+                    </h3>
+                </div>
+
+                <div id="collapse-countdown" class="collapse text-countdown" aria-labelledby="heading-countdown"
+                    data-parent="#home-accordian">
+                    <div class="card-body">
+                        Countdown Timer to be added here
+                    </div>
+                </div>
             </div>
         </div>
 </div>
+
 
         <footer class="footer fixed-bottom">
 
@@ -186,8 +277,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
             crossorigin="anonymous"></script>
-
-    
 
 </body>
 
