@@ -39,6 +39,7 @@
 }
 
 
+
 p {
     margin-bottom:0;
 }
@@ -321,5 +322,83 @@ h3 {
     border-bottom-right-radius:0.5rem;
     background-color:rgb(106, 103, 103);
     
+}
+
+/*-------------------------Exploration PAGE-----------------*/
+
+
+
+#main-exploration-image {
+    background-image:url("/assets/images/Star-sky-portrait-small.jpeg"); 
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    border-top:none;
+    background-attachment: fixed;
+    display:inline-block;
+}
+
+.exploration-item {
+      background-color:#24242480;
+      display:block;
+      margin:0 auto;
+      margin-top:15vh;
+      padding-top:5vw;
+      width:80vw;
+    }
+
+
+#exploration h2 {
+    font-family:'ethnocentric_rg', sans-serif;
+}
+
+
+
+.exploration-quote span {
+    font-style: italic;
+}
+
+
+.explorations-trips p{
+    padding-top:10vh;
+}
+
+
+#destinations-image-one {
+    margin-top:10vh;
+    float:right; 
+    width:60%;
+   
+}
+
+#destinations-image-two {
+    margin-top:10vh;
+    float:left; 
+    width:50%;
+
+   
+}
+
+#destinations-image-three {
+    margin-top:10vh;
+    float:right; 
+    
+
+.earth {
+    float:left;
+
+}
+
+
+.lunar {
+    float:right;
+   
+}
+
+
+.safari {
+     float:left;
+
 }
 
