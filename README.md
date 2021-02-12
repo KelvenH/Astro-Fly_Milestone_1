@@ -12,14 +12,10 @@ Astro:Fly is a fictional company set to offer space tourism / commercial flights
 1|4/01/21|Initial outline of README content| Outline to be discussed with mentor
 1.1 |04/01/21|Added personal, business and client goals ||
 1.2 |19/01/21|General updates to reflect ongoing development through initial build of core||
+1.3 |12/02/21|Added key points of feedback from mentor 1:1, updated tasks, content and themes with developments||
 1.4 |XX/XX/21|XXXXXXXXXX||
 1.5 |XX/XX/21|XXXXXXXXXX||
-1.6 |XX/XX/21|XXXXXXXXXX||
-1.7 |XX/XX/21|XXXXXXXXXX||
-1.8 |XX/XX/21|XXXXXXXXXX||
-1.9 |XX/XX/21|XXXXXXXXXX||
-1.10 |XX/XX/21|XXXXXXXXXX||
-1.11 |XX/XX/21|XXXXXXXXXX||
+
 
 
 ---
@@ -28,8 +24,8 @@ Record of key outcomes from discussions with mentor
 
 Session # | Date | Key Questions / Points to Raise | Key Points of Feedback |
 --------- | ---- | ------------------------------- | ---------------------- |
-1 | 20/01/21 | Review wireframes, UX & README | - |
-2 | Kelv to schedule | TBC | - |
+1 | 20/01/21 | Review wireframes, UX & README | Keep simple, use Figma for MS2, include images in early mock-ups, use media queries for respsonsiveness challenges, achieve c. 65% completion by 2nd mentor 1:1 |
+2 | 17/02/21 | Current bugs; accordion drop-down off-screen | - |
 3 | Kelv to schedule | TBC | - |
 
 ---
@@ -57,7 +53,7 @@ Initiate Repository and README file | - | Done | - |
 Determine Project Subject | Considertions and outcome tabled below | Done | Opted for ficticiuous space tourism company site|  
 Conduct Research | Refer to existing sites for examples of content structure and features | Done | - |
 Develop Wireframes / Balsamiq | Review course materials / Slack guides prior to commencing | In Progress | Largely complete, but adjustments in initial build will require adjustments to the final documentation |
-Schedule sessions with mentor | To take place after wireframes developed, mid-development and towards end of final build | In Progress | - |
+Schedule sessions with mentor | To take place after wireframes developed, mid-development and towards end of final build | In Progress | 2nd 1:1 booked |
 Revisit course materials, projects and assessment criteria to ensure requirements addressed | - | Weekly CheckPoint (On-going) | - |
 Initiate site skeleton based on wireframes | - | In Progress | - |
 Futher actions to be added as activity progresses | - | - | - |
@@ -135,7 +131,7 @@ Content & features initially considered and indication where incorporated into b
 
 Page | Content | Features | In Build | Comments |
 -----|---------|----------|----------|----------|
-Home | About, Navigation Bar | static background image, interactive Nav bar, transition effects | TBC | - |
+Home | About, Navigation Bar | static background image, interactive Nav bar, transition effects | Nav bar developed for mobie, need to refine and develop version for larger screen sizes. Some content to be finalised. | Some content to be finalised. |
 Home| Timeline conception to launch| TBC | No | Dropped as requires additional development - viewed as nice to have and not neccessity to the site  |
 Home | Countdown Timer to maiden launch| TBC | TBC | -
 Voyage Overview| Pre-voyage (medical, training, quarantine)  | Expandable List | TBC | - |
@@ -143,10 +139,11 @@ Voyage Overview| Voyage Route | Map | TBC | - |
 Voyage Overview| Ship Facilities | Interactive List, Floorplan with hover over text | TBC | - |
 Voyage Overview| Premium Upgrades | Interactive List | TBC | - |
 Voyage Overview| - | TBC | TBC | - |
-Gallery| stock images / artist impressions of departure port, ships, moon base, crew and celestial images | TBC | TBC | - |
+Gallery| stock images / artist impressions of departure port, ships, moon base, crew and celestial images | TBC | TBC | - Some content to be finalised.
 Register Interest | - | modal form | TBC | - |
-Careers | - | TBC | TBC | - |
-News | - | Ficticious news stories and links to live external sites (e.g. NASA, Space-X, Virgin Galactic) | TBC | - |
+Careers | - | - | Dropped | Over and above project requirements | referrence left within navigation menus to retain asthetics |
+News | - | Ficticious news stories and links to live external sites (e.g. NASA, Space-X, Virgin Galactic) | Dropped - but added news style ticker to homepage | - |
+
 
 ---
 ## Styles
@@ -179,7 +176,7 @@ Futuristic | Yes | Expect these to be more easily available and achieved through
 Bootstrap 4
 Google Fonts
 Font Awesome
-
+Adobe Photoshop
 
 ---
 ## Testing
@@ -200,5 +197,5 @@ Font Awesome
 - w3schools.com
 - Github community
 - YouTube (Kevin Powell and Dani Krossing) - 
-- image sources - Shutterstock, Pexels and Depositphotos?
+- image sources - Adobe Stock, Shutterstock, Pexels and Depositphotos?
 
