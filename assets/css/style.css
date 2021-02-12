@@ -392,6 +392,7 @@ h3 {
 #destinations-image-three {
     margin-top:10vh;
     float:right; 
+    width:40%;
 }   
 
 .earth {
@@ -410,3 +411,11 @@ h3 {
 
 }
 
+.txt-left {
+ text-align: left;
+}
+
+
+.txt-right {
+    text-align: right;
+}
