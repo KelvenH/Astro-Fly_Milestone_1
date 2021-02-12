@@ -106,11 +106,13 @@ h3 {
 .dropdown-item {
    background:#242424;
    color: rgb(255, 127, 0);
-
-
  
 }
 
+.dropdown-item:hover {
+        background: rgb(255, 127, 0);
+        color:#242424;
+}
 
 /*-------------------------Footer-----------------*/
 
@@ -293,6 +295,14 @@ h3 {
     color: orange;
     }
 
+#home-accordian .btn-link:hover {
+    text-decoration: none;
+        color: orange;
+        border-style: none; 
+        outline:none;
+        box-shadow:none;
+}
+
 #home-accordian .btn-link:hover,
 #home-accordian .btn-link:focus,
 #home-accordian .btn-link:active,
@@ -303,7 +313,6 @@ h3 {
         outline:none;
         box-shadow:none;
 }
-
 
 .card-header {
     border:0.25rem solid;
