@@ -44,7 +44,7 @@ p {
     margin-bottom:0;
 }
 
-    html, body {
+html, body {
     height:100%;
     font-family: 'Goldman', sans-serif;
     font-size: clamp(16px, 2vw, 36px);
@@ -81,14 +81,21 @@ h3 {
 
    background-color: #242424;
    border-bottom: 5px solid RGBA(255,129,10,0.8);
-    font-family:'ethnocentric_rg', sans-serif;
-    color: RGBA(255,129,10,0.9);
-    line-height: 7vh;
+   font-family:'ethnocentric_rg', sans-serif;
+   color: RGBA(255,129,10,0.9);
+   line-height: 7vh;
 }
 
 .navbar-brand, .navbar-toggler {
-        color: rgba(255,129,10,0.9);
+    color: rgba(255,129,10,0.9);
     font-size: clamp(30px, 8vw, 60px);
+    text-shadow:2px 2px 2px black;
+}
+
+
+/*---intentional increase on planet icon shadow to create 3D effect-----*/
+.icon-planet {
+    filter: drop-shadow(5px 5px 2px black);
 }
 
 
@@ -162,8 +169,8 @@ h3 {
 
 .welcome-strapline {
     font-family:'ethnocentric_rg', sans-serif;
-    color:RGBA(255,129,10,0.9);
-    text-shadow:2px 2px 30px black;
+    color:RGBA(255,129,10,1);
+    text-shadow:2px 2px 2px black;
     text-align:right;
     padding-top: 3vw;
     padding-left:50vw;
@@ -210,9 +217,13 @@ h3 {
     flex-wrap: wrap;
     position: relative;
     background-color:none;
-    background:url(/assets/images/metal-grille.jpg);
+    background:url(/assets/images/Tiled-Hex_Black.svg);
     background-size: cover;
     }
+
+.intro-text {
+    text-shadow:2px 2px 2px black;
+}
 
   /*-------------------------Home Page - Intro / Ticker-----------------*/
 
@@ -226,6 +237,7 @@ h3 {
     overflow:hidden;
     margin:4vh 3vh 0 3vh;
     border-style:inset;
+    text-shadow:0px 0px 2px orange;
 
 }
 
@@ -248,7 +260,7 @@ h3 {
     flex-shrink: 0;
     white-space: pre-wrap;
     padding-left:1vw;
-
+    
     }
 
 .break-news {
@@ -263,7 +275,7 @@ h3 {
     100%  {transform: translateX(-3500%);}
 }
 
-/*-------------------------Home Page - background-----------------*/
+/*-------------------------Home Page main - background-----------------*/
 
 #main-window-image {
     background-image:url("/assets/images/main_background.jpg"); 
@@ -276,7 +288,7 @@ h3 {
 
 }
 
-/*-------------------------Home Page - main accordian-----------------*/
+/*-------------------------Home Page main - accordian-----------------*/
 
 #home-accordian {
     padding-bottom:10vh;
@@ -285,44 +297,33 @@ h3 {
     margin-top:0%;
 }
 
+#home-accordian button {
+    padding:0;
+}
+
+
 .card {
     background-color:transparent;
-    padding-top:10%;
     text-align:center;
     margin-bottom: 1vh;
 }
 
-.btn-link {
-    font-family:'ethnocentric_rg', sans-serif;
-    color: RGBA(255,129,10,0.8);
-    }
-
-#home-accordian .btn-link:hover {
-    text-decoration: none;
-        color: RGBA(255,129,10,1);
-        border-style: none; 
-        outline:none;
-        box-shadow:none;
-}
-
-#home-accordian .btn-link:hover,
-#home-accordian .btn-link:focus,
-#home-accordian .btn-link:active,
-#home-accordian .btn-link:visited {
-    text-decoration: none;
-        color: RGBA(255,129,10,1);
-        border-style: none; 
-        outline:none;
-        box-shadow:none;
-}
 
 .card-header {
-    border:0.25rem solid;
-    border-color: RGBA(255,129,10,0.8);
-    border-top-left-radius:0.5rem;
-    border-top-right-radius:0.5rem;
-    background-color: #242424;
-    text-align:center;
+    background-image:url("/assets/images/Accordion-Header-Background.svg"); 
+    background-repeat:no-repeat;
+    background-position: cover;
+    width:100%;
+    padding:1vh;
+    margin-top:3vh;
+    
+    /*--------
+    background-position: center;
+    width:100%;
+    height: 100%;
+    border-top:none;
+    background-attachment: fixed;------------*/
+ 
 }
 
 .card-body {
@@ -334,6 +335,34 @@ h3 {
     background-color:rgb(106, 103, 103);
     
 }
+
+
+.btn-link {
+    font-family:'ethnocentric_rg', sans-serif;
+    color: RGBA(255,129,10,0.8);
+    }
+
+#home-accordian .btn-link:hover {
+    text-decoration: none;
+    color: RGBA(255,129,10,1);
+    border-style: none; 
+    outline:none;
+    box-shadow:none;
+}
+
+ /*--------
+#home-accordian .btn-link:hover,
+#home-accordian .btn-link:focus,
+#home-accordian .btn-link:active,
+#home-accordian .btn-link:visited {
+    text-decoration: none;
+        color: RGBA(255,129,10,1);
+        border-style: none; 
+        outline:none;
+        box-shadow:none;
+}
+-----*/
+
 
 /*-------------------------Exploration PAGE-----------------*/
 
