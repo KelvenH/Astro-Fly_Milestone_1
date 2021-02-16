@@ -46,7 +46,7 @@ p {
 
 html, body {
     height:100%;
-    font-family: 'Goldman', sans-serif;
+    font-family: 'Baumans', sans-serif;
     font-size: clamp(16px, 2vw, 36px);
     color: RGBA(255,129,10,0.8);
     text-align: center;
@@ -292,57 +292,49 @@ h3 {
 
 #home-accordian {
     padding-bottom:10vh;
-    width:75%;
+    width:75vw;
     margin:15%;
     margin-top:0%;
 }
 
 #home-accordian button {
     padding:0;
+    line-height: 6vh;
 }
 
 
 .card {
     background-color:transparent;
-    text-align:center;
     margin-bottom: 1vh;
 }
 
 
 .card-header {
     background-image:url("/assets/images/Accordion-Header-Background.svg"); 
+    background-position: top;
+    background-size:cover;
+    height:100%;
     background-repeat:no-repeat;
-    background-position: cover;
-    width:100%;
-    padding:1vh;
     margin-top:3vh;
-    
-    /*--------
-    background-position: center;
-    width:100%;
-    height: 100%;
-    border-top:none;
-    background-attachment: fixed;------------*/
- 
+    padding:0;
 }
 
-.card-body {
-    border-style: solid;
-    border-width: 0 0.25rem 0.25rem 0.25rem;
-    border-color: RGBA(255,129,10,0.8);
-    border-bottom-left-radius:0.5rem;
-    border-bottom-right-radius:0.5rem;
-    background-color:rgb(106, 103, 103);
-    
+
+.card-header h3 {
+    padding-left:3vw;
 }
+ 
 
 
 .btn-link {
     font-family:'ethnocentric_rg', sans-serif;
     color: RGBA(255,129,10,0.8);
-    }
+}
 
-#home-accordian .btn-link:hover {
+
+#home-accordian .btn-link:hover,
+#home-accordian .btn-link:focus,
+#home-accordian .btn-link:active {
     text-decoration: none;
     color: RGBA(255,129,10,1);
     border-style: none; 
@@ -350,19 +342,51 @@ h3 {
     box-shadow:none;
 }
 
- /*--------
-#home-accordian .btn-link:hover,
-#home-accordian .btn-link:focus,
-#home-accordian .btn-link:active,
-#home-accordian .btn-link:visited {
-    text-decoration: none;
-        color: RGBA(255,129,10,1);
-        border-style: none; 
-        outline:none;
-        box-shadow:none;
-}
------*/
 
+.card-body {
+    color: RGBA(255,129,10,1);
+    text-shadow:2px 2px 2px black;
+    padding-top:3vh;
+    padding-bottom:5vh;
+  
+    
+   /*---- 
+    background-color: RGBA(255,129,10,0.4);
+    padding: 3vw;
+    border-style: solid;
+    border-width: 0 0.25rem 0.25rem 0.25rem;
+    border-color: RGBA(255,129,10,0.8);
+    border-bottom-left-radius:0.5rem;
+    border-bottom-right-radius:0.5rem;
+    -----*/
+}
+
+
+#collapse-mission {
+    background-image:url("/assets/images/Accordion-Item-Background-5.svg"); 
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    padding:0;
+    background-color: RGBA(24,24,24,0.8);
+    }
+
+
+#collapse-trips {
+    background-image:url("/assets/images/Accordion-Item-Background-4.svg"); 
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    padding:0;
+    background-color: RGBA(24,24,24,0.8);
+}
+
+#collapse-mini-gallery,
+#collapse-countdown {
+    background-image:url("/assets/images/Accordion-Item-Background-4.svg"); 
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    padding:0;
+    background-color: RGBA(24,24,24,0.8);
+}
 
 /*-------------------------Exploration PAGE-----------------*/
 
