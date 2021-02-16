@@ -5,7 +5,7 @@
     url(../fonts/ethnocentric_rg-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
-}
+    }
 
 @font-face {
     font-family: 'ethnocentric_el';
@@ -14,35 +14,35 @@
     url('../fonts/ethnocentric_el-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+    }
 
 /*-------------------------General Settings-----------------*/
 
 * {
     margin:0;
     padding:0;
-}
+    }
 
 .container {
     margin:0;
     padding:0;
-}
+    }
 
 .container-fluid {
     margin:0;
     padding:0;
-}
+    }
 
 .row {
     margin:0;
     padding:0;
-}
+    }
 
 
 
 p {
-    margin-bottom:0;
-}
+    margin-bottom:0;   
+    }
 
 html, body {
     height:100%;
@@ -51,13 +51,13 @@ html, body {
     color: RGBA(255,129,10,0.8);
     text-align: center;
     background-color:transparent;
-}
+    }
 
 h3 {
     font-size: clamp(28px, 2vw, 36px);
     font-family:'ethnocentric_rg', sans-serif;
     color: RGBA(255,129,10,0.8);
-}
+    }
 
 /*-------------------------Custom Shaped Boxes----------------*/
 
@@ -65,15 +65,12 @@ h3 {
 .clip-box-one-outer {
     clip-path:polygon(1% 6%, 6% 1%, 54% 1%, 60% 4%, 92% 4%, 95% 10%, 95% 10%, 95% 10%, 95% 10%, 95% 38%, 94% 42%, 94% 50%, 95% 50%, 95% 60%, 95% 90%, 91% 99%, 53% 99%, 50% 95%, 40% 95%, 40% 99%, 11% 99%, 2% 90%, 2% 40%, 1% 36%, 1% 20%, 1% 6%);   
     background-color: RGBA(255,129,10,0.8);
-    
-   
-}
+    }
 
 .clip-box-one-inner {
     clip-path:polygon(2% 7%, 7% 2%, 54% 2%, 60% 5%, 67% 5%, 91% 5%, 94% 10%, 94% 38%, 92% 38%, 92% 15%, 91% 20%, 91% 39%, 93% 39%, 93% 52%, 94% 52%, 94% 90%, 91% 97%, 85% 97%, 53% 97%, 50% 93%, 39% 93%, 39% 98%, 11% 98%, 11% 96%, 38% 96%, 38% 95%, 9% 95%, 6% 92%, 50% 92%, 50% 91%, 5% 91%, 3% 90%, 3% 40%, 2% 36%, 2% 8%, 5% 8%, 5% 34%, 5% 7%, 2% 7%); 
     background-color:#242424;
-   
-}
+    }
 
 /*-------------------------Navbar----------------*/
 
@@ -84,42 +81,50 @@ h3 {
    font-family:'ethnocentric_rg', sans-serif;
    color: RGBA(255,129,10,0.9);
    line-height: 7vh;
-}
+    }
 
-.navbar-brand, .navbar-toggler {
+.navbar-logo, .navbar-toggler {
     color: rgba(255,129,10,0.9);
     font-size: clamp(30px, 8vw, 60px);
     text-shadow:2px 2px 2px black;
-}
+    }
 
+.navbar a:link,
+.navbar a:visited, 
+.navbar a:hover,
+.navbar a:active {
+    text-decoration: none;
+    color: rgba(255,129,10,0.9);
+    cursor: auto;
+    }
 
-/*---intentional increase on planet icon shadow to create 3D effect-----*/
+/*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
+
 .icon-planet {
     filter: drop-shadow(5px 5px 2px black);
-}
+    }
 
 
 .dropdown-menu {
     background-color:#242424;
     padding-top:0;
-}
+    }
+
 
 .dropdown-header {
     color: RGBA(255,129,10,0.8);
     font-weight: 600;
-        
     }
 
 .dropdown-item {
    background:#242424;
    color: RGBA(255,129,10,0.8);
- 
-}
+    }
 
 .dropdown-item:hover {
-        background: RGBA(255,129,10,1);
-        color:#242424;
-}
+    background: RGBA(255,129,10,1);
+    color:#242424;
+    }
 
 /*-------------------------Footer-----------------*/
 
@@ -133,14 +138,13 @@ h3 {
     text-align:center;
     border-top:10px solid;
     border-color: RGBA(255,129,10,0.8);
-  
-}
+    }
 
 
 .footer-main a {
     color:inherit;
     text-decoration:none;
-}
+    }
 
 
 /*-------------------------HOME PAGE-----------------*/
@@ -148,12 +152,12 @@ h3 {
 /*-------------------------Home Page - Welcome-----------------*/
 
 .welcome {
-    margin-top:11vh;
+    margin-top:10vh;
     height:30vh;
     font-size: clamp(16px, 4vw, 40px);
    /*------ padding-right: clamp(8px, 16px, 32px?);-----*/
-    border-bottom: 5px solid RGBA(255,129,10,0.8);
-}
+    border-bottom: 5px solid RGBA(255,129,10,1);
+    }
 
 .welcome-planet-img {
     background:url(/assets/images/planet_earth-xs.jpg);
@@ -165,7 +169,7 @@ h3 {
     animation-fill-mode: both;
     animation-duration:10s;
     animation-timing-function: linear;  
-} 
+    } 
 
 .welcome-strapline {
     font-family:'ethnocentric_rg', sans-serif;
@@ -180,7 +184,7 @@ h3 {
     animation-fill-mode: both;
     animation-duration:6s;
     animation-timing-function: ease;  
-}
+    }
 
 /*-------welcome animtaion------- desired effect - break of new dawn*/
 
@@ -223,7 +227,7 @@ h3 {
 
 .intro-text {
     text-shadow:2px 2px 2px black;
-}
+    }
 
   /*-------------------------Home Page - Intro / Ticker-----------------*/
 
@@ -238,8 +242,7 @@ h3 {
     margin:4vh 3vh 0 3vh;
     border-style:inset;
     text-shadow:0px 0px 2px orange;
-
-}
+    }
 
 .intro-ticker-news {
     display:inline-block;
@@ -251,7 +254,6 @@ h3 {
     margin-bottom:0;
     margin-top:2vh;
     padding-inline-start:0;
- 
     }
 
 .intro-ticker-news li {
@@ -260,20 +262,18 @@ h3 {
     flex-shrink: 0;
     white-space: pre-wrap;
     padding-left:1vw;
-    
     }
 
 .break-news {
     display:flex;
     background-color: RGBA(255,129,10,1);
     color: black;
-    
-}
+    }
 
 @keyframes animate {
      0%  {transform: translateX(120%);}
     100%  {transform: translateX(-3500%);}
-}
+    }
 
 /*-------------------------Home Page main - background-----------------*/
 
@@ -285,8 +285,7 @@ h3 {
     width:100%;
     border-top:none;
     background-attachment: fixed;
-
-}
+    }
 
 /*-------------------------Home Page main - accordian-----------------*/
 
@@ -295,19 +294,26 @@ h3 {
     width:75vw;
     margin:15%;
     margin-top:0%;
-}
+    }
 
 #home-accordian button {
     padding:0;
     line-height: 6vh;
-}
+    }
 
 
 .card {
     background-color:transparent;
     margin-bottom: 1vh;
-}
+    }
 
+/*----Note on SVGs: Background images were created in Adobe Illustrator and exported as SVGs. 
+Attempts to apply as border-image properties were unsuccessful so applied as background images. 
+Used a 3rd party tool (https://codepen.io/designcourse/live/mdydjBa) to re-calculate SVG viewbox properties 
+and set ‘preserveAspect Ratio’ to none to enable scaled fit within the div (settings within individual SVG files). 
+Opted to hold SVGs (opposed to inline CSS) to keep code cleaner. 
+Downside was inability to get the transparent background to fit SVG instead of div border 
+(next time needs to be applied in original SVG pre-export ------*/
 
 .card-header {
     background-image:url("/assets/images/Accordion-Header-Background.svg"); 
@@ -317,19 +323,18 @@ h3 {
     background-repeat:no-repeat;
     margin-top:3vh;
     padding:0;
-}
+    }
 
 
 .card-header h3 {
     padding-left:3vw;
-}
+    }
  
-
 
 .btn-link {
     font-family:'ethnocentric_rg', sans-serif;
     color: RGBA(255,129,10,0.8);
-}
+    }
 
 
 #home-accordian .btn-link:hover,
@@ -340,7 +345,7 @@ h3 {
     border-style: none; 
     outline:none;
     box-shadow:none;
-}
+    }
 
 
 .card-body {
@@ -359,7 +364,7 @@ h3 {
     border-bottom-left-radius:0.5rem;
     border-bottom-right-radius:0.5rem;
     -----*/
-}
+    }
 
 
 #collapse-mission {
@@ -377,7 +382,7 @@ h3 {
     background-repeat:no-repeat;
     padding:0;
     background-color: RGBA(24,24,24,0.8);
-}
+    }
 
 #collapse-mini-gallery,
 #collapse-countdown {
@@ -386,6 +391,10 @@ h3 {
     background-repeat:no-repeat;
     padding:0;
     background-color: RGBA(24,24,24,0.8);
+    }
+
+#collapse-countdown {
+    margin-bottom:5vh;
 }
 
 /*-------------------------Exploration PAGE-----------------*/
@@ -401,76 +410,71 @@ h3 {
     border-top:none;
     background-attachment: fixed;
     display:inline-block;
-}
+    }
 
 .exploration-item {
-      background-color:#24242480;
-      display:block;
-      margin:0 auto;
-      margin-top:15vh;
-      padding-top:5vw;
-      width:80vw;
+    background-color:#24242480;
+    display:block;
+    margin:0 auto;
+    margin-top:15vh;
+    padding-top:5vw;
+    width:80vw;
     }
 
 
 #exploration h2 {
     font-family:'ethnocentric_rg', sans-serif;
-}
+    }
 
 
 
 .exploration-quote span {
     font-style: italic;
-}
+    }
 
 
 .explorations-trips p{
     padding-top:10vh;
-}
+    }
 
 
 #destinations-image-one {
     margin-top:10vh;
     float:right; 
     width:60%;
-   
-}
+    }
 
 #destinations-image-two {
     margin-top:10vh;
     float:left; 
     width:50%;
-
-   
-}
+    }
 
 #destinations-image-three {
     margin-top:10vh;
     float:right; 
     width:40%;
-}   
+    }   
 
 .earth {
     float:left;
-}
+    }
 
 
 .lunar {
     float:right;
-
-}
+    }
 
 
 .safari {
-     float:left;
-
-}
+    float:left;
+    }
 
 .txt-left {
- text-align: left;
-}
+    text-align: left;
+    }
 
 
 .txt-right {
     text-align: right;
-}
+    }
