@@ -287,16 +287,16 @@ h3 {
     background-attachment: fixed;
     }
 
-/*-------------------------Home Page main - accordian-----------------*/
+/*-------------------------Home Page main - accordion-----------------*/
 
-#home-accordian {
+#home-accordion {
     padding-bottom:10vh;
     width:75vw;
     margin:15%;
     margin-top:0%;
     }
 
-#home-accordian button {
+#home-accordion button {
     padding:0;
     line-height: 6vh;
     }
@@ -337,9 +337,9 @@ Downside was inability to get the transparent background to fit SVG instead of d
     }
 
 
-#home-accordian .btn-link:hover,
-#home-accordian .btn-link:focus,
-#home-accordian .btn-link:active {
+#home-accordion .btn-link:hover,
+#home-accordion .btn-link:focus,
+#home-accordion .btn-link:active {
     text-decoration: none;
     color: RGBA(255,129,10,1);
     border-style: none; 

@@ -13,8 +13,18 @@
     <script src="https://kit.fontawesome.com/d01fd203b5.js" crossorigin="anonymous"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <script> 
+            $('#accordion').on('shown.bs.collapse', function (e) {
+            var offset = $(this).find('.collapse.in').prev('.panel-heading');
+            if(offset) {
+                $('html,body').animate({
+                    scrollTop: $(offset).offset().top -100
+                }, 500);
+            }
+        });
+</script> 
 
-    <title>Astro:Fly (Home)</title>
+<title>Astro:Fly (Home)</title>
 
 </head>
 
@@ -131,7 +141,7 @@
 
     <div id="main-window-image">
 
-        <div class="accordion" id="home-accordian">
+        <div class="accordion" id="home-accordion">
 
             <div class="card">
                 <div class="card-header" id="heading-mission">
@@ -144,7 +154,7 @@
                 </div>
 
                 <div id="collapse-mission" class="collapse text-mission" aria-labelledby="heading-mission"
-                    data-parent="#home-accordian">
+                    data-parent="#home-accordion">
                     <div class="card-body">
                         Astro:Fly believes space exploration should be a possibilty for all - no longer limited to
                         national space agencies. Not only will you be able to follow in the footsteps of astro-nautical
@@ -167,7 +177,7 @@
 
 
                 <div id="collapse-trips" class="collapse text-trips" aria-labelledby="heading-trips"
-                    data-parent="#home-accordian">
+                    data-parent="#home-accordion">
                     <div class="card-body">
                         Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                         Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu
@@ -191,7 +201,7 @@
                 </div>
 
                 <div id="collapse-mini-gallery" class="collapse text-mini-gallery"
-                    aria-labelledby="heading-mini-gallery" data-parent="#home-accordian">
+                    aria-labelledby="heading-mini-gallery" data-parent="#home-accordion">
                     <div class="card-body">
                         Images to be added here
                     </div>
@@ -210,7 +220,7 @@
                 </div>
 
                 <div id="collapse-countdown" class="collapse text-countdown" aria-labelledby="heading-countdown"
-                    data-parent="#home-accordian">
+                    data-parent="#home-accordion">
                     <div class="card-body">
                         Countdown Timer to be added here
                     </div>
