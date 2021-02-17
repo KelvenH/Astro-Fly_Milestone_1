@@ -87,7 +87,7 @@ h3 {
    border-bottom: 5px solid RGBA(255,129,10,0.8);
    font-family:'ethnocentric_rg', sans-serif;
    color: RGBA(255,129,10,0.9);
-   line-height: 7vh;
+   height: 9vh;
     }
 
 .navbar-logo, .navbar-toggler {
@@ -139,7 +139,7 @@ h3 {
     background-color: #242424;
     font-size: clamp(30px, 8vw, 60px);
     color: RGBA(255,129,10,0.8);
-    height: 10vh;
+    height: 9vh;
     position:sticky;
     display:inline-block;
     text-align:center;
@@ -158,8 +158,11 @@ h3 {
 
 /*-------------------------Home Page - Welcome-----------------*/
 
+.welcome-container {
+    margin-top:9vh;  
+}
+
 .welcome {
-    margin-top:10vh;
     height:30vh;
     font-size: clamp(16px, 4vw, 40px);
    /*------ padding-right: clamp(8px, 16px, 32px?);-----*/
@@ -239,48 +242,51 @@ h3 {
   /*-------------------------Home Page - Intro / Ticker---------*/
 
 
-.intro-ticker {
-    background-color: black;
-    font-family:'Aldrich', sans-serif;
-    font-size: clamp(14px, 2vw, 32px);
-    color: RGBA(255,129,10,1);
-    width:100vw;
-    height: 4vh;
-    overflow:hidden;
-    margin:4vh 3vh 0 3vh;
-    border-style:inset;
-    text-shadow:0px 0px 2px orange;
-    }
+.intro-ticker{
+  overflow: hidden; 
+  border-style:inset;
+  margin:4vh 3vh 0 3vh;
+  line-height:1rem;
+}
+
 
 .intro-ticker-news {
-    display:inline-block;
-    height:4vh;
-    list-style:none;
-    width: 100%;
-    background-color: none;
-    animation: animate 240s linear infinite;
-    margin-bottom:0;
-    margin-top:2vh;
-    padding-inline-start:0;
-    }
+  width: 100%;
+  padding-left: 100%; 
+  background-color: black;
+  color:RGBA(0,217,255,1);
+  background-size:100% 100%;
+  font-family:'digital';
+  font-size:70%;
+}
 
-.intro-ticker-news li {
-    display:inline-block;
-    justify-content: center;
-    flex-shrink: 0;
-    white-space: pre-wrap;
-    padding-left:1vw;
-    }
+.intro-ticker-animate {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: animate;
+  animation-duration: 120s;
+}
 
-.break-news {
-    display:flex;
-    background-color: RGBA(255,129,10,1);
-    color: black;
-    }
+
+.intro-news-item {
+  display: inline-block; 
+  padding-top: 0.5rem;
+  }
+
+
+.intro-news-item.breaking-news {
+color: black;
+background-color:RGBA(0,217,255,1);
+}
+
+
 
 @keyframes animate {
-     0%  {transform: translateX(120%);}
-    100%  {transform: translateX(-3500%);}
+     0%  {transform: translateX(0%);}
+    100%  {transform: translateX(-102%);}
     }
 
 /*-------------------------Home Page main - background-----------------*/
