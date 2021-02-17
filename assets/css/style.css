@@ -16,6 +16,13 @@
     font-style: normal;
     }
 
+@font-face {
+    src:url('/assets/fonts/AdvancedDotDigital7-OpXA.ttf');
+    font-family:'digital';
+    }
+
+
+
 /*-------------------------General Settings-----------------*/
 
 * {
@@ -59,7 +66,7 @@ h3 {
     color: RGBA(255,129,10,0.8);
     }
 
-/*-------------------------Custom Shaped Boxes----------------*/
+/*-------------------------Custom Shaped Boxes (clip-paths)----------------*/
 
 
 .clip-box-one-outer {
@@ -229,7 +236,8 @@ h3 {
     text-shadow:2px 2px 2px black;
     }
 
-  /*-------------------------Home Page - Intro / Ticker-----------------*/
+  /*-------------------------Home Page - Intro / Ticker---------*/
+
 
 .intro-ticker {
     background-color: black;
