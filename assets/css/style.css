@@ -1,3 +1,8 @@
+
+/*-------------------------Fonts-----------------*/
+/*-licence purchased for ethnocentric via fontspring.com*/
+/*-Digital font available on free usage for non-commercial use via .com*/
+
 @font-face {
     font-family: 'ethnocentric_rg';
     src: 
@@ -235,12 +240,20 @@ h3 {
     background-size: cover;
     }
 
+
 .intro-text {
     text-shadow:2px 2px 2px black;
     }
 
+
+.intro-text p {
+    font-size:1.25rem;
+    }
+
+
   /*-------------------------Home Page - Intro / Ticker---------*/
 
+/*---guidance from https://code-boxx.com/html-css-news-ticker-horizontal-vertical/ ----*/
 
 .intro-ticker{
   overflow: hidden; 
@@ -283,7 +296,6 @@ background-color:RGBA(0,217,255,1);
 }
 
 
-
 @keyframes animate {
      0%  {transform: translateX(0%);}
     100%  {transform: translateX(-102%);}
@@ -305,13 +317,13 @@ background-color:RGBA(0,217,255,1);
 
 #home-accordion {
     padding-bottom:10vh;
-    width:75vw;
-    margin:15%;
+    width:90vw;
+    margin-left:5vw;
     margin-top:0%;
     }
 
 #home-accordion button {
-    padding:0;
+    padding-left:5vw;
     line-height: 6vh;
     }
 
@@ -331,19 +343,18 @@ Downside was inability to get the transparent background to fit SVG instead of d
 
 .card-header {
     background-image:url("/assets/images/Accordion-Header-Background.svg"); 
-    background-position: top;
+    background-position: left;
     background-size:cover;
-    height:100%;
     background-repeat:no-repeat;
     margin-top:3vh;
     padding:0;
     }
 
-
+/*--
 .card-header h3 {
     padding-left:3vw;
     }
- 
+ --*/
 
 .btn-link {
     font-family:'ethnocentric_rg', sans-serif;
@@ -362,24 +373,28 @@ Downside was inability to get the transparent background to fit SVG instead of d
     }
 
 
-.card-body {
+ .card-body {
     color: RGBA(255,129,10,1);
     text-shadow:2px 2px 2px black;
-    padding-top:3vh;
-    padding-bottom:5vh;
-  
-    
-   /*---- 
-    background-color: RGBA(255,129,10,0.4);
-    padding: 3vw;
-    border-style: solid;
-    border-width: 0 0.25rem 0.25rem 0.25rem;
-    border-color: RGBA(255,129,10,0.8);
-    border-bottom-left-radius:0.5rem;
-    border-bottom-right-radius:0.5rem;
-    -----*/
+    background-color:transparent;
+    padding:2rem 1rem 2.1rem 1rem;
     }
 
+.backpanel {
+    border-style: solid;
+    border-image-source: url("/assets/images/Accordion-Item-Background-7.svg");
+    border-image-slice:16 18 17 12;
+    border-image-width:2% 5% 5% 5%;
+    border-image-outset:0px 0px 0px 0px;
+    border-image-repeat:stretch stretch;
+    background-color:RGBA(24,24,24,0.8);
+    padding:auto;
+   
+}
+ 
+
+/*---- commented out 1st attempt at using SVG for backgrounds
+     
 
 #collapse-mission {
     background-image:url("/assets/images/Accordion-Item-Background-5.svg"); 
@@ -410,6 +425,55 @@ Downside was inability to get the transparent background to fit SVG instead of d
 #collapse-countdown {
     margin-bottom:5vh;
 }
+   
+   #home-accordion .card-body {
+    padding:0;
+    
+    padding:1.5rem 1rem 1.5rem 0.75rem;
+    
+-----*/
+
+/*-- commented out second attempt at using SVGs for backgrounds
+
+.bp-1 {
+    background-image:url("/assets/images/Accordion-Item-Background-1.svg"); 
+}
+
+.bp-2 {
+    background-image:url("/assets/images/Accordion-Item-Background-2.svg"); 
+}
+
+.bp-3 {
+    background-image:url("/assets/images/Accordion-Item-Background-3.svg"); 
+}
+
+.bp-4 {
+    background-image:url("/assets/images/Accordion-Item-Background-4.svg"); 
+}
+
+.bp-5 {
+    background-image:url("/assets/images/Accordion-Item-Background-5.svg");
+}
+
+.bp-6 {
+    background-image:url("/assets/images/Accordion-Item-Background-6.svg");
+}
+
+.bp-7 {
+    background-image:url("/assets/images/Accordion-Item-Background-7.svg");
+}
+
+.backpanel {
+    background-repeat:no-repeat;
+    background-size: 100% 100%; 
+    background-color: RGBA(24,24,24,0.8);
+    }
+ 
+ 
+    --*/
+
+
+
 
 /*-------------------------Exploration PAGE-----------------*/
 
