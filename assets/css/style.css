@@ -5,20 +5,7 @@
 
 @font-face {
     font-family: 'ethnocentric_rg';
-    src: 
-    url(../fonts/ethnocentric_rg-webfont.woff2) format('woff2'),
-    url(../fonts/ethnocentric_rg-webfont.woff) format('woff');
-    font-weight: normal;
-    font-style: normal;
-    }
-
-@font-face {
-    font-family: 'ethnocentric_el';
-    src: 
-    url('../fonts/ethnocentric_el-webfont.woff2') format('woff2'),
-    url('../fonts/ethnocentric_el-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    src:url('/assets/fonts/ethnocentric_rg-webfont.woff');
     }
 
 @font-face {
@@ -49,7 +36,6 @@
     margin:0;
     padding:0;
     }
-
 
 
 p {
@@ -90,6 +76,11 @@ h3 {
     text-shadow:2px 2px 2px black;
     }
 
+.dropdown-item:hover {
+    background: RGBA(255,129,10,1);
+    color:#242424;
+        }
+
     /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
 
 .icon-planet {
@@ -109,55 +100,45 @@ h3 {
 
 .dropdown-menu {
     background-color:#242424;
-    line-height:10vh;
-    padding-top:0;
-    height:80vh;
+    height:90vh;
     width:80vw;
-    text-align:center;
+    line-height:10vh;
+    padding-top:1vh;
+    background-image:url(/assets/images/Detail-Vert1.svg);
+    background-repeat:no-repeat;
+    background-size:15vw 70vh;
+    background-position-x: left;
+    background-position-y: 10vh;
     }
    
 
 .dropdown-header {
     color: RGBA(255,129,10,0.8);
     font-weight: 600;
+    text-align:center;
     }
 
-.dropdown-item {
-   color: RGBA(255,129,10,0.8);
-   padding:0;
-   width:40vw;
-    }
-
-
-.dropdown-item:hover {
-    background: RGBA(255,129,10,1);
-    color:#242424;
-    width:60vw;
-    }
 
 /*---Nav Menu Panels (clip-paths)----------------*/
 
 .menu-panel {
     background-image:url('/assets/images/menu-panel.svg');
     background-repeat: no-repeat;
-    width:100%;
-    
-    margin-bottom:2vh;
-    
-}
+    background-size: contain;
+    background-position:50%;
+    width:70%;
+    margin-left:18vw;
+    margin-top:2vh;
+    margin-bottom:1vh;
+    }
 
-.menu-panel.lft {
-    margin-right:20vw;
-    margin-left:5vw;
-    
-}
 
-.menu-panel.rgt{
-    margin-left:30vw;
-    margin-right:5vw;
-    
+.dropdown-item {
+   color: RGBA(255,129,10,0.8);
+   font-size:0.75rem;
+   }
 
-}
+
 
 
 /*-- clip-paths - commented out as not satisfied with result, switched out for simple SVG image 
