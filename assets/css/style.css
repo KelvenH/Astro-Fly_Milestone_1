@@ -557,6 +557,6 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 }
 
 .gallery img {
-    max-height:10vh;
+    height:20vh;
 
     }
