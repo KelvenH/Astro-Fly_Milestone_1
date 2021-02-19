@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 291 36" preserveAspectRatio="none"><defs><style>.a,.h{fill:#242424;}.a,.g{stroke:#e67f09;stroke-miterlimit:10;}.b,.g{fill:none;}.c,.d,.e,.f{fill:#e67f09;}.c{opacity:0.4;}.e{opacity:0.6;}.f{opacity:0.8;}</style></defs><rect class="a" x="190.5" y="1" width="100" height="34"/><polygon class="a" points="214.5 0.5 189.5 35.5 10.61 35.5 10.86 0.5 214.5 0.5"/><line class="b" y1="3.5" x2="277" y2="3.5"/><polyline class="c" points="195.88 36 221.76 0 236.13 0 210.22 36"/><polygon class="d" points="291 0 291 36 251.06 36 276.95 0 291 0"/><polyline class="e" points="214.38 36 240.26 0 254.63 0 228.72 36"/><polyline class="f" points="232.88 36 258.76 0 273.13 0 247.22 36"/><line class="g" x1="214.5" y1="0.5" x2="291" y2="0.5"/><line class="g" x1="189.5" y1="35.5" x2="291" y2="35.5"/><polyline class="a" points="281 34.5 281 1.5 286 1.5 286 11.5 288 13.5 288 21.5 286 23.5 286 34.5"/><rect class="h" x="259" y="32.5" width="7" height="2"/><rect class="h" x="270" y="32.5" width="7" height="2"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="10 0 281 36">
+  <defs>
+    <style>
+      .a,.h{fill:#242424}.a,.g{stroke:#e67f09;stroke-miterlimit:10}.g{fill:none}
+    </style>
+  </defs>
+  <path class="a" d="M190.5 1h100v34h-100z"/>
+  <path class="a" d="M214.5.5l-25 35H10.61l.25-35H214.5z"/>
+  <path fill="none" d="M0 3.5h277"/>
+  <path opacity=".4" fill="#e67f09" d="M195.88 36l25.88-36h14.37l-25.91 36"/>
+  <path fill="#e67f09" d="M291 0v36h-39.94l25.89-36H291z"/>
+  <path opacity=".6" fill="#e67f09" d="M214.38 36l25.88-36h14.37l-25.91 36"/>
+  <path opacity=".8" fill="#e67f09" d="M232.88 36l25.88-36h14.37l-25.91 36"/>
+  <path class="g" d="M214.5.5H291M189.5 35.5H291"/>
+  <path class="a" d="M281 34.5v-33h5v10l2 2v8l-2 2v11"/>
+  <path class="h" d="M259 32.5h7v2h-7zM270 32.5h7v2h-7z"/>
+</svg>
