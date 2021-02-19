@@ -549,3 +549,14 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 .txt-right {
     text-align: right;
     }
+
+    /*-------------------------Gallery / Viewing Port-----------------*/
+
+.viewingport-main {
+    margin-top:10vh;
+}
+
+.gallery img {
+    max-height:10vh;
+
+    }
