@@ -67,12 +67,12 @@ h3 {
    border-bottom: 5px solid RGBA(255,129,10,0.8);
    font-family:'ethnocentric_rg', sans-serif;
    color: RGBA(255,129,10,0.9);
-   height: 9vh;
+   height: 10vh;
     }
 
 .navbar-logo, .navbar-toggler {
     color: rgba(255,129,10,0.9);
-    font-size: clamp(30px, 8vw, 60px);
+    font-size: 5vh;
     text-shadow:2px 2px 2px black;
     }
 
@@ -101,22 +101,21 @@ h3 {
 .dropdown-menu {
     background-color:#242424;
     height:90vh;
-    width:80vw;
+    width:60vw;
+    max-width: 450px;
     line-height:10vh;
-    padding-top:1vh;
-    background-image:url(/assets/images/Detail-Vert1.svg);
-    background-repeat:no-repeat;
-    background-size:15vw 70vh;
-    background-position-x: left;
-    background-position-y: 10vh;
-    }
+    border:5px solid RGBA(255,129,10,1);
+    padding-top:0;
+    text-align: center;
+   }
    
 
 .dropdown-header {
-    color: RGBA(255,129,10,0.8);
+    background-color: RGBA(255,129,10,0.8);
+    color: #242424;
+    font-size: 2vh;
     font-weight: 600;
-    text-align:center;
-    }
+     }
 
 
 /*---Nav Menu Panels (clip-paths)----------------*/
@@ -126,18 +125,18 @@ h3 {
     background-repeat: no-repeat;
     background-size: contain;
     background-position:50%;
-    width:70%;
-    margin-left:18vw;
-    margin-top:2vh;
-    margin-bottom:1vh;
-    }
+    margin-top:1.5vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
 
 
 .dropdown-item {
    color: RGBA(255,129,10,0.8);
-   font-size:0.75rem;
+   font-size:1.5vh;
    }
-
 
 
 
@@ -186,8 +185,6 @@ h3 {
 
 .welcome {
     height:30vh;
-    font-size: clamp(16px, 4vw, 40px);
-   /*------ padding-right: clamp(8px, 16px, 32px?);-----*/
     border-bottom: 5px solid RGBA(255,129,10,1);
     }
 
