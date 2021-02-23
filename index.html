@@ -254,45 +254,52 @@
                                 <h4>Countdown to Next Launch</h4>
                                 <table id="countdown-info">
                                     <tr>
-                                        <td>Destination: </td>
-                                        <td class="answer">Lunar Base 5 </td>
+                                        <td class="info-label">Destination: </td>
+                                        <td class="info-answer"> Lunar Base 5 </td>
                                     </tr>
 
                                     <tr>
-                                        <td id="passengers">Passengers:</td>
-                                        <td class="answer">Astro:Pioneers x25
-                                            <br> Astro:Crew x20 </td>
+                                        <td class="info-label passengers">Passengers:</td>
+                                        <td class="info-answer"> Astro:Pioneers x25
+                                                Astro:Crew x20 </td>
                                     </tr>
 
                                     <tr>
-                                        <td>Payload:</td>
-                                        <td class="answer">**CLASSIFIED**</td>
+                                        <td class="info-label">Payload:</td>
+                                        <td class="info-answer"> **CLASSIFIED**</td>
                                     </tr>
 
                                 </table>
-
-                                <div class="container" id="countdown-labels">
-                                    <div class="row time-header no-gutters">
-                                        <div class="col">Months</div>
-                                        <div class="col"> Days</div>
-                                        <div class="col"> Hours</div>
-                                        <div class="col"> Mins.</div>
-                                        <div class="col"> Secs.</div>
-                                        <div class="w-100"></div>
-                                        <div class="col count"> 5 </div>
-                                        <div class="col count"> 17 </div>
-                                        <div class="col count"> 8 </div>
-                                        <div class="col count"> 54 </div>
-                                        <div class="col count secs digit"></div>
+                                
+                                <div class="container countdown-container">
+                                    <div class="row no-gutters countdown-labels">
+                                        <div class="col-sm">Months : </div>
+                                        <div class="col-sm">Days : </div>
+                                        <div class="col-sm">Hours : </div>
+                                        <div class="col-sm">Secs : </div>
+                                        <div class="col-sm">Mins</div>
                                     </div>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
+                                
+                                    <div class="row no-gutters countdown-wrapper">
+                                        <div class="col-sm count"> 5 </div>
+                                        <div class="col-sm count"> 17 </div>
+                                        <div class="col-sm count"> 8 </div>
+                                        <div class="col-sm count">  
+                                            <span class="box min digit"></span>
+                                        </div>
+                                        <div class="col count box">
+                                            <span class="sec tens"></span>
+                                            <span class="sec digit "></span>
+                                        </div>
+                                    </div>                      <!---close countdown row / wrapper-->
+                                  </div>                        <!---close countdown cotainer -->  
+                            </div>                              <!---close countdown-card-body-->
+                        </div>                                  <!---close collapse-countdown--->
 
-                    </div>
-                </div>
-            </div>
+                    </div>                                      <!---close countdown accordion-->
+                </div>                                          <!---close accordion-->
+            </div>                                              <!---close main-window-->
+         </div>                                                 <!---close welcome-container-->
     </section>
 
     <footer class="footer fixed-bottom">
