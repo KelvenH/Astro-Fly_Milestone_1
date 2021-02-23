@@ -13,14 +13,23 @@
     font-family:'digital';
     }
 
-
+@font-face {
+    src:url('/assets/fonts/digital-7.ttf');
+    font-family:'LED';
+    }
 
 /*-------------------------General Settings-----------------*/
+
+/*----no single command seemed to eliminate unneccessary auto-padding & margins. 
+Currently achieved through use of the global settings below across element types inaddition to Bootstrap classes (mb-0 & row no-gutters) - 
+to be reviewed prior to launch and remove any redundant ----*/
 
 * {
     margin:0;
     padding:0;
     }
+
+
 
 .container {
     margin:0;
@@ -446,6 +455,152 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
   }
 
 
+ /*-----Home Page - Countdown Timer --------*/
+ /*---- A true countdown timer requires understanidng of JS, so for the purpose of representing what this 'could' look like I created a mock version which only counts down from a static starting point and only adjusts the minutes and seconds.
+ Acknowledgement - i found a version on Codepen which i've based my html and CSS on (https://codepen.io/JamesDouglas/pen/RgwbRo 
+  
+ 
+
+ 
+
+
+ #countdown-table td {
+    display:flex;
+    align-items:center;
+    
+    background-color: #242424;
+    font-family: 'LED';
+    height: 5vh;
+   
+    line-height: 5vh;
+    transform: scale(1.3);
+ }
+
+#countdown-table.count { 
+    display:flex;
+    width: 10vh;
+    font-size:4vh;
+    font-weight:bold;
+    color:RGBA(255,129,10,1);
+    text-shadow: 0 0 5vh RGBA(255,129,10,1);
+    text-align:center; 
+    overflow:hidden;  
+ }
+
+.count.tens::after {
+  
+  content: "5 4 3 2 1 0";
+}
+
+.count.digit::after {
+ 
+  content: "9 8 7 6 5 4 3 2 1 0";
+}
+
+.count.secs.tens::after {
+  animation: animate-tens 60s 2s steps(6) infinite;
+}
+
+.count.secs.digit::after {
+  animation: animate-digit 10s 2s steps(10) infinite;
+}
+
+@keyframes animate-tens {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -30vh;
+  }
+}
+
+@keyframes animate-digit {
+  0% {top: 0;}
+
+  100% {top: -50vh;} 
+} -----*/
+
+#collapse-countdown {
+    text-align:left;
+}
+
+#passengers {
+     vertical-align:text-top;
+}
+
+#countdown-info .answer {
+    padding-left:0.5vh;
+}
+
+
+#countdown-labels {
+    border-collapse: collapse;
+    border: 1px solid RGBA(255,129,10,1);
+    margin-left:auto;
+    margin-right:auto;
+    padding:0 0.5vh;
+    text-align:center;
+    }
+
+ body {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #052d5b;
+}
+.container {
+  display: flex;
+  height: 5vh;
+  width: 10vh;
+  line-height: 5vh;
+  transform: scale(1.3);
+}
+
+.container .count {
+  background: red;
+  height: 100%;
+  width: 50%;
+  font-size: 4vh;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  margin: 0 5px;
+  overflow: hidden;
+}
+
+.count.tens::after {
+  position: relative;
+  content: "5 4 3 2 1 0";
+}
+
+.count.digit::after {
+  position: relative;
+  content: "9 8 7 6 5 4 3 2 1 0";
+}
+
+.count.secs.tens::after {
+  animation: animate-tens 60s 2s steps(6) infinite;
+}
+
+.count.secs.digit::after {
+  animation: animate-digit 10s 2s steps(10) infinite;
+}
+
+@keyframes animate-tens {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -30vh;
+  }
+}
+
+@keyframes animate-digit {
+  0% {top: 0;}
+
+  100% {top: -50vh;}
+}
 /*-------------------------Exploration PAGE-----------------*/
 
 
