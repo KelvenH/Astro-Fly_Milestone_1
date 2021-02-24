@@ -272,25 +272,26 @@
                                 </table>
 
                                 <div class="container countdown-container">
-                                    <div class="row no-gutters countdown-labels">
-                                        <div class="d-inline">Months : </div>
-                                        <div class="d-inline">Days : </div>
-                                        <div class="d-inline">Hours : </div>
-                                        <div class="d-inline">Secs : </div>
-                                        <div class="d-inline">Mins</div>
+                                    <div class="d-inline-flex justify-content-around countdown-labels">
+                                        <div>Months</div>
+                                        <div>Days</div>
+                                        <div>Hours</div>
+                                        <div>Mins</div>
+                                        <div>Secs</div>
                                     </div>
 
-                                    <div class="row no-gutters countdown-wrapper">
-                                       <div class="d-inline"> 5 </div>
-                                       <div class="d-inline"> 17 </div>
-                                        <div class="d-inline"> 8 </div>
-                                        <div class="d-inline count">
-                                            <span class="d-inline min digit"></span>
-                                        </div>
-                                        <div class="d-inline count box">
+                                    <div class="d-inline-flex justify-content-around countdown-wrapper">
+                                        <div> 9 </div>
+                                        <div> 8 </div>
+                                        <div> 7 </div>
+                                        <div class="wrapper">
+                                            <span class="box first-number"></span>
+                                        </div>   
+                                        <div> 5 </div> 
+                                        <!--- <div class="d-inline count box">
                                             <span class="sec tens"></span>
                                             <span class="sec digit "></span>
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <!---close countdown row / wrapper-->
                                 </div>
@@ -302,36 +303,12 @@
 
                     </div>
                     <!---close countdown accordion-->
-
-                    <div class="test-card-parent">
-                        <div class="card-header" id="test-card">
-                            <h3 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed" type="button"
-                                    data-toggle="collapse" data-target="#collapse-test-card" aria-expanded="false"
-                                    aria-controls="collapse-test-card">Test Card
-                                </button>
-                            </h3>
-                        </div>
-
-                        <div id="collapse-test-card" class="collapse text-test-card UIpanel UI-p-sm"
-                            aria-labelledby="heading-test-card" data-parent="#home-accordion">
-                            <div class="card-body test-card">
-
-                                <div class="test-labels">
-                                        <div class="d-inline">Months : </div>
-                                         <div class="d-inline">Days : </div>
-                                         <div class="d-inline">Hours : </div>
-                                         <div class="d-inline">Secs : </div>
-                                         <div class="d-inline">Mins</div>
-                                    </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
-
+                    <!---close countdown accordion
+                    <div class="wrapper">
+                        <span class="box third-number"></span>
+                        <span class="box second-number"></span>
+                        <span class="box first-number"></span>
+                    </div>-->
                 </div>
                 <!---close accordion-->
             </div>

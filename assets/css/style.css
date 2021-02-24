@@ -460,13 +460,9 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
  Acknowledgement - i found a version on Codepen which i've based my html and CSS on (https://codepen.io/JamesDouglas/pen/RgwbRo 
   ---*/
  
-
-
-
-
 #countdown-info {
    align-items:left;
-   width:90%;
+   
     } 
 
 #countdown-info .info-label {
@@ -482,35 +478,63 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
      vertical-align:text-top;
     }
 
-.countdown-container {
-    width:90%;
-    display:inline-block;
-}
-
+    
 
 .countdown-labels {
-    border: 1px solid RGBA(255,129,10,1);
     display:inline-block;
-    width:90%;
+    width:100%;
     vertical-align: top;
+    border: 1px solid RGBA(255,129,10,1);
 }
-
 
 
 .countdown-wrapper {
     display:inline-block;
+    width:100%;
     vertical-align: top;
+    border: 1px solid RGBA(255,129,10,1);
+    border-collapse: collapse;
+    background-color: #242424;
     transform:translate (-50%, -50%);
     font-family:'LED';
-    background-color: #242424;
-    border-collapse: collapse;
-    border: 1px solid RGBA(255,129,10,1);
-    padding:0 30px;
-    border-radius:25px;
-    margin: 0 10px;
+    padding:0 0;
+    margin: 0 0;
+    height:5vh;
+    line-height:5vh;
+    font-weight:bold;
+    font-size: 4vh;
+    padding-top:0.5vh;
+    text-align:center;
     }
 
+.wrapper {
+    top:50%;
+    left:50%;
+    transform:translate (-50%, -50%);
+}
+
 .box {
+    display:inline-block;
+    overflow:hidden;
+    }
+    
+.box:after {
+    position: relative;
+    white-space: pre;
+    content: "9\A 8\A 7\A 6\A 5\A 4\A 3\A 2\A 1\A 0\A";
+    }
+
+.box.first-number:after {
+    animation: animate 1s steps(10) infinite;
+    }
+
+@keyframes animate {
+    0% {top:0;}
+    100% {top:-50vh}
+    }
+
+/*---
+.count {
     display:inline-block;
     overflow:hidden;
     height:5vh;
@@ -519,41 +543,105 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     font-size: 4vh;
     }
 
-.box.digit:after {
+.count.sec.digit:after {
     position: relative;
     white-space: pre;
     content: "9\A 8\A 7\A 6\A 5\A 4\A 3\A 2\A 1\A 0\A";
     }
 
-.box.tens:after {
+.count.sec.digit:after {
+    animation: animate-sec-digit 10s steps(10) infinite;
+    }
+
+@keyframes animate-sec-digit{
+    0% {top:0;}
+    100% {top:-50vh}
+    }
+
+.count.sec.tens:after {
     position: relative;
     white-space: pre;
     content: "5\A 4\A 3\A 2\A 1\A 0\A";
     }
 
-.box.sec.digit:after {
-    animation: animate-digit 10s steps(10) infinite;
+.count.sec.tens:after {
+    animation: animate-sec-tens 60s steps(6) infinite;
     }
 
-.box.sec.tens:after {
-    animation: animate-tens 60s steps(6) infinite;
-    }
-
-.box.min.digit:after {
-    animation: animate-digit 600s steps(10) infinite;
-    }
-
-
-@keyframes animate-digit{
-    0% {top:0;}
-    100% {top:-50vh}
-}
-
-@keyframes animate-tens{
+@keyframes animate-sec-tens{
     0% {top:0;}
     100% {top:-30vh}
+    }
+
+
+.count.min.digit:after {
+    position: relative;
+    white-space: pre;
+    content: "9\A 8\A 7\A 6\A 5\A 4\A 3\A 2\A 1\A 0\A";
+    }
+
+.count.min.digit:after {
+    animation: animate-min-digit 600s steps(10) infinite;
+    }
+
+@keyframes animate-min-digit{
+    0% {top:0;}
+    100% {top:-50vh}
+    }
+
+    border-collapse: collapse;
+---*/
+/*---
+.wrapper {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate (-50%, -50%);
 }
 
+.wrapper span{
+    font-family:'LED';
+    background-color: #242424;
+    border: 1px solid RGBA(255,129,10,1);
+    padding:0 30px;
+    margin: 0 10px;
+}
+
+.box {
+    display:inline-block;
+    overflow:hidden;
+    height:5vh;
+    line-height:5vh;
+    font-weight:bold;
+    font-size: 4vh;
+    padding-top:0.5vh;
+    text-align:center;
+    }
+    
+.box:after {
+    position: relative;
+    white-space: pre;
+    content: "9\A 8\A 7\A 6\A 5\A 4\A 3\A 2\A 1\A 0\A";
+    }
+
+.box.first-number:after {
+    animation: animate 1s steps(10) infinite;
+    }
+
+.box.second-number:after {
+    animation: animate 10s steps(10) infinite;
+    }
+
+.box.third-number:after {
+    animation: animate 100s steps(10) infinite;
+    }
+
+
+@keyframes animate{
+    0% {top:0;}
+    100% {top:-50vh}
+    }
+---*/
 /*-------------------------Exploration PAGE-----------------*/
 
 
