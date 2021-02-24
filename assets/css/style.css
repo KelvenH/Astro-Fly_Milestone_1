@@ -461,6 +461,9 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
   ---*/
  
 
+
+
+
 #countdown-info {
    align-items:left;
    width:90%;
@@ -479,19 +482,25 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
      vertical-align:text-top;
     }
 
+.countdown-container {
+    width:90%;
+    display:inline-block;
+}
+
+
 .countdown-labels {
     border: 1px solid RGBA(255,129,10,1);
     display:inline-block;
     width:90%;
+    vertical-align: top;
 }
 
 
-.countdown-wrapper {
-    position:absolute;
-    transform:translate (-50%, -50%);
-    }
 
 .countdown-wrapper {
+    display:inline-block;
+    vertical-align: top;
+    transform:translate (-50%, -50%);
     font-family:'LED';
     background-color: #242424;
     border-collapse: collapse;
