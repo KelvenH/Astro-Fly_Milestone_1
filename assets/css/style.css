@@ -456,14 +456,16 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
  /*-----Home Page - Countdown Timer --------*/
- /*---- A true countdown timer requires understanidng of JS, so for the purpose of representing what this 'could' look like I created a mock version which only counts down from a static starting point and only adjusts the minutes and seconds.
- Acknowledgement - i found a version on Codepen which i've based my html and CSS on (https://codepen.io/JamesDouglas/pen/RgwbRo 
+ /*---- A true countdown timer requires understanidng of JS, so for the purpose of representing what this 'could' look like I created a mock version which only counts down from a static starting point, only adjusts the minutes and seconds and resets on page load and expanding the accordion card. 
+ Acknowledgement: Initial challenges were encuntered regading vertica alignment & hiding overflow (of no-displayed numbers). A similar example was found on YouTube [https://www.youtube.com/watch?v=rhZgquCAcGc] which this code is based on although adapted to; fit in a table (to retain alignmet of time with labels) and splittng code to acount for hr / min count-down from 59-0, and digits from 10-0.   
   ---*/
  
 #countdown-info {
    align-items:left;
    margin-bottom: 2vh;
     } 
+
+/*-----relates to layout of text wich appears prir to the timer----*/
 
 #countdown-info .info-label {
     text-align:right;
@@ -478,6 +480,8 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
      vertical-align:text-top;
     }
 
+ /*-----styling for the countdown timer ----*/ 
+
  .table-countdown {
     border: 1px solid RGBA(255,129,10,1);
     width:80vw;
@@ -489,7 +493,6 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 .table-countdown-wrapper {
     background-color: #242424;
-    
     transform:translate (-50%, -50%);
     font-family:'LED';
     height:5vh;
@@ -546,6 +549,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     display:inline-block;
 }
 --------*/
+
 .time {
     display:inline-block;
     overflow:hidden;
@@ -558,14 +562,13 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     content: "9\A 8\A 7\A 6\A 5\A 4\A 3\A 2\A 1\A 0\A";
     }
 
-
 .tens:after {
     position:absolute;
     white-space: pre;
     content: "5\A 4\A 3\A 2\A 1\A 0\A";
     }
 
-
+/*--countdown animation works by steping through the numbers defined in the 'content' above with the step count and %'s aligned to the correct timing (i.e 1 second / min ('digit') & 10 seconds/minutes ('tens'). Numbers effectively scroll on screen but 'overflow:hidden' only allows 1 number (per field) to be shown  --*/
 
 .seconds.digit:after {
     animation: animate-secs-digit 10s steps(10) infinite;
