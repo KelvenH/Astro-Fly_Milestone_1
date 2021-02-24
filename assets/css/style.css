@@ -116,7 +116,7 @@ h3 {
     border:5px solid RGBA(255,129,10,1);
     padding-top:0;
     text-align: center;
-   }
+    }
    
 
 .dropdown-header {
@@ -124,10 +124,10 @@ h3 {
     color: #242424;
     font-size: 2vh;
     font-weight: 600;
-     }
+    }
 
 
-/*---Nav Menu Panels (clip-paths)----------------*/
+/*---Nav Menu Panels ----------------*/
 
 .menu-panel {
     background-image:url('/assets/images/menu-panel.svg');
@@ -139,7 +139,7 @@ h3 {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-}
+    }
 
 
 .dropdown-item {
@@ -462,7 +462,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
  
 #countdown-info {
    align-items:left;
-   
+   margin-bottom: 2vh;
     } 
 
 #countdown-info .info-label {
@@ -474,11 +474,36 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     padding-left:5vw;
     }
 
-#passengers {
+#countdown-info .passengers {
      vertical-align:text-top;
     }
 
+ .table-countdown {
+    border: 1px solid RGBA(255,129,10,1);
+    width:80vw;
+}
+
+.table-countdown-labels {
+    border: 1px solid RGBA(255,129,10,1);
+}
+
+.table-countdown-wrapper {
+    background-color: #242424;
     
+    transform:translate (-50%, -50%);
+    font-family:'LED';
+    height:5vh;
+    line-height:5vh;
+    font-weight:bold;
+    font-size: 4vh;
+}
+
+.table-wrapper {
+    transform:translate (-50%, -50%);
+    vertical-align: top;
+    position:relative;
+    overflow:hidden;
+}   
 
 .countdown-labels {
     display:inline-block;
@@ -487,9 +512,10 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     border: 1px solid RGBA(255,129,10,1);
 }
 
-
+/*-----Original div version - replaced with table approach to address alignment issues
 .countdown-wrapper {
     display:inline-block;
+    overflow:hidden;
     width:100%;
     vertical-align: top;
     border: 1px solid RGBA(255,129,10,1);
@@ -504,144 +530,86 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     font-weight:bold;
     font-size: 4vh;
     padding-top:0.5vh;
-    text-align:center;
     }
 
 .wrapper {
-    top:50%;
-    left:50%;
-    transform:translate (-50%, -50%);
+    transform:translate (0, 0);
+    vertical-align: top;
+    position:relative;
 }
 
-.box {
+.wrap-secs {
+    display:inline-block;
+}
+
+.wrap-mins {
+    display:inline-block;
+}
+--------*/
+.time {
     display:inline-block;
     overflow:hidden;
+    padding:0 0.5vh;
     }
     
-.box:after {
-    position: relative;
+.digit:after {
+    position:absolute;
     white-space: pre;
     content: "9\A 8\A 7\A 6\A 5\A 4\A 3\A 2\A 1\A 0\A";
     }
 
-.box.first-number:after {
-    animation: animate 1s steps(10) infinite;
-    }
 
-@keyframes animate {
-    0% {top:0;}
-    100% {top:-50vh}
-    }
-
-/*---
-.count {
-    display:inline-block;
-    overflow:hidden;
-    height:5vh;
-    line-height:5vh;
-    font-weight:bold;
-    font-size: 4vh;
-    }
-
-.count.sec.digit:after {
-    position: relative;
-    white-space: pre;
-    content: "9\A 8\A 7\A 6\A 5\A 4\A 3\A 2\A 1\A 0\A";
-    }
-
-.count.sec.digit:after {
-    animation: animate-sec-digit 10s steps(10) infinite;
-    }
-
-@keyframes animate-sec-digit{
-    0% {top:0;}
-    100% {top:-50vh}
-    }
-
-.count.sec.tens:after {
-    position: relative;
+.tens:after {
+    position:absolute;
     white-space: pre;
     content: "5\A 4\A 3\A 2\A 1\A 0\A";
     }
 
-.count.sec.tens:after {
-    animation: animate-sec-tens 60s steps(6) infinite;
+
+
+.seconds.digit:after {
+    animation: animate-secs-digit 10s steps(10) infinite;
     }
 
-@keyframes animate-sec-tens{
+@keyframes animate-secs-digit {
+    0% {top:0;}
+    100% {top:-49.5vh} /*--- ** Adjusted from -50vh as slight mis-alignment for last few seconds, to be checked in other responsive screen sizes if needed ----*/
+    }
+
+.seconds.tens:after {
+    animation: animate-secs-tens 60s steps(6) infinite;
+    }
+
+@keyframes animate-secs-tens {
     0% {top:0;}
     100% {top:-30vh}
     }
 
 
-.count.min.digit:after {
-    position: relative;
-    white-space: pre;
-    content: "9\A 8\A 7\A 6\A 5\A 4\A 3\A 2\A 1\A 0\A";
+
+.mins.digit:after {
+    animation: animate-mins-digit 600s steps(10) infinite;
     }
 
-.count.min.digit:after {
-    animation: animate-min-digit 600s steps(10) infinite;
-    }
-
-@keyframes animate-min-digit{
+@keyframes animate-mins-digit {
     0% {top:0;}
     100% {top:-50vh}
     }
 
-    border-collapse: collapse;
----*/
-/*---
-.wrapper {
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform:translate (-50%, -50%);
-}
-
-.wrapper span{
-    font-family:'LED';
-    background-color: #242424;
-    border: 1px solid RGBA(255,129,10,1);
-    padding:0 30px;
-    margin: 0 10px;
-}
-
-.box {
-    display:inline-block;
-    overflow:hidden;
-    height:5vh;
-    line-height:5vh;
-    font-weight:bold;
-    font-size: 4vh;
-    padding-top:0.5vh;
-    text-align:center;
-    }
-    
-.box:after {
-    position: relative;
-    white-space: pre;
-    content: "9\A 8\A 7\A 6\A 5\A 4\A 3\A 2\A 1\A 0\A";
+.mins.tens:after {
+    animation: animate-mins-tens 3600s steps(6) infinite;
     }
 
-.box.first-number:after {
-    animation: animate 1s steps(10) infinite;
-    }
-
-.box.second-number:after {
-    animation: animate 10s steps(10) infinite;
-    }
-
-.box.third-number:after {
-    animation: animate 100s steps(10) infinite;
-    }
-
-
-@keyframes animate{
+@keyframes animate-mins-tens {
     0% {top:0;}
-    100% {top:-50vh}
+    100% {top:-30vh}
     }
----*/
+
+
+
+
+
+
 /*-------------------------Exploration PAGE-----------------*/
 
 

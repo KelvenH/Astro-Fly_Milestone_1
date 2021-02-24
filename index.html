@@ -271,6 +271,8 @@
 
                                 </table>
 
+                                <!---not currently in use - superceded by table approach
+
                                 <div class="container countdown-container">
                                     <div class="d-inline-flex justify-content-around countdown-labels">
                                         <div>Months</div>
@@ -281,40 +283,59 @@
                                     </div>
 
                                     <div class="d-inline-flex justify-content-around countdown-wrapper">
-                                        <div> 9 </div>
-                                        <div> 8 </div>
+                                        <div> 5 </div>
+                                        <div> 18 </div>
                                         <div> 7 </div>
-                                        <div class="wrapper">
-                                            <span class="box first-number"></span>
-                                        </div>   
-                                        <div> 5 </div> 
-                                        <!--- <div class="d-inline count box">
-                                            <span class="sec tens"></span>
-                                            <span class="sec digit "></span>
-                                        </div>-->
+                                        <div class="d-inline wrapper wrap-mins">
+                                            <div class="time mins tens"></div>
+                                            <div class="time mins digit"></div>
+                                        </div>
+                                         <div class="d-inline wrapper wrap-secs">
+                                            <div class="time seconds tens"></div>
+                                            <div class="time seconds digit"></div>
+                                        </div>
+                                        
+                                        
                                     </div>
-                                    <!---close countdown row / wrapper-->
+                                    
                                 </div>
-                                <!---close countdown cotainer -->
-                            </div>
-                            <!---close countdown-card-body-->
-                        </div>
-                        <!---close collapse-countdown--->
+                                
+                            end of original countdown-->
 
-                    </div>
-                    <!---close countdown accordion-->
-                    <!---close countdown accordion
-                    <div class="wrapper">
-                        <span class="box third-number"></span>
-                        <span class="box second-number"></span>
-                        <span class="box first-number"></span>
-                    </div>-->
-                </div>
-                <!---close accordion-->
-            </div>
-            <!---close main-window-->
-        </div>
-        <!---close welcome-container-->
+                                <table class="table-countdown">
+                                    <thead>
+                                        <tr class="table-countdown-labels">
+                                            <th scope="col">Months</th>
+                                            <th scope="col">Days</th>
+                                            <th scope="col">Hours</th>
+                                            <th scope="col">Mins</th>
+                                            <th scope="col">Secs</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-countdown-wrapper">
+                                            <td> 5 </td>
+                                            <td> 18 </td>
+                                            <td> 7 </td>
+                                            <td class="table-wrapper">
+                                                <span class="time mins tens"></span>
+                                                <span class="time mins digit"></span>
+                                            </td>
+                                            <td class="table-wrapper">
+                                                <span class="time seconds tens"></span>
+                                                <span class="time seconds digit"></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div> <!---close countdown-card-body-->
+                        </div>     <!---close collapse-countdown--->
+                    </div>         <!---close countdown accordion card-->
+                </div>             <!---close accordion-->
+            </div>                 <!---close main-window-->
+        </div>                     <!---close welcome-container-->
     </section>
 
     <section>
