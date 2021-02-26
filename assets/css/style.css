@@ -719,6 +719,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
    background-repeat:no-repeat;
    background-size: cover;
    background-position: center center;
+   position:relative;
    background-attachment: fixed;
    height:100vh;
 }
@@ -729,9 +730,73 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 .A404-text.txt1{
     padding-top:7vh;
+    animation-name:redirect-txt1;
+    animation-delay:0.5s;
+    animation-fill-mode: both;
+    animation-duration:3s;
+    animation-timing-function: ease;  
+    }
+
+
+@keyframes redirect-txt1 {
+0% {visibility: hidden;}
+10% {visibility: visible;}
+100% {visibility: hidden;}
 }
 
-/*----
 
+.A404-text.txt2{
+    animation-name:redirect-txt2;
+    animation-delay:4s;
+    animation-fill-mode: both;
+    animation-duration:2s;
+    animation-timing-function: ease;  
+    }
+
+
+@keyframes redirect-txt2 {
+0% {visibility: hidden;}
+10% {visibility: visible;}
+100% {visibility: hidden;}
+}
+
+
+.light {
+    border-style: solid transparent;
+    background-color: white;
+    width:15%;
+    height:15%;
+    border-radius:50%;
+    position:absolute;
+    top:13%;
+    left:25%;
+    animation-name:light;
+    animation-delay:6s;
+    animation-fill-mode: both;
+    animation-duration:0.4s;
+    animation-timing-function: linear;  
+    }  
+    
+
+
+
+@keyframes light {
+  0% {
+    transform: scale(0);
+    background-color: orange;
+    opacity:0;
+    border-radius: 100%;
+  }
+
+  100% {
+    transform: scale(15);
+    opacity:1;
+    background-color: white;
+  }
+}
+
+
+
+    /*----
 
     -----*/
