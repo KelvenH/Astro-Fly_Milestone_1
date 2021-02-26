@@ -85,10 +85,7 @@ h3 {
     text-shadow:2px 2px 2px black;
     }
 
-.dropdown-item:hover {
-    background: RGBA(255,129,10,1);
-    color:#242424;
-        }
+
 
     /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
 
@@ -107,23 +104,30 @@ h3 {
     }
 
 
+         
 .dropdown-menu {
     background-color:#242424;
-    height:90vh;
+    height:81vh;
     width:60vw;
+    font-size: 2vh;
     max-width: 450px;
-    line-height:10vh;
+    line-height:9vh;
     border:5px solid RGBA(255,129,10,1);
     padding-top:0;
     text-align: center;
+    overflow:hidden;
+    overflow-y: scroll;
+    z-index:1;
+    
     }
    
 
 .dropdown-header {
     background-color: RGBA(255,129,10,0.8);
     color: #242424;
-    font-size: 2vh;
     font-weight: 600;
+    padding:1vh;
+    line-height:5vh;
     }
 
 
@@ -134,6 +138,7 @@ h3 {
     background-repeat: no-repeat;
     background-size: contain;
     background-position:50%;
+    text-shadow:2px 2px 2px black;
     margin-top:1.5vh;
     display: block;
     margin-left: auto;
@@ -148,6 +153,19 @@ h3 {
    }
 
 
+.menu-panel a:hover {
+    background-color:transparent;
+    color:#242424;
+ /*--  !!!!! add alt menu panel color here  --*/
+    }
+
+
+    /*--
+.dropdown-item:hover {
+    background: RGBA(255,129,10,1);
+    color:#242424;
+        }
+--*/
 
 /*-- clip-paths - commented out as not satisfied with result, switched out for simple SVG image 
 
@@ -773,7 +791,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     animation-name:light;
     animation-delay:6s;
     animation-fill-mode: both;
-    animation-duration:0.4s;
+    animation-duration:0.3s;
     animation-timing-function: linear;  
     }  
     
