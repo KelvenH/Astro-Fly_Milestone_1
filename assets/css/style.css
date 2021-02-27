@@ -1,21 +1,20 @@
-
 /*-------------------------Fonts-----------------*/
 /*-licence purchased for ethnocentric via fontspring.com*/
 /*-Digital font available on free usage for non-commercial use via .com*/
 
 @font-face {
+    font-family: 'ethnocentric_rg';
     src:url('../fonts/ethnocentric_rg-webfont.woff');
-    font-family: 'ethnocentric_rg', Arial, Helvetica, sans-serif;
     }
 
 @font-face {
-    src:url('../fonts/AdvancedDotDigital7-OpXA.ttf');
-    font-family:'digital', Arial, Helvetica, sans-serif;
+    src:url('../assets/fonts/AdvancedDotDigital7-OpXA.ttf');
+    font-family:'digital';
     }
 
 @font-face {
-    src:url('../fonts/digital-7.ttf');
-    font-family:'LED', Arial, Helvetica, sans-serif;
+    src:url('../assets/fonts/digital-7.ttf');
+    font-family:'LED';
     }
 
 /*-------------------------General Settings-----------------*/
@@ -23,6 +22,7 @@
 /*----no single command seemed to eliminate unneccessary auto-padding & margins. 
 Currently achieved through use of the global settings below across element types inaddition to Bootstrap classes (mb-0 & row no-gutters) - 
 to be reviewed prior to launch and remove any redundant ----*/
+
 
 * {
     margin:0;
@@ -53,7 +53,7 @@ p {
 
 html, body {
     height:100%;
-    font-family: 'Baumans', Arial, Helvetica, sans-serif;
+    font-family: 'Baumans',  Arial, Helvetica, sans-serif;
     font-size: clamp(16px, 2vw, 36px);
     color: RGBA(255,129,10,0.8);
     text-align: center;
@@ -61,7 +61,6 @@ html, body {
     }
 
 h3 {
-    font-size: clamp(28px, 2vw, 36px);
     font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
     color: RGBA(255,129,10,0.8);
     }
@@ -72,19 +71,19 @@ h3 {
 
 .navbar {
 
-   background-color: #242424;
+   background-image: linear-gradient(to bottom left, black, #242424);
    border-bottom: 5px solid RGBA(255,129,10,0.8);
    font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
    color: RGBA(255,129,10,0.9);
    height: 10vh;
     }
 
+
 .navbar-logo, .navbar-toggler {
     color: rgba(255,129,10,0.9);
     font-size: 5vh;
     text-shadow:2px 2px 2px black;
     }
-
 
 
     /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
@@ -134,7 +133,7 @@ h3 {
 /*---Nav Menu Panels ----------------*/
 
 .menu-panel {
-    background-image:url(../images/menu-panel.svg);
+    background-image:url();  /*---new image to be added---*/
     background-repeat: no-repeat;
     background-size: contain;
     background-position:50%;
@@ -184,7 +183,7 @@ h3 {
 /*-------------------------Footer-----------------*/
 
 .footer-main {
-    background-color: #242424;
+    background-image: linear-gradient(to bottom right, black, #242424);
     font-size: clamp(30px, 8vw, 60px);
     color: RGBA(255,129,10,0.8);
     height: 9vh;
@@ -206,7 +205,8 @@ h3 {
 /*-------------------------Home Page - Welcome-----------------*/
 
 .welcome-container {
-    margin-top:9vh;  
+    margin-top:9vh; 
+    position:relative; 
 }
 
 .welcome {
@@ -227,12 +227,14 @@ h3 {
     } 
 
 .welcome-strapline {
-    font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
+    font-family:'ethnocentric_rg', Arial, Helvetica, sans-serif;
     color:RGBA(255,129,10,1);
     text-shadow:2px 2px 2px black;
-    text-align:right;
+    position:absolute;
+    top:0;
+    right:0;
+    max-width:50vw;
     padding-top: 3vw;
-    padding-left:50vw;
     padding-right:2vw;
     animation-name:txtfadein;
     animation-delay:2s;
@@ -271,7 +273,7 @@ Acknowledgement: CCStricks.com article and demos-----*/
 /*-------------------------Home Page - Intro-----------------*/
 
   #intro-box {
-    padding:4vh 1vh;
+    padding:3vh 1vh;
     border-bottom:5px solid;
     border-color: RGBA(255,129,10,0.8);
     display:inline;
@@ -300,7 +302,7 @@ Acknowledgement: CCStricks.com article and demos-----*/
 .intro-ticker{
   overflow: hidden; 
   border-style:inset;
-  margin:4vh 3vh 0 3vh;
+  margin:2vh 3vh 0 3vh;
   line-height:1rem;
 }
 
@@ -345,15 +347,15 @@ background-color:RGBA(0,217,255,1);
 
 /*-------------------------Home Page main - background-----------------*/
 
+
 #main-window-image {
-    background-image:url(); /*----image removed - switching to background color/. -------*/
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    width:100%;
+
+    background-color:black;
+    background-size:cover;
     border-top:none;
     background-attachment: fixed;
-    }
+}
+
 
 /*-------------------------Home Page main - accordion-----------------*/
 
@@ -405,19 +407,18 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 .card-header {
-    background-image:url(); /*----image removed - replacing -------*/
-    background-position: left;
+    background-image:url(../images/menu_panel_2.svg); 
+    background-position:center;
     background-size:contain;
     background-repeat:no-repeat;
     margin-top:3vh;
-    padding:0;
-    width:100%;
+    text-align:center !important;
     }
 
 
 
 .btn-link {
-    font-family:'ethnocentric_rg', Arial, Helvetica, sans-serif;
+    font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
     color: RGBA(255,129,10,0.8);
     }
 
@@ -434,43 +435,28 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 .UIpanel {
+    background-image:url(../images/menu_panel_detail_2.svg); 
     min-width: 100%;    
     background-repeat:no-repeat;
-    padding:0.5rem 1rem 1rem 1rem;
-    }
+    text-shadow:2px 2px 2px black;
+  }
 
- 
-.UI-p-lg {
-    background-image:url(../images/UI-Panel-Portrait-lg.svg); 
+#collapse-mission {
+    padding:4.5vh 1vh 2vh 1vh;
 }
 
-.UI-p-md {
-    background-image:url(../images/UI-Panel-Portrait-md.svg); 
+#collapse-trips {
+    padding:8vh 1vh 4vh 1vh;
 }
 
-.UI-p-sm {
-    background-image:url(../images/UI-Panel-Portrait-sm.svg); 
+#collapse-mini-gallery {
+    padding:4vh 1vh 2vh 1vh;
     min-height:30vh;
 }
 
-.UI-l-lg {
-    background-image:url(../images/UI-Panel-Landscape-lg.svg); 
+#collapse-countdown {
+    padding:4vh 1vh 2vh 1vh;
 }
-
-.UI-l-md {
-    background-image:url(../images/UI-Panel-Landscape-md.svg); 
-}
-
-.UI-l-sm {
-    background-image:url(../images/UI-Panel-Landscape-sm.svg); 
-}
-
-
- .card-body {
-    text-shadow:2px 2px 2px black;
-    padding:0.5rem 0.5rem 1.5rem 0;
-  }
-
 
  /*-----Home Page - Countdown Timer --------*/
  /*---- A true countdown timer requires understanidng of JS, so for the purpose of representing what this 'could' look like I created a mock version which only counts down from a static starting point, only adjusts the minutes and seconds and resets on page load and expanding the accordion card. 
@@ -501,17 +487,21 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
  .table-countdown {
     border: 1px solid RGBA(255,129,10,1);
-    width:80vw;
+    width:75vw;
 }
 
 .table-countdown-labels {
     border: 1px solid RGBA(255,129,10,1);
+    color:black;
+    background-color:RGBA(255,129,10,0.8);
+    text-shadow:none;
 }
 
+
 .table-countdown-wrapper {
-    background-color: #242424;
+    background-color: black;
     transform:translate (-50%, -50%);
-    font-family:'LED', Arial, Helvetica, sans-serif;
+    font-family:'LED',  Arial, Helvetica, sans-serif;
     height:5vh;
     line-height:5vh;
     font-weight:bold;
@@ -525,12 +515,15 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     overflow:hidden;
 }   
 
+/*----
 .countdown-labels {
     display:inline-block;
     width:100%;
     vertical-align: top;
     border: 1px solid RGBA(255,129,10,1);
+    
 }
+---*/
 
 /*-----Original div version - replaced with table approach to address alignment issues
 .countdown-wrapper {
@@ -542,7 +535,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     border-collapse: collapse;
     background-color: #242424;
     transform:translate (-50%, -50%);
-    font-family:'LED', Arial, Helvetica, sans-serif;
+    font-family:'LED',  Arial, Helvetica, sans-serif;
     padding:0 0;
     margin: 0 0;
     height:5vh;
@@ -656,7 +649,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 #exploration h2 {
-    font-family:'ethnocentric_rg', Arial, Helvetica, sans-serif;
+    font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
     }
 
 
