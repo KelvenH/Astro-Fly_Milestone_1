@@ -4,18 +4,18 @@
 /*-Digital font available on free usage for non-commercial use via .com*/
 
 @font-face {
-    font-family: 'ethnocentric_rg';
     src:url('assets/fonts/ethnocentric_rg-webfont.woff');
+    font-family: 'ethnocentric_rg', Arial, Helvetica, sans-serif;
     }
 
 @font-face {
     src:url('assets/fonts/AdvancedDotDigital7-OpXA.ttf');
-    font-family:'digital';
+    font-family:'digital', Arial, Helvetica, sans-serif;
     }
 
 @font-face {
     src:url('assets/fonts/digital-7.ttf');
-    font-family:'LED';
+    font-family:'LED', Arial, Helvetica, sans-serif;
     }
 
 /*-------------------------General Settings-----------------*/
@@ -53,7 +53,7 @@ p {
 
 html, body {
     height:100%;
-    font-family: 'Baumans', sans-serif;
+    font-family: 'Baumans', Arial, Helvetica, sans-serif;
     font-size: clamp(16px, 2vw, 36px);
     color: RGBA(255,129,10,0.8);
     text-align: center;
@@ -62,7 +62,7 @@ html, body {
 
 h3 {
     font-size: clamp(28px, 2vw, 36px);
-    font-family:'ethnocentric_rg', sans-serif;
+    font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
     color: RGBA(255,129,10,0.8);
     }
 
@@ -74,7 +74,7 @@ h3 {
 
    background-color: #242424;
    border-bottom: 5px solid RGBA(255,129,10,0.8);
-   font-family:'ethnocentric_rg', sans-serif;
+   font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
    color: RGBA(255,129,10,0.9);
    height: 10vh;
     }
@@ -227,7 +227,7 @@ h3 {
     } 
 
 .welcome-strapline {
-    font-family:'ethnocentric_rg', sans-serif;
+    font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
     color:RGBA(255,129,10,1);
     text-shadow:2px 2px 2px black;
     text-align:right;
@@ -311,7 +311,7 @@ Acknowledgement: CCStricks.com article and demos-----*/
   background-color: black;
   color:RGBA(0,217,255,1);
   background-size:100% 100%;
-  font-family:'digital';
+  font-family:'digital', Arial, Helvetica, sans-serif;
   font-size:70%;
 }
 
@@ -417,7 +417,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 .btn-link {
-    font-family:'ethnocentric_rg', sans-serif;
+    font-family:'ethnocentric_rg', Arial, Helvetica, sans-serif;
     color: RGBA(255,129,10,0.8);
     }
 
@@ -511,7 +511,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 .table-countdown-wrapper {
     background-color: #242424;
     transform:translate (-50%, -50%);
-    font-family:'LED';
+    font-family:'LED', Arial, Helvetica, sans-serif;
     height:5vh;
     line-height:5vh;
     font-weight:bold;
@@ -542,7 +542,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     border-collapse: collapse;
     background-color: #242424;
     transform:translate (-50%, -50%);
-    font-family:'LED';
+    font-family:'LED', Arial, Helvetica, sans-serif;
     padding:0 0;
     margin: 0 0;
     height:5vh;
@@ -656,7 +656,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 #exploration h2 {
-    font-family:'ethnocentric_rg', sans-serif;
+    font-family:'ethnocentric_rg', Arial, Helvetica, sans-serif;
     }
 
 
