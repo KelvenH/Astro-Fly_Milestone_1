@@ -5,16 +5,16 @@
 
 @font-face {
     font-family: 'ethnocentric_rg';
-    src:url('assets/fonts/ethnocentric_rg-webfont.woff');
+    src:url('../../assets/fonts/ethnocentric_rg-webfont.woff');
     }
 
 @font-face {
-    src:url('assets/fonts/AdvancedDotDigital7-OpXA.ttf');
+    src:url('../../assets/fonts/AdvancedDotDigital7-OpXA.ttf');
     font-family:'digital';
     }
 
 @font-face {
-    src:url('assets/fonts/digital-7.ttf');
+    src:url('../../assets/fonts/digital-7.ttf');
     font-family:'LED';
     }
 
@@ -215,7 +215,7 @@ h3 {
     }
 
 .welcome-planet-img {
-    background:url("assets/images/planet_earth-xs.jpg"); /*----image source XXXXXXXX -----*/
+    background:url(../../assets/images/planet_earth-xs.jpg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-position: 30%;
     background-repeat: no-repeat;
@@ -280,7 +280,7 @@ Acknowledgement: CCStricks.com article and demos-----*/
     flex-wrap: wrap;
     position: relative;
     background-color:none;
-    background:url("assets/images/Tiled-Hex_Black.svg"); /*----image source XXXXXXXX -----*/
+    background:url(../../assets/images/Tiled-Hex_Black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     }
 
@@ -360,7 +360,7 @@ background-color:RGBA(0,217,255,1);
 /*--
 
 #main-window-image {
-    background-image:url("assets/images/main_background.jpg");   ----image source XXXXXXXX -----
+    background-image:url(../../assets/images/main_background.jpg);   ----image source XXXXXXXX -----
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
@@ -421,7 +421,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 .card-header {
-    background-image:url("menu_panel_2.svg"); 
+    background-image:url(menu_panel_2.svg); 
     background-position:center;
     background-size:contain;
     background-repeat:no-repeat;
@@ -449,7 +449,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 .UIpanel {
-    background-image:url("menu_panel_detail_2.svg"); 
+    background-image:url(menu_panel_detail_2.svg); 
     min-width: 100%;    
     background-repeat:no-repeat;
     text-shadow:2px 2px 2px black;
@@ -642,7 +642,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 #main-exploration-image {
-    background-image:url("assets/images/Star-sky-portrait-small.jpeg"); /*----image source XXXXXXXX -----*/
+    background-image:url(../../assets/images/Star-sky-portrait-small.jpeg); /*----image source XXXXXXXX -----*/
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
@@ -739,7 +739,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 /*-------------------------404 Page-----------------*/
 
 .A404-image {
-   background-image:url("assets/images/404_Error.png");
+   background-image:url(../../assets/images/404_Error.png);
    background-repeat:no-repeat;
    background-size: cover;
    background-position: center center;
