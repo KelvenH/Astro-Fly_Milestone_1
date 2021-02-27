@@ -134,7 +134,7 @@ h3 {
 /*---Nav Menu Panels ----------------*/
 
 .menu-panel {
-    background-image:url('/assets/images/menu-panel.svg');
+    background-image:url('/assets/images/menu_panel_2.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position:50%;
@@ -345,8 +345,20 @@ background-color:RGBA(0,217,255,1);
 
 /*-------------------------Home Page main - background-----------------*/
 
+
 #main-window-image {
-    background-image:url("/assets/images/main_background.jpg"); /*----image source XXXXXXXX -----*/
+
+    background-color: black;
+    width:100%;
+    border-top:none;
+    background-attachment: fixed;
+}
+
+
+/*--
+
+#main-window-image {
+    background-image:url("/assets/images/main_background.jpg");   ----image source XXXXXXXX -----
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
@@ -354,6 +366,8 @@ background-color:RGBA(0,217,255,1);
     border-top:none;
     background-attachment: fixed;
     }
+
+-----*/
 
 /*-------------------------Home Page main - accordion-----------------*/
 
