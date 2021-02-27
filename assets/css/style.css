@@ -205,7 +205,7 @@ h3 {
 /*-------------------------Home Page - Welcome-----------------*/
 
 .welcome-container {
-    margin-top:9vh; 
+    margin-top:10vh; 
     position:relative; 
 }
 
@@ -406,7 +406,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 /*---MEDIA QUERIES - TO BE ADDED, USE PORTRAIT SVG FOR MOBILE AND TABLET (WHEN IN PORT MODE) AND LANDSCAPE FOR ALL OTHER SCREEN SIZES / LAYOUT)---*/
 
 
-.card-header {
+.index-card-header {
     background-image:url(../images/menu_panel_2.svg); 
     background-position:center;
     background-size:contain;
@@ -717,7 +717,9 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 /*-------------------------Registration-----------------*/
 
-
+.form-header {
+    margin-top:10vh;
+}
 
 
 
