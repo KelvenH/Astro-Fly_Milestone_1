@@ -280,7 +280,7 @@ Acknowledgement: CCStricks.com article and demos-----*/
     flex-wrap: wrap;
     position: relative;
     background-color:none;
-    background:url(../../assets/images/Tiled-Hex_Black.svg); /*----image source XXXXXXXX -----*/
+    background:url(../../assets/images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     }
 
@@ -642,7 +642,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 #main-exploration-image {
-    background-image:url(../../assets/images/Star-sky-portrait-small.jpeg); /*----image source XXXXXXXX -----*/
+    background-image:url(); /*----image removed - switching to background color/. -------*/
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
@@ -739,7 +739,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 /*-------------------------404 Page-----------------*/
 
 .A404-image {
-   background-image:url(../../assets/images/404_Error.png);
+   background-image:url(../../assets/images/a404_error.png);
    background-repeat:no-repeat;
    background-size: cover;
    background-position: center center;

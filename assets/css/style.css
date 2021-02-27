@@ -278,7 +278,7 @@ Acknowledgement: CCStricks.com article and demos-----*/
     flex-wrap: wrap;
     position: relative;
     background-color:none;
-    background:url(../images/Tiled-Hex_Black.svg); /*----image source XXXXXXXX -----*/
+    background:url(../images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     }
 
@@ -346,7 +346,7 @@ background-color:RGBA(0,217,255,1);
 /*-------------------------Home Page main - background-----------------*/
 
 #main-window-image {
-    background-image:url(../images/main_background.jpg); /*----image source XXXXXXXX -----*/
+    background-image:url(); /*----image removed - switching to background color/. -------*/
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
@@ -405,7 +405,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 .card-header {
-    background-image:url(../images/Accordion-Header-Background.svg); 
+    background-image:url(); /*----image removed - replacing -------*/
     background-position: left;
     background-size:contain;
     background-repeat:no-repeat;
@@ -635,7 +635,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 #main-exploration-image {
-    background-image:url(../images/Star-sky-portrait-small.jpeg); /*----image source XXXXXXXX -----*/
+    background-image:url(); /*----image removed - switching to background color/. -------*/
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
@@ -732,7 +732,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 /*-------------------------404 Page-----------------*/
 
 .A404-image {
-   background-image:url(../images/404_Error.png);
+   background-image:url(../images/a404_error.png);
    background-repeat:no-repeat;
    background-size: cover;
    background-position: center center;
