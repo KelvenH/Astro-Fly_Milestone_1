@@ -1,0 +1,366 @@
+@font-face {
+    font-family: 'ethnocentric_rg';
+    src: 
+    url(../fonts/ethnocentric_rg-webfont.woff2) format('woff2'),
+    url(../fonts/ethnocentric_rg-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ethnocentric_el';
+    src: 
+    url('../fonts/ethnocentric_el-webfont.woff2') format('woff2'),
+    url('../fonts/ethnocentric_el-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*-------------------------General Settings-----------------*/
+
+* {
+    margin:0;
+    padding:0;
+}
+
+.container {
+    margin:0;
+    padding:0;
+}
+
+.container-fluid {
+    margin:0;
+    padding:0;
+}
+
+.row {
+    margin:0;
+    padding:0;
+}
+
+
+p {
+    margin-bottom:0;
+}
+
+    html, body {
+    height:100%;
+    font-family: 'Goldman', sans-serif;
+    font-size: clamp(16px, 2vw, 36px);
+    color: orange;
+    text-align: center;
+    background-color:transparent;
+}
+
+h3 {
+    font-size: clamp(28px, 2vw, 36px);
+    font-family:'ethnocentric_rg', sans-serif;
+    color: orange;
+}
+
+/*-------------------------Custom Shaped Boxes----------------*/
+
+
+.clip-box-one-outer {
+    clip-path:polygon(1% 6%, 6% 1%, 54% 1%, 60% 4%, 92% 4%, 95% 10%, 95% 10%, 95% 10%, 95% 10%, 95% 38%, 94% 42%, 94% 50%, 95% 50%, 95% 60%, 95% 90%, 91% 99%, 53% 99%, 50% 95%, 40% 95%, 40% 99%, 11% 99%, 2% 90%, 2% 40%, 1% 36%, 1% 20%, 1% 6%);   
+    background-color:rgb(255, 127, 0);
+    
+   
+}
+
+.clip-box-one-inner {
+    clip-path:polygon(2% 7%, 7% 2%, 54% 2%, 60% 5%, 67% 5%, 91% 5%, 94% 10%, 94% 38%, 92% 38%, 92% 15%, 91% 20%, 91% 39%, 93% 39%, 93% 52%, 94% 52%, 94% 90%, 91% 97%, 85% 97%, 53% 97%, 50% 93%, 39% 93%, 39% 98%, 11% 98%, 11% 96%, 38% 96%, 38% 95%, 9% 95%, 6% 92%, 50% 92%, 50% 91%, 5% 91%, 3% 90%, 3% 40%, 2% 36%, 2% 8%, 5% 8%, 5% 34%, 5% 7%, 2% 7%); 
+    background-color:#242424;
+   
+}
+
+/*-------------------------Navbar----------------*/
+
+.navbar {
+
+   background-color: #242424;
+   border-bottom: 5px solid rgb(255, 127, 0);
+    font-family:'ethnocentric_rg', sans-serif;
+    color: rgb(255, 127, 0);
+    line-height: 7vh;
+}
+
+.navbar-brand, .navbar-toggler {
+        color: rgb(255, 127, 0);
+    font-size: clamp(30px, 8vw, 60px);
+}
+
+
+.dropdown-menu {
+    background-color:#242424;
+    padding-top:0;
+}
+
+.dropdown-header {
+    color: rgb(255, 127, 0);
+    font-weight: 600;
+        
+    }
+
+.dropdown-item {
+   background:#242424;
+   color: rgb(255, 127, 0);
+
+
+ 
+}
+
+
+/*-----
+
+
+.dropdown-item {
+   display: none;
+   position:absolute;
+   background:rgb(80, 66, 207);
+   border-radius:0px 0px 14px 14px;
+}
+
+
+.dropdown-list:hover .dropdown-items {
+    display: block;
+}
+
+.dropdown-items li {
+   width:180px;
+   border-radius:14px;
+}
+
+.dropdown-items li a {
+   padding:16px 14px;
+}
+
+.dropdown-items li a:hover {
+   background-color: red;
+}
+---*/
+
+
+
+/*-------------------------Footer-----------------*/
+
+.footer-main {
+    background-color: #242424;
+    font-size: clamp(30px, 8vw, 60px);
+    color: rgb(255, 127, 0);
+    height: 10vh;
+    position:sticky;
+    display:inline-block;
+    text-align:center;
+    border-top:10px solid;
+    border-color: rgb(255, 127, 0);
+  
+}
+
+/*-------------------------HOME PAGE-----------------*/
+
+/*-------------------------Home Page - Welcome-----------------*/
+
+.welcome {
+    height:30vh;
+    font-size: clamp(16px, 4vw, 40px);
+   /*------ padding-right: clamp(8px, 16px, 32px?);-----*/
+    border-bottom: 5px solid rgb(255, 127, 0);
+}
+
+.welcome-planet-img {
+    background:url(/assets/images/planet_earth-xs.jpg);
+    background-size: cover;
+    background-position: 30%;
+    background-repeat: no-repeat;
+    animation-name:imgfadein;
+    animation-delay:1.5;
+    animation-fill-mode: both;
+    animation-duration:10s;
+    animation-timing-function: linear;  
+}
+
+.welcome-strapline {
+    font-family:'ethnocentric_rg', sans-serif;
+    color: rgb(255, 127, 0);
+    text-align:right;
+    padding-top: 3vw;
+    padding-left:50vw;
+    padding-right:2vw;
+    animation-name:txtfadein;
+    animation-delay:2s;
+    animation-fill-mode: both;
+    animation-duration:6s;
+    animation-timing-function: ease;  
+}
+
+/*-------welcome animtaion------- desired effect - break of new dawn*/
+
+@keyframes imgfadein {
+    0%      {filter: brightness(0) blur(10px);}
+    10%     {filter: brightness(0.15) blur(5px);}
+    20%     {filter: brightness(0.3) blur(2px);}
+    30%     {filter: brightness(0.45) blur(1px);}
+    40%     {filter: brightness(0.6) blur(0px);}
+    50%     {filter: brightness(0.75) blur(0px);}
+    60%     {filter: brightness(1.0) blur(0);}
+    86%     {filter: brightness(1.25) blur(0);}
+    88%     {filter: brightness(1.5) blur(0);}
+    89%     {filter: brightness(1.4) blur(0);}
+    90%     {filter: brightness(1.4) blur(0);}
+    95%     {filter: brightness(1.2) blur(0);}
+    100%    {filter: brightness(1.0) blur(0);}
+    }   
+
+
+@keyframes txtfadein {
+  0% {visibility: hidden; opacity: 0%;}
+  50% {visibility: hidden; opacity:1%;}
+  100% {visibility: visible; opacity:100%;}
+  }
+
+/*-------------------------Home Page - Intro-----------------*/
+
+  #intro-box {
+    padding:4vh 1vh;
+    border-bottom:5px solid;
+    border-color: rgb(255, 127, 0);
+    display:inline;
+    flex-wrap: wrap;
+    position: relative;
+    background-color:none;
+    background:url(/assets/images/metal-grille.jpg);
+    background-size: cover;
+    }
+
+  /*-------------------------Home Page - Intro / Ticker-----------------*/
+
+.intro-ticker {
+    background-color: black;
+    font-family:'Aldrich', sans-serif;
+    font-size: clamp(14px, 2vw, 32px);
+    color: orange;
+    width:100vw;
+    height: 4vh;
+    overflow:hidden;
+    margin:4vh 3vh 0 3vh;
+    border-style:inset;
+
+}
+
+.intro-ticker-news {
+    display:inline-block;
+    height:4vh;
+    list-style:none;
+    width: 100%;
+    background-color: none;
+    animation: animate 240s linear infinite;
+    margin-bottom:0;
+    margin-top:2vh;
+    padding-inline-start:0;
+ 
+    }
+
+.intro-ticker-news li {
+    display:inline-block;
+    justify-content: center;
+    flex-shrink: 0;
+    white-space: pre-wrap;
+    padding-left:1vw;
+
+    }
+
+.break-news {
+    display:flex;
+    background-color: orange;
+    color: black;
+    
+}
+
+@keyframes animate {
+     0%  {transform: translateX(120%);}
+    100%  {transform: translateX(-3500%);}
+}
+
+/*-------------------------Home Page - background-----------------*/
+
+#main-window-image {
+    background-image:url("/assets/images/main_background.jpg"); 
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    border-top:none;
+    background-attachment: fixed;
+
+}
+
+/*-------------------------Home Page - main accordian-----------------*/
+
+#home-accordian {
+    padding-bottom:10vh;
+    width:75%;
+    margin:15%;
+    margin-top:0%;
+}
+
+.card {
+    background-color:transparent;
+    padding-top:10%;
+    text-align:center;
+    margin-bottom: 1vh;
+}
+
+.btn-link {
+    font-family:'ethnocentric_rg', sans-serif;
+    color: orange;
+    }
+
+#home-accordian .btn-link:hover,
+#home-accordian .btn-link:focus,
+#home-accordian .btn-link:active,
+#home-accordian .btn-link:visited {
+    text-decoration: none;
+        color: orange;
+        border-style: none; 
+        outline:none;
+        box-shadow:none;
+}
+
+
+
+.card-header {
+    border:0.25rem solid;
+    border-color: rgb(255, 127, 0);
+    border-top-left-radius:0.5rem;
+    border-top-right-radius:0.5rem;
+    background-color: #242424;
+    text-align:center;
+}
+
+.card-body {
+    border-style: solid;
+    border-width: 0 0.25rem 0.25rem 0.25rem;
+    border-color: rgb(255, 127, 0);
+    border-bottom-left-radius:0.5rem;
+    border-bottom-right-radius:0.5rem;
+    background-color:rgb(106, 103, 103);
+    
+}
+
+
+
+
+/*----
+
+.intro-img {
+    object-fit:cover;
+    width: 40vw;
+}
+
+.quote.text {
+    font-style:oblique;
+    width:80vw;
+    text-align:center;
+}
+----------*/
