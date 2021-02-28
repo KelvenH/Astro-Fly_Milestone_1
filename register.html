@@ -74,47 +74,55 @@
                     <div class="card-header">
                         <ul class="nav nav-tabs card-header-tabs">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Astro:Cadet</a>
+                                <a class="nav-link active" id="cadet-tab" data-toggle="tab" href="#cadet" role="tab" aria-controls="cadet">Astro:Cadet</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Astro:Explorer</a>
+
+		                    <li class="nav-item">
+                                <a class="nav-link active" id="explorer-tab" data-toggle="tab" href="#explorer" role="tab" aria-controls="explorer">Astro:Explorer</a>
                             </li>
+                            
                             <li class="nav-item">
-                                <a class="nav-link active" href="#">Astro:Pioneer</a>
+                                <a class="nav-link active" id="pioneer-tab" data-toggle="tab" href="#pioneer" role="tab" aria-controls="pioneer">Astro:Pioneer</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Astro:VIP</a>
+
+		                    <li class="nav-item">
+                                <a class="nav-link active" id="vip-tab" data-toggle="tab" href="#vip" role="tab" aria-controls="vip">Astro:VIP</a>
                             </li>
                         </ul>
                     </div>
+
   
                     <div class="card-body">
-                        
-                        <p class="card-text">Qualifying Criteria: None - Membership is FREE! Just complete the registration form linked below to join.<br>
+                        <div class="tab-content" id=“myTabContent">
+
+                            <p class="card-text">Qualifying Criteria: None - Membership is FREE! Just complete the registration form linked below to join.<br>
                             Benefits: As an Astro:Cadet you qualify for exclusive competitions and amazing prize give-aways. You'll also receive regular updates with all the exciting news of our latest adventures, technological achievments and scientific discoveries. 
                             You'll also receive 1 month's free access <sup>*</sup> to our Astro:Tube channel where you can view footage from recent flights, behind the scene footage from our European Astro:Hub facility or even tune in to watch one of our launches.
                             <sup>*</sup> Astro:Tube access is free for 30 calender days, after which you will need to upgrade to Astro:Explorer to retain access. Offer is valid to 1 household only. Further Terms and Conditions will be provided upon registration. </p>
                         
-                        <p class="card-text">Qualifying Criteria: Book a space flight with us and get instantly promoted to Astro:Explorer<sup>*</sup>. Alternatively you can join this rank and open up amazing benefits below for only £75 per month.<br>
+                            <p class="card-text">Qualifying Criteria: Book a space flight with us and get instantly promoted to Astro:Explorer<sup>*</sup>. Alternatively you can join this rank and open up amazing benefits below for only £75 per month.<br>
                            Benefits: Astro:Explorers will be invited to join our exclusive Astro:Tube 'live' channel. This is a 24hr 7 days a week service where you can engage with the team directly in real time! Weekly sessions are hosted across the Astro:Fly teams. So maybe tune in for a group chat with one of our research team on Lunar Base 5 or Astro:View or join one of our Astro:Fly Commanders who will be willing to answer any questions you have on what it's like to travel beyond Earth's gravity. In between reglar shows are live feeds from our Astro:Hub facility, launch base and Astro:view.
                           <sup>*</sup> Free membership is activated upon receipt of your deposit. Further Terms and Conditions will be provided upon registration.</p>
                         
-                        <p class="card-text">Qualifying Criteria: only accessible for the most adventurous! Astro:Pioneer acknowledges your achievement in joining us for one of our space adventures.<br>
+                            <p class="card-text">Qualifying Criteria: only accessible for the most adventurous! Astro:Pioneer acknowledges your achievement in joining us for one of our space adventures.<br>
                             Benefits: The true benefit is the experience. But even after your return to Earth, you'll continue to receive on-going benefits which vary depending upon the adventure you undertake<sup>*</sup>. For example, should you join us on an Astro:Safari for a stay on our Astro:View solar observor, you'll have lifetime access to live feeds, tracking information and data sent back from the probe you launch!<br>
                             <sup>*</sup> Subject to full payment received for a flight and is awarded upon completion of your pre-flight medical and training assessment at our Astro:Hub facility prior to launch. Full list of benefits, Terms and Conditions will be provided upon booking.</p>
                         
-                        <p class="card-text">Qualifying Criteria: Exclusively on the invitation of Astro:Fly. An Astro:VIP is the highest commendation awarded to those for whom human-kind owes so much. These special individuals hve been recognised for the most incredible breakthroughs in the fields of scientific discovery, technological achievemnts and bio-medicine.</p>
+                            <p class="card-text">Qualifying Criteria: Exclusively on the invitation of Astro:Fly. An Astro:VIP is the highest commendation awarded to those for whom human-kind owes so much. These special individuals hve been recognised for the most incredible breakthroughs in the fields of scientific discovery, technological achievemnts and bio-medicine.</p>
                         
+                        </div>
                     </div>
                 </div>
                 
             </nav>
 
+            
+
             <a href="#" class="btn btn-primary">Go somewhere</a>  <!---Links to open register form modal --->
             
             <form class="form">
     
-                    <div class="form-group form-part-A">
+                <div class="form-group form-part-A">
                         <p>Your Contact Details</p>
 
                         <label for="title">Title:</label> 
@@ -145,21 +153,22 @@
                         </div>
                     </div>
                         
-                    <div class="form-part2">
-                        <p>Part2</p>
-                    </div>
+                <div class="form-part2">
+                
+                    <p>Part2</p>
+                </div>
 
-                    <div class="form-row text-center">
+                <div class="form-row text-center">
                             
-                        <div class="col">
-                            <button type="submit" class="btn btn-secondary">Register</button>
-                            <button type="submit" class="btn btn-secondary">Cancel</button>
-                        </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-secondary">Register</button>
+                        <button type="submit" class="btn btn-secondary">Cancel</button>
                     </div>
+                </div>
                        
-                </form>
-            </div>
+            </form>
         </div>
+    </section>
 
 
         <!--- Fields / inouts
