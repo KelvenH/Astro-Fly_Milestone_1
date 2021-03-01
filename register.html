@@ -19,7 +19,7 @@
 
 <body>
 
-   <header>
+    <header>
 
         <nav class="navbar fixed-top align-items-center">
 
@@ -151,12 +151,63 @@
             </div>
         </div>
 
-        <button type="button" class="btn btn-lg btn-block register-button">Click Here to Join!</button>
-     
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-lg btn-block open-register-button" data-toggle="modal"
+            data-target="#register-modal">Click Here to Join!</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="register-modal" tabindex="-1" aria-labelledby="registration-modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="register-modal-label">Join the Astro:Fly family</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        This is the modal body
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-lg register-submit-button">Submit</button>
+                        <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4 </div>
+                    <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4 </div>
+                    <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4 </div>
+                    <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4 </div>
+                    <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4 </div>
+                    <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4 </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4 </div>
+                    <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4 </div>
+                    <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4 </div>
+                    <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4 </div>
+                    <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4 </div>
+                    <div class="col-sm-6 col-md-4">.col-sm-6 .col-md-4 </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 ml-auto">.col-md-6 .ml-auto</div>
+                </div>
+
+            </div>
+        </div>
+
     </section>
 
- 
- <footer class="footer fixed-bottom">
+    <footer class="footer fixed-bottom">
 
         <div class="container-fluid footer-main">
             <div class="row no-gutters">
@@ -195,3 +246,83 @@
 </body>
 
 </html>
+<!---Links to open register form modal --->
+
+
+
+<!-- form to be added to modal
+
+            <form class="form">
+
+                <div class="form-group form-part-A">
+                    <p>Your Contact Details</p>
+
+                    <label for="title">Title:</label>
+                    <input type="title" name="title" id="title" class="form-control" required />
+
+                    <label for="f-name">First Name:</label>
+                    <input type="text" name="f-name" id="f-name" class="form-control" required />
+
+                    <label for="s-name">Surname:</label>
+                    <input type="text" name="s-name" id="s-name" class="form-control" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="emailaddress" class="form-control" required />
+
+                    <label for="phone">Phone:</label>
+                    <input type="phone" name="phone" id="phone" class="form-control" required />
+
+                    <div class="input group">
+                        <label class="input group postal address">Address:</label>
+
+
+                        <input type="address" name="address" id="postaddress1" class="form-control"
+                            placeholder="address" required />
+                        <input type="address" name="address" id="postaddress2" class="form-control"
+                            placeholder="address" required />
+                        <input type="address" name="address" id="postaddress3" class="form-control"
+                            placeholder="address" required />
+                        <input type="address" name="address" id="postaddress4" class="form-control"
+                            placeholder="address" required />
+                        <input type="address" name="address" id="postaddress5" class="form-control"
+                            placeholder="address" required />
+
+                    </div>
+                </div>
+
+                <div class="form-part2">
+
+                    <p>Part2</p>
+                </div>
+
+                <div class="form-row text-center">
+
+                    <div class="col">
+                        <button type="submit" class="btn btn-secondary">Register</button>
+                        <button type="submit" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </div>
+
+            </form>
+            --->
+
+
+
+
+<!--- Fields / inouts
+
+            Title
+            First name
+            Surname
+            DOB
+            Nationality
+            Country of Residence
+            Experience
+            Medical
+            Interested in - exploration choices
+            Register for future updates and access to exclusive competitions and give aways
+            VIP Y/N
+            Cancel / Submit Buttons
+            Modal pop-up (sure wish to cancel.   /.   thank you for submitting, team in touch
+
+-->

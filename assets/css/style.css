@@ -812,12 +812,22 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     border:solid 5px rgba(255,129,10,1);
 }
 
-.register-button {
+.open-register-button {
     position:center;
     margin-top:4vh;
     background-color: rgba(255,129,10,1);
     color:black;
 }
+
+
+.register-submit-button {
+    position:center;
+    margin-top:4vh;
+    background-color: rgba(255,129,10,1);
+    color:black;
+}
+
+
 
 /*-------------------------404 Page-----------------*/
 
