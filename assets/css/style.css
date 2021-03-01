@@ -726,6 +726,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     background-repeat:no-repeat;
     width:100%;
     margin-top:10vh;
+   
 }
 
 
@@ -733,18 +734,60 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     padding:1px;  /*Bug fix horizontal margin collapse between parent and child - fix sourced from https://www.smashingmagazine.com/2019/07/margins-in-css/--------*/
 }
 
+
 /*----- class names re-used from accordion to apply header and content background images, IDs added to specify sizing adjustments & styling-----*/
 
 #register-header {
-    margin-top:4vh;
-    
+    margin-top:4vh;   
     font-weight:700;
     line-height:6vh;
 }
 
-#register-intro {
-    padding:4.5vh 1vh 2vh 1vh;
+
+.UI-detail-panel-wrap {
+    margin-top:2vh;
+    position:relative;
 }
+
+.UI-detail-panel-top {
+    position:relative;
+    margin-bottom:calc(-100vw / 3.5);
+}
+
+.UI-detail-panel-text {
+    position:relative;
+    margin-bottom:calc(-100vw / 3.5);
+    padding-left:10vw;
+    width:90vw;
+    text-align:center;
+    color:orange;
+    z-index:100;
+}
+
+
+.UI-detail-panel-mid {
+    position:relative;
+    vertical-align: top;
+    width:100%;
+}   
+
+.UI-size1 {
+    height: 20vh;
+    margin-top:-1vh;
+}   
+
+
+.UI-size2 {
+    height: 40vh;
+    margin-top:-25vw;
+}
+
+
+.UI-detail-panel-bottom {
+    position:relative;
+    vertical-align: top;
+}
+
 
 /*--- padding:8vh 1vh 4vh 1vh--*/
 
