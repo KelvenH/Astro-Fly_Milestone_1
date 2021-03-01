@@ -54,7 +54,7 @@ p {
 html, body {
     height:100%;
     font-family: 'Baumans',  Arial, Helvetica, sans-serif;
-    font-size: clamp(16px, 2vw, 36px);
+    /*--font-size: clamp(16px, 2vw, 36px);----*/
     color: RGBA(255,129,10,0.8);
     text-align: center;
     background-color:transparent;
@@ -65,7 +65,9 @@ h3 {
     color: RGBA(255,129,10,0.8);
     }
 
-
+.card-body {
+    padding:0;
+}
 
 /*-------------------------Navbar----------------*/
 
@@ -361,8 +363,7 @@ background-color:RGBA(0,217,255,1);
 
 #home-accordion {
     padding-bottom:10vh;
-    width:90vw;
-    margin-left:5vw;
+    width:100vw;
     margin-top:0%;
     }
 
@@ -439,10 +440,11 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     min-width: 100%;    
     background-repeat:no-repeat;
     text-shadow:2px 2px 2px black;
+    padding:7vh 6vh 5vh 3vh;
   }
 
-#collapse-mission {
-    padding:4.5vh 1vh 2vh 1vh;
+/*-#collapse-mission {
+    padding:6vh 6vh 4vh 3vh;
 }
 
 #collapse-trips {
@@ -457,6 +459,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 #collapse-countdown {
     padding:4vh 1vh 2vh 1vh;
 }
+--*/
 
  /*-----Home Page - Countdown Timer --------*/
  /*---- A true countdown timer requires understanidng of JS, so for the purpose of representing what this 'could' look like I created a mock version which only counts down from a static starting point, only adjusts the minutes and seconds and resets on page load and expanding the accordion card. 
@@ -468,7 +471,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
    margin-bottom: 2vh;
     } 
 
-/*-----relates to layout of text wich appears prir to the timer----*/
+/*-----relates to layout of text wich appears prior to the timer----*/
 
 #countdown-info .info-label {
     text-align:right;
@@ -717,10 +720,38 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 /*-------------------------Registration-----------------*/
 
-.form-header {
+#register-container {
+    background-image:url(../images/hex_black_bg_sm.png);
+    position:center;
+    background-repeat:no-repeat;
+    width:100%;
     margin-top:10vh;
 }
 
+
+#register-wrapper {
+    padding:1px;  /*Bug fix horizontal margin collapse between parent and child - fix sourced from https://www.smashingmagazine.com/2019/07/margins-in-css/--------*/
+}
+
+/*----- class names re-used from accordion to apply header and content background images, IDs added to specify sizing adjustments & styling-----*/
+
+#register-header {
+    margin-top:4vh;
+    
+    font-weight:700;
+    line-height:6vh;
+}
+
+#register-intro {
+    padding:4.5vh 1vh 2vh 1vh;
+}
+
+/*--- padding:8vh 1vh 4vh 1vh--*/
+
+#register-tiers {
+    font-weight:800;
+    margin-top:4vh;
+}
 
 
 
