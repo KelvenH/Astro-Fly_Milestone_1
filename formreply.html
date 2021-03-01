@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
+
+
+<style>
+@font-face {
+    font-family: 'ethnocentric_rg';
+    src:url('../fonts/ethnocentric_rg-webfont.woff');
+    }
+ 
+.section {
+    height:100vh;
+    width:100vw;
+    
+}
+
+  body  {
+    font-family: 'Baumans',  Arial, Helvetica, sans-serif;
+    text-align:center;
+    color: RGBA(255,129,10,0.8);
+    font-size:3vh;
+    border:solid 5px RGBA(255,129,10,0.8);
+    background-image: linear-gradient(to bottom left, black, grey);
+    background-image:no-repeat;
+    background-size:cover;
+    margin:25% 10%;
+    padding:1em;
+  }
+
+  p {
+      font-size:5vh;
+      filter:brightness (1);
+      font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
+      text-shadow: 7px 7px 7px black;
+  }
+
+.icon-planet {
+    filter: drop-shadow(5px 5px 2px black);
+    }
+
+button {
+
+    background-color: RGBA(255,129,10,0.6);
+    color:black;
+    margin-top:3vh;
+    height:5vh;
+    width:30vw;
+}
+
+
+</style>
+    <title>Astro:Fly (Form Received)</title>
+</head>
+<body>
+
+    <!--- Purpose of this page is to act as a dummy recipient of the form, which a) provides acknowledgement and b) re-directs to the home page) ---->
+    
+    <div container>
+    
+        <div>
+
+        We have contact! <br><br>
+        Hi, thank you for getting in touch. One of the team will be in touch with you.
+        <br><br>
+        <p>Astr<span class="iconify icon-planet align-self-center" data-icon="bx:bxs-planet" data-inline="true"></span>:Fly</p>
+        Pioneering commercial space travel
+        <br><br>
+        Now let's get you home.......    
+        </div>
+
+         <a href="index.html"><button>Destination: Home</button></a>
+
+    </div>
+</body>
+</html>
