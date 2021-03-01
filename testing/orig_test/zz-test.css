@@ -22,44 +22,57 @@
 .test2-top {
     background-image:url(../../assets/images/testsvg-top.svg);
     background-repeat: no-repeat;
-    background-size: cover;
-    height:90vh;
-    
-}
-
-
-.test2-mid {
-    background-image:url(../../assets/images/testsvg-mid.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size:cover;
 }
 
 .test2-bottom {
-    background-image:url(../../assets/images/testsvg-bott.svg);
+    background:url(../../assets/images/testsvg-bott.svg);
     background-repeat: no-repeat;
     background-size:100% 100%;
+
+}
+
+.test2-mid {
+    background-image:url(../../assets/images/testsvg-mid.svg);
 
 }
 
 .panel-wrapper {
     position:relative;
     background:black;
+    z-index:-10;
+}
+
+
+.panel-top {
+    position:relative;
 }
 
 .panel-text {
-    position:absolute;
-    top:5vh;
-    left:5vh;
-    margin-right:5vh;
+    position:relative;
+    top:calc(-100vw / 3.5);
+    margin-bottom:calc(-100vw / 3.5);
+    padding-left:10vw;
+    width:90vw;
+    text-align:center;
     color:orange;
-}
-
-.panel-top, .panel-bottom {
 
 }
+
 
 .panel-mid {
-height:80vh;
-width:100%;
+    position:relative;
+    top:calc(-100vw / 3.5);
+    height: 40vh;
+    z-index:-1;
+    width:100%;
+    margin-top:-25vw;
+}   
+
+
+.panel-bottom {
+    position:relative;
+    margin-top:-50vw;
 }
+
+
