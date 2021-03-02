@@ -165,8 +165,7 @@ h3 {
 .navbar a:hover,
 .navbar a:active {
     text-decoration: none;
-    color: rgba(255,129,10,0.9);
-    cursor: auto;
+    color: var(--ink1);
     }
 
 
