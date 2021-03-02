@@ -41,6 +41,26 @@ body div p {font-size:16px};
 --tickerfont: 'digital', Arial, sans-serif;
 --LEDfont: 'LED', Arial, sans-serif;
 
+                /*---Font Color Variables---*/
+
+--ink1:rgb(255,129,10);        /*--for title / highlight text--*/
+--ink2:rgba(255,129,10,0.8);   /*--for baseline text--*/
+--ink3:rgb(94,87,77);          /*--off-black/orange for gradient fill--*/
+--ink4:        
+
+                /*----Special Font Colors----*/
+
+--LED1: rgba(0,217,255,1);        /*--news ticker--*/
+--LED2:   ;
+--Digit1: ;
+--Digit2: ;
+
+
+                 /*---Background & Border Color Variables---*/
+
+--paint1: rgb(235,103,27) /*---vector orange - current - hex value #db841d--*/
+--paint2: rgb(219, 132, 29) /*--vector orange - switching to - hex value #db841d--*/
+--paint3: ;
 
 /*-------------------------General Settings-----------------*/
 
