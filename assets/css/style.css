@@ -3,8 +3,11 @@
              /*--'Ethnocentric' licence purchased for usage via fontspring.com--*/
 @font-face {
     font-family: 'ethnocentric_rg';
-    src:url('../fonts/ethnocentric_rg-webfont.woff');
-    }
+    src: url('/assets/fonts/ethnocentric_rg-webfont.woff') format('woff2'),
+         url('/assets/fonts/ethnocentric_rg-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
             /*--Digital & LED fonts available on free license for non-commercial use via dafont.com--*/
 @font-face {
@@ -20,47 +23,51 @@
             /*--'Baumans' font used as baseline font - linked to GoogleFonts in html header--*/
 
 
-/*----------------------------Responsive Font Sizing-----------------------------------------*/
-
-h1 {font-size:clamp(32px, 36px, 44px)};
-h2 /*----not defined / used -----*/
-h3 {font-size:clamp(28px, 32px, 36px)};
-h4 /*----not defined / used -----*/
-h5 {font-size:clamp(16px, 18px, 20px)};
-body div p {font-size:16px};
-
 /*----------------------------Root Variables-------------------------------------------------*/
 
 :root {
 
                  /*---Font Variables---*/
 
---standardfont: 'Baumans',  Arial, sans-serif;
---titlefont: 'ethnocentric_rg', Arial, sans-serif;
---sub-titlefont: 'ethnocentric_rg', Arial, sans-serif;
---tickerfont: 'digital', Arial, sans-serif;
---LEDfont: 'LED', Arial, sans-serif;
+  --standardfont:'Baumans', Arial, sans-serif;
+  --titlefont: 'ethnocentric_rg', Arial, sans-serif;
+  --sub-titlefont:'ethnocentric-rg', Arial, sans-serif;
+  --tickerfont:'digital', Arial, sans-serif;
+  --LEDfont:'LED', Arial, sans-serif;
+
 
                 /*---Font Color Variables---*/
 
---ink1:rgb(255,129,10);        /*--for title / highlight text--*/
---ink2:rgba(255,129,10,0.8);   /*--for baseline text--*/
---ink3:rgb(94,87,77);          /*--off-black/orange for gradient fill--*/
---ink4:        
+  --ink1:rgb(255,129,10);     /*--for title / highlight text--*/
+  --ink2:rgb(219,132,29);   /*--for baseline text--*/
+  --ink3:rgb(94,87,77);       /*--off-black/orange for gradient fill--*/
+  --ink4:rgb(104,87,66);      /*--off-grey w/ slight orange for gradient fill--*/  
+
 
                 /*----Special Font Colors----*/
 
---LED1: rgba(0,217,255,1);        /*--news ticker--*/
---LED2:   ;
---Digit1: ;
---Digit2: ;
+  --LED1: rgba(0,217,255,1);        /*--news ticker--*/
+/*--LED2:   --*/
+/*--Digit1: --*/
+/*--Digit2: --*/
 
 
                  /*---Background & Border Color Variables---*/
 
---paint1: rgb(235,103,27) /*---vector orange - current - hex value #db841d--*/
---paint2: rgb(219, 132, 29) /*--vector orange - switching to - hex value #db841d--*/
---paint3: ;
+  --paint1: rgb(235,103,27); /*---vector orange - current - hex value #db841d--*/
+  --paint2: rgb(219,132,29); /*--vector orange - switching to - hex value #db841d--*/
+/*--paint3: --*/
+
+}
+
+/*----------------------------Responsive Font Sizing-----------------------------------------*/
+
+h1 {font-size:clamp(32px, 5vw, 44px);}
+/*--h2 ----not defined / used -----*/
+h3 {font-size:clamp(28px, 4.5vw, 36px);}
+/*--h4 ---not defined / used -----*/
+h5 {font-size:clamp(16px, 18px, 20px);}
+.body, div, p {font-size:16px;}
 
 /*-------------------------General Settings-----------------*/
 
@@ -68,8 +75,7 @@ body div p {font-size:16px};
 Currently achieved through use of the global settings below across element types inaddition to Bootstrap classes (mb-0 & row no-gutters) - 
 to be reviewed prior to launch and remove any redundant ----*/
 
-
-* {
+/*-- {
     margin:0;
     padding:0;
     }
@@ -112,41 +118,46 @@ h3 {
 
 .card-body {
     padding:0;
-}
-/*-------------------------Setting Responsive Font Sizes----------------*/
+} --*/
+/*-------------------------Key Items----------------------------------------------------*/
 
-h1 {font-size: clamp(32px, 10vw, 64px)}
-h2 {font-size: clamp(28px, 4.5vw, 56px)}
-h3 {font-size: clamp(25px, 4vw, 50px)}
-h4 {font-size: clamp(21px, 3.5vw, 42px)}
-h5 {font-size: clamp(18px, 3vw, 36px)} 
-body {font-size: clamp(16px, 2vw, 32px)}
+.logo {
+    font-family: var(--titlefont);
+    color: var(--ink1);
+    text-shadow:2px 2px 2px black;
+    }
+
+.icon-planet {
+    color:var(--ink1);
+    filter: drop-shadow(5px 5px 2px black); /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
+    }
 
 
 /*-------------------------Navbar----------------*/
 
 .navbar {
+    background-image: linear-gradient(to bottom left, black,var(--ink4));
+    border-bottom: 8px solid var(--ink1);
+   }
 
-   background-image: linear-gradient(to bottom left, black, #242424);
-   border-bottom: 5px solid RGBA(255,129,10,0.8);
-   font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
-   color: RGBA(255,129,10,0.9);
-   height: clamp(60px, 10vw, 110px);
-   margin-bottom:1px;
+.navbar-toggler {
+    color: var(--ink1);
+    margin-right:5vw;
     }
 
-
-.navbar-logo, .navbar-toggler {
-    color: rgba(255,129,10,0.9);
-    text-shadow:2px 2px 2px black;
+ /*-- remove auto margin & padding to enable top / bottom alignment of text and icon--*/
+.logo {
+    margin-bottom:0;
+    }
+.navbar-toggler {
+    padding:0;
+    }
+  
+ /*-- align relative sizing with logo text--*/
+.navbar-toggler i {
+    font-size:clamp(32px, 5vw, 44px);
     }
 
-
-    /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
-
-.icon-planet {
-    filter: drop-shadow(5px 5px 2px black);
-    }
 
 
 .navbar a:link,
