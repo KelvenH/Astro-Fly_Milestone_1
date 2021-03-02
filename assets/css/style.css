@@ -54,7 +54,7 @@ p {
 html, body {
     height:100%;
     font-family: 'Baumans',  Arial, Helvetica, sans-serif;
-    /*--font-size: clamp(16px, 2vw, 36px);----*/
+    
     color: RGBA(255,129,10,0.8);
     text-align: center;
     background-color:transparent;
@@ -62,12 +62,21 @@ html, body {
 
 h3 {
     font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
-    color: RGBA(255,129,10,0.8);
+    color: RGBA(255,129,10,1);
     }
 
 .card-body {
     padding:0;
 }
+/*-------------------------Setting Responsive Font Sizes----------------*/
+
+h1 {font-size: clamp(32px, 10vw, 64px)}
+h2 {font-size: clamp(28px, 4.5vw, 56px)}
+h3 {font-size: clamp(25px, 4vw, 50px)}
+h4 {font-size: clamp(21px, 3.5vw, 42px)}
+h5 {font-size: clamp(18px, 3vw, 36px)} 
+body {font-size: clamp(16px, 2vw, 32px)}
+
 
 /*-------------------------Navbar----------------*/
 
@@ -77,13 +86,13 @@ h3 {
    border-bottom: 5px solid RGBA(255,129,10,0.8);
    font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
    color: RGBA(255,129,10,0.9);
-   height: 10vh;
+   height: clamp(60px, 10vw, 110px);
+   margin-bottom:1px;
     }
 
 
 .navbar-logo, .navbar-toggler {
     color: rgba(255,129,10,0.9);
-    font-size: 5vh;
     text-shadow:2px 2px 2px black;
     }
 
@@ -207,14 +216,18 @@ h3 {
 /*-------------------------Home Page - Welcome-----------------*/
 
 .welcome-container {
-    margin-top:10vh; 
     position:relative; 
+    margin-top: clamp(60px, 10vw, 110px);
 }
 
 .welcome {
-    height:30vh;
+    
+    height: clamp(60px, 10vw, 110px);
+    
     border-bottom: 5px solid RGBA(255,129,10,1);
     }
+
+   
 
 .welcome-planet-img {
     background:url(../images/planet_earth-xs.jpg); /*----image source XXXXXXXX -----*/
