@@ -29,6 +29,17 @@ h4 /*----not defined / used -----*/
 h5 {font-size:clamp(16px, 18px, 20px)};
 body div p {font-size:16px};
 
+/*----------------------------Root Variables-------------------------------------------------*/
+
+:root {
+
+                 /*---Font Variables---*/
+
+--standardfont: 'Baumans',  Arial, sans-serif;
+--titlefont: 'ethnocentric_rg', Arial, sans-serif;
+--sub-titlefont: 'ethnocentric_rg', Arial, sans-serif;
+--tickerfont: 'digital', Arial, sans-serif;
+--LEDfont: 'LED', Arial, sans-serif;
 
 
 /*-------------------------General Settings-----------------*/
