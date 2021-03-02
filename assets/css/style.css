@@ -1,12 +1,12 @@
-/*-------------------------Fonts-----------------*/
-/*-licence purchased for ethnocentric via fontspring.com*/
-/*-Digital font available on free usage for non-commercial use via .com*/
+/*--------------------------Font Types------------------------------------------------------*/
 
+             /*--'Ethnocentric' licence purchased for usage via fontspring.com--*/
 @font-face {
     font-family: 'ethnocentric_rg';
     src:url('../fonts/ethnocentric_rg-webfont.woff');
     }
 
+            /*--Digital & LED fonts available on free license for non-commercial use via dafont.com--*/
 @font-face {
     src:url('../fonts/AdvancedDotDigital7-OpXA.ttf');
     font-family:'digital';
@@ -16,6 +16,20 @@
     src:url('../fonts/digital-7.ttf');
     font-family:'LED';
     }
+
+            /*--'Baumans' font used as baseline font - linked to GoogleFonts in html header--*/
+
+
+/*----------------------------Responsive Font Sizing-----------------------------------------*/
+
+h1 {font-size:clamp(32px, 36px, 44px)};
+h2 /*----not defined / used -----*/
+h3 {font-size:clamp(28px, 32px, 36px)};
+h4 /*----not defined / used -----*/
+h5 {font-size:clamp(16px, 18px, 20px)};
+body div p {font-size:16px};
+
+
 
 /*-------------------------General Settings-----------------*/
 
