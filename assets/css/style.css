@@ -8,12 +8,12 @@
     }
 
 @font-face {
-    src:url('../assets/fonts/AdvancedDotDigital7-OpXA.ttf');
+    src:url('../fonts/AdvancedDotDigital7-OpXA.ttf');
     font-family:'digital';
     }
 
 @font-face {
-    src:url('../assets/fonts/digital-7.ttf');
+    src:url('../fonts/digital-7.ttf');
     font-family:'LED';
     }
 
@@ -443,27 +443,44 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     padding:7vh 6vh 5vh 3vh;
   }
 
-/*-#collapse-mission {
-    padding:6vh 6vh 4vh 3vh;
+#collapse-mission {
+    padding:6vh 5vh 4vh 4vh;
 }
 
 #collapse-trips {
-    padding:8vh 1vh 4vh 1vh;
+    padding:8vh 5vh 5vh 5vh;
 }
 
-#collapse-mini-gallery {
-    padding:4vh 1vh 2vh 1vh;
-    min-height:30vh;
+#collapse-video {
+    padding:6vh 1vh 5vh 1vh;
+    overflow:hidden;
+    position:relative;
+    width:80%;
 }
+
+#collapse-video::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+#collapse-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 #collapse-countdown {
     padding:4vh 1vh 2vh 1vh;
 }
---*/
+
 
  /*-----Home Page - Countdown Timer --------*/
  /*---- A true countdown timer requires understanidng of JS, so for the purpose of representing what this 'could' look like I created a mock version which only counts down from a static starting point, only adjusts the minutes and seconds and resets on page load and expanding the accordion card. 
- Acknowledgement: Initial challenges were encuntered regading vertica alignment & hiding overflow (of no-displayed numbers). A similar example was found on YouTube [https://www.youtube.com/watch?v=rhZgquCAcGc] which this code is based on although adapted to; fit in a table (to retain alignmet of time with labels) and splittng code to acount for hr / min count-down from 59-0, and digits from 10-0.   
+ Acknowledgement: Initial challenges were encuntered regading vertical alignment & hiding overflow (of non-displayed numbers). A similar example was found on YouTube [https://www.youtube.com/watch?v=rhZgquCAcGc] which this code is based on although adapted to; fit in a table (to retain alignmet of time with labels) and splittng code to acount for hr / min count-down from 59-0, and digits from 10-0.   
   ---*/
  
 #countdown-info {
@@ -491,6 +508,8 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
  .table-countdown {
     border: 1px solid RGBA(255,129,10,1);
     width:75vw;
+    margin-left:5vw;
+    
 }
 
 .table-countdown-labels {
