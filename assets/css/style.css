@@ -116,35 +116,14 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 
 
-/*-------------------------Navbar----------------*/
+/*-------------------------Navigation Bar----------------------------------------------------*/
 
 .navbar {
     background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));
     border-bottom: 8px solid var(--ink1);
-   }
-
-.navbar-toggler {
-    color: var(--ink1);
-    margin-right:5vw;
     }
 
-
-
- /*-- remove auto margin & padding to enable top / bottom alignment of text and icon--*/
-
- .logo {
-    margin-bottom:0;
-    }
-
-.navbar-toggler {
-    padding:0;
-    }
-  
- /*-- align relative sizing with logo text--*/
-.navbar-toggler i {
-    font-size:clamp(28px, 5vw, 44px);
-    }
-
+     /*--- remove auto margin & padding to enable top / bottom alignment of text and menu icons--*/
 
 .navbar a:link,
 .navbar a:visited, 
@@ -154,21 +133,39 @@ to be reviewed prior to launch and remove any redundant ----*/
     color: var(--ink1);
     }
 
+.logo {
+    margin-bottom:0;
+    }
 
-/*-----media query to display simple drop down menu for smaller screens (incl all portrait to include tablets which may have slightly wider dimension)--*/
+    /*-----Basic menu for small screens / portrait only. Media query prevents small menu toggler seen on larger devices--*/
 
-@media (min-width:769px)
-{
+@media (min-width:768px) and (orientation:landscape)
 
-#nav-drop-menu-small {
-display:none;
+{   
+    #dropdownMenuButton-sm, navbar-toggler, i.fa-bars {
+    display:none;
+    }
 }
 
-}
+    /*------Second media query to prevent screens loading code for functionality not visible. Note: 'AND' operator on 1st query vs list on 2nd query (acts as 'OR' operator) as mobile devices could be either----*/
 
 @media (max-width:768px), (orientation:portrait)
 
 {
+.navbar-toggler {
+    color: var(--ink1);
+    margin-right:5vw;
+    padding:0;                        /*-- align toggler with logo sizing--------*/
+    font-size:clamp(28px, 5vw, 44px); /*-- align relative sizing with logo text--*/
+    }
+
+    .nav-panel-small a:hover,
+    .nav-panel-small a:focus,
+    .nav-panel-small a:active {
+    background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
+    color:var(--ink0);
+    }
+
 #nav-drop-menu-small {
     background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));    
     border:8px solid var(--ink1); 
@@ -177,14 +174,12 @@ display:none;
     z-index:1;
     width:90vw;
     max-width:500px;
-    
 }
 
 .drop-header {
     background-color: var(--ink2);
     color: var(--ink0); 
     margin-top:-4vh;
-   
 }
 
 .nav-panel-small {
@@ -196,13 +191,7 @@ display:none;
     margin-right:auto;
 }  
 
-.nav-panel-small a:hover,
-.nav-panel-small a:focus,
-.nav-panel-small a:active {
-    background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
-    color:var(--ink0);
-    }
-} /*-- close small menu media query --*/
+} /*--- End small menu styling / media query ---*/
 
 
 
@@ -211,6 +200,7 @@ display:none;
 
 
 /*-----media query to display larger panel and additional content for bigger screens -----*/
+
 
 
 
@@ -278,19 +268,22 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 --------------------------------------*/
 
 /*----image source XXXXXXXX -----*/
-@media (max-width:540px) {
+@media (max-width:540px) 
+{
 .welcome-hero-img {
-    background-image:url('/../images/final-images/planet_earth-sm.jpeg') /*---(s 540 x 193px)--*/
+    background-image:url('../images/final-images/planet_earth-sm.jpeg') /*---(s 540 x 193px)--*/
     }
 }    
 
-@media (min-width:541px) and (max-width:768px) {
+@media (min-width:541px) and (max-width:768px) 
+{
 .welcome-hero-img {
     background-image:url('../images/final-images/planet_earth-md.jpeg') /*---(m 768 x 275px)--*/
     }
 }   
 
-@media (min-width:769px) and (max-width:992px){
+@media (min-width:769px) and (max-width:992px)
+{
 .welcome-hero-img {
     background-image:url('../images/final-images/planet_earth-lg.jpeg') /*---(lg 992 x 355px)--*/
     }
@@ -301,7 +294,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 .welcome-hero-img {
     background-image:url('../images/final-images/planet_earth-xl.jpeg'); /*---xl 1140 x 408px--*/
     background-position: top;
-}
+    }
 }   
    
 
