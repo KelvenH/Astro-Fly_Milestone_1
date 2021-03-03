@@ -24,7 +24,10 @@
             /*--'Baumans' font used as baseline font - linked to GoogleFonts in html header--*/
 
 
-/*----------------------------Root Variables-------------------------------------------------*/
+
+
+
+/*-------------------------- Global Root Variables-------------------------------------------------*/
 
 :root {
 
@@ -63,14 +66,23 @@
 
 }
 
+
+
+
 /*----------------------------Responsive Font Sizing-----------------------------------------*/
 
-h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont)}
+.body, div, p {font-size:16px;font-family: var(--standardfont);}
+h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont);}
 /*--h2 ----not defined / used -----*/
-h3 {font-size:clamp(15px, 3.5vw, 36px);font-family: var(--titlefont)}
+h3 {font-size:clamp(15px, 3vw, 36px);font-family: var(--sub-titlefont);}
 /*--h4 ---not defined / used -----*/
-h5 {font-size:clamp(16px, 18px, 20px);font-family: var(--standardfont)}
-.body, div, p {font-size:16px;font-family: var(--standardfont)}
+h5 {font-size:clamp(16px, 18px, 20px);font-family: var(--standardfont);}
+.body, div, p {font-size:16px;font-family: var(--standardfont);}
+
+
+
+
+
 
 /*-------------------------General Settings-----------------*/
 
@@ -78,50 +90,15 @@ h5 {font-size:clamp(16px, 18px, 20px);font-family: var(--standardfont)}
 Currently achieved through use of the global settings below across element types inaddition to Bootstrap classes (mb-0 & row no-gutters) - 
 to be reviewed prior to launch and remove any redundant ----*/
 
-/*-- {
-    margin:0;
-    padding:0;
-    }
-
-
-
-.container {
-    margin:0;
-    padding:0;
-    }
-
 .container-fluid {
-    margin:0;
-    padding:0;
-    }
-
-.row {
-    margin:0;
     padding:0;
     }
 
 
-p {
-    margin-bottom:0;   
-    }
 
-html, body {
-    height:100%;
-    font-family: 'Baumans',  Arial, Helvetica, sans-serif;
-    
-    color: RGBA(255,129,10,0.8);
-    text-align: center;
-    background-color:transparent;
-    }
 
-h3 {
-    font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
-    color: RGBA(255,129,10,1);
-    }
 
-.card-body {
-    padding:0;
-} --*/
+
 /*-------------------------Key Items----------------------------------------------------*/
 
 .logo {
@@ -133,6 +110,9 @@ h3 {
     color:var(--ink1);
     filter: drop-shadow(5px 5px 2px var(--ink0)); /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
     }
+
+
+
 
 
 /*-------------------------Navbar----------------*/
@@ -147,10 +127,14 @@ h3 {
     margin-right:5vw;
     }
 
+
+
  /*-- remove auto margin & padding to enable top / bottom alignment of text and icon--*/
-.logo {
+
+ .logo {
     margin-bottom:0;
     }
+
 .navbar-toggler {
     padding:0;
     }
@@ -160,6 +144,7 @@ h3 {
     font-size:clamp(28px, 5vw, 44px);
     }
 
+
 .navbar a:link,
 .navbar a:visited, 
 .navbar a:hover,
@@ -168,16 +153,17 @@ h3 {
     color: var(--ink1);
     }
 
-/*-----media query to display simple drop down menu for smaller screens (incl all portrait to include tablets which may have slightly wider dimension) & hide for larger screens--*/
+
+/*-----media query to display simple drop down menu for smaller screens (incl all portrait to include tablets which may have slightly wider dimension)--*/
 
 @media (min-width:769px)
 {
+
 #nav-drop-menu-small {
 display:none;
 }
 
 }
-
 
 @media (max-width:768px), (orientation:portrait)
 
@@ -190,13 +176,13 @@ display:none;
     z-index:1;
     width:90vw;
     max-width:500px;
-    max-height:90vh;
+    
 }
 
 .drop-header {
     background-color: var(--ink2);
     color: var(--ink0); 
-    margin-top:-2vh;
+    margin-top:-4vh;
    
 }
 
@@ -215,13 +201,19 @@ display:none;
     background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
     color:var(--ink0);
     }
-} /*-- close media query --*/
+} /*-- close small menu media query --*/
 
 
-/*---continue from here---*/
+
+
+/*---!!!!!!!!!!!ADD LARGE SCREEN CONTENT HERE!!!!!!!!!!!!!!!---*/
 
 
 /*-----media query to display larger panel and additional content for bigger screens -----*/
+
+
+
+
 
 
 /*-------------------------Footer-----------------*/
@@ -243,12 +235,12 @@ display:none;
     }
 
 
-/*-------------------------HOME PAGE-----------------*/
+/*-------------------------HOME PAGE----------------------------------------*/
 
                         /*-------fluid container ensures 100% screen width with responsive margin-top (aligned to header sizing) to avoid being hidden under fixed header-----------------*/
 
 .home-container {
-    margin-top: clamp(60px, 10vw, 110px);
+    padding-top: clamp(55px, 8.75vw, 75px);
 }
 
                          /*------------Home Page - Welcome-----------------*/
@@ -258,38 +250,80 @@ display:none;
     position:relative;
     }
 
+
+
 .welcome-hero-img {
-    background-image:url('/assets/images/planet_earth-xs.jpg'); /*----image source XXXXXXXX -----*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height:250px;
+    height:40vw;
+    max-height:500px;
+}
 
-    } 
+/*-----CHALLENGE ENCOUNTERED--------------
+Original image re-sized to enable media queries to determine most appropriate size (all have same aspect ratio). 
+Issue 1 - failed as unable to embed media query in html mark-up (<picture> and <object-fit> not returning rquired behaviour). 
+Outcome - Linger term action: follow-up post milestone project; short term - alternative sought.
+
+Issue 2 - retained media queries in CSS to be displayed as background image, but difficulties getting the image to display. 
+Cause -  div treated as 'empty' by browsers - requires a fixed height (100% not viable as 100% of nothing!)
+Outcome - used VW as variable (with overall max)- feel to be acceptable (responsive sizing / no 'white space') but recognise not desired approach.
+--------------------------------------*/
+
+/*----image source XXXXXXXX -----*/
+@media (max-width:540px) {
+.welcome-hero-img {
+    background-image:url('/../images/final-images/planet_earth-sm.jpeg') /*---(s 540 x 193px)--*/
+    }
+}    
+
+@media (min-width:541px) and (max-width:768px) {
+.welcome-hero-img {
+    background-image:url('../images/final-images/planet_earth-md.jpeg') /*---(m 768 x 275px)--*/
+    }
+}   
+
+@media (min-width:769px) and (max-width:992px){
+.welcome-hero-img {
+    background-image:url('../images/final-images/planet_earth-lg.jpeg') /*---(lg 992 x 355px)--*/
+    }
+}   
+
+/*--image will appear to zoom in above c.1400px, position changed to Top to move direction to appropriate area---*/ 
+@media (min-width:993px) {
+.welcome-hero-img {
+    background-image:url('../images/final-images/planet_earth-xl.jpeg'); /*---xl 1140 x 408px--*/
+    background-position: top;
+}
+}   
+   
+   
 
     /*---animation-name:imgfadein;
     animation-delay:1.5s;
     animation-fill-mode: both;
     animation-duration:10s;
-    animation-timing-function: linear;--*/ 
+    animation-timing-function: linear;
+       --*/  
 
 .welcome-strapline {
-    font-family:'ethnocentric_rg', Arial, Helvetica, sans-serif;
-    color:RGBA(255,129,10,1);
-    text-shadow:2px 2px 2px black;
+    color:var(--ink2);
+    text-shadow:2px 2px 2px var(--ink0);
     position:absolute;
     top:0;
     right:0;
     max-width:50vw;
     padding-top: 3vw;
     padding-right:2vw;
-    animation-name:txtfadein;
+}
+    /*--animation-name:txtfadein;
     animation-delay:2s;
     animation-fill-mode: both;
     animation-duration:6s;
     animation-timing-function: ease;  
-    }
+    }  --*/ 
+
 
 /*-------welcome animtaion------- 
 Desired effect - break of new dawn
