@@ -185,6 +185,7 @@ display:none;
     background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));    
     border:8px solid var(--ink1); 
     text-align: center;
+    overflow-y:auto;
     z-index:1;
     width:90vw;
     max-width:500px;
@@ -225,20 +226,19 @@ display:none;
 /*-------------------------Footer-----------------*/
 
 .footer-main {
-    background-image: linear-gradient(to bottom right, black, #242424);
-    font-size: clamp(30px, 8vw, 60px);
-    color: RGBA(255,129,10,0.8);
-    height: 9vh;
+    background-image: linear-gradient(to bottom right, var(--ink0),var(--ink4));
     display:inline-block;
     text-align:center;
-    border-top:10px solid;
-    border-color: RGBA(255,129,10,0.8);
+    border-top:8px solid var(--ink1);
     }
 
 
 .footer-main a {
-    color:inherit;
+    color:var(--ink1);
+    font-size:clamp(28px, 5vw, 44px); /*--icon sizing consitent with nav icon--*/
     text-decoration:none;
+    text-shadow:2px 2px 2px var(--ink0);
+    height: clamp(32px, 5vw, 48px);
     }
 
 
