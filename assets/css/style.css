@@ -167,12 +167,21 @@ h3 {
     color: var(--ink1);
     }
 
-/*-----media query to display simple drop down menu for smaller screens (incl all portrait to include tablets which may have slightly wider dimension)--*/
+/*-----media query to display simple drop down menu for smaller screens (incl all portrait to include tablets which may have slightly wider dimension) & hide for larger screens--*/
 
-@media screen and (max-width:768px), (orientation:portrait)
+@media (min-width:769px)
+{
+#nav-drop-menu-small {
+display:none;
+}
+
+}
+
+
+@media (max-width:768px), (orientation:portrait)
 
 {
-.dropdown-menu {
+#nav-drop-menu-small {
     background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));    
     border:8px solid var(--ink1); 
     text-align: center;
@@ -189,36 +198,28 @@ h3 {
    
 }
 
-.svg-panel {
-    background-image:url('/assets/images/final-images/glass-navmenu-small.svg');
+.nav-panel-small {
+    background-image:url(/assets/images/glass-navmenu-small.svg);
     background-size:cover;
     background-repeat:no-repeat;
     width:85%;
     margin-left:auto;
     margin-right:auto;
-    
-    }
+}  
 
-}  /*-- close media query --*/
+.nav-panel-small a:hover,
+.nav-panel-small a:focus,
+.nav-panel-small a:active {
+    background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
+    color:#242424;
+    }
+} /*-- close media query --*/
+
+
+/*---continue from here---*/
+
 
 /*-----media query to display larger panel and additional content for bigger screens -----*/
-
-/*---Kelv to continue from here!!---*/
-
-.menu-panel a:hover {
-    background-color:transparent;
-    color:#242424;
- /*--  !!!!! add alt menu panel color here  --*/
-    }
-
-
-    /*--
-.dropdown-item:hover {
-    background: RGBA(255,129,10,1);
-    color:#242424;
-        }
---*/
-
 
 
 /*-------------------------Footer-----------------*/
