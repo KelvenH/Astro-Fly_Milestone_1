@@ -38,17 +38,19 @@
 
                 /*---Font Color Variables---*/
 
-  --ink1:rgb(255,129,10);     /*--for title / highlight text--*/
+  --ink0:rgb(0,0,0);        /*--black--*/
+  --ink1:rgb(255,129,10);   /*--for title / highlight text--*/
   --ink2:rgb(219,132,29);   /*--for baseline text--*/
-  --ink3:rgb(94,87,77);       /*--off-black/orange for gradient fill--*/
-  --ink4:rgb(104,87,66);      /*--off-grey w/ slight orange for gradient fill--*/  
+  --ink3:rgb(94,87,77);     /*--alternative-off black / grey--*/
+  --ink4:rgb(104,87,66);    /*--off-grey w/ slight orange tone for gradient fill--*/  
+  --ink5:rgb(130,120,98);   /*--alternative-light grey / orange tone--*/ 
 
 
                 /*----Special Font Colors----*/
 
-  --LED1: rgba(0,217,255,1);        /*--news ticker--*/
-/*--LED2:   --*/
-/*--Digit1: --*/
+  --LED1: rgba(0,217,255,1);      /*--news ticker - hex value #00d9ff-------*/
+  --glass1: rgba(0,189,255,0.9);    /*--svg glass edge - hex value 00d9ff--*/
+  --glass2: rgba(0,217,255,0.18);   /*--svg glass fill w high transparency - hex value #00bdff--*/
 /*--Digit2: --*/
 
 
@@ -62,12 +64,12 @@
 
 /*----------------------------Responsive Font Sizing-----------------------------------------*/
 
-h1 {font-size:clamp(32px, 5vw, 44px);}
+h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont)}
 /*--h2 ----not defined / used -----*/
-h3 {font-size:clamp(28px, 4.5vw, 36px);}
+h3 {font-size:clamp(15px, 3.5vw, 36px);font-family: var(--titlefont)}
 /*--h4 ---not defined / used -----*/
-h5 {font-size:clamp(16px, 18px, 20px);}
-.body, div, p {font-size:16px;}
+h5 {font-size:clamp(16px, 18px, 20px);font-family: var(--standardfont)}
+.body, div, p {font-size:16px;font-family: var(--standardfont)}
 
 /*-------------------------General Settings-----------------*/
 
@@ -122,21 +124,20 @@ h3 {
 /*-------------------------Key Items----------------------------------------------------*/
 
 .logo {
-    font-family: var(--titlefont);
     color: var(--ink1);
-    text-shadow:2px 2px 2px black;
+    text-shadow:2px 2px 2px var(--ink0);
     }
 
 .icon-planet {
     color:var(--ink1);
-    filter: drop-shadow(5px 5px 2px black); /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
+    filter: drop-shadow(5px 5px 2px var(--ink0)); /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
     }
 
 
 /*-------------------------Navbar----------------*/
 
 .navbar {
-    background-image: linear-gradient(to bottom left, black,var(--ink4));
+    background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));
     border-bottom: 8px solid var(--ink1);
    }
 
@@ -155,10 +156,8 @@ h3 {
   
  /*-- align relative sizing with logo text--*/
 .navbar-toggler i {
-    font-size:clamp(32px, 5vw, 44px);
+    font-size:clamp(28px, 5vw, 44px);
     }
-
-
 
 .navbar a:link,
 .navbar a:visited, 
@@ -168,55 +167,43 @@ h3 {
     color: var(--ink1);
     }
 
+/*-----media query to display simple drop down menu for smaller screens (incl all portrait to include tablets which may have slightly wider dimension)--*/
 
-         
+@media screen and (max-width:768px), (orientation:portrait)
+
+{
 .dropdown-menu {
-    background-color:#242424;
-    height:81vh;
-    width:60vw;
-    font-size: 2vh;
-    max-width: 450px;
-    line-height:9vh;
-    border:5px solid RGBA(255,129,10,1);
-    padding-top:0;
+    background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));    
+    border:8px solid var(--ink1); 
     text-align: center;
-    overflow:hidden;
-    overflow-y: scroll;
     z-index:1;
+    width:90vw;
+    max-width:500px;
+    max-height:90vh;
+}
+
+.drop-header {
+    background-color: var(--ink2);
+    color: var(--ink0); 
+    margin-top:-2vh;
+   
+}
+
+.svg-panel {
+    background-image:url('/assets/images/final-images/glass-navmenu-small.svg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    width:85%;
+    margin-left:auto;
+    margin-right:auto;
     
     }
-   
 
-.dropdown-header {
-    background-color: RGBA(255,129,10,0.8);
-    color: #242424;
-    font-weight: 600;
-    padding:1vh;
-    line-height:5vh;
-    }
+}  /*-- close media query --*/
 
+/*-----media query to display larger panel and additional content for bigger screens -----*/
 
-/*---Nav Menu Panels ----------------*/
-
-.menu-panel {
-    background-image:url();  /*---new image to be added---*/
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position:50%;
-    text-shadow:2px 2px 2px black;
-    margin-top:1.5vh;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    }
-
-
-.dropdown-item {
-   color: RGBA(255,129,10,0.8);
-   font-size:1.5vh;
-   }
-
+/*---Kelv to continue from here!!---*/
 
 .menu-panel a:hover {
     background-color:transparent;
@@ -232,18 +219,6 @@ h3 {
         }
 --*/
 
-/*-- clip-paths - commented out as not satisfied with result, switched out for simple SVG image 
-
-.clip-box-one-outer {
-    clip-path:polygon(1% 6%, 6% 1%, 54% 1%, 60% 4%, 92% 4%, 95% 10%, 95% 10%, 95% 10%, 95% 10%, 95% 38%, 94% 42%, 94% 50%, 95% 50%, 95% 60%, 95% 90%, 91% 99%, 53% 99%, 50% 95%, 40% 95%, 40% 99%, 11% 99%, 2% 90%, 2% 40%, 1% 36%, 1% 20%, 1% 6%);   
-    background-color: RGBA(255,129,10,0.8);
-    }
-
-.clip-box-one-inner {
-    clip-path:polygon(2% 7%, 7% 2%, 54% 2%, 60% 5%, 67% 5%, 91% 5%, 94% 10%, 94% 38%, 92% 38%, 92% 15%, 91% 20%, 91% 39%, 93% 39%, 93% 52%, 94% 52%, 94% 90%, 91% 97%, 85% 97%, 53% 97%, 50% 93%, 39% 93%, 39% 98%, 11% 98%, 11% 96%, 38% 96%, 38% 95%, 9% 95%, 6% 92%, 50% 92%, 50% 91%, 5% 91%, 3% 90%, 3% 40%, 2% 36%, 2% 8%, 5% 8%, 5% 34%, 5% 7%, 2% 7%); 
-    background-color:#242424;
-    }
---*/
 
 
 /*-------------------------Footer-----------------*/
