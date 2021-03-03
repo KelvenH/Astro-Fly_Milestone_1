@@ -96,8 +96,10 @@ to be reviewed prior to launch and remove any redundant ----*/
     }
 
 
-
-
+.dropdown-item {
+    padding-left:0;
+    padding-right:0;
+}
 
 
 /*-------------------------Key Items----------------------------------------------------*/
@@ -147,6 +149,14 @@ to be reviewed prior to launch and remove any redundant ----*/
     }
 }
 
+ /*--BUG FIX - situation where tablet could open small menu in portrait but then switch to landscape, and menu would remain visible but with no css styling. Addition below ensures not seen--*/
+
+    #nav-drop-menu-small {
+        display:none;
+    }
+}
+
+
     /*------Second media query to prevent screens loading code for functionality not visible. Note: 'AND' operator on 1st query vs list on 2nd query (acts as 'OR' operator) as mobile devices could be either----*/
 
 @media (max-width:768px), (orientation:portrait)
@@ -170,8 +180,6 @@ to be reviewed prior to launch and remove any redundant ----*/
     background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));    
     border:8px solid var(--ink1); 
     text-align: center;
-    overflow-y:auto;
-    z-index:1;
     width:90vw;
     max-width:500px;
 }
@@ -179,7 +187,7 @@ to be reviewed prior to launch and remove any redundant ----*/
 .drop-header {
     background-color: var(--ink2);
     color: var(--ink0); 
-    margin-top:-4vh;
+    z-index: 1050;
 }
 
 .nav-panel-small {
@@ -190,6 +198,10 @@ to be reviewed prior to launch and remove any redundant ----*/
     margin-left:auto;
     margin-right:auto;
 }  
+
+.dropdown-item {
+    text-align:center;
+}
 
 } /*--- End small menu styling / media query ---*/
 
@@ -293,7 +305,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 @media (min-width:993px) {
 .welcome-hero-img {
     background-image:url('../images/final-images/planet_earth-xl.jpeg'); /*---xl 1140 x 408px--*/
-    background-position: top;
+    background-position: 0% 20%;
     }
 }   
    
