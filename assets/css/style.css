@@ -11,13 +11,14 @@
 
             /*--Digital & LED fonts available on free license for non-commercial use via dafont.com--*/
 @font-face {
-    src:url('../fonts/AdvancedDotDigital7-OpXA.ttf');
     font-family:'digital';
+    src:url('../fonts/AdvancedDotDigital7-OpXA.ttf');
+
     }
 
 @font-face {
-    src:url('../fonts/digital-7.ttf');
     font-family:'LED';
+    src:url('/assets/fonts/digital-7.ttf');
     }
 
             /*--'Baumans' font used as baseline font - linked to GoogleFonts in html header--*/
@@ -212,7 +213,7 @@ display:none;
 .nav-panel-small a:focus,
 .nav-panel-small a:active {
     background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
-    color:#242424;
+    color:var(--ink0);
     }
 } /*-- close media query --*/
 
@@ -244,33 +245,34 @@ display:none;
 
 /*-------------------------HOME PAGE-----------------*/
 
-/*-------------------------Home Page - Welcome-----------------*/
+                        /*-------fluid container ensures 100% screen width with responsive margin-top (aligned to header sizing) to avoid being hidden under fixed header-----------------*/
 
-.welcome-container {
-    position:relative; 
+.home-container {
     margin-top: clamp(60px, 10vw, 110px);
 }
 
+                         /*------------Home Page - Welcome-----------------*/
+
 .welcome {
-    
-    height: clamp(60px, 10vw, 110px);
-    
     border-bottom: 5px solid RGBA(255,129,10,1);
+    position:relative;
     }
 
-   
-
-.welcome-planet-img {
-    background:url(../images/planet_earth-xs.jpg); /*----image source XXXXXXXX -----*/
-    background-size: cover;
-    background-position: 30%;
+.welcome-hero-img {
+    background-image:url('/assets/images/planet_earth-xs.jpg'); /*----image source XXXXXXXX -----*/
+    background-position: center;
     background-repeat: no-repeat;
-    animation-name:imgfadein;
+    background-size: cover;
+    position: relative;
+    height:250px;
+
+    } 
+
+    /*---animation-name:imgfadein;
     animation-delay:1.5s;
     animation-fill-mode: both;
     animation-duration:10s;
-    animation-timing-function: linear;  
-    } 
+    animation-timing-function: linear;--*/ 
 
 .welcome-strapline {
     font-family:'ethnocentric_rg', Arial, Helvetica, sans-serif;
@@ -354,12 +356,12 @@ Acknowledgement: CCStricks.com article and demos-----*/
 
 
 .intro-ticker-news {
+ 
   width: 100%;
   padding-left: 100%; 
   background-color: black;
   color:RGBA(0,217,255,1);
   background-size:100% 100%;
-  font-family:'digital', Arial, Helvetica, sans-serif;
   font-size:70%;
 }
 
@@ -375,6 +377,7 @@ Acknowledgement: CCStricks.com article and demos-----*/
 
 
 .intro-news-item {
+  font-family:var(--tickerfont);
   display: inline-block; 
   padding-top: 0.5rem;
   }
@@ -567,7 +570,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 .table-countdown-wrapper {
     background-color: black;
     transform:translate (-50%, -50%);
-    font-family:'LED',  Arial, Helvetica, sans-serif;
+    font-family:var(--LEDfont);
     height:5vh;
     line-height:5vh;
     font-weight:bold;
