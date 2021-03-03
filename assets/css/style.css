@@ -21,8 +21,7 @@
     src:url('/assets/fonts/digital-7.ttf');
     }
 
-            /*--'Baumans' font used as baseline font - linked to GoogleFonts in html header--*/
-
+                        /*--'Baumans' (baseline font) and 'Syncopate' (for slogan) both GoogleFonts also used and linked from html header--*/
 
 
 
@@ -36,6 +35,7 @@
   --standardfont:'Baumans', Arial, sans-serif;
   --titlefont: 'ethnocentric_rg', Arial, sans-serif;
   --sub-titlefont: 'ethnocentric_rg', Arial, sans-serif;
+  --specialfont: 'Orbitron', Arial, sans-serif;
   --tickerfont:'digital', Arial, sans-serif;
   --LEDfont:'LED', Arial, sans-serif;
 
@@ -72,13 +72,13 @@
 
 /*----------------------------Responsive Font Sizing-----------------------------------------*/
 
-.body, div, p {font-size:16px;font-family: var(--standardfont);}
-h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont);}
+body, div, p {font-size:16px;font-family: var(--standardfont);color: var(--ink2);}
+h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont);color: var(--ink1);}
 /*--h2 ----not defined / used -----*/
-h3 {font-size:clamp(15px, 3vw, 36px);font-family: var(--sub-titlefont);}
-/*--h4 ---not defined / used -----*/
-h5 {font-size:clamp(16px, 18px, 20px);font-family: var(--standardfont);}
-.body, div, p {font-size:16px;font-family: var(--standardfont);}
+h3 {font-size:clamp(16px, 3vw, 36px);font-family: var(--sub-titlefont);color: var(--ink2);}
+h4 {font-size:clamp(16px, 20px, 24px);font-family: var(--specialfont);color: var(--glass1);font-weight:400;}
+h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: var(--ink2);}
+.specialtype {font-size:clamp(15px, 18px, 20px);font-family: var(--specialfont);color: var(--glass1);font-weight:200;}
 
 
 
@@ -122,7 +122,8 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 .navbar {
     background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));
-    border-bottom: 8px solid var(--ink1);
+    border-bottom: 8px solid var(--glass1);
+    
     }
 
      /*--- remove auto margin & padding to enable top / bottom alignment of text and menu icons--*/
@@ -147,15 +148,13 @@ to be reviewed prior to launch and remove any redundant ----*/
     #dropdownMenuButton-sm, navbar-toggler, i.fa-bars {
     display:none;
     }
-}
 
- /*--BUG FIX - situation where tablet could open small menu in portrait but then switch to landscape, and menu would remain visible but with no css styling. Addition below ensures not seen--*/
+    /*--BUG FIX - situation where tablet could open small menu in portrait but then switch to landscape, and menu would remain visible but with no css styling. Addition below ensures not seen--*/
 
     #nav-drop-menu-small {
         display:none;
     }
 }
-
 
     /*------Second media query to prevent screens loading code for functionality not visible. Note: 'AND' operator on 1st query vs list on 2nd query (acts as 'OR' operator) as mobile devices could be either----*/
 
@@ -185,13 +184,13 @@ to be reviewed prior to launch and remove any redundant ----*/
 }
 
 .drop-header {
-    background-color: var(--ink2);
-    color: var(--ink0); 
+    background-color: var(--ink2); 
+    color: var(--ink0);             /*--font color override required--*/
     z-index: 1050;
 }
 
 .nav-panel-small {
-    background-image:url(/assets/images/glass-navmenu-small.svg);
+    background-image:url(../images/glass-navmenu-small.svg);
     background-size:cover;
     background-repeat:no-repeat;
     width:85%;
@@ -204,6 +203,7 @@ to be reviewed prior to launch and remove any redundant ----*/
 }
 
 } /*--- End small menu styling / media query ---*/
+
 
 
 
@@ -249,7 +249,7 @@ to be reviewed prior to launch and remove any redundant ----*/
                          /*------------Home Page - Welcome-----------------*/
 
 .welcome {
-    border-bottom: 5px solid RGBA(255,129,10,1);
+    border-bottom: 5px solid var(--glass1);
     position:relative;
     }
 
@@ -312,7 +312,6 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 
 
 .welcome-strapline {
-    color:var(--ink2);
     text-shadow:2px 2px 2px var(--ink0);
     position:absolute;
     top:0;
@@ -361,24 +360,22 @@ Acknowledgement: CCStricks.com article and demos-----*/
   #intro-box {
     padding:3vh 1vh;
     border-bottom:5px solid;
-    border-color: RGBA(255,129,10,0.8);
+    border-color: var(--ink1);
     display:inline;
     flex-wrap: wrap;
     position: relative;
     background-color:none;
-    background:url(../images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
+    background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     }
 
 
 .intro-text {
-    text-shadow:2px 2px 2px black;
+    text-shadow:2px 2px 2px var(--ink0);
+     text-align:center;
     }
 
 
-.intro-text p {
-    font-size:1.25rem;
-    }
 
 
   /*-------------------------Home Page - Intro / Ticker---------*/
