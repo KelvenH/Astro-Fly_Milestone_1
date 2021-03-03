@@ -35,9 +35,10 @@
 
   --standardfont:'Baumans', Arial, sans-serif;
   --titlefont: 'ethnocentric_rg', Arial, sans-serif;
-  --sub-titlefont:'ethnocentric-rg', Arial, sans-serif;
+  --sub-titlefont: 'ethnocentric_rg', Arial, sans-serif;
   --tickerfont:'digital', Arial, sans-serif;
   --LEDfont:'LED', Arial, sans-serif;
+
 
 
                 /*---Font Color Variables---*/
@@ -259,6 +260,11 @@ display:none;
     position: relative;
     height:40vw;
     max-height:500px;
+    animation-name:imgfadein;
+    animation-delay:1.5s;
+    animation-fill-mode: both;
+    animation-duration:10s;
+    animation-timing-function: linear;
 }
 
 /*-----CHALLENGE ENCOUNTERED--------------
@@ -298,14 +304,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 }
 }   
    
-   
 
-    /*---animation-name:imgfadein;
-    animation-delay:1.5s;
-    animation-fill-mode: both;
-    animation-duration:10s;
-    animation-timing-function: linear;
-       --*/  
 
 .welcome-strapline {
     color:var(--ink2);
@@ -316,13 +315,13 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     max-width:50vw;
     padding-top: 3vw;
     padding-right:2vw;
-}
-    /*--animation-name:txtfadein;
+    animation-name:txtfadein;
     animation-delay:2s;
     animation-fill-mode: both;
     animation-duration:6s;
     animation-timing-function: ease;  
-    }  --*/ 
+    }  
+
 
 
 /*-------welcome animtaion------- 
