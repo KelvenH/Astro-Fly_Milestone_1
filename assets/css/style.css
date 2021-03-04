@@ -92,6 +92,7 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 .container-fluid {
     padding:0;
+    margin-right:0;
     }
 
 .dropdown-item {
@@ -99,7 +100,10 @@ to be reviewed prior to launch and remove any redundant ----*/
     padding-right:0;
 }
 
-
+.row {
+    margin-right:0;
+    margin-left:0;
+}
 
 
 /*-------------------------Key Items----------------------------------------------------*/
@@ -140,9 +144,11 @@ to be reviewed prior to launch and remove any redundant ----*/
     margin-bottom:0;
     }
 
+/*-----Currently disabled - choice of nav menu
+
     /*-----Basic menu for small screens / portrait only. Media query prevents small menu toggler seen on larger devices--*/
 
-@media (min-width:768px) and (orientation:landscape)
+/*-----@media (min-width:768px) and (orientation:landscape)
 
 {   
     #dropdownMenuButton-sm, navbar-toggler, i.fa-bars {
@@ -151,16 +157,17 @@ to be reviewed prior to launch and remove any redundant ----*/
 
     /*--BUG FIX - situation where tablet could open small menu in portrait but then switch to landscape, and menu would remain visible but with no css styling. Addition below ensures not seen--*/
 
-    #nav-drop-menu-small {
+ /*-----   #nav-drop-menu-small {
         display:none;
     }
 }
-
+-*/
     /*------Second media query to prevent screens loading code for functionality not visible. Note: 'AND' operator on 1st query vs list on 2nd query (acts as 'OR' operator) as mobile devices could be either----*/
 
-@media (max-width:768px), (orientation:portrait)
+/*-----@media (max-width:768px), (orientation:portrait)
 
-{
+{---*/
+
 .navbar-toggler {
     color: var(--ink1);
     margin-right:5vw;
@@ -202,7 +209,9 @@ to be reviewed prior to launch and remove any redundant ----*/
     text-align:center;
 }
 
-} /*--- End small menu styling / media query ---*/
+/*-}.   --- unhide closing media bracket when re-instating
+
+-- End small menu styling / media query ---*/
 
 
 
@@ -244,14 +253,15 @@ to be reviewed prior to launch and remove any redundant ----*/
                         /*-------fluid container ensures 100% screen width with responsive margin-top (aligned to header sizing) to avoid being hidden under fixed header-----------------*/
 
 #home-content {
-    max-height:100vh;
+    width:100vw;
 }
 
 .home-container-A {
     padding-top: clamp(55px, 8.75vw, 75px);
+    width:100vw;
 }
 
-                         /*------------Home Page - Welcome-----------------*/
+                /*------------Home Page - Section A Welcome-----------------*/
 
 .welcome {
     position:relative;
@@ -355,7 +365,11 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
   50% {visibility: hidden; opacity:1%;}
   100% {visibility: visible; opacity:100%;}
   }
+                /*--------------Home Page - Section B HUD-----------------*/
 
+.home-container-B {
+    width:100vw;
+}
 
 .HUD {
     width:80vw;
@@ -376,14 +390,16 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     text-align:center;
     }
 
-                    /*--------------Home Page - Intro-----------------*/
-.home-container-B {
+                /*----------Home Page - Section C HUD Ticker & Panels-------*/
+
+.home-container-C {
+    width:100vw;
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
 }
 
- /*-------------------------Home Page - Intro / Ticker---------*/
+                /*------------Home Page - Intro / Ticker---------*/
 
 
 #intro-box {
@@ -454,8 +470,6 @@ background-color: var(--LED1);
 
 
 #home-accordion {
-    padding-bottom:10vh;
-    width:50vw;
     margin-top:0%;
     }
 
