@@ -90,6 +90,11 @@ h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: va
 Currently achieved through use of the global settings below across element types inaddition to Bootstrap classes (mb-0 & row no-gutters) - 
 to be reviewed prior to launch and remove any redundant ----*/
 
+.container {
+    padding:0;
+    margin-right:0;
+    }
+
 .container-fluid {
     padding:0;
     margin-right:0;
@@ -252,16 +257,15 @@ to be reviewed prior to launch and remove any redundant ----*/
 
                         /*-------fluid container ensures 100% screen width with responsive margin-top (aligned to header sizing) to avoid being hidden under fixed header-----------------*/
 
-#home-content {
-    width:100vw;
-}
+
 
 .home-container-A {
     padding-top: clamp(55px, 8.75vw, 75px);
     width:100vw;
+    max-height:30vw;
 }
 
-                /*------------Home Page - Section A Welcome-----------------*/
+                /*------------Home Page - Container A Welcome-----------------*/
 
 .welcome {
     position:relative;
@@ -328,7 +332,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     text-shadow:2px 2px 2px var(--ink0);
     position:absolute;
     top:3vw;
-    right:5vw;
+    right:0;
     max-width:50vw;
     animation-name:txtfadein;
     animation-delay:2s;
@@ -365,39 +369,40 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
   50% {visibility: hidden; opacity:1%;}
   100% {visibility: visible; opacity:100%;}
   }
-                /*--------------Home Page - Section B HUD-----------------*/
+                /*--------------Home Page - Container B HUD & Ticker -----------------*/
 
 .home-container-B {
     width:100vw;
-}
-
-.HUD {
-    width:80vw;
-    height:17vh;
-    margin-left:10vw;
-    margin-top:-7vw;
-    position:absolute;
-    background-image:url(../images/final-images/HUD1Asset-1.svg);     
-    background-repeat:no-repeat;
-    background-size:contain;
-    
-  }
-
-.HUD-text {
-    padding-top:5%;
-    position:relative;
-    text-shadow:2px 2px 2px var(--ink0);
-    text-align:center;
-    }
-
-                /*----------Home Page - Section C HUD Ticker & Panels-------*/
-
-.home-container-C {
-    width:100vw;
+    height:100%;
+    max-height:30vw;
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
+    padding-bottom:2vh;
 }
+
+.HUD { 
+    padding-top:2vh;
+}
+
+.HUD-center {
+   width:100%;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.HUD-text {
+    position:absolute;
+    margin:0 auto;
+    left:0;
+    right:0;
+    top:20%;
+    text-align:center;
+    width:100%;
+    text-shadow:2px 2px 2px var(--ink0);
+    }
+
 
                 /*------------Home Page - Intro / Ticker---------*/
 
@@ -462,8 +467,9 @@ background-color: var(--LED1);
     }
 
   
+/*----------Home Page - Container C ------ Control Panel-----------------*/
 
-/*-------------------------Home Page main - accordion-----------------*/
+
 #home-main-panel {
     margin-top:5vw;
 }
@@ -780,6 +786,17 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     padding-top:5vw;
 }
 
+.grid-container-nav {
+    border:3px solid red;
+    width:90vw;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+
+
+
 /*-------------------------Exploration PAGE-----------------*/
 
 
@@ -873,6 +890,9 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 .nav1 {
 
 }
+
+
+
 
     /*-------------------------Gallery / Viewing Port-----------------*/
 
