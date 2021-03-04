@@ -243,6 +243,10 @@ to be reviewed prior to launch and remove any redundant ----*/
 
                         /*-------fluid container ensures 100% screen width with responsive margin-top (aligned to header sizing) to avoid being hidden under fixed header-----------------*/
 
+#home-content {
+    max-height:100vh;
+}
+
 .home-container-A {
     padding-top: clamp(55px, 8.75vw, 75px);
 }
@@ -444,6 +448,10 @@ background-color: var(--LED1);
   
 
 /*-------------------------Home Page main - accordion-----------------*/
+#home-main-panel {
+    margin-top:5vw;
+}
+
 
 #home-accordion {
     padding-bottom:10vh;
@@ -526,6 +534,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     background-image:url(../images/final-images/menu_panel_detail_2.svg);     
     background-repeat:no-repeat;
     text-shadow:2px 2px 2px var(--ink0);
+    padding:2vw;
     /*--min-width: 100%; 
     padding:7vh 6vh 5vh 3vh;--*/
   }
@@ -562,7 +571,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 #collapse-countdown {
-    /*--padding:4vh 1vh 2vh 1vh;--*/
+    padding:4vh 1vh 2vh 1vh;
 }
 
 
@@ -595,7 +604,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
  .table-countdown {
     border: 1px solid RGBA(255,129,10,1);
-    width:75vw;
+    width:80%;
     margin-left:5vw;
     
 }
@@ -728,6 +737,21 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     100% {top:-30vh}
     }
 
+
+     /*----------------Home: Main Panel - Right Column -----------------*/
+
+@media (max-width:767px), (orientation:portrait)
+
+{   
+    #home-main-panel-right {
+    visibility: hidden;
+    display:none;
+    }
+
+}
+
+
+
 .extended-pane-right {
     border: 1px solid var(--glass1);
     background-color: var(--glass2);
@@ -735,19 +759,24 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     width:80%;
     margin-left:10%;
     text-align:center !important;
+    padding-top:5vw;
 }
 
-
+.nav-panel-large {
+    padding-top:5vw;
+}
 
 /*-------------------------Exploration PAGE-----------------*/
 
 
 
 #main-exploration-image {
-    background-image:url(); /*----image removed - switching to background color/. -------*/
+    /*----background-image:url(); image removed - switching to background color/
+    background-color: var(--ink0);
     background-repeat:no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover;. -------*/
+    background-color: var(--ink0);
     width:100%;
     border-top:none;
     background-attachment: fixed;
@@ -820,6 +849,16 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 .txt-right {
     text-align: right;
     }
+
+
+
+.nav-panel-large-btn {
+
+}
+
+.nav1 {
+
+}
 
     /*-------------------------Gallery / Viewing Port-----------------*/
 
