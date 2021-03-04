@@ -3,30 +3,31 @@
              /*--'Ethnocentric' licence purchased for usage via fontspring.com--*/
 @font-face {
     font-family: 'ethnocentric_rg';
-    src: url('/assets/fonts/ethnocentric_rg-webfont.woff') format('woff2'),
-         url('/assets/fonts/ethnocentric_rg-webfont.woff2') format('woff');
+    src: url('../fonts/ethnocentric_rg-webfont.woff2') format('woff2'),
+         url('../fonts/ethnocentric_rg-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
             /*--Digital & LED fonts available on free license for non-commercial use via dafont.com--*/
 @font-face {
-    font-family:'digital';
     src:url('../fonts/AdvancedDotDigital7-OpXA.ttf');
-
+    font-family:'digital' ;
     }
 
 @font-face {
-    font-family:'LED';
-    src:url('/assets/fonts/digital-7.ttf');
+    src:url('../fonts/digital-7.ttf');
+    font-family:'LED' ;
     }
 
-                        /*--'Baumans' (baseline font) and 'Syncopate' (for slogan) both GoogleFonts also used and linked from html header--*/
+            /*--'Baumans' (baseline font) and 'Syncopate' (for slogan) both GoogleFonts also used and linked from html header--*/
 
 
 
 
-/*-------------------------- Global Root Variables-------------------------------------------------*/
+
+
+/*----------------------------Global Root Variables---------------------------------------*/
 
 :root {
 
@@ -40,22 +41,21 @@
   --LEDfont:'LED', Arial, sans-serif;
 
 
-
                 /*---Font Color Variables---*/
 
-  --ink0:rgb(0,0,0);        /*--black--*/
-  --ink1:rgb(255,129,10);   /*--for title / highlight text--*/
-  --ink2:rgb(219,132,29);   /*--for baseline text--*/
-  --ink3:rgb(94,87,77);     /*--alternative-off black / grey--*/
-  --ink4:rgb(104,87,66);    /*--off-grey w/ slight orange tone for gradient fill--*/  
-  --ink5:rgb(130,120,98);   /*--alternative-light grey / orange tone--*/ 
+  --ink0:rgb(0,0,0);          /*--black--*/
+  --ink1:rgb(255,129,10);     /*--for title / highlight text--*/
+  --ink2:rgb(219,132,29);     /*--for baseline text--*/
+  --ink3:rgb(94,87,77);       /*--alternative-off black / grey--*/
+  --ink4:rgb(104,87,66);      /*--off-grey w/ slight orange tone for gradient fill--*/  
+  --ink5:rgb(130,120,98);      /*--alternative-light grey / orange tone--*/
 
 
                 /*----Special Font Colors----*/
 
-  --LED1: rgba(0,217,255,1);      /*--news ticker - hex value #00d9ff-------*/
-  --glass1: rgba(0,189,255,0.9);    /*--svg glass edge - hex value 00d9ff--*/
-  --glass2: rgba(0,217,255,0.18);   /*--svg glass fill w high transparency - hex value #00bdff--*/
+  --LED1:   rgba(0,217,255,1);    /*--news ticker - hex value #00d9ff-------*/
+  --glass1: rgba(0,196,255,0.9);  /*--svg glass edge  - hex value 00d9ff--*/
+  --glass2: rgba(107,196,255,0.18); /*--svg glass fill w high transparency - hex value #6bc4dff--*/
 /*--Digit2: --*/
 
 
@@ -70,7 +70,7 @@
 
 
 
-/*----------------------------Responsive Font Sizing-----------------------------------------*/
+/*----------------------------Responsive Fonts -----------------------------------------*/
 
 body, div, p {font-size:16px;font-family: var(--standardfont);color: var(--ink2);}
 h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont);color: var(--ink1);}
@@ -84,8 +84,7 @@ h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: va
 
 
 
-
-/*-------------------------General Settings-----------------*/
+/*-------------------------General Settings-------------------------------------------*/
 
 /*----no single command seemed to eliminate unneccessary auto-padding & margins. 
 Currently achieved through use of the global settings below across element types inaddition to Bootstrap classes (mb-0 & row no-gutters) - 
@@ -95,11 +94,12 @@ to be reviewed prior to launch and remove any redundant ----*/
     padding:0;
     }
 
-
 .dropdown-item {
     padding-left:0;
     padding-right:0;
 }
+
+
 
 
 /*-------------------------Key Items----------------------------------------------------*/
@@ -118,7 +118,7 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 
 
-/*-------------------------Navigation Bar----------------------------------------------------*/
+/*-------------------------Navigation Bar-----------------------------------*/
 
 .navbar {
     background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));
@@ -184,13 +184,13 @@ to be reviewed prior to launch and remove any redundant ----*/
 }
 
 .drop-header {
-    background-color: var(--ink2); 
-    color: var(--ink0);             /*--font color override required--*/
+    background-color: var(--ink2);
+    color: var(--ink0);     /*--font color override required--*/
     z-index: 1050;
 }
 
 .nav-panel-small {
-    background-image:url(../images/glass-navmenu-small.svg);
+    background-image:url(../images/final-images/glass-navmenu-small.svg);
     background-size:cover;
     background-repeat:no-repeat;
     width:85%;
@@ -207,12 +207,10 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 
 
-
 /*---!!!!!!!!!!!ADD LARGE SCREEN CONTENT HERE!!!!!!!!!!!!!!!---*/
 
 
 /*-----media query to display larger panel and additional content for bigger screens -----*/
-
 
 
 
@@ -225,7 +223,9 @@ to be reviewed prior to launch and remove any redundant ----*/
     background-image: linear-gradient(to bottom right, var(--ink0),var(--ink4));
     display:inline-block;
     text-align:center;
-    border-top:8px solid var(--ink1);
+    border-top:8px solid var(--glass1);
+    padding-top:5px;
+    padding-bottom:5px;
     }
 
 
@@ -235,6 +235,7 @@ to be reviewed prior to launch and remove any redundant ----*/
     text-decoration:none;
     text-shadow:2px 2px 2px var(--ink0);
     height: clamp(32px, 5vw, 48px);
+    
     }
 
 
@@ -242,14 +243,13 @@ to be reviewed prior to launch and remove any redundant ----*/
 
                         /*-------fluid container ensures 100% screen width with responsive margin-top (aligned to header sizing) to avoid being hidden under fixed header-----------------*/
 
-.home-container {
+.home-container-A {
     padding-top: clamp(55px, 8.75vw, 75px);
 }
 
                          /*------------Home Page - Welcome-----------------*/
 
 .welcome {
-    border-bottom: 5px solid var(--glass1);
     position:relative;
     }
 
@@ -267,6 +267,7 @@ to be reviewed prior to launch and remove any redundant ----*/
     animation-fill-mode: both;
     animation-duration:10s;
     animation-timing-function: linear;
+    border-bottom: 5px solid var(--glass1);
 }
 
 /*-----CHALLENGE ENCOUNTERED--------------
@@ -280,57 +281,53 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 --------------------------------------*/
 
 /*----image source XXXXXXXX -----*/
-@media (max-width:540px) 
-{
+@media (max-width:540px) {
 .welcome-hero-img {
     background-image:url('../images/final-images/planet_earth-sm.jpeg') /*---(s 540 x 193px)--*/
     }
 }    
 
-@media (min-width:541px) and (max-width:768px) 
-{
+@media (min-width:541px) and (max-width:768px) {
 .welcome-hero-img {
     background-image:url('../images/final-images/planet_earth-md.jpeg') /*---(m 768 x 275px)--*/
     }
 }   
 
-@media (min-width:769px) and (max-width:992px)
-{
+@media (min-width:769px) and (max-width:992px){
 .welcome-hero-img {
     background-image:url('../images/final-images/planet_earth-lg.jpeg') /*---(lg 992 x 355px)--*/
     }
 }   
 
-/*--image will appear to zoom in above c.1400px, position changed to Top to move direction to appropriate area---*/ 
+/*--image will appear to zoom in above c.1400px, position changed to 20%off-top to adjust focus--*/ 
 @media (min-width:993px) {
 .welcome-hero-img {
     background-image:url('../images/final-images/planet_earth-xl.jpeg'); /*---xl 1140 x 408px--*/
     background-position: 0% 20%;
-    }
+}
 }   
    
 
 
 .welcome-strapline {
+    
     text-shadow:2px 2px 2px var(--ink0);
     position:absolute;
-    top:0;
-    right:0;
+    top:3vw;
+    right:5vw;
     max-width:50vw;
-    padding-top: 3vw;
-    padding-right:2vw;
     animation-name:txtfadein;
     animation-delay:2s;
     animation-fill-mode: both;
     animation-duration:6s;
     animation-timing-function: ease;  
-    }  
+    } 
 
+    
 
-
-/*-------welcome animtaion------- 
-Desired effect - break of new dawn
-Acknowledgement: CCStricks.com article and demos-----*/
+                /*-------welcome animtaion------- 
+                Desired effect - break of new dawn
+                Acknowledgement: CCStricks.com animation article and demos-----*/
 
 @keyframes imgfadein {
     0%      {filter: brightness(0) blur(10px);}
@@ -355,38 +352,51 @@ Acknowledgement: CCStricks.com article and demos-----*/
   100% {visibility: visible; opacity:100%;}
   }
 
-/*-------------------------Home Page - Intro-----------------*/
 
-  #intro-box {
-    padding:3vh 1vh;
-    border-bottom:5px solid;
-    border-color: var(--ink1);
-    display:inline;
-    flex-wrap: wrap;
-    position: relative;
-    background-color:none;
+.HUD {
+    width:80vw;
+    height:17vh;
+    margin-left:10vw;
+    margin-top:-7vw;
+    position:absolute;
+    background-image:url(../images/final-images/HUD1Asset-1.svg);     
+    background-repeat:no-repeat;
+    background-size:contain;
+    
+  }
+
+.HUD-text {
+    padding-top:5%;
+    position:relative;
+    text-shadow:2px 2px 2px var(--ink0);
+    text-align:center;
+    }
+
+                    /*--------------Home Page - Intro-----------------*/
+.home-container-B {
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
-    }
+    background-attachment: fixed;
+}
+
+ /*-------------------------Home Page - Intro / Ticker---------*/
 
 
-.intro-text {
-    text-shadow:2px 2px 2px var(--ink0);
-     text-align:center;
-    }
-
-
-
-
-  /*-------------------------Home Page - Intro / Ticker---------*/
+#intro-box {
+    display:inline;
+    flex-wrap: wrap;
+    padding-top:6vh;
+}
 
 /*---guidance from https://code-boxx.com/html-css-news-ticker-horizontal-vertical/ ----*/
 
 .intro-ticker{
+  margin-top:15vh;
+  margin-bottom:2vh;
   overflow: hidden; 
   border-style:inset;
   margin:2vh 3vh 0 3vh;
-  line-height:1rem;
+  line-height:2rem;
 }
 
 
@@ -394,8 +404,7 @@ Acknowledgement: CCStricks.com article and demos-----*/
  
   width: 100%;
   padding-left: 100%; 
-  background-color: black;
-  color:RGBA(0,217,255,1);
+  background-color: var(--ink0);
   background-size:100% 100%;
   font-size:70%;
 }
@@ -409,6 +418,7 @@ Acknowledgement: CCStricks.com article and demos-----*/
   animation-name: animate;
   animation-duration: 120s;
 }
+
 
 
 .intro-news-item {
@@ -431,23 +441,13 @@ background-color: var(--LED1);
     100%  {transform: translateX(-102%);}
     }
 
-/*-------------------------Home Page main - background-----------------*/
-
-
-#main-window-image {
-
-    background-color:black;
-    background-size:cover;
-    border-top:none;
-    background-attachment: fixed;
-}
-
+  
 
 /*-------------------------Home Page main - accordion-----------------*/
 
 #home-accordion {
     padding-bottom:10vh;
-    width:100vw;
+    width:50vw;
     margin-top:0%;
     }
 
@@ -492,18 +492,17 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 .index-card-header {
-    background-image:url(../images/menu_panel_2.svg); 
+    background-image:url(../images/final-images/menu_panel_2.svg); 
     background-position:center;
     background-size:contain;
     background-repeat:no-repeat;
-    margin-top:3vh;
     text-align:center !important;
     }
 
 
 
 .btn-link {
-    font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
+    font-family:var(--sub-titlefont);
     color: RGBA(255,129,10,0.8);
     }
 
@@ -512,38 +511,43 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 #home-accordion .btn-link:focus,
 #home-accordion .btn-link:active {
     text-decoration: none;
-    color: RGBA(255,129,10,1);
+    color: var(--ink1);    /*--!!!check as maybe redundant code now!!!--*/
     border-style: none; 
     outline:none;
     box-shadow:none;
     }
 
+#home-accordion .btn-link:hover {
+  box-shadow: 20px 10px 50px 20px var(--glass1);
+}
+
 
 .UIpanel {
-    background-image:url(../images/menu_panel_detail_2.svg); 
-    min-width: 100%;    
+    background-image:url(../images/final-images/menu_panel_detail_2.svg);     
     background-repeat:no-repeat;
-    text-shadow:2px 2px 2px black;
-    padding:7vh 6vh 5vh 3vh;
+    text-shadow:2px 2px 2px var(--ink0);
+    /*--min-width: 100%; 
+    padding:7vh 6vh 5vh 3vh;--*/
   }
 
+
 #collapse-mission {
-    padding:6vh 5vh 4vh 4vh;
+    /*--padding:6vh 5vh 4vh 4vh;--*/
 }
 
 #collapse-trips {
-    padding:8vh 5vh 5vh 5vh;
+    /*--padding:8vh 5vh 5vh 5vh;--*/
 }
 
 #collapse-video {
-    padding:6vh 1vh 5vh 1vh;
+    /*--padding:6vh 1vh 5vh 1vh;--*/
     overflow:hidden;
     position:relative;
     width:80%;
 }
 
 #collapse-video::after {
-    padding-top: 56.25%;
+    /*--padding-top: 56.25%;--*/
     display: block;
     content: '';
 }
@@ -558,7 +562,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 
 #collapse-countdown {
-    padding:4vh 1vh 2vh 1vh;
+    /*--padding:4vh 1vh 2vh 1vh;--*/
 }
 
 
@@ -580,7 +584,7 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
 #countdown-info .info-answer {
     text-align:left;
-    padding-left:5vw;
+    padding-left:1vw;
     }
 
 #countdown-info .passengers {
@@ -724,8 +728,14 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     100% {top:-30vh}
     }
 
-
-
+.extended-pane-right {
+    border: 1px solid var(--glass1);
+    background-color: var(--glass2);
+    height:80%;
+    width:80%;
+    margin-left:10%;
+    text-align:center !important;
+}
 
 
 
@@ -813,12 +823,21 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 
     /*-------------------------Gallery / Viewing Port-----------------*/
 
+
 .viewingport-main {
-    margin-top:10vh;
+    padding-top:10vh;
+    background-color:black;
 }
 
-.gallery img {
-    height:20vh;
+
+
+.carousel-item img {
+    padding-bottom:5vw;
+    max-width:25vw;
+    height:100%;
+    margin-left:auto;
+    Margin-right:auto;
+    background-color:black;
 }
 
 /*-------------------------Registration-----------------*/
@@ -1006,6 +1025,7 @@ sourced from Mozilla (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 }
 
 .A404-text {
+    text-align:center;
     text-shadow:1px 1px 2px darkgray;
 }
 
