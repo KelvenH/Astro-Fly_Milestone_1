@@ -604,14 +604,21 @@ text-shadow:2px 2px 2px var(--glass2);
 
 /*--Challenge - can not remove the default Bootstrap styling once a button has been activated----*/
 
-
-.nav-item:checked a {
+.nav-item:link a,
+.nav-item:visited a,
+.nav-item:hover a,
+.nav-item:focus a,
+.nav-item:active a {
     background-color: var(--LED1);
     color: var(--ink1);
-    box-shadow: 20px 20px 150px 20px var(--glass1);
+    box-shadow: 20px 10px 50px 20px var(--glass1);
 }
 
-
+.nav-item:target a {
+    background-color: var(--LED1);
+    color: var(--ink1);
+    box-shadow: 20px 10px 50px 20px var(--red);
+}
 
 
 
