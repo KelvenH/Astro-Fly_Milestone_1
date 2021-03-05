@@ -602,59 +602,14 @@ text-shadow:2px 2px 2px var(--glass2);
 
 }
 
+/*--Challenge - can not remove the default Bootstrap styling once a button has been activated----*/
 
-.nav-item:link a,
-.nav-item:visited a,
-.nav-item:hover a,
-.nav-item:focus a,
-.nav-item:active a {
+
+.nav-item:checked a {
     background-color: var(--LED1);
     color: var(--ink1);
+    box-shadow: 20px 20px 150px 20px var(--glass1);
 }
-
-
-#btn-open-form {
-    position:center; 
-    background-color: rgba(255,129,10,1);
-    color:var(--glass3);
-}
-
-
-
-
-
-
-
-
-
-
-
-/*--origin accordion styling to incorporate into new layout --*/
-
-#home-accordion .btn-link:hover,
-#home-accordion .btn-link:focus,
-#home-accordion .btn-link:active {
-    text-decoration: none;
-    color: var(--ink1);    /*--!!!check as maybe redundant code now!!!--*/
-    border-style: none; 
-    outline:none;
-    box-shadow:none;
-    }
-
-#home-accordion .btn-link:hover {
-  box-shadow: 20px 10px 50px 20px var(--glass1);
-}
-
-
-.UIpanel {
-    background-image:url(../images/final-images/menu_panel_detail_2.svg);     
-    background-repeat:no-repeat;
-    text-shadow:2px 2px 2px var(--ink0);
-    padding:2vw;
-    /*--min-width: 100%; 
-    padding:7vh 6vh 5vh 3vh;--*/
-  }
-
 
 
 
