@@ -42,8 +42,8 @@
                 
                 /*---Font Sizing Variables-----(only defined for specific instances where need to override - as typically fonts-sizings matched by element type (i.e. H1) to the responsive fonts tabled below---*/
 
-  --LEDsize1:font-size:clamp(12px, 16px, 20px);
-  --LEDsize2:font-size:clamp(12px, 16px, 20px);
+  --LEDsize1:clamp(12px, 16px, 20px);
+  --LEDsize2:clamp(12px, 16px, 20px);
 
                 /*---Font Color Variables---*/
 
@@ -284,8 +284,7 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 /*-------------------------HOME PAGE----------------------------------------*/
 #home-content {         /*--!!!!final action to adjust to enusre no vertical page scrolling on med+ screens)--*/
-    height:100vh;
-    width:100vw;
+  
 }
 
 
@@ -402,10 +401,10 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 
 
 @keyframes txtfadein {
-  0% {visibility: hidden; opacity: 0%;}
-  50% {visibility: hidden; opacity:1%;}
-  100% {visibility: visible; opacity:100%;}
-  }
+    0% {visibility: hidden; opacity: 0%;}
+    50% {visibility: hidden; opacity:1%;}
+    100% {visibility: visible; opacity:100%;}
+    }
                 
   
   
@@ -413,23 +412,24 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 
 #home-container-B {
     width:100vw;
-    height:100%;
+
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
     padding-bottom:2vh;
-}
+    }
+
 
 .HUD { 
     padding-top:1vh;
-}
+    }
 
 .HUD-center {
     width:100%;
     position:relative;
     margin-left:auto;
     margin-right:auto;
-}
+    }
 
 .HUD-text {
     position:absolute;
@@ -443,7 +443,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     }
 
 /*--Media queries-HUD-remove graphics from small screens - also reduce text-size and add padding to prevent overflow with ticker--*/ 
-@media (max-width:767px) {
+    @media (max-width:767px) {
 
     #HUD-img, .HUD-right, .HUD-left {
     display:none;
@@ -451,22 +451,15 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 
     .HUD-text {
     top:0;
-    
     }
 
     
     .HUD-text.logo, .HUD-text .specialtype {
-   
     margin-left:0;
     margin-right:0;
     font-size:14px  
     }
 
-    /*-- 
-    top:0;
-     width:100vw;
-    font-size:14px  
-  --*/
 
     .HUD-center {
     padding-bottom:10vh;
@@ -476,18 +469,18 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 /*--END HUD Media Queries--*/ 
 
 #HUD-img {
-max-height: 200px;
-}
+    max-height: 200px;
+    }
 
 .HUD-left {
-text-align:left;
-margin-left:3vw;
-}
+    text-align:left;
+    margin-left:3vw;
+    }
 
 .HUD-right {
-text-align:right;
-margin-right:3vw;
-}
+    text-align:right;
+    margin-right:3vw;
+    }
 
 
                 /*------------Home Page - Intro / Ticker---------*/
@@ -496,49 +489,49 @@ margin-right:3vw;
 /*---guidance from https://code-boxx.com/html-css-news-ticker-horizontal-vertical/ ----*/
 
 .intro-ticker{
-  margin-top:15vh;
-  margin-bottom:2vh;
-  overflow: hidden; 
-  border-style:inset;
-  margin:2vh 3vw 0 3vw;
-  line-height:2rem;
-}
+    margin-top:15vh;
+    margin-bottom:2vh;
+    overflow: hidden; 
+    border-style:inset;
+    margin:2vh 3vw 0 3vw;
+    line-height:2rem;
+    }
 
 
 .intro-ticker-news {
  
-  width: 100%;
-  padding-left: 100%; 
-  background-color: var(--ink0);
-  background-size:100% 100%;
-  font-size:70%;
-}
+    width: 100%;
+    padding-left: 100%; 
+    background-color: var(--ink0);
+    background-size:100% 100%;
+    font-size:70%;
+    }
 
 .intro-ticker-animate {
-  display: inline-block;
-  white-space: nowrap;
-  padding-right: 100%;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-name: animate;
-  animation-duration: 120s;
-}
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: animate;
+    animation-duration: 120s;
+    }
 
 
 
 .intro-news-item {
-  font-family:var(--tickerfont);
-  font-size: 90%;
-  color: var(--LED1);
-  display: inline-block; 
-  padding-top: 0.5rem;
-  }
+    font-family:var(--tickerfont);
+    font-size: 90%;
+    color: var(--LED1);
+    display: inline-block; 
+    padding-top: 0.5rem;
+    }
 
 
 .intro-news-item.breaking-news {
-color: var(--ink0);
-background-color: var(--LED1);
-}
+    color: var(--ink0);
+    background-color: var(--LED1);
+    }   
 
 
 @keyframes animate {
@@ -552,7 +545,7 @@ background-color: var(--LED1);
     .intro-ticker {
     line-height:26px;
     }
-}
+    }
   
 /*----------Home Page -  Control Panel-----------------*/
 
@@ -566,9 +559,9 @@ Background images were self-created in Adobe Illustrator and exported as SVGs.
 Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code cleaner. ---*/
 
 .home-main-control-panel {
-margin-top:2vw;
-margin-bottom:1vw;
-}
+    margin-top:2vw;
+    margin-bottom:1vw;
+    }
 
 
 
@@ -577,34 +570,39 @@ margin-bottom:1vw;
 
 
 .home-main-lower-left-pane {
-border-left:10px solid var(--glass2);
-border-bottom:10px solid var(--glass2);  
-border-top:10px solid var(--glass1);
-border-right:10px solid var(--glass1);            
-margin-left:3vw;
-background-color:var(--glass2);
-}
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);            
+    margin-left:3vw;
+    background-color:var(--glass2);
+    }
 
 
 #Info-Screen-Selector {
-padding-top:1.5vw;
-text-align:center;
-}
+    padding-top:1.5vw;
+    text-align:center;
+    font-family:var(--LEDfont);
+    }
 
+#Info-Screen-Selector h5 {
+    font-family:var(--LEDfont);
+    }
 
 .nav-item {
-margin:auto;
-width:80%;
-box-shadow: none;
-}
+    margin:auto;
+    width:80%;
+    box-shadow: none;
+    }
 
 .nav-item a {
-background-color:var(--glass2);
-border:2px solid var(--glass1);
-margin:5px;
-text-shadow:2px 2px 2px var(--glass2);
-
-}
+    font-family:var(--LEDfont);
+    color: var(--LED1);    
+    background-color:var(--glass2);
+    border:2px solid var(--glass1);
+    margin:5px;
+    text-shadow:2px 2px 2px var(--glass2);
+    }
 
 
 /*--Challenge - can not remove the default Bootstrap styling once a button has been activated----*/
@@ -621,7 +619,6 @@ text-shadow:2px 2px 2px var(--glass2);
 
 .nav-item:active {
     box-shadow: 20px 20px 100px 30px var(--glass1);
-    
 }
 
 
@@ -639,12 +636,12 @@ display:none;}
 
 
 .home-main-lower-center-pane {
-margin-left:20px;
-border-left:10px solid var(--glass2);
-border-bottom:10px solid var(--glass2);  
-border-top:10px solid var(--glass1);
-border-right:10px solid var(--glass1);      
-}
+    margin-left:20px;
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);
+    }
 
 
 
@@ -657,136 +654,105 @@ border-right:10px solid var(--glass1);
 
 
 #home-main-lower-right-pane {
-border-left:10px solid var(--glass2);
-border-bottom:10px solid var(--glass2);  
-border-top:10px solid var(--glass1);
-border-right:10px solid var(--glass1);            
-margin-left:15px;
-background-color:var(--glass2);
-padding-top:1.5vw;
-padding-left:5vw;
-padding-right:5vw;
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);            
+    margin-left:15px;
+    background-color:var(--glass2);
+    padding-top:1.5vw;
+    padding-left:5vw;
+    padding-right:5vw;
+    }
+
+
+.LEDh2 {
+    text-shadow:20px 20px 20px 20px #00d9ff;
 }
 
-
-.home-menu-text h2 {
-color:var(--LED1);
-
-}
-
-.home-menu-text p, th, td {
-color:var(--LED1);
-
-}
-
-
-
-td th p
-
-
-#heading-mission {
-    /*--padding:6vh 5vh 4vh 4vh;--*/
-}
-
-#heading-trips {
-    /*--padding:8vh 5vh 5vh 5vh;--*/
-}
-
-#heading-media {
-    /*--padding:6vh 1vh 5vh 1vh;-
-    overflow:hidden;
-    position:relative;
-    width:80%;-*/
-}
-
-#heading-video::after {
-    /*--padding-top: 56.25%;
-    display: block;
-    content: '';--*/
-}
-
-#heading-video iframe {
-    /*--position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;--*/
-}
-
-
-#heading-countdown {
-    /*--padding:4vh 1vh 2vh 1vh;--*/
-}
-
-
- /*-----Home Page - Countdown Timer --------*/
- /*---- A true countdown timer requires understanidng of JS, so for the purpose of representing what this 'could' look like I created a mock version which only counts down from a static starting point, only adjusts the minutes and seconds and resets on page load and expanding the accordion card. 
- Acknowledgement: Initial challenges were encuntered regading vertical alignment & hiding overflow (of non-displayed numbers). A similar example was found on YouTube [https://www.youtube.com/watch?v=rhZgquCAcGc] which this code is based on although adapted to; fit in a table (to retain alignmet of time with labels) and splittng code to acount for hr / min count-down from 59-0, and digits from 10-0.   
+ /*-----Home Page - Countdown Timer ------*/
+ /*---- A true countdown timer requires understanding of JS, so for the purpose of representing what this 'could' look like I created a mock version which only counts down from a static starting point, only adjusts the minutes and seconds and resets on page load and navigating away / to the hosting nav panel.
+ Acknowledgement: Initially attempted an approach based on purely animation (i.e. show / hide), but could not overcome challenges with vertical alignment & hiding the overflow of the digits when not dslayed. A similar example was found on YouTube [https://www.youtube.com/watch?v=rhZgquCAcGc] which this code is now based on although adapted to; fit in a table (to retain alignmet of time with labels) and splittng code to acount for hr / min count-down from 59-0, and digits from 10-0.   
   ---*/
  
+
 #countdown-info {
-   align-items:left;
-   margin-bottom: 2vh;
+    font-family: var(--LEDfont);
+    color:var(--LED1); 
+    margin-bottom: 2vh;
     } 
 
 /*-----relates to layout of text wich appears prior to the timer----*/
 
+
+
 #countdown-info .info-label {
+
     text-align:right;
+    padding-right:2vw;
     }
 
 #countdown-info .info-answer {
+    font-family: var(--LEDfont);
+    color:var(--LED1);
     text-align:left;
-    padding-left:1vw;
+    padding-left:2vw;
     }
 
 #countdown-info .passengers {
+    padding-top:2vh;
      vertical-align:text-top;
     }
 
  /*-----styling for the countdown timer ----*/ 
 
  .table-countdown {
-    border: 1px solid RGBA(255,129,10,1);
+    border: 1px solid var(--glass1);
     width:80%;
     margin-left:5vw;
-    
-}
+    }
 
 .table-countdown-labels {
-    border: 1px solid RGBA(255,129,10,1);
-    color:black;
-    background-color:RGBA(255,129,10,0.8);
+    border: 1px solid var(--glass1);
+    background-color:var(--glass2);
     text-shadow:none;
-}
+    }
 
 
 .table-countdown-wrapper {
-    background-color: black;
+    background-color: var(--glass3);
     transform:translate (-50%, -50%);
-    font-family:var(--LEDfont);
+    font-family:var(--digitalfont);
     height:5vh;
     line-height:5vh;
     font-weight:bold;
     font-size: 4vh;
-}
+    }
+
 
 .table-wrapper {
     transform:translate (-50%, -50%);
     vertical-align: top;
     position:relative;
     overflow:hidden;
-}   
+    }   
 
-/*----
+.mins-wrap {
+    vertical-align: top;
+    padding-top:10px;
+    }
+
+
 .countdown-labels {
     display:inline-block;
+    font-family: var(--LEDfont);
     width:100%;
     vertical-align: top;
-    border: 1px solid RGBA(255,129,10,1);
-    
-}
----*/
+    border: 1px solid var(--glass1);
+    padding:0 0.5vh;
+    margin-left:auto;
+    margin-right:auto;
+    }
 
 
 .time {
@@ -795,11 +761,13 @@ td th p
     padding:0 0.5vh;
     }
     
+
 .digit:after {
     position:absolute;
     white-space: pre;
     content: "9\A 8\A 7\A 6\A 5\A 4\A 3\A 2\A 1\A 0\A";
     }
+
 
 .tens:after {
     position:absolute;
@@ -815,7 +783,7 @@ td th p
 
 @keyframes animate-secs-digit {
     0% {top:0;}
-    100% {top:-49.5vh} /*--- ** Adjusted from -50vh as slight mis-alignment for last few seconds, to be checked in other responsive screen sizes if needed ----*/
+    100% {top:-50vh} /*--- ** Adjusted from -50vh as slight mis-alignment for last few seconds, to be checked in other responsive screen sizes if needed ----*/
     }
 
 .seconds.tens:after {
