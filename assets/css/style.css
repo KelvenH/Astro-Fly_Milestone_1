@@ -56,13 +56,14 @@
   --LED1:   rgba(0,217,255,1);    /*--news ticker - hex value #00d9ff-------*/
   --glass1: rgba(0,196,255,0.9);  /*--svg glass edge  - hex value 00d9ff--*/
   --glass2: rgba(107,196,255,0.18); /*--svg glass fill w high transparency - hex value #6bc4dff--*/
+  --glass3: rgba(0,0,0,0.3);         /*--black 50% transparency---*/
 /*--Digit2: --*/
 
 
                  /*---Background & Border Color Variables---*/
 
   --paint1: rgb(235,103,27); /*---vector orange - current - hex value #db841d--*/
-  --paint2: rgb(219,132,29); /*--vector orange - switching to - hex value #db841d--*/
+  --paint2: rgb(179, 149, 113); /*--vector orange - switching to - hex value #db841d--*/
 /*--paint3: --*/
 
 }
@@ -78,7 +79,7 @@ h2 {font-size:clamp(16px, 3vw, 36px);font-family: var(--titlefont);color: var(--
 h3 {font-size:clamp(16px, 2vw, 28px);font-family: var(--sub-titlefont);color: var(--ink2);}
 h4 {font-size:clamp(16px, 20px, 24px);font-family: var(--specialfont);color: var(--glass1);font-weight:400;}
 h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: var(--ink2);}
-.specialtype {font-size:clamp(12px, 16px, 20px);font-family: var(--specialfont);color: var(--glass1);font-weight:200;}
+.specialfont1 {font-size:clamp(12px, 16px, 20px);font-family: var(--specialfont);color: var(--LED1);font-weight:200;}
 
 
 
@@ -93,10 +94,12 @@ to be reviewed prior to launch and remove any redundant ----*/
 .container {
     padding:0;
     margin-right:0;
+    margin-left:0;
     }
 
 .container-fluid {
     padding:0;
+    margin-left:0;
     margin-right:0;
     }
 
@@ -276,6 +279,11 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 
 /*-------------------------HOME PAGE----------------------------------------*/
+#home-content {         /*--!!!!final action to adjust to enusre no vertical page scrolling on med+ screens)--*/
+    height:100vh;
+    width:100vw;
+}
+
 
                         /*-------fluid container ensures 100% screen width with responsive margin-top (aligned to header sizing) to avoid being hidden under fixed header-----------------*/
 
@@ -436,7 +444,6 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     }
 
     .HUD-text {
-  
     top:0;
     
     }
@@ -485,7 +492,7 @@ text-align:right;
   margin-bottom:2vh;
   overflow: hidden; 
   border-style:inset;
-  margin:2vh 3vh 0 3vh;
+  margin:2vh 3vw 0 3vw;
   line-height:2rem;
 }
 
@@ -551,35 +558,78 @@ Background images were self-created in Adobe Illustrator and exported as SVGs.
 Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code cleaner. ---*/
 
 .home-main-control-panel {
-background-color:var(--glass2);
-height:50%;
+margin-top:2vw;
+margin-bottom:1vw;
 }
 
 
+
+
+/*----------------Home: Main Panel - Left Column -----------------*/
+
+
+.home-main-lower-left-pane {
+border-left:10px solid var(--glass2);
+border-bottom:10px solid var(--glass2);  
+border-top:5px solid var(--glass1);
+border-right:5px solid var(--glass1);            
+margin-left:3vw;
+background-color:var(--glass2);
+}
 
 
 #Info-Screen-Selector {
-    background-image:url(../images/final-images/HUD1LAsset6.svg);
-    background-repeat:no-repeat;
-    background-size: cover;
-    position:left;
-    margin-left:2vh;
-    margin-top:1vh;
-    width:20%;
+padding-top:1.5vw;
+
+text-align:center;
 }
 
-#Info-Screen-Selector .nav-pills {
-    margin-top:5vh;
 
-} 
-
-
-#Info-Screen-Selector .nav-item {
-    width:5vw;
-    padding:5px;
+.nav-item {
+margin:auto;
+width:80%;
 }
 
-/*----------------Home: Main Panel - Right Column -----------------*/
+.nav-item a {
+font:var(--specialfont);
+color: var(--LED1);
+font-weight: 700;
+background-color:var(--glass2);
+border:2px solid var(--glass1);
+margin:5px;
+text-shadow:2px 2px 2px var(--glass2);
+
+
+}
+
+
+.nav-item:link a,
+.nav-item:visited a,
+.nav-item:hover a,
+.nav-item:focus a,
+.nav-item:active a {
+    background-color: var(--LED1);
+    color: var(--ink1);
+}
+
+
+#btn-open-form {
+    position:center; 
+    background-color: rgba(255,129,10,1);
+    color:var(--glass3);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*--origin accordion styling to incorporate into new layout --*/
 
 #home-accordion .btn-link:hover,
 #home-accordion .btn-link:focus,
@@ -604,6 +654,48 @@ height:50%;
     /*--min-width: 100%; 
     padding:7vh 6vh 5vh 3vh;--*/
   }
+
+
+
+
+
+
+
+
+
+
+/*----------------Home: Main Panel - Center Column -----------------*/
+
+/*--Media query - hide center pane from small screens --*/
+
+@media (max-width:767px) {
+.home-main-lower-center-pane {
+display:none;}
+}
+
+/*--end media query--*/
+
+.home-main-lower-center-pane {
+border:5px solid green;   /*--temporary border during development --*/
+}
+
+
+
+
+
+
+
+/*----------------Home: Main Panel - Righ Column -----------------*/
+
+
+
+.home-main-lower-right-pane {
+border:5px solid purple;   /*--temporary border during development --*/
+margin-right:-3vw;
+}
+
+
+
 
 
 #heading-mission {
