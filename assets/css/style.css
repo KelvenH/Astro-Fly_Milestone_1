@@ -111,7 +111,7 @@ to be reviewed prior to launch and remove any redundant ----*/
 }
 
 
-/*-------------------------Key Items----------------------------------------------------*/
+/*-------------------------Logo----------------------------------------------------*/
 
 .logo {
     color: var(--ink1);
@@ -137,13 +137,6 @@ to be reviewed prior to launch and remove any redundant ----*/
 
      /*--- remove auto margin & padding to enable top / bottom alignment of text and menu icons--*/
 
-.navbar a:link,
-.navbar a:visited, 
-.navbar a:hover,
-.navbar a:active {
-    text-decoration: none;
-    color: var(--ink1);
-    }
 
 .logo {
     margin-bottom:0;
@@ -160,7 +153,7 @@ to be reviewed prior to launch and remove any redundant ----*/
     display:none;
     }
 
-    /*--BUG FIX - situation where tablet could open small menu in portrait but then switch to landscape, and menu would remain visible but with no css styling. Addition below ensures not seen--*/
+    /*--BUG - FIXED - situation where tablet could open small menu in portrait but then switch to landscape, and menu would remain visible but with no css styling. Addition below ensures not seen--*/
 
  /*-----   #nav-drop-menu-small {
         display:none;
@@ -176,16 +169,10 @@ to be reviewed prior to launch and remove any redundant ----*/
 .navbar-toggler {
     color: var(--ink1);
     margin-right:5vw;
-    padding:0;                        /*-- align toggler with logo sizing--------*/
+    padding:0;                        /*-- to align toggler with logo sizing--------*/
     font-size:clamp(28px, 5vw, 44px); /*-- align relative sizing with logo text--*/
     }
-
-    .nav-panel-small a:hover,
-    .nav-panel-small a:focus,
-    .nav-panel-small a:active {
-    background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
-    color:var(--ink0);
-    }
+   
 
 #nav-drop-menu-small {
     background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));    
@@ -214,10 +201,45 @@ to be reviewed prior to launch and remove any redundant ----*/
     text-align:center;
 }
 
-/*-}.   --- unhide closing media bracket when re-instating
+/*---psuedo elements override Bootstrap default settings for links and retain coloring consitent with site---*/
+
+.navbar .logo:link,
+.navbar .logo:visited,
+.navbar .logo:hover,
+.navbar .logo:focus,
+.navbar .logo:active {
+    text-decoration: none;
+} 
+
+.nav-panel-small:link .dropdown-item, 
+.nav-panel-small:visited .dropdown-item {
+    text-decoration: none;
+} 
+
+.nav-panel-small:hover .dropdown-item,
+.nav-panel-small:focus .dropdown-item,
+.nav-panel-small:active .dropdown-item{
+    text-decoration: none;
+    background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
+} 
+
+/*--BUG - FIXED - pseudo states were not being applied corectly. This was due to there being three element layers (the panel, the anchor and the H3 text. Styles were either not being cascaded or apply differently as the cursor moved across the 3 elements. Was unable to configure single code so split out for each of the three layers--*/
+
+.nav-panel-small:hover h3,
+.nav-panel-small:focus h3,
+.nav-panel-small:active h3{
+    background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
+    color:var(--ink0);
+} 
+
+.dropdown-item:hover h3 {
+        color:var(--ink0);
+} 
+
+/*-   }   --- unhide closing media bracket when re-instating
+
 
 -- End small menu styling / media query ---*/
-
 
 
 
