@@ -530,7 +530,7 @@ Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code
 
 .home-main-control-panel {
 background-color:var(--glass2);
-margin-left:5vw;
+height:50%;
 }
 
 
