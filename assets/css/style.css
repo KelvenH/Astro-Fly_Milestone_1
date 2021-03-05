@@ -335,7 +335,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     position:absolute;
     height:30vh;
     top:3vw;
-    right:0;
+    right:2vw;
     max-width:50vw;
     animation-name:txtfadein;
     animation-delay:2s;
@@ -377,7 +377,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 #home-container-B {
     width:100vw;
     height:100%;
-    max-height:300px;
+  
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
@@ -515,31 +515,9 @@ background-color: var(--LED1);
     .intro-ticker {
     line-height:26px;
     }
-
-  
-/*----------Home Page - Container C ------ Control Panel-----------------*/
-
-
-#home-container-C {
-    margin-top:5vw;
-    
 }
-
-
-#home-accordion {
-    margin-top:0%;
-    }
-
-#home-accordion button {
-    padding-left:5vw;
-    line-height: 6vh;
-    }
-
-
-.card {
-    background-color:transparent;
-    margin-bottom: 1vh;
-    }
+  
+/*----------Home Page -  Control Panel-----------------*/
 
 /*----Note on SVGs: 
 
@@ -548,43 +526,38 @@ https://sciencefictioninterfaces.tumblr.com/
 https://www.saji8k.com/kit-fui/movie/
 
 Background images were self-created in Adobe Illustrator and exported as SVGs.
-Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code cleaner. 
+Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code cleaner. ---*/
 
-Unsuccesful Approaches; 
-Initial intenton was to use a single SVG and scale for each accordion, but due to different size of accordion text and portrait (mobile) vs. landscape (larger screens) resulted in;
-- 'background image' - fixed dimension ratios resulted in images too small / large for the child div text
--  SVG 'preserveAspectRatio:none' - enabled scaling to fit accordion card but stretched / squashed too much to use
-- 'border-image' - method splits image into 9 sections assigned to top,middle,bottom (vert) and left, center, right (horiz), still affected dimensions and variety in text sizes would  require individual slicing co-ordinates.
-- 'vector-effect:non-scaling-stroke'; - improved but did not satisfy the final result (in conjunction with border-image some aspects e.g. corner to side joins) were not aligning consistently, and whilst line-width was retained, the use of some shapes and fills were still mis-aligned / distorted.
-
-Approach taken:
-Resorted to producing different sized images (small, medium, large) in both portrait and landscape. The most appropriate fit was then targetted to the individual accordion.
-This also meant different styles / images could have been used if more time available.
-
-SVGs were put through 3rd party tool (https://codepen.io/designcourse/live/mdydjBa) to re-calculate SVG viewbox properties & eliminate any surplus 'white space' on image.
-Applied SVG file reduction tool (https://jakearchibald.github.io/svgomg/) to minimise SVG file sizes further. 
-Did also applying 'prettify markup' and although means file sizes are not the minimum possible, the SVG code outputs over multiple lines which is easier to review / understand and adjust than a single line of code.
+.home-main-control-panel {
+background-color:var(--glass2);
+margin-left:5vw;
+}
 
 
 
-/*---MEDIA QUERIES - TO BE ADDED, USE PORTRAIT SVG FOR MOBILE AND TABLET (WHEN IN PORT MODE) AND LANDSCAPE FOR ALL OTHER SCREEN SIZES / LAYOUT)---*/
 
-
-.index-card-header {
-    background-image:url(../images/final-images/menu_panel_2.svg); 
-    background-position:center;
-    background-size:contain;
+#Info-Screen-Selector {
+    background-image:url(../images/final-images/HUD1LAsset6.svg);
     background-repeat:no-repeat;
-    text-align:center !important;
-    }
+    background-size: cover;
+    position:left;
+    margin-left:2vh;
+    margin-top:1vh;
+    width:20%;
+}
+
+#Info-Screen-Selector .nav-pills {
+    margin-top:5vh;
+
+} 
 
 
+#Info-Screen-Selector .nav-item {
+    width:5vw;
+    padding:5px;
+}
 
-.btn-link {
-    font-family:var(--sub-titlefont);
-    color: RGBA(255,129,10,0.8);
-    }
-
+/*----------------Home: Main Panel - Right Column -----------------*/
 
 #home-accordion .btn-link:hover,
 #home-accordion .btn-link:focus,
@@ -611,38 +584,38 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
   }
 
 
-#collapse-mission {
+#heading-mission {
     /*--padding:6vh 5vh 4vh 4vh;--*/
 }
 
-#collapse-trips {
+#heading-trips {
     /*--padding:8vh 5vh 5vh 5vh;--*/
 }
 
-#collapse-video {
-    /*--padding:6vh 1vh 5vh 1vh;--*/
+#heading-video {
+    /*--padding:6vh 1vh 5vh 1vh;-
     overflow:hidden;
     position:relative;
-    width:80%;
+    width:80%;-*/
 }
 
-#collapse-video::after {
-    /*--padding-top: 56.25%;--*/
+#heading-video::after {
+    /*--padding-top: 56.25%;
     display: block;
-    content: '';
+    content: '';--*/
 }
 
-#collapse-video iframe {
-    position: absolute;
+#heading-video iframe {
+    /*--position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100%;--*/
 }
 
 
-#collapse-countdown {
-    padding:4vh 1vh 2vh 1vh;
+#heading-countdown {
+    /*--padding:4vh 1vh 2vh 1vh;--*/
 }
 
 
@@ -715,40 +688,6 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
 }
 ---*/
 
-/*-----Original div version - replaced with table approach to address alignment issues
-.countdown-wrapper {
-    display:inline-block;
-    overflow:hidden;
-    width:100%;
-    vertical-align: top;
-    border: 1px solid RGBA(255,129,10,1);
-    border-collapse: collapse;
-    background-color: #242424;
-    transform:translate (-50%, -50%);
-    font-family:'LED',  Arial, Helvetica, sans-serif;
-    padding:0 0;
-    margin: 0 0;
-    height:5vh;
-    line-height:5vh;
-    font-weight:bold;
-    font-size: 4vh;
-    padding-top:0.5vh;
-    }
-
-.wrapper {
-    transform:translate (0, 0);
-    vertical-align: top;
-    position:relative;
-}
-
-.wrap-secs {
-    display:inline-block;
-}
-
-.wrap-mins {
-    display:inline-block;
-}
---------*/
 
 .time {
     display:inline-block;
@@ -809,41 +748,14 @@ Did also applying 'prettify markup' and although means file sizes are not the mi
     }
 
 
-     /*----------------Home: Main Panel - Right Column -----------------*/
-
-@media (max-width:767px), (orientation:portrait)
-
-{   
-    #home-main-panel-right {
-    visibility: hidden;
-    display:none;
-    }
-
-}
+     
 
 
 
-.extended-pane-right {
-    border: 1px solid var(--glass1);
-    background-color: var(--glass2);
-    height:80%;
-    width:80%;
-    margin-left:10%;
-    text-align:center !important;
-    padding-top:5vw;
-}
 
-.nav-panel-large {
-    padding-top:5vw;
-}
 
-.grid-container-nav {
-    border:3px solid red;
-    width:90vw;
-    margin-left:auto;
-    margin-right:auto;
 
-}
+
 
 
 
