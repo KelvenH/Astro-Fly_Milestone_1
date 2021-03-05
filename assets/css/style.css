@@ -12,15 +12,15 @@
             /*--Digital & LED fonts available on free license for non-commercial use via dafont.com--*/
 @font-face {
     src:url('../fonts/AdvancedDotDigital7-OpXA.ttf');
-    font-family:'digital' ;
+    font-family:'ticker';
     }
 
 @font-face {
     src:url('../fonts/digital-7.ttf');
-    font-family:'LED' ;
+    font-family:'digital' ;
     }
 
-            /*--'Baumans' (baseline font) and 'Syncopate' (for slogan) both GoogleFonts also used and linked from html header--*/
+            /*--'Baumans' (baseline font) and 'Orbitron' (LED style) both GoogleFonts also used and linked from html header--*/
 
 
 
@@ -35,11 +35,15 @@
 
   --standardfont:'Baumans', Arial, sans-serif;
   --titlefont: 'ethnocentric_rg', Arial, sans-serif;
-  --sub-titlefont: 'ethnocentric_rg', Arial, sans-serif;
-  --specialfont: 'Orbitron', Arial, sans-serif;
-  --tickerfont:'digital', Arial, sans-serif;
-  --LEDfont:'LED', Arial, sans-serif;
+  --LEDfont:'orbitron', Arial, sans-serif;              /*--LED 'screens'--*/
+  --digitalfont: 'digital', Arial, sans-serif;         /*--digtal clock--*/
+  --tickerfont:'ticker', Arial, sans-serif;             /*--news ticker'--*/
 
+                
+                /*---Font Sizing Variables-----(only defined for specific instances where need to override - as typically fonts-sizings matched by element type (i.e. H1) to the responsive fonts tabled below---*/
+
+  --LEDsize1:font-size:clamp(12px, 16px, 20px);
+  --LEDsize2:font-size:clamp(12px, 16px, 20px);
 
                 /*---Font Color Variables---*/
 
@@ -53,18 +57,18 @@
 
                 /*----Special Font Colors----*/
 
-  --LED1:   rgba(0,217,255,1);    /*--news ticker - hex value #00d9ff-------*/
-  --glass1: rgba(0,196,255,0.9);  /*--svg glass edge  - hex value 00d9ff--*/
+  --LED1:   rgba(0,217,255,1);      /*--LED screens , ticker and digital - hex value #00d9ff-------*/
+  --glass1: rgba(0,196,255,0.9);    /*--svg glass edge  - hex value 00d9ff--*/
   --glass2: rgba(107,196,255,0.18); /*--svg glass fill w high transparency - hex value #6bc4dff--*/
-  --glass3: rgba(0,0,0,0.3);         /*--black 50% transparency---*/
-/*--Digit2: --*/
+  --glass3: rgba(0,0,0,0.3);      /*--black 50% transparency---*/
+  /*--digital1: (not currently defined / required)--*/
 
 
                  /*---Background & Border Color Variables---*/
 
   --paint1: rgb(235,103,27); /*---vector orange - current - hex value #db841d--*/
   --paint2: rgb(179, 149, 113); /*--vector orange - switching to - hex value #db841d--*/
-/*--paint3: --*/
+/*--paint3: (not currently defined / required)--*/
 
 }
 
@@ -76,12 +80,12 @@
 body, div, p {font-size:16px;font-family: var(--standardfont);color: var(--ink2);}
 h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont);color: var(--ink1);}
 h2 {font-size:clamp(16px, 3vw, 36px);font-family: var(--titlefont);color: var(--ink1);}
-h3 {font-size:clamp(16px, 2vw, 28px);font-family: var(--sub-titlefont);color: var(--ink2);}
-h4 {font-size:clamp(16px, 20px, 24px);font-family: var(--specialfont);color: var(--glass1);font-weight:400;}
+h3 {font-size:clamp(16px, 2vw, 28px);font-family: var(--titlefont);color: var(--ink2);}
+h4 {font-size:clamp(16px, 20px, 24px);font-family: var(--standardfont);color: var(--ink2);font-weight:400;}
 h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: var(--ink2);}
-.specialfont1 {font-size:clamp(12px, 16px, 20px);font-family: var(--specialfont);color: var(--LED1);font-weight:200;}
-
-
+.LEDh2 {font-size:clamp(16px, 3vw, 36px);font-family: var(--titlefont);color: var(--LED1);}
+.LEDh4 {font-size:clamp(6px, 20px, 24px);font-family: var(--LEDfont);color: var(--LED1);}
+.LEDstnd {font-size:16px;font-family: var(--LEDfont);color: var(--LED1);}
 
 
 
@@ -402,12 +406,14 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
   50% {visibility: hidden; opacity:1%;}
   100% {visibility: visible; opacity:100%;}
   }
+                
+  
+  
                 /*--------------Home Page - Container B HUD & Ticker -----------------*/
 
 #home-container-B {
     width:100vw;
     height:100%;
-  
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
@@ -475,10 +481,12 @@ max-height: 200px;
 
 .HUD-left {
 text-align:left;
+margin-left:3vw;
 }
 
 .HUD-right {
 text-align:right;
+margin-right:3vw;
 }
 
 
@@ -571,8 +579,8 @@ margin-bottom:1vw;
 .home-main-lower-left-pane {
 border-left:10px solid var(--glass2);
 border-bottom:10px solid var(--glass2);  
-border-top:5px solid var(--glass1);
-border-right:5px solid var(--glass1);            
+border-top:10px solid var(--glass1);
+border-right:10px solid var(--glass1);            
 margin-left:3vw;
 background-color:var(--glass2);
 }
@@ -580,7 +588,6 @@ background-color:var(--glass2);
 
 #Info-Screen-Selector {
 padding-top:1.5vw;
-
 text-align:center;
 }
 
@@ -588,19 +595,17 @@ text-align:center;
 .nav-item {
 margin:auto;
 width:80%;
+box-shadow: none;
 }
 
 .nav-item a {
-font:var(--specialfont);
-color: var(--LED1);
-font-weight: 700;
 background-color:var(--glass2);
 border:2px solid var(--glass1);
 margin:5px;
 text-shadow:2px 2px 2px var(--glass2);
 
-
 }
+
 
 /*--Challenge - can not remove the default Bootstrap styling once a button has been activated----*/
 
@@ -611,18 +616,13 @@ text-shadow:2px 2px 2px var(--glass2);
 .nav-item:active a {
     background-color: var(--LED1);
     color: var(--ink1);
-    box-shadow: 20px 10px 50px 20px var(--glass1);
+    box-shadow: 20px 20px 100px 30px var(--glass1);
 }
 
-.nav-item:target a {
-    background-color: var(--LED1);
-    color: var(--ink1);
-    box-shadow: 20px 10px 50px 20px var(--red);
+.nav-item:active {
+    box-shadow: 20px 20px 100px 30px var(--glass1);
+    
 }
-
-
-
-
 
 
 
@@ -637,8 +637,13 @@ display:none;}
 
 /*--end media query--*/
 
+
 .home-main-lower-center-pane {
-border:5px solid green;   /*--temporary border during development --*/
+margin-left:20px;
+border-left:10px solid var(--glass2);
+border-bottom:10px solid var(--glass2);  
+border-top:10px solid var(--glass1);
+border-right:10px solid var(--glass1);      
 }
 
 
@@ -647,17 +652,36 @@ border:5px solid green;   /*--temporary border during development --*/
 
 
 
-/*----------------Home: Main Panel - Righ Column -----------------*/
+/*----------------Home: Main Panel - Right Column -----------------*/
 
 
 
-.home-main-lower-right-pane {
-border:5px solid purple;   /*--temporary border during development --*/
-margin-right:-3vw;
+#home-main-lower-right-pane {
+border-left:10px solid var(--glass2);
+border-bottom:10px solid var(--glass2);  
+border-top:10px solid var(--glass1);
+border-right:10px solid var(--glass1);            
+margin-left:15px;
+background-color:var(--glass2);
+padding-top:1.5vw;
+padding-left:5vw;
+padding-right:5vw;
+}
+
+
+.home-menu-text h2 {
+color:var(--LED1);
+
+}
+
+.home-menu-text p, th, td {
+color:var(--LED1);
+
 }
 
 
 
+td th p
 
 
 #heading-mission {
@@ -668,7 +692,7 @@ margin-right:-3vw;
     /*--padding:8vh 5vh 5vh 5vh;--*/
 }
 
-#heading-video {
+#heading-media {
     /*--padding:6vh 1vh 5vh 1vh;-
     overflow:hidden;
     position:relative;
