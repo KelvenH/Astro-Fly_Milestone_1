@@ -81,7 +81,7 @@
 
     <section id="home-content">
 
-        <div class="container-fluid align-items-center home-container-A" id="home-container-A">
+        <div class="container-fluid align-items-center" id="home-container-A">
 
             <div class="row no-gutters welcome">
                 <div class="col-12 welcome-hero-img">
@@ -92,20 +92,23 @@
         </div> <!---close container A-->
         
 
-        <div class="container-fluid align-items-center home-container-B" id="home-container-B">
+        <div class="container-fluid align-items-center" id="home-container-B">
             
             <div class="row no-gutters HUD">
-                <div class="col-2 HUD-left extra"></div>
+                <div class="col-2 HUD-left">Left graphic here!!
                 </div>
-                <div class="col-8 HUD-center d-flex">
-                    <img src="assets/images/final-images/HUD1Asset-3.svg">
-                    <h3 class="HUD-text logo">Welcome to Astr<span class="iconify icon-planet align-self-center"
-                                data-icon="bx:bxs-planet" data-inline="true"></span>:Fly
-                    </h3> 
+                <div class="col-8 HUD-center">
+                    <img id="HUD-img" src="assets/images/final-images/HUD1Asset-3.svg">
+                    <div class="HUD-text"> 
+                        <h3 class="logo">Welcome to<br>Astr<span class="iconify icon-planet align-self-center"
+                         data-icon="bx:bxs-planet" data-inline="true"></span>:Fly
+                        </h3> 
+                        <p class="specialtype">Pioneering Space Travel</p>
+                    </div> 
+                </div>     <!---close HUD center--> 
+                <div class="col-2 HUD-right"> Right graphic here!!
                 </div>
-                <div class="col-2 HUD-right extra">
-                </div>
-            </div>  <!---close HUD--> 
+            </div>          <!---close HUD row--> 
                       
             <div class="row no-gutters home-main-ticker">
 
@@ -175,7 +178,7 @@
    
             </div>   <!---close ticker row (Container B) -->
          
-        <div class="container-fluid align-items-center home-container-C" id="home-container-C">   
+        <div class="container-fluid align-items-center" id="home-container-C">   
             <div class="row no-gutters home-main-control-panel">
                 <div class="col-2">
                     <div id="Info-Screen-Selector"> Please select one of the following for more information

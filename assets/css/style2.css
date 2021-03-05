@@ -1,0 +1,266 @@
+/*--------------------------Font Types------------------------------------------------------*/
+
+             /*--'Ethnocentric' licence purchased for usage via fontspring.com--*/
+@font-face {
+    font-family: 'ethnocentric_rg';
+    src: url('../fonts/ethnocentric_rg-webfont.woff2') format('woff2'),
+         url('../fonts/ethnocentric_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+            /*--Digital & LED fonts available on free license for non-commercial use via dafont.com--*/
+@font-face {
+    src:url('../fonts/AdvancedDotDigital7-OpXA.ttf');
+    font-family:'digital' ;
+    }
+
+@font-face {
+    src:url('../fonts/digital-7.ttf');
+    font-family:'LED' ;
+    }
+
+            /*--'Baumans' (baseline font) and 'Syncopate' (for slogan) both GoogleFonts also used and linked from html header--*/
+
+
+
+
+
+
+/*----------------------------Global Root Variables---------------------------------------*/
+
+:root {
+
+                 /*---Font Variables---*/
+
+  --standardfont:'Baumans', Arial, sans-serif;
+  --titlefont: 'ethnocentric_rg', Arial, sans-serif;
+  --sub-titlefont: 'ethnocentric_rg', Arial, sans-serif;
+  --specialfont: 'Orbitron', Arial, sans-serif;
+  --tickerfont:'digital', Arial, sans-serif;
+  --LEDfont:'LED', Arial, sans-serif;
+
+
+                /*---Font Color Variables---*/
+
+  --ink0:rgb(0,0,0);          /*--black--*/
+  --ink1:rgb(255,129,10);     /*--for title / highlight text--*/
+  --ink2:rgb(219,132,29);     /*--for baseline text--*/
+  --ink3:rgb(94,87,77);       /*--alternative-off black / grey--*/
+  --ink4:rgb(104,87,66);      /*--off-grey w/ slight orange tone for gradient fill--*/  
+  --ink5:rgb(130,120,98);      /*--alternative-light grey / orange tone--*/
+
+
+                /*----Special Font Colors----*/
+
+  --LED1:   rgba(0,217,255,1);    /*--news ticker - hex value #00d9ff-------*/
+  --glass1: rgba(0,196,255,0.9);  /*--svg glass edge  - hex value 00d9ff--*/
+  --glass2: rgba(107,196,255,0.18); /*--svg glass fill w high transparency - hex value #6bc4dff--*/
+/*--Digit2: --*/
+
+
+                 /*---Background & Border Color Variables---*/
+
+  --paint1: rgb(235,103,27); /*---vector orange - current - hex value #db841d--*/
+  --paint2: rgb(219,132,29); /*--vector orange - switching to - hex value #db841d--*/
+/*--paint3: --*/
+
+}
+
+
+
+
+/*----------------------------Responsive Fonts -----------------------------------------*/
+
+body, div, p {font-size:16px;font-family: var(--standardfont);color: var(--ink2);}
+h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont);color: var(--ink1);}
+/*--h2 ----not defined / used -----*/
+h3 {font-size:clamp(16px, 3vw, 36px);font-family: var(--sub-titlefont);color: var(--ink2);}
+h4 {font-size:clamp(16px, 20px, 24px);font-family: var(--specialfont);color: var(--glass1);font-weight:400;}
+h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: var(--ink2);}
+.specialtype {font-size:clamp(15px, 18px, 20px);font-family: var(--specialfont);color: var(--glass1);font-weight:200;}
+
+
+
+
+
+/*-------------------------General Settings-------------------------------------------*/
+
+/*----no single command seemed to eliminate unneccessary auto-padding & margins. 
+Currently achieved through use of the global settings below across element types inaddition to Bootstrap classes (mb-0 & row no-gutters) - 
+to be reviewed prior to launch and remove any redundant ----*/
+
+
+
+/*-------------------------Key Items----------------------------------------------------*/
+
+.logo {
+    color: var(--ink1);
+    text-shadow:2px 2px 2px var(--ink0);
+    }
+
+.icon-planet {
+    color:var(--ink1);
+    filter: drop-shadow(5px 5px 2px var(--ink0)); /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
+    }
+
+
+
+
+
+/*-------------------------Navigation Bar-----------------------------------*/
+
+.navbar {
+    background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));
+    border-bottom: 8px solid var(--glass1);
+    
+    }
+
+     /*--- remove auto margin & padding to enable top / bottom alignment of text and menu icons--*/
+
+.navbar a:link,
+.navbar a:visited, 
+.navbar a:hover,
+.navbar a:active {
+    text-decoration: none;
+    color: var(--ink1);
+    }
+
+.logo {
+    margin-bottom:0;
+    }
+
+/*-----Currently disabled - choice of nav menu
+
+    /*-----Basic menu for small screens / portrait only. Media query prevents small menu toggler seen on larger devices--*/
+
+/*-----@media (min-width:768px) and (orientation:landscape)
+
+{   
+    #dropdownMenuButton-sm, navbar-toggler, i.fa-bars {
+    display:none;
+    }
+
+    /*--BUG FIX - situation where tablet could open small menu in portrait but then switch to landscape, and menu would remain visible but with no css styling. Addition below ensures not seen--*/
+
+ /*-----   #nav-drop-menu-small {
+        display:none;
+    }
+}
+-*/
+    /*------Second media query to prevent screens loading code for functionality not visible. Note: 'AND' operator on 1st query vs list on 2nd query (acts as 'OR' operator) as mobile devices could be either----*/
+
+/*-----@media (max-width:768px), (orientation:portrait)
+
+{---*/
+
+.navbar-toggler {
+    color: var(--ink1);
+    margin-right:5vw;
+    padding:0;                        /*-- align toggler with logo sizing--------*/
+    font-size:clamp(28px, 5vw, 44px); /*-- align relative sizing with logo text--*/
+    }
+
+    .nav-panel-small a:hover,
+    .nav-panel-small a:focus,
+    .nav-panel-small a:active {
+    background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
+    color:var(--ink0);
+    }
+
+#nav-drop-menu-small {
+    background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));    
+    border:8px solid var(--ink1); 
+    text-align: center;
+    width:90vw;
+    max-width:500px;
+}
+
+.drop-header {
+    background-color: var(--ink2);
+    color: var(--ink0);     /*--font color override required--*/
+    z-index: 1050;
+}
+
+.nav-panel-small {
+    background-image:url(../images/final-images/glass-navmenu-small.svg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    width:85%;
+    margin-left:auto;
+    margin-right:auto;
+}  
+
+.dropdown-item {
+    text-align:center;
+}
+
+/*-}.   --- unhide closing media bracket when re-instating
+
+-- End small menu styling / media query ---*/
+
+
+
+
+/*---!!!!!!!!!!!ADD LARGE SCREEN CONTENT HERE!!!!!!!!!!!!!!!---*/
+
+
+/*-----media query to display larger panel and additional content for bigger screens -----*/
+
+
+
+
+
+
+/*-------------------------Footer-----------------*/
+
+.footer-main {
+    background-image: linear-gradient(to bottom right, var(--ink0),var(--ink4));
+    display:inline-block;
+    text-align:center;
+    border-top:8px solid var(--glass1);
+    padding-top:5px;
+    padding-bottom:5px;
+    }
+
+
+.footer-main a {
+    color:var(--ink1);
+    font-size:clamp(28px, 5vw, 44px); /*--icon sizing consitent with nav icon--*/
+    text-decoration:none;
+    text-shadow:2px 2px 2px var(--ink0);
+    height: clamp(32px, 5vw, 48px);
+    
+    }
+
+#home-content{
+    margin-left:5vw;
+}
+/*-------------------------HOME PAGE----------------------------------------*/
+
+                        /*-------fluid container ensures 100% screen width with responsive margin-top (aligned to header sizing) to avoid being hidden under fixed header-----------------*/
+
+
+
+#home-container-A {
+    padding-top: clamp(55px, 8.75vw, 75px);
+    width:100vw;
+    max-height:25vw;
+}
+
+                /*------------Home Page - Container A Welcome-----------------*/
+
+.welcome {
+    position:relative;
+    }
+
+
+
+.welcome-hero-img {
+   
+  
+    height:40vw;
+ 
+
+    border-bottom: 5px solid var(--glass1);
+}

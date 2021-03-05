@@ -74,11 +74,11 @@
 
 body, div, p {font-size:16px;font-family: var(--standardfont);color: var(--ink2);}
 h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont);color: var(--ink1);}
-/*--h2 ----not defined / used -----*/
-h3 {font-size:clamp(16px, 3vw, 36px);font-family: var(--sub-titlefont);color: var(--ink2);}
+h2 {font-size:clamp(16px, 3vw, 36px);font-family: var(--titlefont);color: var(--ink1);}
+h3 {font-size:clamp(16px, 2vw, 28px);font-family: var(--sub-titlefont);color: var(--ink2);}
 h4 {font-size:clamp(16px, 20px, 24px);font-family: var(--specialfont);color: var(--glass1);font-weight:400;}
 h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: var(--ink2);}
-.specialtype {font-size:clamp(15px, 18px, 20px);font-family: var(--specialfont);color: var(--glass1);font-weight:200;}
+.specialtype {font-size:clamp(12px, 16px, 20px);font-family: var(--specialfont);color: var(--glass1);font-weight:200;}
 
 
 
@@ -259,11 +259,12 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 
 
-.home-container-A {
+#home-container-A {
     padding-top: clamp(55px, 8.75vw, 75px);
     width:100vw;
-    max-height:30vw;
+    
 }
+
 
                 /*------------Home Page - Container A Welcome-----------------*/
 
@@ -274,12 +275,12 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 
 .welcome-hero-img {
+    height: 30vw;
+    max-height:300px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height:40vw;
-    max-height:500px;
     animation-name:imgfadein;
     animation-delay:1.5s;
     animation-fill-mode: both;
@@ -301,19 +302,20 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 /*----image source XXXXXXXX -----*/
 @media (max-width:540px) {
 .welcome-hero-img {
-    background-image:url('../images/final-images/planet_earth-sm.jpeg') /*---(s 540 x 193px)--*/
-    }
+    background-image:url('../images/final-images/planet_earth-sm.jpeg'); /*---(s 540 x 193px)--*/
+    min-height:110px;
+}
 }    
 
 @media (min-width:541px) and (max-width:768px) {
 .welcome-hero-img {
-    background-image:url('../images/final-images/planet_earth-md.jpeg') /*---(m 768 x 275px)--*/
+    background-image:url('../images/final-images/planet_earth-md.jpeg'); /*---(m 768 x 275px)--*/
     }
 }   
 
 @media (min-width:769px) and (max-width:992px){
 .welcome-hero-img {
-    background-image:url('../images/final-images/planet_earth-lg.jpeg') /*---(lg 992 x 355px)--*/
+    background-image:url('../images/final-images/planet_earth-lg.jpeg'); /*---(lg 992 x 355px)--*/
     }
 }   
 
@@ -331,6 +333,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     
     text-shadow:2px 2px 2px var(--ink0);
     position:absolute;
+    height:30vh;
     top:3vw;
     right:0;
     max-width:50vw;
@@ -371,10 +374,10 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
   }
                 /*--------------Home Page - Container B HUD & Ticker -----------------*/
 
-.home-container-B {
+#home-container-B {
     width:100vw;
     height:100%;
-    max-height:30vw;
+    max-height:300px;
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
@@ -382,11 +385,11 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 }
 
 .HUD { 
-    padding-top:2vh;
+    padding-top:1vh;
 }
 
 .HUD-center {
-   width:100%;
+    width:100%;
     position:relative;
     margin-left:auto;
     margin-right:auto;
@@ -403,15 +406,55 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     text-shadow:2px 2px 2px var(--ink0);
     }
 
+/*--Media queries-HUD-remove graphics from small screens - also reduce text-size and add padding to prevent overflow with ticker--*/ 
+@media (max-width:767px) {
+
+    #HUD-img, .HUD-right, .HUD-left {
+    display:none;
+    }
+
+    .HUD-text {
+  
+    top:0;
+    
+    }
+
+    
+    .HUD-text.logo, .HUD-text .specialtype {
+   
+    margin-left:0;
+    margin-right:0;
+    font-size:14px  
+    }
+
+    /*-- 
+    top:0;
+     width:100vw;
+    font-size:14px  
+  --*/
+
+    .HUD-center {
+    padding-bottom:10vh;
+    }
+    } 
+
+/*--END HUD Media Queries--*/ 
+
+#HUD-img {
+max-height: 200px;
+}
+
+.HUD-left {
+text-align:left;
+}
+
+.HUD-right {
+text-align:right;
+}
+
 
                 /*------------Home Page - Intro / Ticker---------*/
 
-
-#intro-box {
-    display:inline;
-    flex-wrap: wrap;
-    padding-top:6vh;
-}
 
 /*---guidance from https://code-boxx.com/html-css-news-ticker-horizontal-vertical/ ----*/
 
@@ -466,12 +509,20 @@ background-color: var(--LED1);
     100%  {transform: translateX(-102%);}
     }
 
+/*--Media queries-Ticker-further reduce ticker to fill space by hidden HUD graphic--*/ 
+@media (max-width:767px) {
+
+    .intro-ticker {
+    line-height:26px;
+    }
+
   
 /*----------Home Page - Container C ------ Control Panel-----------------*/
 
 
-#home-main-panel {
+#home-container-C {
     margin-top:5vw;
+    
 }
 
 
