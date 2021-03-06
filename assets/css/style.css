@@ -828,6 +828,7 @@ display:none;}
 
 #fights-container-A {
     width:100vw;
+    background-color: black;
 }
 
 #flights-hero-col {
@@ -962,11 +963,16 @@ display:none;}
 }
 
 
-/*-------------------------Exploration PAGE-----------------*/
+        /*-----------------Flights - Quote Section-----------------*/
 
+#flights-row2-textquote {
+    padding:2vh 3vh 2vh 3vh;
+    text-align:center;
+}
 
+#flights-intro-quote {
 
-
+}
 
 
 
