@@ -293,7 +293,6 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 
 #home-container-A {
-    padding-top: clamp(55px, 8.75vw, 75px);
     width:100vw;
     
 }
@@ -830,20 +829,35 @@ display:none;}
 
 /*-------------------------Exploration PAGE-----------------*/
 
+#exploration-content {
+    height:100vh;
+    width:100vw;
+}
 
 
-#main-exploration-image {
-    /*----background-image:url(); image removed - switching to background color/
-    background-color: var(--ink0);
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;. -------*/
-    background-color: var(--ink0);
-    width:100%;
-    border-top:none;
-    background-attachment: fixed;
-    display:inline-block;
-    }
+
+            /*-----------Exploration - Section A Intro-----------------*/
+
+#exploration-container-A {
+    width:100vw;
+    background-color:var(--ink0);
+    padding-top: clamp(55px, 8.75vw, 75px);
+    
+}
+
+
+
+.exploration-quote
+
+
+
+
+
+            /*-----------Exploration - Section B Trips-----------------*/
+
+#exploration-container-B {
+    background-color:var(--ink0)
+}
 
 .exploration-item {
     background-color:#24242480;
@@ -854,10 +868,40 @@ display:none;}
     width:80vw;
     }
 
-
 #exploration h2 {
     font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
     }
+
+
+                        /*-----------Exploration - Trips: Earth ORBIT-------*/
+
+#Earth-ORBIT
+
+                        /*-----------Exploration - Trips: Moon--------------*/
+
+#moon-trips
+
+                        /*-----------Exploration - Trips: Space Safari------*/
+#space-safari
+    
+                        /*-----------Exploration - Fleet-----------------*/
+
+#exploration-fleet
+
+                        /*-----------Exploration - Future-----------------*/
+#exploration-future
+
+.mars
+
+
+
+
+
+
+
+
+
+
 
 
 
