@@ -84,8 +84,8 @@ h3 {font-size:clamp(16px, 2vw, 28px);font-family: var(--titlefont);color: var(--
 h4 {font-size:clamp(16px, 20px, 24px);font-family: var(--standardfont);color: var(--ink2);font-weight:400;}
 h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: var(--ink2);}
 .LEDh2 {font-size:clamp(16px, 3vw, 36px);font-family: var(--titlefont);color: var(--LED1);}
-.LEDh4 {font-size:clamp(6px, 20px, 24px);font-family: var(--LEDfont);color: var(--LED1);}
-.LEDstnd {font-size:16px;font-family: var(--LEDfont);color: var(--LED1);}
+.LEDh4 {font-size:clamp(16px, 20px, 24px);font-family: var(--LEDfont);color: var(--LED1);}
+.LEDstnd {font-size:clamp(14px, 1.2vw, 18px);font-family: var(--LEDfont);color: var(--LED1);}
 
 
 
@@ -845,46 +845,22 @@ display:none;}
     margin-right:auto;   
 }
 
-.exploration-intro p {
-    /*--height: 30vw;
-    max-height:300px;---*/
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    border-bottom: 5px solid var(--glass1);
+#exploration-hero-title {
+    max-width:100%;
+    height:40vw;
+    padding-top:2vw;
+    
 } 
 
-/*--media query - appropriate image size selection-----*/
-
-
-/*----image source: Adobe Stock-----*/
-@media (max-width:540px) {
-.exploration-intro p {
-    background-image:url('../images/final-images/Explore-hero-img-sm.jpg');   /*---(s 540 x 243px)--*/
-    min-height:110px;
+#exploration-hero-title h2 {
+    text-align:center;
 }
-}    
 
-@media (min-width:541px) and (max-width:768px) {
-.exploration-intro p {
-    background-image:url('../images/final-images/Explore-hero-img-md.jpg');  /*---(m 768 x 346px)--*/
-    }
-}   
-
-@media (min-width:769px) and (max-width:992px){
-.exploration-intro p {
-    background-image:url('../images/final-images/Explore-hero-img-lg.jpg');    /*--(lg 992 x 446px)--*/
-    }
-}   
-
-/*--image will appear to zoom in above c.1400px, position changed to 20%off-top to adjust focus--*/ 
-@media (min-width:993px) {
-.exploration-intro p {
-    background-image:url('../images/final-images/Explore-hero-img-xl.jpg');     /*---xl 1200 x 540px--*/
-    background-position: 0% 20%;
+#exploration-hero-img {
+    max-width:100%;
+    height:auto;
 }
-}   
+
 
 .exploration-quote
 
@@ -920,27 +896,27 @@ display:none;}
 
 /*----image source: Adobe Stock-----*/
 @media (max-width:540px) {
-.welcome-hero-img {
+XXXXXXXXXX    {
     background-image:url('../images/final-images/earth-img-sm.jpg');     /*---(s 270 x 274px)--*/
     min-height:110px;
 }
 }    
 
 @media (min-width:541px) and (max-width:768px) {
-.welcome-hero-img {
+XXXXXXXXXX    {
     background-image:url('../images/final-images/earth-img-md.jpg');     /*---(m 384 x 390px)--*/
     }
 }   
 
 @media (min-width:769px) and (max-width:992px){
-.welcome-hero-img {
+XXXXXXXXXX    {
     background-image:url('../images/final-images/earth-img-lg.jpg');     /*--(lg 496 x 504px)--*/
     }
 }   
 
 /*--image will appear to zoom in above c.1400px, position changed to 20%off-top to adjust focus--*/ 
 @media (min-width:993px) {
-.welcome-hero-img {
+XXXXXXXXXX    {
     background-image:url('../images/final-images/earth-img-xl.jpg');     /*---xl 600 x 610px--*/
     background-position: 0% 20%;
 }
