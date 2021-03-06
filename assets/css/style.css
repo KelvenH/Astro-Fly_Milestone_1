@@ -835,10 +835,56 @@ display:none;}
     padding-right:0;
 }
 
+#flights-hero-wrap {
+    position:relative;
+}
+
 #flights-hero-img {
     width:100%;
     height:auto;
 }
+
+#flights-hero-wrap{
+    position:relative;
+}
+
+#flights-hero-wrap h1, p {
+    padding-left:5%;
+}
+
+#flights-hero-title-1 {
+    position:absolute;
+    top:5%;
+}
+
+#flights-hero-title-1b {
+    position:absolute;
+    top:25%;
+}
+
+#flights-hero-title-2 {
+    position:absolute;
+    top:40%;
+}
+
+#flights-hero-title-2b {
+    position:absolute;
+    top:60%;
+}
+
+#flights-hero-title-3 {
+    position:absolute;
+    top:75%;
+}
+
+#flights-hero-title-3b {
+    position:absolute;
+    top:75%;
+    padding-left:0;
+    right:5%;
+    padding-right:3%;
+}
+
 
 
 
