@@ -818,12 +818,27 @@ display:none;}
      
 
 
+/*-------------------------FLIGHTS PAGE-----------------*/
 
 
+#flights-content {
+    height:100vw;
+    width:100vw;
+}
 
+#fights-container-A {
+    width:100vw;
+}
 
+#flights-hero-col {
+    padding-left:0;
+    padding-right:0;
+}
 
-
+#flights-hero-img {
+    width:100%;
+    height:auto;
+}
 
 
 
