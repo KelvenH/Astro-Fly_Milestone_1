@@ -126,7 +126,7 @@ to be reviewed prior to launch and remove any redundant ----*/
     }
 
 .icon-planet {
-    color:var(--ink1);
+    color:var(--LED1);
     filter: drop-shadow(5px 5px 2px var(--ink0)); /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
     }
 
