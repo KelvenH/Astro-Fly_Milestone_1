@@ -850,81 +850,116 @@ display:none;}
 
 #flights-hero-wrap h1, p {
     padding-left:5%;
-    visibility:hidden;
+    
     }
 
 #flights-hero-title-1 {
     position:absolute;
     top:5%;
     animation-name:flights-txt1;
-    animation-delay:1s;
-    animation-fill-mode: both;
-    animation-duration:10s;
-    animation-timing-function: ease;  
-    }
-    @keyframes flights-txt1 {
-    0% {visibility: hidden;}
-    10% {visibility: visible;}
-    100% {visibility: hidden;}
+    animation-duration:12s;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards;  
     }
 
-/*--
+    @keyframes flights-txt1 {
+    0%   {opacity:0%;}
+    10%  {opacity:100%;}
+    40%  {opacity:100%;}
+    50%  {opacity:0%;}
+    100% {visibility:hidden; opacity:0%;}
+    }
+
 #flights-hero-title-1b {
     position:absolute;
-    top:25%;
-    
-}
---*/
+    top:22%;
+    animation-name:flights-txt1b;
+    animation-duration:12s;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards; 
+    }
+
+    @keyframes flights-txt1b {
+    0%   {opacity:0%;}
+    40%   {opacity:1%;}
+    50%  {opacity:100%;}
+    90%  {opacity:100%;}
+    100% {visibility:hidden; opacity:0%;}
+    }
+
+
 #flights-hero-title-2 {
     position:absolute;
-    top:40%;
+    top:45%;
     animation-name:flights-txt2;
-    animation-delay:2s;
-    animation-fill-mode: both;
-    animation-duration:10s;
-    animation-timing-function: ease;  
+    animation-duration:12s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;  
+     
     }
 
     @keyframes flights-txt2 {
-    0% {visibility: hidden;}
-    10% {visibility: visible;}
-    100% {visibility: hidden;}
+    0%   {opacity:0%;}
+    10%   {opacity:1%;}
+    20%  {opacity:100%;}
+    90%  {opacity:100%;}
+    100% {visibility:hidden; opacity:0%;}
     }
 
-/*--
 #flights-hero-title-2b {
     position:absolute;
-    top:60%;
-    
+    top:62%;
+    animation-name:flights-txt2b;
+    animation-duration:12s;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards; 
+    }
 
-}
---*/
+    @keyframes flights-txt2b {
+    0%   {opacity:0%;}
+    60%   {opacity:1%;}
+    70%  {opacity:100%;}
+    90%  {opacity:100%;}
+    100% {visibility:hidden;opacity:0%;}
+    }
+
+
 #flights-hero-title-3 {
     position:absolute;
-    top:75%;
+    top:80%;
     animation-name:flights-txt3;
-    animation-delay:3s;
-    animation-fill-mode: both;
-    animation-duration:10s;
-    animation-timing-function: ease;  
-}
+    animation-duration:12s;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards; 
+    }
 
 @keyframes flights-txt3 {
-0% {visibility: hidden;}
-10% {visibility: visible;}
-100% {visibility: hidden;}
-}
-/*--
+    0%   {opacity:0%;}
+    20%   {opacity:1%;}
+    30%  {opacity:100%;}
+    90%  {opacity:100%;}
+    100% {visibility:hidden;opacity:0%;}
+    }
+
+
 #flights-hero-title-3b {
     position:absolute;
-    top:75%;
+    top:80%;
     padding-left:0;
     right:5%;
     padding-right:3%;
-    
-}
---*/
+    animation-name:flights-txt3b;
+    animation-duration:12s;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards; 
+    }
 
+    @keyframes flights-txt3b {
+    0%   {opacity:0%;}
+    75%  {opacity:1%;}
+    80%  {opacity:100%;}
+    100% {opacity:100%;}
+}
 
 
 /*-------------------------Exploration PAGE-----------------*/
