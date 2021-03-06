@@ -83,7 +83,7 @@ h2 {font-size:clamp(16px, 3vw, 36px);font-family: var(--titlefont);color: var(--
 h3 {font-size:clamp(16px, 2vw, 28px);font-family: var(--titlefont);color: var(--ink2);}
 h4 {font-size:clamp(16px, 20px, 24px);font-family: var(--standardfont);color: var(--ink2);font-weight:400;}
 h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: var(--ink2);}
-.LEDh2 {font-size:clamp(16px, 3vw, 36px);font-family: var(--titlefont);color: var(--LED1);}
+.LEDh2 {font-size:clamp(16px, 3vw, 29px);font-family: var(--titlefont);color: var(--LED1);}
 .LEDh4 {font-size:clamp(16px, 20px, 24px);font-family: var(--LEDfont);color: var(--LED1);}
 .LEDstnd {font-size:clamp(14px, 1.2vw, 18px);font-family: var(--LEDfont);color: var(--LED1);}
 
@@ -588,7 +588,7 @@ Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code
     font-family:var(--LEDfont);
     }
 
-.nav-item {
+#home-menu-panel.nav-item {
     margin:auto;
     width:80%;
     box-shadow: none;
@@ -974,6 +974,7 @@ display:none;}
 
 #flights-intro-quote q {
     font-style:italic;
+    
 }
 
             /*-----------Exploration - Section B Trips---------------*/
@@ -982,7 +983,13 @@ display:none;}
         background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
         background-size: cover;
         background-attachment: fixed;
+        padding-bottom:clamp(32px, 5vw, 48px);
 }
+
+#flight-main-panel {
+    width:100%;
+}
+
 
 #flights-trips-nav {
     border-left:10px solid var(--glass2);
@@ -1005,7 +1012,11 @@ display:none;}
     
 }
 
-
+#destinations-image-one {
+    max-width:100px;
+    height:150px;
+    width:150px;
+}
 
 
 
