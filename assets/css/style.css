@@ -68,7 +68,7 @@
 
   --paint1: rgb(235,103,27); /*---vector orange - current - hex value #db841d--*/
   --paint2: rgb(179, 149, 113); /*--vector orange - switching to - hex value #db841d--*/
-/*--paint3: (not currently defined / required)--*/
+  --paint3: rgb(42,42,49); /*--off-black --*/
 
 }
 
@@ -415,7 +415,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
-    padding-bottom:2vh;
+
     }
 
 
@@ -828,7 +828,7 @@ display:none;}
 
 #fights-container-A {
     width:100vw;
-    background-color: black;
+    background-color: ;
 }
 
 #flights-hero-col {
@@ -968,35 +968,44 @@ display:none;}
 #flights-row2-textquote {
     padding:2vh 3vh 2vh 3vh;
     text-align:center;
-}
-
-#flights-intro-quote {
+    background-image: linear-gradient(to bottom left, var(--paint3),var(--ink0));
 
 }
 
-
-
-            /*-----------Exploration - Section B Trips-----------------
-
-#exploration-container-B {
-    background-color:var(--ink0)
+#flights-intro-quote q {
+    font-style:italic;
 }
 
-.exploration-item {
-    background-color:#24242480;
-    display:block;
-    margin:0 auto;
-    margin-top:15vh;
-    padding-top:5vw;
-    width:80vw;
-    }
+            /*-----------Exploration - Section B Trips---------------*/
 
-#exploration h2 {
-    font-family:'ethnocentric_rg',  Arial, Helvetica, sans-serif;
-    }
+#flights-container-B {
+        background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
+        background-size: cover;
+        background-attachment: fixed;
+}
+
+#flights-trips-nav {
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);            
+    margin-left:3vw;
+    background-color:var(--glass2);
+    margin-bottom:1vh;
+}
 
 
-                        /-----------Exploration - Trips: Earth ORBIT-------
+#flights-trips-display {
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);            
+    margin-left:3vw;
+    background-color:var(--glass2);
+    
+}
+
+
 
 
 
