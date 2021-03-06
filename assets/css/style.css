@@ -841,25 +841,29 @@ display:none;}
 #exploration-container-A {
     width:100vw;
     background-color:var(--ink0);
-    margin-left:auto;
-    margin-right:auto;   
+    padding-left:0;
+    padding-right:0; 
 }
 
 #exploration-hero-title {
-    max-width:100%;
-    height:40vw;
+    position:relative;  
     padding-top:2vw;
     
 } 
 
-#exploration-hero-title h2 {
-    text-align:center;
+#exploration-hero-img {
+    width:100%;
+
 }
 
-#exploration-hero-img {
-    max-width:100%;
-    height:auto;
+#exploration-hero-title h2 {
+    text-align:center;
+    position:absolute;
+    top:5%;
+    left:50%;
 }
+
+
 
 
 .exploration-quote
