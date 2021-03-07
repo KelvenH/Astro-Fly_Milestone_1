@@ -107,6 +107,14 @@ to be reviewed prior to launch and remove any redundant ----*/
     margin-right:0;
     }
 
+.col {
+    margin-right:0;
+    margin-left:0;
+    padding-right: 0;
+    padding-left:0;
+}
+
+
 .dropdown-item {
     padding-left:0;
     padding-right:0;
@@ -411,7 +419,6 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 
 #home-container-B {
     width:100vw;
-
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
@@ -979,27 +986,21 @@ display:none;}
 
             /*-----------Exploration - Section B Trips---------------*/
 
-#flights-container-B {
-        background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
-        background-size: cover;
-        background-attachment: fixed;
-        padding-bottom:clamp(32px, 5vw, 48px);
-}
-
-#flight-main-panel {
-    width:100%;
-}
+#flights-row3-trips {
+    width:100vw;
+    background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
+    background-size: cover;
+    background-attachment: fixed;
+    }
 
 
-#flights-trips-nav {
-    border-left:10px solid var(--glass2);
-    border-bottom:10px solid var(--glass2);  
-    border-top:10px solid var(--glass1);
-    border-right:10px solid var(--glass1);            
-    margin-left:3vw;
-    background-color:var(--glass2);
-    margin-bottom:1vh;
+#flights-panel-wrapper{
+    width:90vw;
+    margin:2vw 2vw 3vw 2vw;
+    border:solid 5px red;
 }
+
+
 
 
 #flights-trips-display {
