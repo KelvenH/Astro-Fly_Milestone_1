@@ -91,6 +91,32 @@ h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: va
 
 /*-------------------------General Settings-------------------------------------------*/
 
+/*-Challenge: Responsive page-sizing meant no fixed footer height. Attempts at calc() a 'buffer row / bottom-margin' (to sit behind footer) was not working and still resulted in either gap (content to footer) or overlap (footer over content). This mainly affected pages where content is dynamic (e.g. nav panes with different sized content).
+Solution: Fix found on CSStricks.com (https://css-tricks.com/couple-takes-sticky-footer/). Using the flexbox method, have utilised <section> (already added to pages) to grow to fill space, and shrink on the footer to meet each other.
+EDIT: applying this fix introduced the original problem on the home page. The overarching page wrapper has been removed from index.html so although 2 different approaches both now display appropriately.
+
+Code fix for fixed footer:----*/
+
+html, body {
+    height:100%;
+
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+}
+
+#page-content {
+    flex:1 0 auto;
+    min-width:0;
+}
+
+.footer {
+    flex-shrink:0;
+}
+
+
 /*----no single command seemed to eliminate unneccessary auto-padding & margins. 
 Currently achieved through use of the global settings below across element types inaddition to Bootstrap classes (mb-0 & row no-gutters) - 
 to be reviewed prior to launch and remove any redundant ----*/
@@ -99,12 +125,14 @@ to be reviewed prior to launch and remove any redundant ----*/
     padding:0;
     margin-right:0;
     margin-left:0;
+    min-width:0;
     }
 
 .container-fluid {
     padding:0;
     margin-left:0;
     margin-right:0;
+    min-width:0;
     }
 
 .col {
@@ -291,13 +319,6 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 
 /*-------------------------HOME PAGE----------------------------------------*/
-#home-content {         /*--!!!!final action to adjust to enusre no vertical page scrolling on med+ screens)--*/
-  
-}
-
-
-                        /*-------fluid container ensures 100% screen width with responsive margin-top (aligned to header sizing) to avoid being hidden under fixed header-----------------*/
-
 
 
 #home-container-A {
@@ -422,7 +443,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
-
+    min-width:0;
     }
 
 
@@ -490,7 +511,9 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 
 
                 /*------------Home Page - Intro / Ticker---------*/
-
+.home-main-ticker {
+    min-width:0;
+}
 
 /*---guidance from https://code-boxx.com/html-css-news-ticker-horizontal-vertical/ ----*/
 
@@ -501,6 +524,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     border-style:inset;
     margin:2vh 3vw 0 3vw;
     line-height:2rem;
+    min-width:0;
     }
 
 
@@ -511,6 +535,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     background-color: var(--ink0);
     background-size:100% 100%;
     font-size:70%;
+    min-width:0;
     }
 
 .intro-ticker-animate {
@@ -521,6 +546,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     animation-timing-function: linear;
     animation-name: animate;
     animation-duration: 120s;
+    min-width:0;
     }
 
 
@@ -531,6 +557,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     color: var(--LED1);
     display: inline-block; 
     padding-top: 0.5rem;
+    min-width:0;
     }
 
 
@@ -555,6 +582,11 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
   
 /*----------Home Page -  Control Panel-----------------*/
 
+#home-main-control-panel {
+    margin-top:1vw;
+    margin-bottom:1vw;
+}
+
 /*----Note on SVGs: 
 
 Inspiration from combination of Sci-Fi films / tv, PC games and search on Sci Fi / Concept User Interfaces ovia Pinterest. Specific sites considered;
@@ -564,14 +596,6 @@ https://www.saji8k.com/kit-fui/movie/
 Background images were self-created in Adobe Illustrator and exported as SVGs.
 Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code cleaner. ---*/
 
-.home-main-control-panel {
-    margin-top:2vw;
-    margin-bottom:1vw;
-    }
-
-
-
-
 /*----------------Home: Main Panel - Left Column -----------------*/
 
 
@@ -580,7 +604,6 @@ Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code
     border-bottom:10px solid var(--glass2);  
     border-top:10px solid var(--glass1);
     border-right:10px solid var(--glass1);            
-    margin-left:3vw;
     background-color:var(--glass2);
     }
 
@@ -667,7 +690,6 @@ display:none;}
     border-bottom:10px solid var(--glass2);  
     border-top:10px solid var(--glass1);
     border-right:10px solid var(--glass1);            
-    margin-left:15px;
     background-color:var(--glass2);
     padding-top:1.5vw;
     padding-left:5vw;
@@ -830,11 +852,6 @@ display:none;}
 
 /*-------------------------FLIGHTS PAGE-----------------*/
 
-
-#flights-content {
-    height:100vw;
-    width:100vw;
-}
 
 #fights-container-A {
     width:100vw;
@@ -1071,6 +1088,10 @@ display:none;}
     padding-right:5vw;
 }
 
+#footer-buffer-row {
+    min-height: clamp(32px, 5vw, 48px);
+    background-color:var(--ink0)
+}
 
           
    
@@ -1365,5 +1386,14 @@ sourced from Mozilla (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 
 
     /*----
-
+Testing purposes only below this line
     -----*/
+
+.xbox {
+        height:30vh;
+        width:99vw;
+        border:10px solid red;
+        padding-left:50%;
+        padding-right:50%;
+        background-color: grey;
+    }
