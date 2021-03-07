@@ -1064,10 +1064,19 @@ display:none;}
     border-bottom:10px solid var(--glass2);  
     border-top:10px solid var(--glass1);
     border-right:10px solid var(--glass1);            
-    margin-left:3vw;
     background-color:var(--glass2);
-    
+    margin-top:1vw;
+    padding-top:1.5vw;
+    padding-left:5vw;
+    padding-right:5vw;
 }
+
+
+          
+   
+    
+
+
 
 #destinations-image-one {
     max-width:100px;
