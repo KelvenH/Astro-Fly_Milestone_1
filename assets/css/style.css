@@ -599,7 +599,7 @@ Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code
 /*----------------Home: Main Panel - Left Column -----------------*/
 
 
-.home-main-lower-left-pane {
+#home-main-lower-left-pane {
     border-left:10px solid var(--glass2);
     border-bottom:10px solid var(--glass2);  
     border-top:10px solid var(--glass1);
@@ -619,7 +619,7 @@ Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code
     }
 
 #home-menu-panel.nav-item {
-    margin:auto;
+    
     width:80%;
     box-shadow: none;
     }
@@ -657,25 +657,25 @@ Resolved - Chrome developer tools showed path to nav.scss file which is now adde
 
 /*----------------Home: Main Panel - Center Column -----------------*/
 
-/*--Media query - hide center pane from small screens --*/
+/*--Media query - hide decal panes from small screens --*/
 
 @media (max-width:767px) {
-.home-main-lower-center-pane {
+#home-main-lower-left-decal,
+#home-main-lower-right-decal
+ {
 display:none;}
 }
 
 /*--end media query--*/
 
 
-.home-main-lower-center-pane {
-    margin-left:20px;
+#home-main-lower-left-decal,
+#home-main-lower-right-decal {
     border-left:10px solid var(--glass2);
     border-bottom:10px solid var(--glass2);  
     border-top:10px solid var(--glass1);
     border-right:10px solid var(--glass1);
     }
-
-
 
 
 
@@ -730,10 +730,7 @@ display:none;}
     padding-left:2vw;
     }
 
-#countdown-info .passengers {
-    padding-top:2vh;
-     vertical-align:text-top;
-    }
+
 
  /*-----styling for the countdown timer ----*/ 
 
@@ -741,6 +738,7 @@ display:none;}
     border: 1px solid var(--glass1);
     width:80%;
     margin-left:5vw;
+    text-align:center;
     }
 
 .table-countdown-labels {
@@ -760,20 +758,6 @@ display:none;}
     font-size: 4vh;
     }
 
-
-.table-wrapper {
-    transform:translate (-50%, -50%);
-    vertical-align: top;
-    position:relative;
-    overflow:hidden;
-    }   
-
-.mins-wrap {
-    vertical-align: top;
-    padding-top:10px;
-    }
-
-
 .countdown-labels {
     display:inline-block;
     font-family: var(--LEDfont);
@@ -785,13 +769,22 @@ display:none;}
     margin-right:auto;
     }
 
+.table-wrapper {
+
+    vertical-align: bottom;
+    position:relative;
+    overflow:hidden;
+    }   
+
 
 .time {
     display:inline-block;
     overflow:hidden;
     padding:0 0.5vh;
     }
-    
+
+
+
 
 .digit:after {
     position:absolute;
@@ -809,7 +802,7 @@ display:none;}
 /*--countdown animation works by steping through the numbers defined in the 'content' above with the step count and %'s aligned to the correct timing (i.e 1 second / min ('digit') & 10 seconds/minutes ('tens'). Numbers effectively scroll on screen but 'overflow:hidden' only allows 1 number (per field) to be shown  --*/
 
 .seconds.digit:after {
-    animation: animate-secs-digit 10s steps(10) infinite;
+    animation: animate-secs-digit 10s steps(10,end) infinite;
     }
 
 @keyframes animate-secs-digit {
@@ -1007,7 +1000,6 @@ display:none;}
             /*-----------Exploration - Section B Trips---------------*/
 
 #flights-row3-trips {
-    width:100vw;
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
@@ -1017,8 +1009,9 @@ display:none;}
 #flights-panel-wrapper{
     width:90vw;
     margin:2vw 2vw 3vw 2vw;
-  
 }
+  
+
 #trips-panel-selector {
     border-left:10px solid var(--glass2);
     border-bottom:10px solid var(--glass2);  
@@ -1027,7 +1020,6 @@ display:none;}
     padding-top:1.5vw;
     background-color: var(--glass2);
     padding-bottom:1.5vw;
-    
     }
 
 #trips-menu {
