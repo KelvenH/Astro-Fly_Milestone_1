@@ -86,7 +86,7 @@ h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: va
 .LEDh2 {font-size:clamp(16px, 3vw, 29px);font-family: var(--titlefont);color: var(--LED1);}
 .LEDh4 {font-size:clamp(16px, 20px, 24px);font-family: var(--LEDfont);color: var(--LED1);}
 .LEDstnd {font-size:clamp(14px, 1.2vw, 18px);font-family: var(--LEDfont);color: var(--LED1);}
-
+.LEDsmall {font-size:clamp(6px, 10px, 12px);font-family: var(--LEDfont);color: var(--LED1);}
 
 
 /*-------------------------General Settings-------------------------------------------*/
@@ -463,7 +463,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     margin:0 auto;
     left:0;
     right:0;
-    top:20%;
+    top:40%;
     text-align:center;
     width:100%;
     text-shadow:2px 2px 2px var(--ink0);
@@ -496,7 +496,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 /*--END HUD Media Queries--*/ 
 
 #HUD-img {
-    max-height: 200px;
+    ;
     }
 
 .HUD-left {
@@ -509,6 +509,10 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     margin-right:3vw;
     }
 
+.holo-rgt-txt {
+    text-align:left;
+    padding-top:1vw;
+}
 
                 /*------------Home Page - Intro / Ticker---------*/
 .home-main-ticker {
