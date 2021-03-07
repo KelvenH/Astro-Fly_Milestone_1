@@ -48,7 +48,7 @@
                 /*---Font Color Variables---*/
 
   --ink0:rgb(0,0,0);          /*--black--*/
-  --ink1:rgb(255,129,10);     /*--for title / highlight text--*/
+  --ink1:rgb(255,129,10);     /*--for title / highlight text - hex value #FF810A--*/
   --ink2:rgb(219,132,29);     /*--for baseline text--*/
   --ink3:rgb(94,87,77);       /*--alternative-off black / grey--*/
   --ink4:rgb(104,87,66);      /*--off-grey w/ slight orange tone for gradient fill--*/  
@@ -611,7 +611,7 @@ Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code
     }
 
 
-/*--Challenge - can not remove the default Bootstrap styling once a button has been activated----*/
+
 
 .nav-item:link a,
 .nav-item:visited a,
@@ -620,13 +620,16 @@ Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code
 .nav-item:active a {
     background-color: var(--LED1);
     color: var(--ink1);
-    box-shadow: 20px 20px 100px 30px var(--glass1);
+    box-shadow: 20px 20px 100px 20px var(--glass1);
 }
 
-.nav-item:active {
-    box-shadow: 20px 20px 100px 30px var(--glass1);
-}
+/*--Challenge - could not remove the default Bootstrap styling once a button has been activated.
+Resolved - Chrome developer tools showed path to nav.scss file which is now added below with the required styles----*/
 
+.nav-pills .nav-link.active {
+    color: var(--ink1);
+    background-color:#00d9ff;
+  }
 
 
 /*----------------Home: Main Panel - Center Column -----------------*/
@@ -997,10 +1000,63 @@ display:none;}
 #flights-panel-wrapper{
     width:90vw;
     margin:2vw 2vw 3vw 2vw;
-    border:solid 5px red;
+  
+}
+#trips-panel-selector {
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);
+    padding-top:1.5vw;
+    background-color: var(--glass2);
+    padding-bottom:1.5vw;
+    
+    }
+
+#trips-menu {
+    text-align:center;
+    font-family:var(--LEDfont);
+    color: var(--LED1);
+    width:100%;
+    border-bottom:none; /*--remove Bootclass default style--*/
 }
 
+#trips-menu li {
+    margin-left:1.5vw;
+    margin-right:1.5vw;
+    border:2px solid var(--glass1);
+    background-color: var(--glass2);
+    min-width:15%;
+}
 
+#trips-menu a {
+    text-decoration:none;
+    color: var(--LED1);
+    padding-left:2vw;
+    padding-right:2vw;
+    
+}
+
+#trips-menu li:hover,
+#trips-menu li:focus,
+#trips-menu li:active{
+    background-color: var(--LED1);
+    box-shadow: 20px 20px 100px 20px var(--glass1);
+}
+
+#trips-menu li:hover a,
+#trips-menu li:active a{
+    color:var(--ink1)
+}
+
+/*--Note:additional styling to override Bootstrap defaults which were not being applied through the above --*/
+
+#trips-menu .nav-link.active {
+    color:var(--ink1);
+    background-color:#00d9ff; /*--note hex value required as var equiv not taking effect when over-riding Bootstrap default --*/ 
+    border-color:var(--glass1);
+    box-shadow: 20px 20px 100px 20px var(--glass1);
+  }
 
 
 #flights-trips-display {
