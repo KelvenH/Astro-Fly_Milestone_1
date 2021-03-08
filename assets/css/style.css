@@ -321,7 +321,7 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 
 .welcome-hero-img {
-    height: 30vw;
+    height: 35vw;
     max-height:300px;
     background-position: center;
     background-repeat: no-repeat;
@@ -466,7 +466,7 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     }
 
     
-    .HUD-text.logo, .HUD-text .specialtype {
+    .HUD-text.logo, .HUD-text .LEDh4 {
     margin-left:0;
     margin-right:0;
     font-size:14px  
@@ -477,6 +477,8 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     padding-bottom:10vh;
     }
     } 
+
+
 
 /*--END HUD Media Queries--*/ 
 
@@ -504,17 +506,31 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 margin-left:2vw;
 margin-right:0vw;
 padding-top:1vw;
-    }
+position:relative;
+}
 
 
-.HUD-left img{
-width:60%;
+#satellite1 {
+top:1vw;
+right:0;
+width:65%;
+height:auto;
+position:absolute;
+}
+
+#dish1 {
+top:5vw;
+left:2vw;
+position:absolute;
+width:30%;
 height:auto;
 }
 
+
 .holo-lft-txt {
     text-align:left;
-    padding-top:1vw;
+    position:absolute;
+    bottom:0;
     }
 
 .HUD-right {
@@ -541,11 +557,10 @@ height:auto;
 /*---guidance from https://code-boxx.com/html-css-news-ticker-horizontal-vertical/ ----*/
 
 .intro-ticker{
-    margin-top:15vh;
     margin-bottom:2vh;
     overflow: hidden; 
     border-style:inset;
-    margin:2vh 3vw 0 3vw;
+    margin:0 2vw 0 2vw;
     line-height:2rem;
     min-width:0;
     }
@@ -632,27 +647,29 @@ Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code
     position:relative;
     }
 
- #decal-1, #decal-2, #decal-3, #decal-4 {
-     padding-top:2vw;
-     padding-bottom:2vw;
- }   
+#home-main-lower-left-pane-decal {
+    border-top:10px solid var(--glass1);
+}
 
-.mini-logo {
+ #decal-1, #decal-3 {
+    
+     padding-bottom:0;
+     width:6vw;
+     height:auto;
+ }   
+ #home-main-lower-left-pane-decal .mini-logo {
     font-family:var(--titlefont);
     color:var(--glass1);
     position:absolute;                  
     bottom:0;                          
-    text-align:center;  
-}
-
-.mini-logo .icon-planet {
-    color:var(--ink1);
-}
+    right:0;  
+ }
 
 #Info-Screen-Selector {
     padding-top:1.5vw;
     text-align:center;
     font-family:var(--LEDfont);
+    margin-left:1vw;
     }
 
 #Info-Screen-Selector h5 {
@@ -718,13 +735,6 @@ display:none;}
 /*--end media query--*/
 
 
-#home-main-lower-left-decal,
-#home-main-lower-right-decal {
-    border-left:10px solid var(--glass2);
-    border-bottom:10px solid var(--glass2);  
-    border-top:10px solid var(--glass1);
-    border-right:10px solid var(--glass1);
-    }
 
 
 
@@ -733,20 +743,38 @@ display:none;}
 /*----------------Home: Main Panel - Right Column -----------------*/
 
 
-
 #home-main-lower-right-pane {
     border-left:10px solid var(--glass2);
     border-bottom:10px solid var(--glass2);  
     border-top:10px solid var(--glass1);
     border-right:10px solid var(--glass1);            
     background-color:var(--glass2);
-    padding-top:1.5vw;
-    padding-left:5vw;
-    padding-right:5vw;
-    padding:1vw;
+    padding: 0.5vw; 
+    margin-right:0.5vw;
     position:relative;
     }
 
+#home-main-lower-right-pane-decal {
+    border-top:10px solid var(--glass1);
+}
+
+#decal-2, #decal-4 {
+     padding-top:2vw;
+     padding-bottom:2vw;
+     width:5vw;
+     height:auto;
+ }   
+
+ #home-main-lower-right-pane-decal .mini-logo {
+    font-family:var(--titlefont);
+    color:var(--glass1);
+    position:absolute;                  
+    bottom:0;                          
+    right:0;  
+}
+.mini-logo .icon-planet {
+    color:var(--ink1);
+}
 
 .LEDh2 {
     text-shadow:20px 20px 20px 20px #00d9ff;

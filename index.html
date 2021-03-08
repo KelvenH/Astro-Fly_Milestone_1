@@ -88,13 +88,15 @@
 
         <div class="row no-gutters HUD">
             <div class="col HUD-left">
-                    <p class="LEDsmall holo-lft-txt"> Comms:
+                <img id="dish1" src="./assets/images/final-images/FINAL1Dish.svg">
+                <img id="satellite1" src="./assets/images/final-images/FINAL1satellitesvg.svg">
+                <p class="LEDsmall holo-lft-txt"> Comms:
                                         Connection.......Established<br>
                                         Signal Strength.........High<br>
                                         Encryption.....Quantum Coded<br>
-                    <span class="p-alarm">Live Feed......Hacked //ALARM//</span>
-                     </p>
-                     <img id="satellite" src="./assets/images/final-images/satellite.svg">
+                <span class="p-alarm">Live Feed......Hacked //ALARM//</span>
+                </p>
+                     
             </div>                   
             <div class="col-7 HUD-center">
                 <img id="HUD-img" src="./assets/images/final-images/HUD1Asset-3.svg">
@@ -192,18 +194,8 @@
         <!-- Tab panes -->
 
         <div class="row no-gutters justify-content-around" id="home-main-control-panel">
-
-            <div class="col-md-1" id="home-main-lower-left-decal">
-                <img id="decal-1" src="./assets/images/final-images/FINALdecal-1.svg">
-                <img id="decal-3" src="./assets/images/final-images/FINALdecal-3.svg">
-                <p class="LEDsmall mini-logo">ASTR<span class="iconify icon-planet align-self-center"
-                            data-icon="bx:bxs-planet" data-inline="true"></span>:Fly
-                </p>
-
-            </div> <!-- close design element column-->
-
-
-            <div class="col-md-2 col-sm-12" id="home-main-lower-left-pane">
+           
+            <div class="col-md-3 col-sm-12" id="home-main-lower-left-pane">
                 <div id="Info-Screen-Selector">
                     <h5>Please select one of the following for more information</h5>
                 </div>
@@ -222,10 +214,15 @@
                         <a class="nav-link" data-toggle="pill" href="#heading-countdown">COUNTDOWN TO LAUNCH</a>
                     </li>
                 </ul>
-            </div> <!-- close info selector col-->
+                <div id="Info-Screen-Selector-decal">
+                    <img id="decal-1" src="./assets/images/final-images/FINALdecal-1.svg">
+                    <img id="decal-3" src="./assets/images/final-images/FINALdecal-3.svg">
+
+                </div>  <!-- close decal section -->
+            </div>      <!-- close info selector col-->
 
 
-            <div class="col-md-7 col-sm-12 tab-content" id="home-main-lower-right-pane">
+            <div class="col-md-8 col-sm-12 tab-content" id="home-main-lower-right-pane">
                 <div id="heading-mission" class="container tab-pane fade active home-menu-text"><br>
                     <h2 class="LEDh2">The Universe is Yours!</h2>
                     <p class="LEDstnd">Astro:Fly believes space exploration should be a possibilty for all - no longer
@@ -258,9 +255,8 @@
                     <p class="LEDstnd"><span class="p-alarm">Connection : interrupted - unauthorised streaming take over under investigation.</span><br> 
                         Astro:Fly hold no responsibility for unauthorised content.<br> 
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/21X5lGlDOfg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
                 </div>
-
+ 
                 <div id="heading-countdown" class="container tab-pane fade home-menu-text"><br>
                     <h2 class="LEDh2">Countdown to Next Launch</h2>
                     <table id="countdown-info">
@@ -309,15 +305,16 @@
                     </table>
                 </div>
                 <!---close countdown-pane-->
+                <div id="home-main-lower-right-pane-decal">
+                    <img id="decal-4" src="./assets/images/final-images/FINALdecal-4.svg">
+                    <img id="decal-2" src="./assets/images/final-images/FINALdecal-2.svg"> 
+                    <p class="LEDsmall mini-logo">ASTR<span class="iconify icon-planet align-self-center"
+                            data-icon="bx:bxs-planet" data-inline="true"></span>:Fly
+                    </p>  
+                </div> <!---close view-pane decal-->
             </div>
             <!---close view-pane col-->
-            <div class="col-md-1" id="home-main-lower-right-decal">
-                <img id="decal-4" src="./assets/images/final-images/FINALdecal-4.svg">
-                <img id="decal-2" src="./assets/images/final-images/FINALdecal-2.svg">
-                 <p class="LEDsmall mini-logo">ASTR<span class="iconify icon-planet align-self-center"
-                            data-icon="bx:bxs-planet" data-inline="true"></span>:Fly
-                </p>
-            </div> <!-- close design element column-->
+           
         </div>
         <!---close control-panel row-->
     </div>
