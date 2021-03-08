@@ -81,10 +81,10 @@ body, div, p {font-size:16px;font-family: var(--standardfont);color: var(--ink2)
 h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont);color: var(--ink1);}
 h2 {font-size:clamp(16px, 3vw, 36px);font-family: var(--titlefont);color: var(--ink1);}
 h3 {font-size:clamp(16px, 2vw, 28px);font-family: var(--titlefont);color: var(--ink2);}
-h4 {font-size:clamp(16px, 20px, 24px);font-family: var(--standardfont);color: var(--ink2);font-weight:400;}
+h4 {font-size:clamp(16px, 20px, 24px);font-family: var(--standardfont);color: var(--ink2);}
 h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: var(--ink2);}
 .LEDh2 {font-size:clamp(16px, 3vw, 29px);font-family: var(--titlefont);color: var(--LED1);}
-.LEDh4 {font-size:clamp(16px, 20px, 24px);font-family: var(--LEDfont);color: var(--LED1);}
+.LEDh4 {font-size:clamp(16px, 20px, 24px);font-family: var(--LEDfont);color: var(--LED1);font-weight:700;}
 .LEDstnd {font-size:clamp(14px, 1.2vw, 18px);font-family: var(--LEDfont);color: var(--LED1);}
 .LEDsmall {font-size:clamp(10px, 12px, 14px);font-family: var(--LEDfont);color: var(--LED1);}
 
@@ -327,7 +327,7 @@ to be reviewed prior to launch and remove any redundant ----*/
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    animation-name:imgfadein;
+    animation-name:imgfadein;               /*----detail of animation further below---*/
     animation-delay:1.5s;
     animation-fill-mode: both;
     animation-duration:10s;
@@ -435,7 +435,8 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 
 
 .HUD-center {
-    padding-top:3%;
+    padding-top:5px;
+    padding-bottom:5px;
     width:100%;
     position:relative;
     margin-left:auto;
@@ -528,9 +529,9 @@ height:auto;
 
 
 .holo-lft-txt {
-    text-align:left;
-    position:absolute;
-    bottom:0;
+text-align:left;
+position:absolute;
+bottom:0;
     }
 
 .HUD-right {
@@ -647,23 +648,8 @@ Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code
     position:relative;
     }
 
-#home-main-lower-left-pane-decal {
-    border-top:10px solid var(--glass1);
-}
 
- #decal-1, #decal-3 {
-    
-     padding-bottom:0;
-     width:6vw;
-     height:auto;
- }   
- #home-main-lower-left-pane-decal .mini-logo {
-    font-family:var(--titlefont);
-    color:var(--glass1);
-    position:absolute;                  
-    bottom:0;                          
-    right:0;  
- }
+ 
 
 #Info-Screen-Selector {
     padding-top:1.5vw;
@@ -682,8 +668,9 @@ Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code
     }
 
 .nav-item a {
-    font-family:var(--LEDfont);
-    color: var(--LED1);    
+    font-family:var(--LEDfont); /*--manual override of Bootstrap default anchor styling--*/
+    color: var(--LED1);
+    font-weight:900;
     background-color:var(--glass2);
     border:2px solid var(--glass1);
     margin:5px;
@@ -749,36 +736,32 @@ display:none;}
     border-top:10px solid var(--glass1);
     border-right:10px solid var(--glass1);            
     background-color:var(--glass2);
-    padding: 0.5vw; 
-    margin-right:0.5vw;
     position:relative;
     }
 
-#home-main-lower-right-pane-decal {
-    border-top:10px solid var(--glass1);
+
+
+/*-DEFECT: a default tab selection is not showing in the tab pane despite class 'active' against a nav-item and it's nav pane. No HTML / CSS solution found on-line (some refered to JS which not yet familiar with).
+OUTCOME: workaround adds a temporary message to the tab pane indicating input is required. Without JS i was unable to make this invisible upon selection, so time animation added to remove the message after 20secs, opacity added to message so as this does not 'bleed' through if content selected before timer completes. -----------------*/
+
+#home-main-lower-right-pane-tempmsg {
+ position: absolute;
+ top: 50%;
+ width: 100%;
+ text-align: center;
+ opacity: 50%;
+ visibility:hidden;
+ animation-name: UItempmsg;
+ animation-delay: 5s;
+ animation-duration:20s;
 }
 
-#decal-2, #decal-4 {
-     padding-top:2vw;
-     padding-bottom:2vw;
-     width:5vw;
-     height:auto;
- }   
-
- #home-main-lower-right-pane-decal .mini-logo {
-    font-family:var(--titlefont);
-    color:var(--glass1);
-    position:absolute;                  
-    bottom:0;                          
-    right:0;  
-}
-.mini-logo .icon-planet {
-    color:var(--ink1);
+@keyframes UItempmsg {
+    0% {visibility:visible;}
+    99% {visibility:visible;}
+    100% {visibility:hidden;}
 }
 
-.LEDh2 {
-    text-shadow:20px 20px 20px 20px #00d9ff;
-}
 
  /*-----Home Page - Countdown Timer ------*/
  /*---- A true countdown timer requires understanding of JS, so for the purpose of representing what this 'could' look like I created a mock version which only counts down from a static starting point, only adjusts the minutes and seconds and resets on page load and navigating away / to the hosting nav panel.
@@ -837,6 +820,7 @@ display:none;}
     font-size: 4vh;
     }
 
+
 .countdown-labels {
     display:inline-block;
     font-family: var(--LEDfont);
@@ -848,8 +832,8 @@ display:none;}
     margin-right:auto;
     }
 
-.table-wrapper {
 
+.table-wrapper {
     vertical-align: bottom;
     position:relative;
     overflow:hidden;
@@ -918,9 +902,36 @@ display:none;}
     100% {top:-30vh}
     }
 
+/*----------DECALS REMOVED - adding unneccessary page height
 
-     
+#home-main-lower-right-pane-decal {
+  height: 5vw;
+  width: auto;
+  background-image: url(../images/final-images/FINALdecal-4.svg),
+      url(../images/final-images/FINALdecal-3.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left, bottom right;
+}
+---------------------------------*/
 
+
+
+#home-main-lower-right-pane-decal .mini-logo {
+font-family:var(--titlefont);
+color:var(--glass1);
+position:absolute;                  
+bottom:0;                          
+text-align:center;  
+}
+
+.mini-logo .icon-planet {
+color:var(--ink1);
+}
+
+
+.LEDh2 {
+text-shadow:20px 20px 20px 20px #00d9ff;
+}
 
 /*-------------------------FLIGHTS PAGE-----------------*/
 
@@ -1234,10 +1245,8 @@ display:none;}
     position:relative;
 }
 
-.UI-detail-panel-top {
-    position:relative;
-    margin-bottom:calc(-100vw / 3.5);
-}
+
+
 
 .UI-detail-panel-text {
     position:relative;
@@ -1249,29 +1258,6 @@ display:none;}
     z-index:100;
 }
 
-
-.UI-detail-panel-mid {
-    position:relative;
-    vertical-align: top;
-    width:100%;
-}   
-
-.UI-size1 {
-    height: 20vh;
-    margin-top:-1vh;
-}   
-
-
-.UI-size2 {
-    height: 40vh;
-    margin-top:-25vw;
-}
-
-
-.UI-detail-panel-bottom {
-    position:relative;
-    vertical-align: top;
-}
 
 
 .membership-table {
@@ -1370,72 +1356,6 @@ sourced from Mozilla (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
     color:rgba(99, 76, 49, 1);
     background-color:rgba(178, 142, 98, 1);
 }
-/*-------------------------404 Page-----------------*/
-
-.A404-image {
-   background-image:url(../images/a404_error.png);
-   background-repeat:no-repeat;
-   background-size: cover;
-   background-position: center center;
-   position:relative;
-   background-attachment: fixed;
-   height:100vh;
-}
-
-.A404-text {
-    text-align:center;
-    text-shadow:1px 1px 2px darkgray;
-}
-
-.A404-text.txt1{
-    padding-top:7vh;
-    animation-name:redirect-txt1;
-    animation-delay:0.5s;
-    animation-fill-mode: both;
-    animation-duration:3s;
-    animation-timing-function: ease;  
-    }
-
-
-@keyframes redirect-txt1 {
-0% {visibility: hidden;}
-10% {visibility: visible;}
-100% {visibility: hidden;}
-}
-
-
-.A404-text.txt2{
-    animation-name:redirect-txt2;
-    animation-delay:4s;
-    animation-fill-mode: both;
-    animation-duration:2s;
-    animation-timing-function: ease;  
-    }
-
-
-@keyframes redirect-txt2 {
-0% {visibility: hidden;}
-10% {visibility: visible;}
-100% {visibility: hidden;}
-}
-
-
-.light {
-    border-style: solid transparent;
-    background-color: white;
-    width:15%;
-    height:15%;
-    border-radius:50%;
-    position:absolute;
-    top:13%;
-    left:25%;
-    animation-name:light;
-    animation-delay:6s;
-    animation-fill-mode: both;
-    animation-duration:0.3s;
-    animation-timing-function: linear;  
-    }  
-    
 
 
 

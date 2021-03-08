@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Aldrich&family=Baumans&family=Goldman:wght@400;700&family=Orbitron:wght@400;700&family=Syncopate:wght@700&display=swap"
-        rel="stylesheet">
+    
+     <!-- Font styles linked from GoogleFonts - further fonts imported - see style.css for info---------------->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/d01fd203b5.js" crossorigin="anonymous"></script>
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css">
@@ -63,7 +64,7 @@
                         <h3>SIGN-UP</h3>
                     </a>
                 </div>
-                
+
             </div>
 
         </nav>
@@ -91,13 +92,13 @@
                 <img id="dish1" src="./assets/images/final-images/FINAL1Dish.svg">
                 <img id="satellite1" src="./assets/images/final-images/FINAL1satellitesvg.svg">
                 <p class="LEDsmall holo-lft-txt"> Comms:
-                                        Connection.......Established<br>
-                                        Signal Strength.........High<br>
-                                        Encryption.....Quantum Coded<br>
-                <span class="p-alarm">Live Feed......Hacked //ALARM//</span>
+                    Connection.......Established<br>
+                    Signal Strength.........High<br>
+                    Encryption.....Quantum Coded<br>
+                    <span class="p-alarm">Live Feed......Hacked //ALARM//</span>
                 </p>
-                     
-            </div>                   
+            </div>
+
             <div class="col-7 HUD-center">
                 <img id="HUD-img" src="./assets/images/final-images/HUD1Asset-3.svg">
                 <div class="HUD-text">
@@ -108,14 +109,14 @@
                 </div>
             </div>
             <!---close HUD center-->
-            <div class="col HUD-right"> 
-                    <img id="globe-holo-img" src="./assets/images/final-images/globe-holo-final-reduced.svg">
-                    <p class="LEDsmall holo-rgt-txt"> 
-                                        Ground Temp (Earth): 24.5<sup>o</sup><br>
-                                        Lunar Base 5.......: -135 <sup>o</sup><br>
-                                        Windspeed..........: 13.4km/ph<br>
-                                        Launch Conditions..: CLEARED<br>
-                    </p> 
+            <div class="col HUD-right">
+                <img id="globe-holo-img" src="./assets/images/final-images/globe-holo-final-reduced.svg">
+                <p class="LEDsmall holo-rgt-txt">
+                    Ground Temp (Earth): 24.5<sup>o</sup><br>
+                    Lunar Base 5.......: -135 <sup>o</sup><br>
+                    Windspeed..........: 13.4km/ph<br>
+                    Launch Conditions..: CLEARED<br>
+                </p>
             </div>
         </div>
         <!---close HUD row-->
@@ -194,7 +195,7 @@
         <!-- Tab panes -->
 
         <div class="row no-gutters justify-content-around" id="home-main-control-panel">
-           
+
             <div class="col-md-3 col-sm-12" id="home-main-lower-left-pane">
                 <div id="Info-Screen-Selector">
                     <h5>Please select one of the following for more information</h5>
@@ -214,15 +215,15 @@
                         <a class="nav-link" data-toggle="pill" href="#heading-countdown">COUNTDOWN TO LAUNCH</a>
                     </li>
                 </ul>
-                <div id="Info-Screen-Selector-decal">
-                    <img id="decal-1" src="./assets/images/final-images/FINALdecal-1.svg">
-                    <img id="decal-3" src="./assets/images/final-images/FINALdecal-3.svg">
 
-                </div>  <!-- close decal section -->
-            </div>      <!-- close info selector col-->
+            </div> <!-- close lower left panel - info selector -->
 
 
             <div class="col-md-8 col-sm-12 tab-content" id="home-main-lower-right-pane">
+                <div class="LEDh4" id="home-main-lower-right-pane-tempmsg">
+                    ... Awaiting user selection ...
+                </div>
+
                 <div id="heading-mission" class="container tab-pane fade active home-menu-text"><br>
                     <h2 class="LEDh2">The Universe is Yours!</h2>
                     <p class="LEDstnd">Astro:Fly believes space exploration should be a possibilty for all - no longer
@@ -252,11 +253,14 @@
 
                 <div id="heading-media" class="container tab-pane fade home-menu-text"><br>
                     <h2 class="LEDh2">Live Feed</h2>
-                    <p class="LEDstnd"><span class="p-alarm">Connection : interrupted - unauthorised streaming take over under investigation.</span><br> 
-                        Astro:Fly hold no responsibility for unauthorised content.<br> 
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/21X5lGlDOfg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+                    <p class="LEDstnd"><span class="p-alarm">Connection : interrupted - unauthorised streaming take over
+                            under investigation.</span><br>
+                        Astro:Fly hold no responsibility for unauthorised content.<br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/21X5lGlDOfg" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></p>
                 </div>
- 
+
                 <div id="heading-countdown" class="container tab-pane fade home-menu-text"><br>
                     <h2 class="LEDh2">Countdown to Next Launch</h2>
                     <table id="countdown-info">
@@ -305,18 +309,16 @@
                     </table>
                 </div>
                 <!---close countdown-pane-->
+
                 <div id="home-main-lower-right-pane-decal">
-                    <img id="decal-4" src="./assets/images/final-images/FINALdecal-4.svg">
-                    <img id="decal-2" src="./assets/images/final-images/FINALdecal-2.svg"> 
-                    <p class="LEDsmall mini-logo">ASTR<span class="iconify icon-planet align-self-center"
-                            data-icon="bx:bxs-planet" data-inline="true"></span>:Fly
-                    </p>  
-                </div> <!---close view-pane decal-->
+                <p class="LEDsmall mini-logo">ASTR<span class="iconify icon-planet align-self-center"
+                        data-icon="bx:bxs-planet" data-inline="true"></span>:Fly</p>
             </div>
-            <!---close view-pane col-->
-           
+            <!---close view-pane decal-->
         </div>
-        <!---close control-panel row-->
+        <!---close right hand-pane col-->
+    </div>
+    <!---close control-panel row-->
     </div>
     <!---close container B-->
 
