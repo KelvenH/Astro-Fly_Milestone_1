@@ -40,10 +40,10 @@
   --tickerfont:'ticker', Arial, sans-serif;             /*--news ticker'--*/
 
                 
-                /*---Font Sizing Variables-----(only defined for specific instances where need to override - as typically fonts-sizings matched by element type (i.e. H1) to the responsive fonts tabled below---*/
+                /*---Font Sizing Variables-----(only defined for specific instances where need to override - as typically fonts-sizings matched by element type (i.e. H1) to the responsive font groupings as tabled below---*/
 
-  --LEDsize1:clamp(12px, 16px, 20px);
-  --LEDsize2:clamp(12px, 16px, 20px);
+  --LEDh2:clamp(16px, 20px, 24px);          /*--sizing matches with VAR responsive font of the same name---*/
+  --LEDstnd:clamp(14px, 1.2vw, 18px);       /*--sizing matches with VAR responsive font of the same name---*/
 
                 /*---Font Color Variables---*/
 
@@ -75,7 +75,7 @@
 
 
 
-/*----------------------------Responsive Fonts -----------------------------------------*/
+/*---------------------Responsive Font Groups -----------------------------------------*/
 
 body, div, p {font-size:16px;font-family: var(--standardfont);color: var(--ink2);}
 h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont);color: var(--ink1);}
@@ -184,30 +184,6 @@ to be reviewed prior to launch and remove any redundant ----*/
 .logo {
     margin-bottom:0;
     }
-
-/*-----Currently disabled - choice of nav menu
-
-    /*-----Basic menu for small screens / portrait only. Media query prevents small menu toggler seen on larger devices--*/
-
-/*-----@media (min-width:768px) and (orientation:landscape)
-
-{   
-    #dropdownMenuButton-sm, navbar-toggler, i.fa-bars {
-    display:none;
-    }
-
-    /*--BUG - FIXED - situation where tablet could open small menu in portrait but then switch to landscape, and menu would remain visible but with no css styling. Addition below ensures not seen--*/
-
- /*-----   #nav-drop-menu-small {
-        display:none;
-    }
-}
--*/
-    /*------Second media query to prevent screens loading code for functionality not visible. Note: 'AND' operator on 1st query vs list on 2nd query (acts as 'OR' operator) as mobile devices could be either----*/
-
-/*-----@media (max-width:768px), (orientation:portrait)
-
-{---*/
 
 .navbar-toggler {
     color: var(--ink1);
@@ -1214,55 +1190,53 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 /*!!!!!---current bug - mobile view scrolls despite no further content - linked to fixed header and footer? or negactive panel margins?)!!!!!!-------*/
 
 
-#register-container {
-    background-image:url(../images/hex_black_bg_sm.png);
-    position:center;
-    background-repeat:repeat;
+.register-container {
+    width:100vw;
+    height:100vh;
+    background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
-    margin-top:10vh;
-    margin-bottom:calc(-100vw / 3.5);
-    height:95vh;
+    
 }
 
 
-#register-wrapper {
-    padding:1px;  /*Bug fix horizontal margin collapse between parent and child - fix sourced from https://www.smashingmagazine.com/2019/07/margins-in-css/--------*/
+#register-intro-wrapper {
+    margin-block-start:2vw;  /*Bug fix horizontal margin collapse between parent and child - fix sourced from https://www.smashingmagazine.com/2019/07/margins-in-css/ --------*/
+    border: solid 0.25vw var(--ink1);
+    width:80vw;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:var(--glass3);
 }
-
-
-/*----- class names re-used from accordion to apply header and content background images, IDs added to specify sizing adjustments & styling-----*/
 
 #register-header {
-    margin-top:4vh;   
+    margin-top:4vw;   
     font-weight:700;
     line-height:6vh;
-}
-
-
-.UI-detail-panel-wrap {
-    margin-top:2vh;
-    position:relative;
-}
-
-
-
-
-.UI-detail-panel-text {
-    position:relative;
-    margin-bottom:calc(-100vw / 3.5);
-    padding-left:10vw;
-    width:90vw;
     text-align:center;
-    color:orange;
-    z-index:100;
+}
+
+#register-intro {
+    padding: 2vw;
+    text-align:center;
 }
 
 
+/*-------Register Membership table-------*/
 
 .membership-table {
-    background-color:grey;
+    margin-block-start:2vw;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);            
+    background-color:var(--glass2);
+    padding: 2vw;
 }
+   
 
 @media screen and (max-width: 600px) {
   .membership-table {
@@ -1273,8 +1247,31 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 #register-tiers {
     font-weight:800;
     margin-top:4vh;
-    border:solid 5px rgba(255,129,10,1);
+
 }
+
+/*------------------------------------------------
+DEFECT;
+ISSUE: HTML not applying font styling as mapped to the class names (per color, font and sizings set out in Responsive Fonts section above
+FIXED: No
+WORKAROUND: Yes - added manual mappings in css). 
+ ---------------------------------------------------*/
+
+#register-membership-content h5,
+#register-membership-content p {
+font-family:var(--LEDfont);
+color:var(--LED1);
+}
+
+#register-membership-content p {
+font-size: var(--LEDstnd);
+}
+
+#register-membership-content h5 {
+ font-size: var(--LEDh2);   
+}
+
+
 
 
 .modal-content {
@@ -1322,6 +1319,9 @@ sourced from Mozilla (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 
 .btn-register {
     margin-top:3vh;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
     background-image: 
         linear-gradient(to top left,
                         rgba(0, 0, 0, .2),
@@ -1375,8 +1375,16 @@ sourced from Mozilla (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 }
 
 
+/*------------------------------------------------
+DEFECT;
+ISSUE: Main tab panels by default extended to the height of the largest content even when those fields have not been selected - this created large empty spaces and often caused unnecessary page scrolling (depending on display / browser size.   
+FIXED: No
+WORKAROUND: Yes - added manual mappings in css). 
+ ---------------------------------------------------*/
 
-    /*----
+
+
+/*--------------------------------------------
 Testing purposes only below this line
-    -----*/
+--------------------------------------------*/
 

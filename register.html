@@ -24,7 +24,7 @@
 
 <body>
 
-     <header>
+    <header>
 
         <nav class="navbar sticky-top align-items-center">
             <!---Bootstrap class name mx-auto(margin left & right auto-size)--->
@@ -63,7 +63,7 @@
                         <h3>SIGN-UP</h3>
                     </a>
                 </div>
-                
+
             </div>
 
         </nav>
@@ -71,27 +71,24 @@
     </header>
 
 
-    <section class="container-fluid" id="register-container">
+    <section class="container-fluid register-container" id="page-content">
 
-        <div class="gy-5" id="register-wrapper">
-            <h4 class="index-card-header" id="register-header">Join the Astro:Fly family</h4>
-            <div class="UI-detail-panel-wrap">
-                <img class="UI-detail-panel-top" src="../../assets/images/testsvg-top.svg">
-                <div class="UI-detail-panel-text register-info">Join the Astro:Fly family today! We have a tiered
-                    membership and it's free to register as an Astro:Cadet. Click the link below!
-                    <br>
-                    Or, if you're thinking of taking that one big step towards being an Astro:Pioneer, just indicate which
-                    of our adventures you are most interested in and our team will be in touch with you.
-                    Astro:Fly - pioneering commercial space travel.
-                </div>
-                <img class="UI-detail-panel-mid UI-size1" src="../../assets/images/testsvg-mid.svg">
-                <img class="UI-detail-panel-bottom" src="../../assets/images/testsvg-bott.svg">
+        <div id="register-intro-wrapper">
+            <h1 id="register-header">Join the Astr<span class="iconify icon-planet align-self-center"
+                    data-icon="bx:bxs-planet" data-inline="true"></span>:Fly family</h1>
+
+            <div class="h4" id="register-intro">Join the Astro:Fly family today! We have a tiered membership and it's
+                free to register as an Astro:Cadet. Click the link below!
+                <br><br>
+                Or, if you're thinking of taking that one big step towards being an Astro:Pioneer, just indicate which
+                of our adventures you are most interested in and our team will be in touch with you.
+                Astro:Fly - pioneering commercial space travel.
             </div>
         </div>
 
 
         <div class="container membership-table" aria-label="Table of Membership levels and benefits">
-            <div id="register-tiers"> Membership Levels and Benefits
+            <div class="LEDh4" id="register-tiers"> Membership Levels and Benefits
                 <br>
                 <!-- Nav pills -->
                 <ul class="nav nav-pills" role="tablist">
@@ -110,57 +107,45 @@
                 </ul>
 
                 <!-- Tab panes -->
-                <div class="tab-content">
-                    <div id="cadet" class="container tab-pane fade active"><br>
+                <div class="tab-content" id="register-membership-content">
+                    <div id="cadet" class="container tab-pane fade active LEDstnd"><br>
                         <h5>Cadet</h5>
-                        <p>Qualifying Criteria: None - Membership is FREE! Just complete the
-                            registration form linked below to join.<br>
-                            Benefits: As an Astro:Cadet you qualify for exclusive competitions and amazing prize
-                            give-aways. You'll also receive regular updates with all the exciting news of our latest
-                            adventures, technological achievments and scientific discoveries.
-                            You'll also receive 1 month's free access <sup>*</sup> to our Astro:Tube channel where
-                            you can view footage from recent flights, behind the scene footage from our European
-                            Astro:Hub facility or even tune in to watch one of our launches.
-                            <sup>*</sup> Astro:Tube access is free for 30 calender days, after which you will need
-                            to upgrade to Astro:Explorer to retain access. Offer is valid to 1 household only.
-                            Further Terms and Conditions will be provided upon registration. </p>
+                        <p>Qualifying Criteria: None - Membership is FREE!! <br>
+                            Just complete the registration form linked below to join.<br>
+                            <br>
+                            Benefits:<br>
+                            - qualify for exclusive competitions and amazing prize
+                            give-aways <br>
+                            - regular updates with all the exciting news of our latest
+                            adventures, technological achievments and scientific discoveries.<br>
+                            - 1 month's free access<sup>*</sup> to our Astro:Tube channel where
+                            you can view footage from recent flights, behind the scene footage from our European Astro:Hub facility or tune in to watch one of our launches live!<br>
+                            <sup>*</sup> <i>Astro:Tube access is free for 30 calender days, after which you will need to upgrade to Astro:Explorer to retain access. Offer is valid to 1 household only. Further Terms and Conditions will be provided upon registration.</i></p>
                     </div>
                     <div id="explorer" class="container tab-pane fade"><br>
                         <h5>Explorer</h5>
-                        <p>Qualifying Criteria: Book a space flight with us and get instantly
-                            promoted to Astro:Explorer<sup>*</sup>. Alternatively you can join this rank and open up
-                            amazing benefits below for only £75 per month.<br>
-                            Benefits: Astro:Explorers will be invited to join our exclusive Astro:Tube 'live'
-                            channel. This is a 24hr 7 days a week service where you can engage with the team
-                            directly in real time! Weekly sessions are hosted across the Astro:Fly teams. So maybe
-                            tune in for a group chat with one of our research team on Lunar Base 5 or Astro:View or
-                            join one of our Astro:Fly Commanders who will be willing to answer any questions you
-                            have on what it's like to travel beyond Earth's gravity. In between reglar shows are
-                            live feeds from our Astro:Hub facility, launch base and Astro:view.
-                            <sup>*</sup> Free membership is activated upon receipt of your deposit. Further Terms
-                            and Conditions will be provided upon registration.</p>
+                        <p>Qualifying Criteria: 1) Book a space flight with us and get instantly
+                            promoted to Astro:Explorer<sup>*</sup>. <br>
+                            2) Alternatively you can level up immediately and get access to all these 
+                            amazing benefits for only £75 per month.<br>
+                            Benefits:<br>
+                            - access to our exclusive Astro:Tube 'live'channel - 24hr 7 days a week service where you can engage with the team directly in real time! Tune in for a group chat with one of our team - maybe a reasearch scientist on Lunar Base 5 or even one of the crew on their way to Mars!<br>
+                            <sup>*</sup><i>Free membership is activated upon receipt of your deposit. Further Terms and Conditions will be provided upon registration.</i></p>
                     </div>
                     <div id="pioneer" class="container tab-pane fade"><br>
                         <h5>Pioneer</h5>
-                        <p>Qualifying Criteria: only accessible for the most adventurous!
-                            Astro:Pioneer acknowledges your achievement in joining us for one of our space
-                            adventures.<br>
-                            Benefits: The true benefit is the experience. But even after your return to Earth,
-                            you'll continue to receive on-going benefits which vary depending upon the adventure you
-                            undertake<sup>*</sup>. For example, should you join us on an Astro:Safari for a stay on
-                            our Astro:View solar observor, you'll have lifetime access to live feeds, tracking
-                            information and data sent back from the probe you launch!<br>
-                            <sup>*</sup> Subject to full payment received for a flight and is awarded upon
-                            completion of your pre-flight medical and training assessment at our Astro:Hub facility
-                            prior to launch. Full list of benefits, Terms and Conditions will be provided upon
-                            booking.</p>s
+                        <p>Qualifying Criteria: only accessible for the most adventurous!<br>
+                            Achievement of Astro:Pioneer has to be earned - it recognises your participation in human's adventure into space and is awarded upon completion of your jurney.<br>
+                            Benefits: The true benefit is the experience! But it doesn't end there. After your return to Earth;<br>
+                            - continue to receive Explorer benefits for no further fee!
+                            - invitation to our annual Astro:Pioneer conference and awards ceremony - you may even be in-line for a surprise?!<br>
+                            - plus many more which vary dependning upon the adventure you have undertaken.<br>
+                            <sup>*</sup><i>Full list of benefits, Terms and Conditions will be provided upon booking.</i></p>
                     </div>
                     <div id="vip" class="container tab-pane fade"><br>
                         <h5>VIP</h5>
-                        <p>Qualifying Criteria: Exclusively on the invitation of Astro:Fly. An
-                            Astro:VIP is the highest commendation awarded to those for whom human-kind owes so much.
-                            These special individuals hve been recognised for the most incredible breakthroughs in
-                            the fields of scientific discovery, technological achievemnts and bio-medicine.</p>
+                        <p>Qualifying Criteria: Exclusively on the invitation of Astro:Fly.<br>
+                            An Astro:VIP is the highest commendation awarded to those for whom human-kind owes so much.These special individuals have been recognised (by us) for the most incredible breakthroughs in the fields of scientific discovery, technological achievements and bio-medicine.</p>
                     </div>
                 </div>
             </div>
@@ -177,72 +162,77 @@
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">Astr<span class="iconify icon-planet align-self-center" data-icon="bx:bxs-planet" data-inline="true"></span>:Fly
-                        <h4 class="modal-title" id="register-modal-label">Looking to book an Astro:Adventure or become a member?</h4>
+                    <div class="modal-header">Astr<span class="iconify icon-planet align-self-center"
+                            data-icon="bx:bxs-planet"></span>:Fly
+                        <h4 class="modal-title" id="register-modal-label">Looking to book an Astro:Adventure or become a
+                            member?</h4>
                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
 
-        <!-- Modal Body----------->
+                    <!-- Modal Body----------->
                     <div class="modal-body">
-                       <!-- Form - structure sourced from Bootstrap 4.5 documentation https://getbootstrap.com/docs/4.5/components/forms/----------->     
+                        <!-- Form - structure sourced from Bootstrap 4.5 documentation https://getbootstrap.com/docs/4.5/components/forms/----------->
                         <form class="form" id="register-form" method="get" action="formreply.html">
-                                
+
                             <!-- Part A Responsive Columns / Text Entry ----------->
                             <div class="form-part-A">
                                 <p>Your Contact Details</p>
                                 <br>
-                                     
+
                                 <div class="form-row">
                                     <div class="form-group col-sm-6">
                                         <label for="f-name">First Name:</label>
-                                        <input type="text" name="f-name" id="f-name" class="form-control text-input" required />
+                                        <input type="text" name="f-name" id="f-name" class="form-control text-input"
+                                            required />
                                     </div>
-                                    
+
                                     <div class="form-group col-sm-6">
                                         <label for="s-name">Surname:</label>
-                                        <input type="text" name="s-name" id="s-name" class="form-control text-input" required />
+                                        <input type="text" name="s-name" id="s-name" class="form-control text-input"
+                                            required />
                                     </div>
                                 </div>
 
                                 <div class="form-row">
-                                    <div class="form-group col-sm-6">        
+                                    <div class="form-group col-sm-6">
                                         <label for="email">Email:</label>
-                                        <input type="email" name="email" id="emailaddress" class="form-control text-input" required />
+                                        <input type="email" name="email" id="emailaddress"
+                                            class="form-control text-input" required />
                                     </div>
 
                                     <div class="form-group col-sm-6">
                                         <label for="phone">Phone:</label>
-                                        <input type="tel" name="phone" id="phone" class="form-control text-input" pattern="[0-9]{5}-[0-9]{6}" required />
-                                        <small>Please use format: 01234-567890</small> 
+                                        <input type="tel" name="phone" id="phone" class="form-control text-input" required />
+                                        
                                     </div>
                                 </div>
-                            </div>              <!-- Close Part A----------->
+                            </div> <!-- Close Part A----------->
 
-                                <!-- Part B : Radio Button to Select Purpose ----------->
+                            <!-- Part B : Radio Button to Select Purpose ----------->
                             <div class="form-part-B">
-                                    
+
                                 <p class="form-help">How Can We Help You?</p>
-                                    <!-- Radio Group 1 : Memberships----------->
-                                    
+                                <!-- Radio Group 1 : Memberships----------->
+
                                 <div class="form-radio-membership">
                                     <p>Membership</p>
                                     <input type="radio" id="form-member1" name="form-member" value="Cadet">
                                     <label for="form-member1">Astro:Cadet (FREE!)</label><br>
-                                        
+
                                     <input type="radio" id="form-member2" name="form-member" value="Explorer">
-                                    <label for="form-member2">Astro:Explorer <br> 
-                                    <sup>(£75 per month or free with Astro:Fly booking)</sup></label><br>
+                                    <label for="form-member2">Astro:Explorer <br>
+                                        <sup>(£75 per month or free with Astro:Fly booking)</sup></label><br>
                                 </div>
                                 <br>
-                                    <!-- Radio Group 2 : Trips----------->
-                                    
+                                <!-- Radio Group 2 : Trips----------->
+
                                 <div class="form-radio-trip">
                                     <p>Booking Enquiry</p>
                                     <input type="radio" id="form-trip1" name="form-trip" value="Earth-Orbit">
                                     <label for="form-trip1">Earth Orbit</label><br>
-                                    
+
                                     <input type="radio" id="form-trip2" name="form-trip" value="Lunar-Orbit">
                                     <label for="form-trip2">Lunar Orbit</label><br>
 
@@ -251,37 +241,40 @@
 
                                     <input type="radio" id="form-trip4" name="form-trip" value="Space Safari">
                                     <label for="form-trip4">Space Safari</label><br>
-                                    
+
                                     <input type="radio" id="form-trip5" name="form-trip" value="Mars">
                                     <label for="form-trip5">Pre-Register for future Mars trips</label><br>
-                                </div>        
-                            </div>              <!-- Close Part B----------->
-                                
-                                <!-- Part C : check boxes and submission / canx buttons ----------->
+                                </div>
+                            </div> <!-- Close Part B----------->
+
+                            <!-- Part C : check boxes and submission / canx buttons ----------->
                             <div class="form-group">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" id="gridCheck">
-                                    <label class="form-check-label" for="gridCheck">Would you like to receive information on other Astro:Corp services?</label>
+                                    <label class="form-check-label" for="gridCheck">Would you like to receive
+                                        information on other Astro:Corp services?</label>
                                 </div>
                                 <div class="form-footer">
-                                                <!-- As no actual recipient server for forms, the submission button will instead link to page which 
+                                    <!-- As no actual recipient server for forms, the submission button will instead link to page which 
                                                     acknowledges submission & returns user to the home page----------->
-                                    <button type="submit" formaction="formreply.html" class="btn btn-lg btn-register" id="btn-submit-form">Submit</button>
-                                    <button type="button" class="btn btn-lg btn-secondary btn-register" id="btn-canx-form" data-dismiss="modal">Cancel</button>
-                                        <!--Modal pop-up (sure wish to cancel.   /.   thank you for submitting, team in touch)????---------->
-                                </div>          
-                            </div>              <!-- Close Part C----------->
+                                    <button type="submit" formaction="formreply.html" class="btn btn-lg btn-register"
+                                        id="btn-submit-form">Submit</button>
+                                    <button type="button" class="btn btn-lg btn-secondary btn-register"
+                                        id="btn-canx-form" data-dismiss="modal">Cancel</button>
+                                    <!--Modal pop-up (sure wish to cancel.   /.   thank you for submitting, team in touch)????---------->
+                                </div>
+                            </div> <!-- Close Part C----------->
 
-                        </form>                 <!-- Close Modal Form------->
-                                           
-                    </div>                      <!-- Close Modal Body------->
-                </div>                          <!-- Close Modal Content---->
-            </div>                              <!-- Close Modal Dialog---->
-        </div>                                  <!-- Close Modal----------->
+                        </form> <!-- Close Modal Form------->
+
+                    </div> <!-- Close Modal Body------->
+                </div> <!-- Close Modal Content---->
+            </div> <!-- Close Modal Dialog---->
+        </div> <!-- Close Modal----------->
     </section>
 
 
-    <footer class="footer fixed-bottom">
+    <footer class="footer sticky bottom">
 
         <div class="container-fluid footer-main">
             <div class="row no-gutters">
