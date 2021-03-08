@@ -447,23 +447,23 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     }
 
 
-.HUD { 
-    padding-top:1vh;
-    }
+
 
 .HUD-center {
+    padding-top:3%;
     width:100%;
     position:relative;
     margin-left:auto;
     margin-right:auto;
     }
 
+
 .HUD-text {
     position:absolute;
     margin:0 auto;
     left:0;
     right:0;
-    top:40%;
+    top:30%;
     text-align:center;
     width:100%;
     text-shadow:2px 2px 2px var(--ink0);
@@ -495,20 +495,31 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 
 /*--END HUD Media Queries--*/ 
 
-#HUD-img {
-    ;
-    }
-
 .HUD-left {
+    margin-left:2vw;
+    padding-top:1vw;
+}
+
+.HUD-left img{
+width:100%;
+height:auto;
+}
+
+.holo-lft-txt {
     text-align:left;
-    margin-left:3vw;
+    padding-top:1vw;
     }
 
 .HUD-right {
-    text-align:right;
-    margin-right:3vw;
+margin-right:2vw;
+padding-top:1vw;
     }
 
+.HUD-right img {
+width:100%;
+height:auto;
+}
+    
 .holo-rgt-txt {
     text-align:left;
     padding-top:1vw;
@@ -1385,11 +1396,3 @@ sourced from Mozilla (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 Testing purposes only below this line
     -----*/
 
-.xbox {
-        height:30vh;
-        width:99vw;
-        border:10px solid red;
-        padding-left:50%;
-        padding-right:50%;
-        background-color: grey;
-    }

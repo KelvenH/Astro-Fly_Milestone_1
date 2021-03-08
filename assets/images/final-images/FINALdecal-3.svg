@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.4 135.9">
+  <defs>
+    <style>
+      .a,.b{fill:#00b3ea}.b{opacity:.3}.c{fill:#feb113}
+    </style>
+  </defs>
+  <path class="a" d="M0 0v135.9h20.7V0zm18.3 132.9H2.4V3h15.9z"/>
+  <path class="b" d="M2.4 3h15.9v129.84H2.4z"/>
+  <path class="c" d="M5.2 16h10.2v116.84H5.2z"/>
+  <path class="a" d="M31.4 0v135.9h20.7V0zm18.3 132.9H33.8V3h15.9z"/>
+  <path class="b" d="M33.8 3h15.9v129.84H33.8z"/>
+  <path class="c" d="M36.7 49.5h10.2v83.36H36.7z"/>
+  <path class="a" d="M62.9 0v135.9h20.6V0zm18.3 132.9H65.3V3h15.9z"/>
+  <path class="b" d="M65.3 3h15.9v129.84H65.3z"/>
+  <path class="c" d="M68.1 29.2h10.2v103.66H68.1z"/>
+  <path class="a" d="M94.3 0v135.9H115V0zm18.3 132.9H96.7V3h15.9z"/>
+  <path class="b" d="M96.7 3h15.9v129.84H96.7z"/>
+  <path class="c" d="M99.6 89.4h10.2v43.47H99.6z"/>
+  <path class="a" d="M125.8 0v135.9h20.6V0zM144 132.9h-15.8V3H144z"/>
+  <path class="b" d="M128.2 3h15.9v129.84h-15.9z"/>
+  <path class="c" d="M131 41.3h10.2v91.55H131z"/>
+</svg>
