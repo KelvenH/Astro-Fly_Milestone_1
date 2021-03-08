@@ -1254,7 +1254,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 DEFECT;
 ISSUE: HTML not applying font styling as mapped to the class names (per color, font and sizings set out in Responsive Fonts section above
 FIXED: No
-WORKAROUND: Yes - added manual mappings in css). 
+WORKAROUND: Yes - added manual mappings below; 
  ---------------------------------------------------*/
 
 #register-membership-content h5,
