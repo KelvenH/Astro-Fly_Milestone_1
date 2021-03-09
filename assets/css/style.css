@@ -474,6 +474,18 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 
 /*--END HUD Media Queries--*/ 
 
+
+/*----DEFECT------------------------------
+Issue: Alignment and layout of HUD graphics can result in poor outline - relates to aspect ratio as opposed to screen width alone.
+FIXED: No
+OUTCOME: Some refinements made to positioning / sizes / paddings, etc for a 'best fit' - better suited to wider aspect ratios (a 
+-------------------------------------------*/
+
+
+
+
+
+
 .HUD-left {
     margin-left:2vw;
     padding-top:1vw;
@@ -1177,7 +1189,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
     margin-right:1.5vw;
     border:2px solid var(--glass1);
     background-color: var(--glass2);
-    min-width:15%;
+    width:20vw;
 }
 
 #trips-menu a {
@@ -1226,11 +1238,13 @@ text-shadow:20px 20px 20px 20px #00d9ff;
     min-height: clamp(32px, 5vw, 48px);
     background-color:var(--ink0)
 }
-
-          
-   
-    
-
+          /*-------Trips - images--------------------*/
+#trips-earth-img {
+    height: 35vw;
+    max-height:300px;
+    position: absolute;
+    top:
+    left:
 
 
 #destinations-image-one {
@@ -1242,25 +1256,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 
 
 
-    /*-------------------------Gallery / Viewing Port-----------------*/
-
-
-.viewingport-main {
-    padding-top:10vh;
-    background-color:black;
-}
-
-
-
-.carousel-item img {
-    padding-bottom:5vw;
-    max-width:25vw;
-    height:100%;
-    margin-left:auto;
-    Margin-right:auto;
-    background-color:black;
-}
-
+   
 /*-------------------------Registration-----------------*/
 
 /*!!!!!---current bug - mobile view scrolls despite no further content - linked to fixed header and footer? or negactive panel margins?)!!!!!!-------*/
