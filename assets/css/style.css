@@ -1236,28 +1236,48 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 
 #footer-buffer-row {
     min-height: clamp(32px, 5vw, 48px);
-    background-color:var(--ink0)
+    background-color:var(--ink0);
 }
           /*-------Trips - images--------------------*/
-#trips-earth-img {
-    height: 35vw;
-    max-height:300px;
-    position: absolute;
-    top:
-    left:
 
-
-#destinations-image-one {
-    max-width:100px;
-    height:150px;
-    width:150px;
+#flights-row3-trips {
+    position:relative;
+    border-top:1vw solid var(--ink);
 }
 
+.earth-orbit {
+    background-image:url(../images/final-images/earth-section.png);
+    background-size:60vw auto;
+    background-color:black;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    position:absolute;
+    
+}
 
+.earth-orbit p {
+   width:70%;
+   height:70vw;
+}
+/*----
+.lunar-orbit {
 
+}
+.Lunar-Landing {
 
-   
-/*-------------------------Registration-----------------*/
+}
+.space-safari { 
+
+}
+
+.mars { 
+
+} 
+
+.hub {
+
+}
+---------------------Registration-----------------*/
 
 /*!!!!!---current bug - mobile view scrolls despite no further content - linked to fixed header and footer? or negactive panel margins?)!!!!!!-------*/
 
@@ -1342,9 +1362,6 @@ font-size: var(--LEDstnd);
 #register-membership-content h5 {
  font-size: var(--LEDh2);   
 }
-
-
-
 
 .modal-content {
     text-align:left;
