@@ -175,6 +175,7 @@ to be reviewed prior to launch and remove any redundant ----*/
 .navbar {
     background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));
     border-bottom: 8px solid var(--glass1);
+    width:100vw;
     
     }
 
@@ -411,12 +412,12 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
 
 
 .HUD-center {
-    padding-top:5px;
+    padding-top:1vw;
     padding-bottom:5px;
     width:100%;
     position:relative;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:1vw;
+    margin-right:1vw;
     }
 
 
@@ -431,7 +432,8 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     text-shadow:2px 2px 2px var(--ink0);
     }
 
-/*--Media queries-HUD-remove graphics from small screens - also reduce text-size and add padding to prevent overflow with ticker--*/ 
+/*--Media queries------HUD-remove graphics from small screens & algnment adjustments to prevent overflow with ticker--*/ 
+
     @media (max-width:767px) {
 
     #HUD-img, .HUD-right, .HUD-left {
@@ -456,6 +458,19 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     } 
 
 
+/*--Further media query to remove text conent for small screens in landscape due to overflow---*/
+
+@media (max-width:767px) and (orientation:landscape) {
+
+    .HUD-text {
+    display:none;
+    }
+
+    .HUD-center {
+    padding-bottom:0;   
+    }
+
+}
 
 /*--END HUD Media Queries--*/ 
 
@@ -611,8 +626,15 @@ https://www.saji8k.com/kit-fui/movie/
 Background images were self-created in Adobe Illustrator and exported as SVGs.
 Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code cleaner. ---*/
 
+
+
 /*----------------Home: Main Panel - Left Column -----------------*/
 
+
+/*----DEFECT------------------------------
+Issue: at the md breakpoint when stacked
+FIXED: No – 
+OUTCOME: workaround adds a temporary message to the tab pane indicating input is required. Without JS i was unable to make this invisible upon selection, so time animation added to remove the message after 20secs, opacity added to message so as this does not 'bleed' through if content selected before timer completes. -----------------*/
 
 #home-main-lower-left-pane {
     border-left:10px solid var(--glass2);
@@ -620,7 +642,7 @@ Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code
     border-top:10px solid var(--glass1);
     border-right:10px solid var(--glass1);            
     background-color:var(--glass2);
-    padding:1vw;
+    padding:0.5vw;
     position:relative;
     }
 
@@ -684,25 +706,6 @@ Resolved - Chrome developer tools showed path to nav.scss file which is now adde
   }
 
 
-/*----------------Home: Main Panel - Center Column -----------------*/
-
-/*--Media query - hide decal panes from small screens --*/
-
-@media (max-width:767px) {
-#home-main-lower-left-decal,
-#home-main-lower-right-decal
- {
-display:none;}
-}
-
-/*--end media query--*/
-
-
-
-
-
-
-
 /*----------------Home: Main Panel - Right Column -----------------*/
 
 
@@ -712,13 +715,17 @@ display:none;}
     border-top:10px solid var(--glass1);
     border-right:10px solid var(--glass1);            
     background-color:var(--glass2);
-    position:relative;
+    position:relative; 
+    
     }
 
 
 
-/*-DEFECT: a default tab selection is not showing in the tab pane despite class 'active' against a nav-item and it's nav pane. No HTML / CSS solution found on-line (some refered to JS which not yet familiar with).
+/*----DEFECT------------------------------
+Issue: a default tab selection is not showing in the tab pane despite class 'active' against a nav-item and it's nav pane. No HTML / CSS solution found on-line (some refered to JS which not yet familiar with). 
+FIXED: No – 
 OUTCOME: workaround adds a temporary message to the tab pane indicating input is required. Without JS i was unable to make this invisible upon selection, so time animation added to remove the message after 20secs, opacity added to message so as this does not 'bleed' through if content selected before timer completes. -----------------*/
+
 
 #home-main-lower-right-pane-tempmsg {
  position: absolute;
@@ -737,6 +744,59 @@ OUTCOME: workaround adds a temporary message to the tab pane indicating input is
     99% {visibility:visible;}
     100% {visibility:hidden;}
 }
+
+/*----DEFECT------------------------------------------------------------------------
+Issue: Affects devices < md breakpoint. Column collapse results in tab panel being located below the tab selection pane and out of default view. Although content is visible (subject to the media defect below) poor UX design as not obvious what tab selections have done and need to scroll between sections to change.
+FIXED - No. Looked for a solution that would switch layout to a dropdown menu, but seem to require JS - other option considered was to have 2 versions (with media player but but unable to link two nav selector sections to the same content - would require duplication of c.120 lines of html.
+OUTCOME - Future change required, no workarounds deployed.
+--------------------------------------------------------------------------------------*/
+
+
+
+
+/*----DEFECT------------------------------------------------------------------------
+Issue: YouTube player screen size too large from small screens
+FIXED: Yes (partial fix and workaround)
+OUTCOME: Partial fix through additional rule to re-size media player.But defect still encountered for devices after small column break point when in portrait mode as iframe expands beyond screen requiring a horizontal scroll. Additional media query for devices small to medium breakpoints to only display in landscape with alert message displayed.  
+Acknowledgment: Fix sourced from https://avexdesigns.com/blog/responsive-youtube-embed
+--------------------------------------------------------------------------------------*/
+
+/*---Defect fix part 1---applies to all sizes-*/
+
+#yt-media-player-wrapper {
+   padding-bottom:56.25%;
+   padding-top:30px;
+   position:relative;
+   height:0;
+   overflow:hidden;
+   }
+
+#yt-media-player-wrapper iframe {
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+    }
+
+ #yt-portrait-alert {
+     display:none
+    }
+ 
+
+/*---Defect fix part 2----media query targets sm - md portrait only----*/
+
+@media (min-width:540px) and (max-width:767px) and (orientation:portrait) {
+
+    #yt-media-player-wrapper iframe {
+    display:none;
+    }
+
+  #yt-portrait-alert {
+     display:block;
+    }
+} 
+
 
 
  /*-----Home Page - Countdown Timer ------*/
@@ -889,6 +949,22 @@ OUTCOME: workaround adds a temporary message to the tab pane indicating input is
   background-position: bottom left, bottom right;
 }
 ---------------------------------*/
+
+
+
+/*-------------Media Query--------
+DEFECT: Small graphic overlaps text on small devices
+FIXED: Yes - media query to hide below 768px screens---*/
+
+
+@media (max-width:767px) {
+#home-main-lower-right-pane-decal .mini-logo {
+visibility:hidden}
+}
+
+/*----end media query------*/
+
+
 
 
 
@@ -1378,8 +1454,7 @@ sourced from Mozilla (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 /*------------------------------------------------
 DEFECT;
 ISSUE: Main tab panels by default extended to the height of the largest content even when those fields have not been selected - this created large empty spaces and often caused unnecessary page scrolling (depending on display / browser size.   
-FIXED: No
-WORKAROUND: Yes - added manual mappings in css). 
+FIXED: No - future fix required (attempted workarounds not sucessful)
  ---------------------------------------------------*/
 
 
