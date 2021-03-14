@@ -1,0 +1,1703 @@
+/*--------------------------Font Types------------------------------------------------------*/
+
+             /*--'Ethnocentric' licence purchased for usage via fontspring.com--*/
+@font-face {
+    font-family: 'ethnocentric_rg';
+    src: url('../fonts/ethnocentric_rg-webfont.woff2') format('woff2'),
+         url('../fonts/ethnocentric_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+            /*--Digital & LED fonts available on free license for non-commercial use via dafont.com--*/
+@font-face {
+    src:url('../fonts/AdvancedDotDigital7-OpXA.ttf');
+    font-family:'ticker';
+    }
+
+@font-face {
+    src:url('../fonts/digital-7.ttf');
+    font-family:'digital' ;
+    }
+
+            /*--'Baumans' (baseline font) and 'Orbitron' (LED style) both GoogleFonts also used and linked from html header--*/
+
+
+
+
+
+
+/*----------------------------Global Root Variables---------------------------------------*/
+
+:root {
+
+                 /*---Font Variables---*/
+
+  --standardfont:'Baumans', Arial, sans-serif;
+  --titlefont: 'ethnocentric_rg', Arial, sans-serif;
+  --LEDfont:'orbitron', Arial, sans-serif;              /*--LED 'screens'--*/
+  --digitalfont: 'digital', Arial, sans-serif;         /*--digtal clock--*/
+  --tickerfont:'ticker', Arial, sans-serif;             /*--news ticker'--*/
+
+                
+                /*---Font Sizing Variables-----(only defined for specific instances where need to override - as typically fonts-sizings matched by element type (i.e. H1) to the responsive font groupings as tabled below---*/
+
+  --LEDh2:clamp(16px, 20px, 24px);          /*--sizing matches with VAR responsive font of the same name---*/
+  --LEDstnd:clamp(14px, 1.2vw, 18px);       /*--sizing matches with VAR responsive font of the same name---*/
+
+                /*---Font Color Variables---*/
+
+  --ink0:rgb(0,0,0);          /*--black--*/
+  --ink1:rgb(255,129,10);     /*--for title / highlight text - hex value #FF810A--*/
+  --ink2:rgb(219,132,29);     /*--for baseline text--*/
+  --ink3:rgb(94,87,77);       /*--alternative-off black / grey--*/
+  --ink4:rgb(104,87,66);      /*--off-grey w/ slight orange tone for gradient fill--*/  
+  --ink5:rgb(130,120,98);      /*--alternative-light grey / orange tone--*/
+
+
+                /*----Special Font Colors----*/
+
+  --LED1:   rgba(0,217,255,1);      /*--LED screens , ticker and digital - hex value #00d9ff-------*/
+  --glass1: rgba(0,196,255,0.9);    /*--svg glass edge  - hex value 00d9ff--*/
+  --glass2: rgba(107,196,255,0.18); /*--svg glass fill w high transparency - hex value #6bc4dff--*/
+  --glass3: rgba(0,0,0,0.3);      /*--black 50% transparency---*/
+  /*--digital1: (not currently defined / required)--*/
+
+
+                 /*---Background & Border Color Variables---*/
+
+  --paint1: rgb(235,103,27); /*---vector orange - current - hex value #db841d--*/
+  --paint2: rgb(179, 149, 113); /*--vector orange - switching to - hex value #db841d--*/
+  --paint3: rgb(42,42,49); /*--off-black --*/
+
+}
+
+
+
+
+/*---------------------Responsive Font Groups -----------------------------------------*/
+
+body, div, p {font-size:16px;font-family: var(--standardfont);color: var(--ink2);}
+h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont);color: var(--ink1);}
+h2 {font-size:clamp(16px, 3vw, 36px);font-family: var(--titlefont);color: var(--ink1);}
+h3 {font-size:clamp(16px, 2vw, 28px);font-family: var(--titlefont);color: var(--ink2);}
+h4 {font-size:clamp(16px, 20px, 24px);font-family: var(--standardfont);color: var(--ink2);}
+h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: var(--ink2);}
+.LEDh2 {font-size:clamp(16px, 3vw, 29px);font-family: var(--titlefont);color: var(--LED1);}
+.LEDh4 {font-size:clamp(16px, 20px, 24px);font-family: var(--LEDfont);color: var(--LED1);font-weight:700;}
+.LEDstnd {font-size:clamp(14px, 1.2vw, 18px);font-family: var(--LEDfont);color: var(--LED1);}
+.LEDsmall {font-size:clamp(10px, 12px, 14px);font-family: var(--LEDfont);color: var(--LED1);}
+
+
+/*-------------------------General Settings-------------------------------------------*/
+
+/*-Challenge: Responsive page-sizing meant no fixed footer height. Attempts at calc() a 'buffer row / bottom-margin' (to sit behind footer) was not working and still resulted in either gap (content to footer) or overlap (footer over content). This mainly affected pages where content is dynamic (e.g. nav panes with different sized content).
+Solution: Fix found on CSStricks.com (https://css-tricks.com/couple-takes-sticky-footer/). Using the flexbox method, have utilised <section> (already added to pages) to grow to fill space, and shrink on the footer to meet each other.
+EDIT: applying this fix introduced the original problem on the home page. The overarching page wrapper has been removed from index.html so although 2 different approaches both now display appropriately.
+
+Code fix for fixed footer:----*/
+
+html, body {
+    height:100%;
+
+}
+
+body {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+#page-content {
+    -webkit-box-flex:1;
+        -ms-flex:1 0 auto;
+            flex:1 0 auto;
+    min-width:0;
+}
+
+.footer {
+    -ms-flex-negative:0;
+        flex-shrink:0;
+}
+
+
+/*----no single command seemed to eliminate unneccessary auto-padding & margins. 
+Currently achieved through use of the global settings below across element types inaddition to Bootstrap classes (mb-0 & row no-gutters) - 
+to be reviewed prior to launch and remove any redundant ----*/
+
+.container {
+    padding:0;
+    margin-right:0;
+    margin-left:0;
+    min-width:0;
+    }
+
+.container-fluid {
+    padding:0;
+    margin-left:0;
+    margin-right:0;
+    min-width:0;
+    }
+
+.col {
+    margin-right:0;
+    margin-left:0;
+    padding-right: 0;
+    padding-left:0;
+}
+
+
+.dropdown-item {
+    padding-left:0;
+    padding-right:0;
+}
+
+.row {
+    margin-right:0;
+    margin-left:0;
+}
+
+
+/*-------------------------Logo----------------------------------------------------*/
+
+.logo {
+    color: var(--ink1);
+    text-shadow:2px 2px 2px var(--ink0);
+    }
+
+.icon-planet {
+    color:var(--LED1);
+    -webkit-filter: drop-shadow(5px 5px 2px var(--ink0));
+            filter: drop-shadow(5px 5px 2px var(--ink0)); /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
+    }
+
+
+
+
+
+/*-------------------------Navigation Bar-----------------------------------*/
+
+.navbar {
+    background-image: -webkit-gradient(linear, right top, left bottom, from(var(--ink0)),to(var(--ink4)));
+    background-image: -o-linear-gradient(top right, var(--ink0),var(--ink4));
+    background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));
+    border-bottom: 8px solid var(--glass1);
+    width:100vw;
+    
+    }
+
+     /*--- remove auto margin & padding to enable top / bottom alignment of text and menu icons--*/
+
+
+.logo {
+    margin-bottom:0;
+    }
+
+.navbar-toggler {
+    color: var(--ink1);
+    margin-right:5vw;
+    padding:0;                        /*-- to align toggler with logo sizing--------*/
+    font-size:clamp(28px, 5vw, 44px); /*-- align relative sizing with logo text--*/
+    }
+   
+
+#nav-drop-menu-small {
+    background-image: -webkit-gradient(linear, right top, left bottom, from(var(--ink0)),to(var(--ink4)));
+    background-image: -o-linear-gradient(top right, var(--ink0),var(--ink4));
+    background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));    
+    border:8px solid var(--ink1); 
+    text-align: center;
+    width:90vw;
+    max-width:500px;
+}
+
+.drop-header {
+    background-color: var(--ink2);
+    color: var(--ink0);     /*--font color override required--*/
+    z-index: 1050;
+}
+
+.nav-panel-small {
+    background-image:url(../images/final-images/glass-navmenu-small.svg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    width:85%;
+    margin-left:auto;
+    margin-right:auto;
+}  
+
+.dropdown-item {
+    text-align:center;
+}
+
+/*---psuedo elements override Bootstrap default settings for links and retain coloring consitent with site---*/
+
+.navbar .logo:link,
+.navbar .logo:visited,
+.navbar .logo:hover,
+.navbar .logo:focus,
+.navbar .logo:active {
+    text-decoration: none;
+} 
+
+.nav-panel-small:link .dropdown-item, 
+.nav-panel-small:visited .dropdown-item {
+    text-decoration: none;
+} 
+
+.nav-panel-small:hover .dropdown-item,
+.nav-panel-small:focus .dropdown-item,
+.nav-panel-small:active .dropdown-item{
+    text-decoration: none;
+    background-image: -webkit-gradient(linear, right top, left bottom, from(var(--ink1)),to(var(--ink5)));
+    background-image: -o-linear-gradient(top right, var(--ink1),var(--ink5));
+    background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
+} 
+
+/*--BUG - FIXED - pseudo states were not being applied corectly. This was due to there being three element layers (the panel, the anchor and the H3 text. Styles were either not being cascaded or applied differently as the cursor moved across the 3 elements. Was unable to configure single code so split out for each of the three layers--*/
+
+.nav-panel-small:hover h3,
+.nav-panel-small:focus h3,
+.nav-panel-small:active h3{
+    background-image: -webkit-gradient(linear, right top, left bottom, from(var(--ink1)),to(var(--ink5)));
+    background-image: -o-linear-gradient(top right, var(--ink1),var(--ink5));
+    background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
+    color:var(--ink0);
+} 
+
+.dropdown-item:hover h3 {
+        color:var(--ink0);
+} 
+
+
+
+/*-------------------------Footer-----------------*/
+
+.footer-main {
+    background-image: -webkit-gradient(linear, left top, right bottom, from(var(--ink0)),to(var(--ink4)));
+    background-image: -o-linear-gradient(top left, var(--ink0),var(--ink4));
+    background-image: linear-gradient(to bottom right, var(--ink0),var(--ink4));
+    display:inline-block;
+    text-align:center;
+    border-top:8px solid var(--glass1);
+    padding-top:5px;
+    padding-bottom:5px;
+    }
+
+
+.footer-main a {
+    color:var(--ink1);
+    font-size:clamp(28px, 5vw, 44px); /*--icon sizing consitent with nav icon--*/
+    text-decoration:none;
+    text-shadow:2px 2px 2px var(--ink0);
+    height: clamp(32px, 5vw, 48px);
+    
+    }
+
+
+/*-------------------------HOME PAGE----------------------------------------*/
+
+
+#home-container-A {
+    width:100vw;
+    
+}
+
+
+                /*------------Home Page - Container A Welcome-----------------*/
+
+.welcome {
+    position:relative;
+    }
+
+
+
+.welcome-hero-img {
+    height: 35vw;
+    max-height:300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    -webkit-animation-name:imgfadein;
+            animation-name:imgfadein;               /*----detail of animation further below---*/
+    -webkit-animation-delay:1.5s;
+            animation-delay:1.5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-duration:10s;
+            animation-duration:10s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    border-bottom: 5px solid var(--glass1);
+}
+
+/*-----CHALLENGE ENCOUNTERED--------------
+Original image re-sized to enable media queries to determine most appropriate size (all have same aspect ratio). 
+Issue 1 - failed as unable to embed media query in html mark-up (<picture> and <object-fit> not returning rquired behaviour). 
+Outcome - Linger term action: follow-up post milestone project; short term - alternative sought.
+
+Issue 2 - retained media queries in CSS to be displayed as background image, but difficulties getting the image to display. 
+Cause -  div treated as 'empty' by browsers - requires a fixed height (100% not viable as 100% of nothing!)
+Outcome - used VW as variable (with overall max)- feel to be acceptable (responsive sizing / no 'white space') but recognise not desired approach.
+--------------------------------------*/
+
+/*----image source XXXXXXXX -----*/
+@media (max-width:540px) {
+.welcome-hero-img {
+    background-image:url('../images/final-images/planet_earth-sm.jpeg'); /*---(s 540 x 193px)--*/
+    min-height:110px;
+}
+}    
+
+@media (min-width:541px) and (max-width:768px) {
+.welcome-hero-img {
+    background-image:url('../images/final-images/planet_earth-md.jpeg'); /*---(m 768 x 275px)--*/
+    }
+}   
+
+@media (min-width:769px) and (max-width:992px){
+.welcome-hero-img {
+    background-image:url('../images/final-images/planet_earth-lg.jpeg'); /*---(lg 992 x 355px)--*/
+    }
+}   
+
+/*--image will appear to zoom in above c.1400px, position changed to 20%off-top to adjust focus--*/ 
+@media (min-width:993px) {
+.welcome-hero-img {
+    background-image:url('../images/final-images/planet_earth-xl.jpeg'); /*---xl 1140 x 408px--*/
+    background-position: 0% 20%;
+}
+}   
+   
+
+
+.welcome-strapline {
+    
+    text-shadow:2px 2px 2px var(--ink0);
+    position:absolute;
+    height:30vh;
+    top:3vw;
+    right:2vw;
+    max-width:50vw;
+    -webkit-animation-name:txtfadein;
+            animation-name:txtfadein;
+    -webkit-animation-delay:2s;
+            animation-delay:2s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-duration:6s;
+            animation-duration:6s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;  
+    } 
+
+    
+
+                /*-------welcome animtaion------- 
+                Desired effect - break of new dawn
+                Acknowledgement: CCStricks.com animation article and demos-----*/
+
+@-webkit-keyframes imgfadein {
+    0%      {-webkit-filter: brightness(0) blur(10px);filter: brightness(0) blur(10px);}
+    10%     {-webkit-filter: brightness(0.15) blur(5px);filter: brightness(0.15) blur(5px);}
+    20%     {-webkit-filter: brightness(0.3) blur(2px);filter: brightness(0.3) blur(2px);}
+    30%     {-webkit-filter: brightness(0.45) blur(1px);filter: brightness(0.45) blur(1px);}
+    40%     {-webkit-filter: brightness(0.6) blur(0px);filter: brightness(0.6) blur(0px);}
+    50%     {-webkit-filter: brightness(0.75) blur(0px);filter: brightness(0.75) blur(0px);}
+    60%     {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
+    86%     {-webkit-filter: brightness(1.25) blur(0);filter: brightness(1.25) blur(0);}
+    88%     {-webkit-filter: brightness(1.5) blur(0);filter: brightness(1.5) blur(0);}
+    89%     {-webkit-filter: brightness(1.4) blur(0);filter: brightness(1.4) blur(0);}
+    90%     {-webkit-filter: brightness(1.4) blur(0);filter: brightness(1.4) blur(0);}
+    95%     {-webkit-filter: brightness(1.2) blur(0);filter: brightness(1.2) blur(0);}
+    100%    {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
+    }
+
+@keyframes imgfadein {
+    0%      {-webkit-filter: brightness(0) blur(10px);filter: brightness(0) blur(10px);}
+    10%     {-webkit-filter: brightness(0.15) blur(5px);filter: brightness(0.15) blur(5px);}
+    20%     {-webkit-filter: brightness(0.3) blur(2px);filter: brightness(0.3) blur(2px);}
+    30%     {-webkit-filter: brightness(0.45) blur(1px);filter: brightness(0.45) blur(1px);}
+    40%     {-webkit-filter: brightness(0.6) blur(0px);filter: brightness(0.6) blur(0px);}
+    50%     {-webkit-filter: brightness(0.75) blur(0px);filter: brightness(0.75) blur(0px);}
+    60%     {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
+    86%     {-webkit-filter: brightness(1.25) blur(0);filter: brightness(1.25) blur(0);}
+    88%     {-webkit-filter: brightness(1.5) blur(0);filter: brightness(1.5) blur(0);}
+    89%     {-webkit-filter: brightness(1.4) blur(0);filter: brightness(1.4) blur(0);}
+    90%     {-webkit-filter: brightness(1.4) blur(0);filter: brightness(1.4) blur(0);}
+    95%     {-webkit-filter: brightness(1.2) blur(0);filter: brightness(1.2) blur(0);}
+    100%    {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
+    }   
+
+
+@-webkit-keyframes txtfadein {
+    0% {visibility: hidden; opacity: 0%;}
+    50% {visibility: hidden; opacity:1%;}
+    100% {visibility: visible; opacity:100%;}
+    }   
+
+
+@keyframes txtfadein {
+    0% {visibility: hidden; opacity: 0%;}
+    50% {visibility: hidden; opacity:1%;}
+    100% {visibility: visible; opacity:100%;}
+    }
+                
+  
+  
+                /*--------------Home Page - Container B HUD & Ticker -----------------*/
+
+#home-container-B {
+    width:100vw;
+    background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
+    background-size: cover;
+    background-attachment: fixed;
+    min-width:0;
+    }
+
+
+
+
+.HUD-center {
+    padding-top:1vw;
+    padding-bottom:5px;
+    width:100%;
+    position:relative;
+    margin-left:1vw;
+    margin-right:1vw;
+    }
+
+
+.HUD-text {
+    position:absolute;
+    margin:0 auto;
+    left:0;
+    right:0;
+    top:30%;
+    text-align:center;
+    width:100%;
+    text-shadow:2px 2px 2px var(--ink0);
+    }
+
+/*--Media queries------HUD-remove graphics from small screens & algnment adjustments to prevent overflow with ticker--*/ 
+
+    @media (max-width:767px) {
+
+    #HUD-img, .HUD-right, .HUD-left {
+    display:none;
+    }
+
+    .HUD-text {
+    top:0;
+    }
+
+    
+    .HUD-text.logo, .HUD-text .LEDh4 {
+    margin-left:0;
+    margin-right:0;
+    font-size:14px  
+    }
+
+
+    .HUD-center {
+    padding-bottom:10vh;
+    }
+    } 
+
+
+/*--Further media query to remove text conent for small screens in landscape due to overflow---*/
+
+@media (max-width:767px) and (orientation:landscape) {
+
+    .HUD-text {
+    display:none;
+    }
+
+    .HUD-center {
+    padding-bottom:0;   
+    }
+
+}
+
+/*--END HUD Media Queries--*/ 
+
+
+/*----DEFECT------------------------------
+Issue: Alignment and layout of HUD graphics can result in poor outline - relates to aspect ratio as opposed to screen width alone.
+FIXED: No
+OUTCOME: Some refinements made to positioning / sizes / paddings, etc for a 'best fit' - better suited to wider aspect ratios (a 
+-------------------------------------------*/
+
+
+
+
+
+
+.HUD-left {
+    margin-left:2vw;
+    padding-top:1vw;
+}
+
+.p-alarm {
+    -webkit-animation-name: alarm;
+            animation-name: alarm;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay:10s;
+            animation-delay:10s;
+}
+
+@-webkit-keyframes alarm {
+  0% {color: var(--LED1);text-shadow:none;}
+  49% {color: var(--LED1);text-shadow:none;}
+  50% {color: red;text-shadow:2px 2px 2px var(--ink0);}
+  100% {color: red;text-shadow:2px 2px 2px var(--ink0);}
+}
+
+@keyframes alarm {
+  0% {color: var(--LED1);text-shadow:none;}
+  49% {color: var(--LED1);text-shadow:none;}
+  50% {color: red;text-shadow:2px 2px 2px var(--ink0);}
+  100% {color: red;text-shadow:2px 2px 2px var(--ink0);}
+}
+
+.HUD-left {
+margin-left:2vw;
+margin-right:0vw;
+padding-top:1vw;
+position:relative;
+}
+
+
+#satellite1 {
+top:1vw;
+right:0;
+width:65%;
+height:auto;
+position:absolute;
+}
+
+#dish1 {
+top:5vw;
+left:2vw;
+position:absolute;
+width:30%;
+height:auto;
+}
+
+
+.holo-lft-txt {
+text-align:left;
+position:absolute;
+bottom:0;
+    }
+
+.HUD-right {
+margin-left:2vw;
+margin-right:0vw;
+padding-top:1vw;
+    }
+
+.HUD-right img {
+width:60%;
+height:auto;
+}
+    
+.holo-rgt-txt {
+    text-align:left;
+    padding-top:1vw;
+}
+
+                /*------------Home Page - Intro / Ticker---------*/
+.home-main-ticker {
+    min-width:0;
+}
+
+/*---guidance from https://code-boxx.com/html-css-news-ticker-horizontal-vertical/ ----*/
+
+.intro-ticker{
+    margin-bottom:2vh;
+    overflow: hidden; 
+    border-style:inset;
+    margin:0 2vw 0 2vw;
+    line-height:2rem;
+    min-width:0;
+    }
+
+
+.intro-ticker-news {
+ 
+    width: 100%;
+    padding-left: 100%; 
+    background-color: var(--ink0);
+    background-size:100% 100%;
+    font-size:70%;
+    min-width:0;
+    }
+
+.intro-ticker-animate {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-name: animate;
+            animation-name: animate;
+    -webkit-animation-duration: 120s;
+            animation-duration: 120s;
+    min-width:0;
+    }
+
+
+
+.intro-news-item {
+    font-family:var(--tickerfont);
+    font-size: 90%;
+    color: var(--LED1);
+    display: inline-block; 
+    padding-top: 0.5rem;
+    min-width:0;
+    }
+
+
+.intro-news-item.breaking-news {
+    color: var(--ink0);
+    background-color: var(--LED1);
+    }   
+
+
+@-webkit-keyframes animate {
+     0%  {-webkit-transform: translateX(0%);transform: translateX(0%);}
+    100%  {-webkit-transform: translateX(-102%);transform: translateX(-102%);}
+    }   
+
+
+@keyframes animate {
+     0%  {-webkit-transform: translateX(0%);transform: translateX(0%);}
+    100%  {-webkit-transform: translateX(-102%);transform: translateX(-102%);}
+    }
+
+/*--Media queries-Ticker-further reduce ticker to fill space by hidden HUD graphic--*/ 
+@media (max-width:767px) {
+
+    .intro-ticker {
+    line-height:26px;
+    }
+    }
+  
+/*----------Home Page -  Control Panel-----------------*/
+
+#home-main-control-panel {
+    margin-top:1vw;
+    margin-bottom:1vw;
+}
+
+/*----Note on SVGs: 
+
+Inspiration from combination of Sci-Fi films / tv, PC games and search on Sci Fi / Concept User Interfaces ovia Pinterest. Specific sites considered;
+https://sciencefictioninterfaces.tumblr.com/
+https://www.saji8k.com/kit-fui/movie/
+
+Background images were self-created in Adobe Illustrator and exported as SVGs.
+Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code cleaner. ---*/
+
+
+
+/*----------------Home: Main Panel - Left Column -----------------*/
+
+
+/*----DEFECT------------------------------
+Issue: at the md breakpoint when stacked
+FIXED: No – 
+OUTCOME: workaround adds a temporary message to the tab pane indicating input is required. Without JS i was unable to make this invisible upon selection, so time animation added to remove the message after 20secs, opacity added to message so as this does not 'bleed' through if content selected before timer completes. -----------------*/
+
+#home-main-lower-left-pane {
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);            
+    background-color:var(--glass2);
+    padding:0.5vw;
+    position:relative;
+    }
+
+
+ 
+
+#Info-Screen-Selector {
+    padding-top:1.5vw;
+    text-align:center;
+    font-family:var(--LEDfont);
+    margin-left:1vw;
+    }
+
+#Info-Screen-Selector h5 {
+    font-family:var(--LEDfont);
+    }
+
+#home-menu-panel.nav-item {
+    width:80%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    }
+
+.nav-item a {
+    font-family:var(--LEDfont); /*--manual override of Bootstrap default anchor styling--*/
+    color: var(--LED1);
+    font-weight:900;
+    background-color:var(--glass2);
+    border:2px solid var(--glass1);
+    margin:5px;
+    text-shadow:2px 2px 2px var(--glass2);
+    }
+
+
+
+
+.nav-item:link a,
+.nav-item:visited a,
+.nav-item:hover a,
+.nav-item:focus a,
+.nav-item:active a {
+    background-color: var(--LED1);
+    color: var(--ink1);
+    -webkit-box-shadow: 20px 20px 100px 20px var(--glass1);
+            box-shadow: 20px 20px 100px 20px var(--glass1);
+}
+
+/*--Challenge - could not remove the default Bootstrap styling once a button has been activated.
+Resolved - Chrome developer tools showed path to nav.scss file which is now added below with the required styles----*/
+
+.nav-pills .nav-link.active {
+    color: var(--ink1);
+    background-color:#00d9ff;
+  }
+
+
+  .home-menu-text {
+      background-color:var(--glass3);
+      padding-left:2vw;
+      padding-right:2vw;
+      padding-bottom:2vw;
+      padding-top:2vw;
+  }
+
+
+/*----------------Home: Main Panel - Right Column -----------------*/
+
+
+#home-main-lower-right-pane {
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);            
+    background-color:var(--glass2);
+    position:relative; 
+    
+    }
+
+
+
+/*----DEFECT------------------------------
+Issue: a default tab selection is not showing in the tab pane despite class 'active' against a nav-item and it's nav pane. No HTML / CSS solution found on-line (some refered to JS which not yet familiar with). 
+FIXED: No – 
+OUTCOME: workaround adds a temporary message to the tab pane indicating input is required. Without JS i was unable to make this invisible upon selection, so time animation added to remove the message after 20secs, opacity added to message so as this does not 'bleed' through if content selected before timer completes. -----------------*/
+
+
+#home-main-lower-right-pane-tempmsg {
+ position: absolute;
+ top: 50%;
+ width: 100%;
+ text-align: center;
+ opacity: 50%;
+ visibility:hidden;
+ -webkit-animation-name: UItempmsg;
+         animation-name: UItempmsg;
+ -webkit-animation-delay: 5s;
+         animation-delay: 5s;
+ -webkit-animation-duration:20s;
+         animation-duration:20s;
+}
+
+@-webkit-keyframes UItempmsg {
+    0% {visibility:visible;}
+    99% {visibility:visible;}
+    100% {visibility:hidden;}
+}
+
+@keyframes UItempmsg {
+    0% {visibility:visible;}
+    99% {visibility:visible;}
+    100% {visibility:hidden;}
+}
+
+/*----DEFECT------------------------------------------------------------------------
+Issue: Affects devices < md breakpoint. Column collapse results in tab panel being located below the tab selection pane and out of default view. Although content is visible (subject to the media defect below) poor UX design as not obvious what tab selections have done and need to scroll between sections to change.
+FIXED - No. Looked for a solution that would switch layout to a dropdown menu, but seem to require JS - other option considered was to have 2 versions (with media player but but unable to link two nav selector sections to the same content - would require duplication of c.120 lines of html.
+OUTCOME - Future change required, no workarounds deployed.
+--------------------------------------------------------------------------------------*/
+
+
+
+
+/*----DEFECT------------------------------------------------------------------------
+Issue: YouTube player screen size too large from small screens
+FIXED: Yes (partial fix and workaround)
+OUTCOME: Partial fix through additional rule to re-size media player.But defect still encountered for devices after small column break point when in portrait mode as iframe expands beyond screen requiring a horizontal scroll. Additional media query for devices small to medium breakpoints to only display in landscape with alert message displayed.  
+Acknowledgment: Fix sourced from https://avexdesigns.com/blog/responsive-youtube-embed
+--------------------------------------------------------------------------------------*/
+
+/*---Defect fix part 1---applies to all sizes-*/
+
+#yt-media-player-wrapper {
+   padding-bottom:56.25%;
+   padding-top:30px;
+   position:relative;
+   height:0;
+   overflow:hidden;
+   }
+
+#yt-media-player-wrapper iframe {
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+    }
+
+ #yt-portrait-alert {
+     display:none
+    }
+ 
+
+/*---Defect fix part 2----media query targets sm - md portrait only----*/
+
+@media (min-width:540px) and (max-width:767px) and (orientation:portrait) {
+
+    #yt-media-player-wrapper iframe {
+    display:none;
+    }
+
+  #yt-portrait-alert {
+     display:block;
+    }
+} 
+
+
+
+ /*-----Home Page - Countdown Timer ------*/
+ /*---- A true countdown timer requires understanding of JS, so for the purpose of representing what this 'could' look like I created a mock version which only counts down from a static starting point, only adjusts the minutes and seconds and resets on page load and navigating away / to the hosting nav panel.
+ Acknowledgement: Initially attempted an approach based on purely animation (i.e. show / hide), but could not overcome challenges with vertical alignment & hiding the overflow of the digits when not dslayed. A similar example was found on YouTube [https://www.youtube.com/watch?v=rhZgquCAcGc] which this code is now based on although adapted to; fit in a table (to retain alignmet of time with labels) and splittng code to acount for hr / min count-down from 59-0, and digits from 10-0.   
+  ---*/
+ 
+
+#countdown-info {
+    font-family: var(--LEDfont);
+    color:var(--LED1); 
+    margin-bottom: 2vh;
+    } 
+
+/*-----relates to layout of text wich appears prior to the timer----*/
+
+
+
+#countdown-info .info-label {
+
+    text-align:right;
+    padding-right:2vw;
+    }
+
+#countdown-info .info-answer {
+    font-family: var(--LEDfont);
+    color:var(--LED1);
+    text-align:left;
+    padding-left:2vw;
+    }
+
+
+
+ /*-----styling for the countdown timer ----*/ 
+
+ .table-countdown {
+    border: 1px solid var(--glass1);
+    width:80%;
+    margin-left:5vw;
+    text-align:center;
+    }
+
+.table-countdown-labels {
+    border: 1px solid var(--glass1);
+    background-color:var(--glass2);
+    text-shadow:none;
+    }
+
+
+.table-countdown-wrapper {
+    background-color: var(--glass3);
+    -webkit-transform:translate (-50%, -50%);
+        -ms-transform:translate (-50%, -50%);
+            transform:translate (-50%, -50%);
+    font-family:var(--digitalfont);
+    height:5vh;
+    line-height:5vh;
+    font-weight:bold;
+    font-size: 4vh;
+    }
+
+
+.countdown-labels {
+    display:inline-block;
+    font-family: var(--LEDfont);
+    width:100%;
+    vertical-align: top;
+    border: 1px solid var(--glass1);
+    padding:0 0.5vh;
+    margin-left:auto;
+    margin-right:auto;
+    }
+
+
+.table-wrapper {
+    vertical-align: bottom;
+    position:relative;
+    overflow:hidden;
+    }   
+
+
+.time {
+    display:inline-block;
+    overflow:hidden;
+    padding:0 0.5vh;
+    }
+
+
+
+
+.digit:after {
+    position:absolute;
+    white-space: pre;
+    content: "9\A 8\A 7\A 6\A 5\A 4\A 3\A 2\A 1\A 0\A";
+    }
+
+
+.tens:after {
+    position:absolute;
+    white-space: pre;
+    content: "5\A 4\A 3\A 2\A 1\A 0\A";
+    }
+
+/*--countdown animation works by steping through the numbers defined in the 'content' above with the step count and %'s aligned to the correct timing (i.e 1 second / min ('digit') & 10 seconds/minutes ('tens'). Numbers effectively scroll on screen but 'overflow:hidden' only allows 1 number (per field) to be shown  --*/
+
+.seconds.digit:after {
+    -webkit-animation: animate-secs-digit 10s steps(10,end) infinite;
+            animation: animate-secs-digit 10s steps(10,end) infinite;
+    }
+
+@-webkit-keyframes animate-secs-digit {
+    0% {top:0;}
+    100% {top:-50vh} /*--- ** Adjusted from -50vh as slight mis-alignment for last few seconds, to be checked in other responsive screen sizes if needed ----*/
+    }
+
+@keyframes animate-secs-digit {
+    0% {top:0;}
+    100% {top:-50vh} /*--- ** Adjusted from -50vh as slight mis-alignment for last few seconds, to be checked in other responsive screen sizes if needed ----*/
+    }
+
+.seconds.tens:after {
+    -webkit-animation: animate-secs-tens 60s steps(6) infinite;
+            animation: animate-secs-tens 60s steps(6) infinite;
+    }
+
+@-webkit-keyframes animate-secs-tens {
+    0% {top:0;}
+    100% {top:-30vh}
+    }
+
+@keyframes animate-secs-tens {
+    0% {top:0;}
+    100% {top:-30vh}
+    }
+
+
+
+.mins.digit:after {
+    -webkit-animation: animate-mins-digit 600s steps(10) infinite;
+            animation: animate-mins-digit 600s steps(10) infinite;
+    }
+
+@-webkit-keyframes animate-mins-digit {
+    0% {top:0;}
+    100% {top:-50vh}
+    }
+
+@keyframes animate-mins-digit {
+    0% {top:0;}
+    100% {top:-50vh}
+    }
+
+.mins.tens:after {
+    -webkit-animation: animate-mins-tens 3600s steps(6) infinite;
+            animation: animate-mins-tens 3600s steps(6) infinite;
+    }
+
+@-webkit-keyframes animate-mins-tens {
+    0% {top:0;}
+    100% {top:-30vh}
+    }
+
+@keyframes animate-mins-tens {
+    0% {top:0;}
+    100% {top:-30vh}
+    }
+
+/*----------DECALS REMOVED - adding unneccessary page height
+
+#home-main-lower-right-pane-decal {
+  height: 5vw;
+  width: auto;
+  background-image: url(../images/final-images/FINALdecal-4.svg),
+      url(../images/final-images/FINALdecal-3.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left, bottom right;
+}
+---------------------------------*/
+
+
+
+/*-------------Media Query--------
+DEFECT: Small graphic overlaps text on small devices
+FIXED: Yes - media query to hide below 768px screens---*/
+
+
+@media (max-width:767px) {
+#home-main-lower-right-pane-decal .mini-logo {
+visibility:hidden}
+}
+
+/*----end media query------*/
+
+
+
+
+
+#home-main-lower-right-pane-decal .mini-logo {
+font-family:var(--titlefont);
+color:var(--glass1);
+position:absolute;                  
+bottom:0;                          
+text-align:center;  
+}
+
+.mini-logo .icon-planet {
+color:var(--ink1);
+}
+
+
+.LEDh2 {
+text-shadow:20px 20px 20px 20px #00d9ff;
+}
+
+/*-------------------------FLIGHTS PAGE-----------------*/
+
+
+#fights-container-A {
+    width:100vw;
+    background-color: ;
+}
+
+#flights-hero-col {
+    padding-left:0;
+    padding-right:0;
+}
+
+#flights-hero-wrap {
+    position:relative;
+}
+
+#flights-hero-img {
+    width:100%;
+    height:auto;
+    }
+
+#flights-hero-wrap{
+    position:relative;
+    }
+
+#flights-hero-wrap h1, p {
+    padding-left:5%;
+    
+    }
+
+#flights-hero-title-1 {
+    position:absolute;
+    top:5%;
+    -webkit-animation-name:flights-txt1;
+            animation-name:flights-txt1;
+    -webkit-animation-duration:12s;
+            animation-duration:12s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; 
+    -webkit-animation-fill-mode: forwards; 
+            animation-fill-mode: forwards;  
+    }
+
+    @-webkit-keyframes flights-txt1 {
+    0%   {opacity:0%;}
+    10%  {opacity:100%;}
+    40%  {opacity:100%;}
+    50%  {opacity:0%;}
+    100% {visibility:hidden; opacity:0%;}
+    }
+
+    @keyframes flights-txt1 {
+    0%   {opacity:0%;}
+    10%  {opacity:100%;}
+    40%  {opacity:100%;}
+    50%  {opacity:0%;}
+    100% {visibility:hidden; opacity:0%;}
+    }
+
+#flights-hero-title-1b {
+    position:absolute;
+    top:22%;
+    -webkit-animation-name:flights-txt1b;
+            animation-name:flights-txt1b;
+    -webkit-animation-duration:12s;
+            animation-duration:12s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; 
+    -webkit-animation-fill-mode: forwards; 
+            animation-fill-mode: forwards; 
+    }
+
+    @-webkit-keyframes flights-txt1b {
+    0%   {opacity:0%;}
+    40%   {opacity:1%;}
+    50%  {opacity:100%;}
+    90%  {opacity:100%;}
+    100% {visibility:hidden; opacity:0%;}
+    }
+
+    @keyframes flights-txt1b {
+    0%   {opacity:0%;}
+    40%   {opacity:1%;}
+    50%  {opacity:100%;}
+    90%  {opacity:100%;}
+    100% {visibility:hidden; opacity:0%;}
+    }
+
+
+#flights-hero-title-2 {
+    position:absolute;
+    top:45%;
+    -webkit-animation-name:flights-txt2;
+            animation-name:flights-txt2;
+    -webkit-animation-duration:12s;
+            animation-duration:12s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;  
+     
+    }
+
+    @-webkit-keyframes flights-txt2 {
+    0%   {opacity:0%;}
+    10%   {opacity:1%;}
+    20%  {opacity:100%;}
+    90%  {opacity:100%;}
+    100% {visibility:hidden; opacity:0%;}
+    }
+
+    @keyframes flights-txt2 {
+    0%   {opacity:0%;}
+    10%   {opacity:1%;}
+    20%  {opacity:100%;}
+    90%  {opacity:100%;}
+    100% {visibility:hidden; opacity:0%;}
+    }
+
+#flights-hero-title-2b {
+    position:absolute;
+    top:62%;
+    -webkit-animation-name:flights-txt2b;
+            animation-name:flights-txt2b;
+    -webkit-animation-duration:12s;
+            animation-duration:12s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; 
+    -webkit-animation-fill-mode: forwards; 
+            animation-fill-mode: forwards; 
+    }
+
+    @-webkit-keyframes flights-txt2b {
+    0%   {opacity:0%;}
+    60%   {opacity:1%;}
+    70%  {opacity:100%;}
+    90%  {opacity:100%;}
+    100% {visibility:hidden;opacity:0%;}
+    }
+
+    @keyframes flights-txt2b {
+    0%   {opacity:0%;}
+    60%   {opacity:1%;}
+    70%  {opacity:100%;}
+    90%  {opacity:100%;}
+    100% {visibility:hidden;opacity:0%;}
+    }
+
+
+#flights-hero-title-3 {
+    position:absolute;
+    top:80%;
+    -webkit-animation-name:flights-txt3;
+            animation-name:flights-txt3;
+    -webkit-animation-duration:12s;
+            animation-duration:12s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; 
+    -webkit-animation-fill-mode: forwards; 
+            animation-fill-mode: forwards; 
+    }
+
+@-webkit-keyframes flights-txt3 {
+    0%   {opacity:0%;}
+    20%   {opacity:1%;}
+    30%  {opacity:100%;}
+    90%  {opacity:100%;}
+    100% {visibility:hidden;opacity:0%;}
+    }
+
+@keyframes flights-txt3 {
+    0%   {opacity:0%;}
+    20%   {opacity:1%;}
+    30%  {opacity:100%;}
+    90%  {opacity:100%;}
+    100% {visibility:hidden;opacity:0%;}
+    }
+
+
+#flights-hero-title-3b {
+    position:absolute;
+    top:80%;
+    padding-left:0;
+    right:5%;
+    padding-right:3%;
+    -webkit-animation-name:flights-txt3b;
+            animation-name:flights-txt3b;
+    -webkit-animation-duration:12s;
+            animation-duration:12s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out; 
+    -webkit-animation-fill-mode: forwards; 
+            animation-fill-mode: forwards; 
+    }
+
+    @-webkit-keyframes flights-txt3b {
+    0%   {opacity:0%;}
+    75%  {opacity:1%;}
+    80%  {opacity:100%;}
+    100% {opacity:100%;}
+}
+
+    @keyframes flights-txt3b {
+    0%   {opacity:0%;}
+    75%  {opacity:1%;}
+    80%  {opacity:100%;}
+    100% {opacity:100%;}
+}
+
+
+        /*-----------------Flights - Quote Section-----------------*/
+
+#flights-row2-textquote {
+    padding:2vh 3vh 2vh 3vh;
+    text-align:center;
+    background-image: -webkit-gradient(linear, right top, left bottom, from(var(--paint3)),to(var(--ink0)));
+    background-image: -o-linear-gradient(top right, var(--paint3),var(--ink0));
+    background-image: linear-gradient(to bottom left, var(--paint3),var(--ink0));
+
+}
+
+#flights-intro-quote q {
+    font-style:italic;
+    
+}
+
+            /*-----------Exploration - Section B Trips---------------*/
+
+#flights-row3-trips {
+    background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
+    background-size: cover;
+    background-attachment: fixed;
+    }
+
+
+#flights-panel-wrapper{
+    width:90vw;
+    margin:2vw 2vw 3vw 2vw;
+}
+  
+
+#trips-panel-selector {
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);
+    padding-top:1.5vw;
+    background-color: var(--glass2);
+    padding-bottom:1.5vw;
+    }
+
+#trips-menu {
+    text-align:center;
+    font-family:var(--LEDfont);
+    color: var(--LED1);
+    width:100%;
+    border-bottom:none; /*--remove Bootclass default style--*/
+}
+
+#trips-menu li {
+    margin-left:1.5vw;
+    margin-right:1.5vw;
+    border:2px solid var(--glass1);
+    background-color: var(--glass2);
+    width:20vw;
+}
+
+#trips-menu a {
+    text-decoration:none;
+    color: var(--LED1);
+    padding-left:2vw;
+    padding-right:2vw;
+    
+}
+
+#trips-menu li:hover,
+#trips-menu li:focus,
+#trips-menu li:active{
+    background-color: var(--LED1);
+    -webkit-box-shadow: 20px 20px 100px 20px var(--glass1);
+            box-shadow: 20px 20px 100px 20px var(--glass1);
+}
+
+#trips-menu li:hover a,
+#trips-menu li:active a{
+    color:var(--ink1)
+}
+
+/*--Note:additional styling to override Bootstrap defaults which were not being applied through the above --*/
+
+#trips-menu .nav-link.active {
+    color:var(--ink1);
+    background-color:#00d9ff; /*--note hex value required as var equiv not taking effect when over-riding Bootstrap default --*/ 
+    border-color:var(--glass1);
+    -webkit-box-shadow: 20px 20px 100px 20px var(--glass1);
+            box-shadow: 20px 20px 100px 20px var(--glass1);
+  }
+
+
+#flights-trips-display {
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);            
+    background-color:var(--glass2);
+    margin-top:1vw;
+    padding-top:1.5vw;
+    padding-left:5vw;
+    padding-right:5vw;
+}
+
+#footer-buffer-row {
+    min-height: clamp(32px, 5vw, 48px);
+    background-color:var(--ink0);
+}
+          /*-------Trips - images--------------------*/
+
+#flights-row3-trips {
+    position:relative;
+    border-top:1vw solid var(--ink);
+}
+
+.earth-orbit {
+    background-image:url(../images/final-images/earth-section.png);
+    background-size:60vw auto;
+    background-color:black;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    position:absolute;
+    
+}
+
+.earth-orbit p {
+   width:70%;
+   height:70vw;
+}
+/*----
+.lunar-orbit {
+
+}
+.Lunar-Landing {
+
+}
+.space-safari { 
+
+}
+
+.mars { 
+
+} 
+
+.hub {
+
+}
+---------------------Registration-----------------*/
+
+/*!!!!!---current bug - mobile view scrolls despite no further content - linked to fixed header and footer? or negactive panel margins?)!!!!!!-------*/
+
+
+.register-container {
+    width:100vw;
+    height:100vh;
+    background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+
+#register-intro-wrapper {
+    -webkit-margin-before:2vw;
+            margin-block-start:2vw;  /*Bug fix horizontal margin collapse between parent and child - fix sourced from https://www.smashingmagazine.com/2019/07/margins-in-css/ --------*/
+    border: solid 0.25vw var(--ink1);
+    width:80vw;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:var(--glass3);
+}
+
+#register-header {
+    margin-top:4vw;   
+    font-weight:700;
+    line-height:6vh;
+    text-align:center;
+}
+
+#register-intro {
+    padding: 2vw;
+    text-align:center;
+}
+
+
+/*-------Register Membership table-------*/
+
+.membership-table {
+    -webkit-margin-before:2vw;
+            margin-block-start:2vw;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);            
+    background-color:var(--glass2);
+    padding: 2vw;
+}
+   
+
+@media screen and (max-width: 600px) {
+  .membership-table {
+    display: none;
+  }
+}
+
+#register-tiers {
+    font-weight:800;
+    margin-top:4vh;
+
+}
+
+/*------------------------------------------------
+DEFECT;
+ISSUE: HTML not applying font styling as mapped to the class names (per color, font and sizings set out in Responsive Fonts section above
+FIXED: No
+WORKAROUND: Yes - added manual mappings below; 
+ ---------------------------------------------------*/
+
+#register-membership-content h5,
+#register-membership-content p {
+font-family:var(--LEDfont);
+color:var(--LED1);
+}
+
+#register-membership-content p {
+font-size: var(--LEDstnd);
+}
+
+#register-membership-content h5 {
+ font-size: var(--LEDh2);   
+}
+
+.modal-content {
+    text-align:left;
+    background-color:black;
+}
+
+.modal-header {
+    text-align:center;
+    text-shadow:0px 0px 1px rgb(245, 145, 87);
+}
+
+.modal-header .btn-close {
+    background-color: rgba(255,129,10,0.6);
+    border-left:solid 2px rgb(245, 145, 87);
+    border-top:solid 2px rgb(245, 145, 87);
+}
+
+.form-radio-membership, .form-radio-trip {
+    border-style:inset;
+    -ms-flex-line-pack:left;
+        align-content:left;
+    padding:1vh;
+
+}
+.text-input {
+    color:RGBA(255,129,10,0.8);
+    text-shadow:0px 0px 1px rgb(245, 145, 87);
+}
+
+.text-input:hover {
+    border-color: rgba(255,129,10,1); 
+    border-width:0.5vh;
+}
+
+.form-help {
+    text-shadow:0px 0px 1px rgb(245, 145, 87);
+    text-align:center;
+    
+}
+
+/*---Form Buttons---*/
+
+/*--Acknowledgement - button gradient, shadow & hover effects 
+sourced from Mozilla (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)---*/
+
+.btn-register {
+    margin-top:3vh;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    background-image: 
+        -webkit-gradient(linear,
+                        right bottom, left top,
+                        from(rgba(0, 0, 0, .2)),
+                        color-stop(30%, rgba(0, 0, 0, .2)),
+                        to(rgba(0, 0, 0, 0)));
+    background-image: 
+        -o-linear-gradient(bottom right,
+                        rgba(0, 0, 0, .2),
+                        rgba(0, 0, 0, .2) 30%,
+                        rgba(0, 0, 0, 0));
+    background-image: 
+        linear-gradient(to top left,
+                        rgba(0, 0, 0, .2),
+                        rgba(0, 0, 0, .2) 30%,
+                        rgba(0, 0, 0, 0));
+    
+    -webkit-box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+    
+            box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.btn-register:hover {
+    background-color: rgb(245, 145, 87);
+}
+
+.btn-register:active {
+    -webkit-box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+            box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+#btn-open-form {
+    position:center; 
+    background-color: rgba(255,129,10,1);
+    color:black;
+}
+
+#btn-submit-form {
+    background-color: rgba(255,129,10,1);
+    color:black;
+}
+
+#btn-canx-form {
+    color:rgba(99, 76, 49, 1);
+    background-color:rgba(178, 142, 98, 1);
+}
+
+
+
+@-webkit-keyframes light {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    background-color: orange;
+    opacity:0;
+    border-radius: 100%;
+  }
+
+  100% {
+    -webkit-transform: scale(15);
+            transform: scale(15);
+    opacity:1;
+    background-color: white;
+  }
+}
+
+
+
+@keyframes light {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    background-color: orange;
+    opacity:0;
+    border-radius: 100%;
+  }
+
+  100% {
+    -webkit-transform: scale(15);
+            transform: scale(15);
+    opacity:1;
+    background-color: white;
+  }
+}
+
+
+/*------------------------------------------------
+DEFECT;
+ISSUE: Main tab panels by default extended to the height of the largest content even when those fields have not been selected - this created large empty spaces and often caused unnecessary page scrolling (depending on display / browser size.   
+FIXED: No - future fix required (attempted workarounds not sucessful)
+ ---------------------------------------------------*/
+
+
+
+/*--------------------------------------------
+Testing purposes only below this line
+--------------------------------------------*/
