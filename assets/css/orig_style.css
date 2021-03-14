@@ -103,25 +103,17 @@ html, body {
 }
 
 body {
-    display:-webkit-box;
-    display:-ms-flexbox;
     display:flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
 }
 
 #page-content {
-    -webkit-box-flex:1;
-        -ms-flex:1 0 auto;
-            flex:1 0 auto;
+    flex:1 0 auto;
     min-width:0;
 }
 
 .footer {
-    -ms-flex-negative:0;
-        flex-shrink:0;
+    flex-shrink:0;
 }
 
 
@@ -171,8 +163,7 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 .icon-planet {
     color:var(--LED1);
-    -webkit-filter: drop-shadow(5px 5px 2px var(--ink0));
-            filter: drop-shadow(5px 5px 2px var(--ink0)); /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
+    filter: drop-shadow(5px 5px 2px var(--ink0)); /*---intentional increase to planet icon shadow (compared to other text shadowing) to enhance visual effect-----*/
     }
 
 
@@ -182,8 +173,6 @@ to be reviewed prior to launch and remove any redundant ----*/
 /*-------------------------Navigation Bar-----------------------------------*/
 
 .navbar {
-    background-image: -webkit-gradient(linear, right top, left bottom, from(var(--ink0)),to(var(--ink4)));
-    background-image: -o-linear-gradient(top right, var(--ink0),var(--ink4));
     background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));
     border-bottom: 8px solid var(--glass1);
     width:100vw;
@@ -206,8 +195,6 @@ to be reviewed prior to launch and remove any redundant ----*/
    
 
 #nav-drop-menu-small {
-    background-image: -webkit-gradient(linear, right top, left bottom, from(var(--ink0)),to(var(--ink4)));
-    background-image: -o-linear-gradient(top right, var(--ink0),var(--ink4));
     background-image: linear-gradient(to bottom left, var(--ink0),var(--ink4));    
     border:8px solid var(--ink1); 
     text-align: center;
@@ -253,8 +240,6 @@ to be reviewed prior to launch and remove any redundant ----*/
 .nav-panel-small:focus .dropdown-item,
 .nav-panel-small:active .dropdown-item{
     text-decoration: none;
-    background-image: -webkit-gradient(linear, right top, left bottom, from(var(--ink1)),to(var(--ink5)));
-    background-image: -o-linear-gradient(top right, var(--ink1),var(--ink5));
     background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
 } 
 
@@ -263,8 +248,6 @@ to be reviewed prior to launch and remove any redundant ----*/
 .nav-panel-small:hover h3,
 .nav-panel-small:focus h3,
 .nav-panel-small:active h3{
-    background-image: -webkit-gradient(linear, right top, left bottom, from(var(--ink1)),to(var(--ink5)));
-    background-image: -o-linear-gradient(top right, var(--ink1),var(--ink5));
     background-image: linear-gradient(to bottom left, var(--ink1),var(--ink5));
     color:var(--ink0);
 } 
@@ -278,8 +261,6 @@ to be reviewed prior to launch and remove any redundant ----*/
 /*-------------------------Footer-----------------*/
 
 .footer-main {
-    background-image: -webkit-gradient(linear, left top, right bottom, from(var(--ink0)),to(var(--ink4)));
-    background-image: -o-linear-gradient(top left, var(--ink0),var(--ink4));
     background-image: linear-gradient(to bottom right, var(--ink0),var(--ink4));
     display:inline-block;
     text-align:center;
@@ -323,16 +304,11 @@ to be reviewed prior to launch and remove any redundant ----*/
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    -webkit-animation-name:imgfadein;
-            animation-name:imgfadein;               /*----detail of animation further below---*/
-    -webkit-animation-delay:1.5s;
-            animation-delay:1.5s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    -webkit-animation-duration:10s;
-            animation-duration:10s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+    animation-name:imgfadein;               /*----detail of animation further below---*/
+    animation-delay:1.5s;
+    animation-fill-mode: both;
+    animation-duration:10s;
+    animation-timing-function: linear;
     border-bottom: 5px solid var(--glass1);
 }
 
@@ -384,16 +360,11 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     top:3vw;
     right:2vw;
     max-width:50vw;
-    -webkit-animation-name:txtfadein;
-            animation-name:txtfadein;
-    -webkit-animation-delay:2s;
-            animation-delay:2s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    -webkit-animation-duration:6s;
-            animation-duration:6s;
-    -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;  
+    animation-name:txtfadein;
+    animation-delay:2s;
+    animation-fill-mode: both;
+    animation-duration:6s;
+    animation-timing-function: ease;  
     } 
 
     
@@ -402,43 +373,20 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
                 Desired effect - break of new dawn
                 Acknowledgement: CCStricks.com animation article and demos-----*/
 
-@-webkit-keyframes imgfadein {
-    0%      {-webkit-filter: brightness(0) blur(10px);filter: brightness(0) blur(10px);}
-    10%     {-webkit-filter: brightness(0.15) blur(5px);filter: brightness(0.15) blur(5px);}
-    20%     {-webkit-filter: brightness(0.3) blur(2px);filter: brightness(0.3) blur(2px);}
-    30%     {-webkit-filter: brightness(0.45) blur(1px);filter: brightness(0.45) blur(1px);}
-    40%     {-webkit-filter: brightness(0.6) blur(0px);filter: brightness(0.6) blur(0px);}
-    50%     {-webkit-filter: brightness(0.75) blur(0px);filter: brightness(0.75) blur(0px);}
-    60%     {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
-    86%     {-webkit-filter: brightness(1.25) blur(0);filter: brightness(1.25) blur(0);}
-    88%     {-webkit-filter: brightness(1.5) blur(0);filter: brightness(1.5) blur(0);}
-    89%     {-webkit-filter: brightness(1.4) blur(0);filter: brightness(1.4) blur(0);}
-    90%     {-webkit-filter: brightness(1.4) blur(0);filter: brightness(1.4) blur(0);}
-    95%     {-webkit-filter: brightness(1.2) blur(0);filter: brightness(1.2) blur(0);}
-    100%    {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
-    }
-
 @keyframes imgfadein {
-    0%      {-webkit-filter: brightness(0) blur(10px);filter: brightness(0) blur(10px);}
-    10%     {-webkit-filter: brightness(0.15) blur(5px);filter: brightness(0.15) blur(5px);}
-    20%     {-webkit-filter: brightness(0.3) blur(2px);filter: brightness(0.3) blur(2px);}
-    30%     {-webkit-filter: brightness(0.45) blur(1px);filter: brightness(0.45) blur(1px);}
-    40%     {-webkit-filter: brightness(0.6) blur(0px);filter: brightness(0.6) blur(0px);}
-    50%     {-webkit-filter: brightness(0.75) blur(0px);filter: brightness(0.75) blur(0px);}
-    60%     {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
-    86%     {-webkit-filter: brightness(1.25) blur(0);filter: brightness(1.25) blur(0);}
-    88%     {-webkit-filter: brightness(1.5) blur(0);filter: brightness(1.5) blur(0);}
-    89%     {-webkit-filter: brightness(1.4) blur(0);filter: brightness(1.4) blur(0);}
-    90%     {-webkit-filter: brightness(1.4) blur(0);filter: brightness(1.4) blur(0);}
-    95%     {-webkit-filter: brightness(1.2) blur(0);filter: brightness(1.2) blur(0);}
-    100%    {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
-    }   
-
-
-@-webkit-keyframes txtfadein {
-    0% {visibility: hidden; opacity: 0%;}
-    50% {visibility: hidden; opacity:1%;}
-    100% {visibility: visible; opacity:100%;}
+    0%      {filter: brightness(0) blur(10px);}
+    10%     {filter: brightness(0.15) blur(5px);}
+    20%     {filter: brightness(0.3) blur(2px);}
+    30%     {filter: brightness(0.45) blur(1px);}
+    40%     {filter: brightness(0.6) blur(0px);}
+    50%     {filter: brightness(0.75) blur(0px);}
+    60%     {filter: brightness(1.0) blur(0);}
+    86%     {filter: brightness(1.25) blur(0);}
+    88%     {filter: brightness(1.5) blur(0);}
+    89%     {filter: brightness(1.4) blur(0);}
+    90%     {filter: brightness(1.4) blur(0);}
+    95%     {filter: brightness(1.2) blur(0);}
+    100%    {filter: brightness(1.0) blur(0);}
     }   
 
 
@@ -544,23 +492,11 @@ OUTCOME: Some refinements made to positioning / sizes / paddings, etc for a 'bes
 }
 
 .p-alarm {
-    -webkit-animation-name: alarm;
-            animation-name: alarm;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-delay:10s;
-            animation-delay:10s;
-}
-
-@-webkit-keyframes alarm {
-  0% {color: var(--LED1);text-shadow:none;}
-  49% {color: var(--LED1);text-shadow:none;}
-  50% {color: red;text-shadow:2px 2px 2px var(--ink0);}
-  100% {color: red;text-shadow:2px 2px 2px var(--ink0);}
+    animation-name: alarm;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay:10s;
 }
 
 @keyframes alarm {
@@ -648,14 +584,10 @@ height:auto;
     display: inline-block;
     white-space: nowrap;
     padding-right: 100%;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-name: animate;
-            animation-name: animate;
-    -webkit-animation-duration: 120s;
-            animation-duration: 120s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: animate;
+    animation-duration: 120s;
     min-width:0;
     }
 
@@ -677,15 +609,9 @@ height:auto;
     }   
 
 
-@-webkit-keyframes animate {
-     0%  {-webkit-transform: translateX(0%);transform: translateX(0%);}
-    100%  {-webkit-transform: translateX(-102%);transform: translateX(-102%);}
-    }   
-
-
 @keyframes animate {
-     0%  {-webkit-transform: translateX(0%);transform: translateX(0%);}
-    100%  {-webkit-transform: translateX(-102%);transform: translateX(-102%);}
+     0%  {transform: translateX(0%);}
+    100%  {transform: translateX(-102%);}
     }
 
 /*--Media queries-Ticker-further reduce ticker to fill space by hidden HUD graphic--*/ 
@@ -748,8 +674,7 @@ OUTCOME: workaround adds a temporary message to the tab pane indicating input is
 
 #home-menu-panel.nav-item {
     width:80%;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     }
 
 .nav-item a {
@@ -772,8 +697,7 @@ OUTCOME: workaround adds a temporary message to the tab pane indicating input is
 .nav-item:active a {
     background-color: var(--LED1);
     color: var(--ink1);
-    -webkit-box-shadow: 20px 20px 100px 20px var(--glass1);
-            box-shadow: 20px 20px 100px 20px var(--glass1);
+    box-shadow: 20px 20px 100px 20px var(--glass1);
 }
 
 /*--Challenge - could not remove the default Bootstrap styling once a button has been activated.
@@ -822,18 +746,9 @@ OUTCOME: workaround adds a temporary message to the tab pane indicating input is
  text-align: center;
  opacity: 50%;
  visibility:hidden;
- -webkit-animation-name: UItempmsg;
-         animation-name: UItempmsg;
- -webkit-animation-delay: 5s;
-         animation-delay: 5s;
- -webkit-animation-duration:20s;
-         animation-duration:20s;
-}
-
-@-webkit-keyframes UItempmsg {
-    0% {visibility:visible;}
-    99% {visibility:visible;}
-    100% {visibility:hidden;}
+ animation-name: UItempmsg;
+ animation-delay: 5s;
+ animation-duration:20s;
 }
 
 @keyframes UItempmsg {
@@ -945,9 +860,7 @@ Acknowledgment: Fix sourced from https://avexdesigns.com/blog/responsive-youtube
 
 .table-countdown-wrapper {
     background-color: var(--glass3);
-    -webkit-transform:translate (-50%, -50%);
-        -ms-transform:translate (-50%, -50%);
-            transform:translate (-50%, -50%);
+    transform:translate (-50%, -50%);
     font-family:var(--digitalfont);
     height:5vh;
     line-height:5vh;
@@ -1000,13 +913,7 @@ Acknowledgment: Fix sourced from https://avexdesigns.com/blog/responsive-youtube
 /*--countdown animation works by steping through the numbers defined in the 'content' above with the step count and %'s aligned to the correct timing (i.e 1 second / min ('digit') & 10 seconds/minutes ('tens'). Numbers effectively scroll on screen but 'overflow:hidden' only allows 1 number (per field) to be shown  --*/
 
 .seconds.digit:after {
-    -webkit-animation: animate-secs-digit 10s steps(10,end) infinite;
-            animation: animate-secs-digit 10s steps(10,end) infinite;
-    }
-
-@-webkit-keyframes animate-secs-digit {
-    0% {top:0;}
-    100% {top:-50vh} /*--- ** Adjusted from -50vh as slight mis-alignment for last few seconds, to be checked in other responsive screen sizes if needed ----*/
+    animation: animate-secs-digit 10s steps(10,end) infinite;
     }
 
 @keyframes animate-secs-digit {
@@ -1015,13 +922,7 @@ Acknowledgment: Fix sourced from https://avexdesigns.com/blog/responsive-youtube
     }
 
 .seconds.tens:after {
-    -webkit-animation: animate-secs-tens 60s steps(6) infinite;
-            animation: animate-secs-tens 60s steps(6) infinite;
-    }
-
-@-webkit-keyframes animate-secs-tens {
-    0% {top:0;}
-    100% {top:-30vh}
+    animation: animate-secs-tens 60s steps(6) infinite;
     }
 
 @keyframes animate-secs-tens {
@@ -1032,13 +933,7 @@ Acknowledgment: Fix sourced from https://avexdesigns.com/blog/responsive-youtube
 
 
 .mins.digit:after {
-    -webkit-animation: animate-mins-digit 600s steps(10) infinite;
-            animation: animate-mins-digit 600s steps(10) infinite;
-    }
-
-@-webkit-keyframes animate-mins-digit {
-    0% {top:0;}
-    100% {top:-50vh}
+    animation: animate-mins-digit 600s steps(10) infinite;
     }
 
 @keyframes animate-mins-digit {
@@ -1047,13 +942,7 @@ Acknowledgment: Fix sourced from https://avexdesigns.com/blog/responsive-youtube
     }
 
 .mins.tens:after {
-    -webkit-animation: animate-mins-tens 3600s steps(6) infinite;
-            animation: animate-mins-tens 3600s steps(6) infinite;
-    }
-
-@-webkit-keyframes animate-mins-tens {
-    0% {top:0;}
-    100% {top:-30vh}
+    animation: animate-mins-tens 3600s steps(6) infinite;
     }
 
 @keyframes animate-mins-tens {
@@ -1142,22 +1031,10 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 #flights-hero-title-1 {
     position:absolute;
     top:5%;
-    -webkit-animation-name:flights-txt1;
-            animation-name:flights-txt1;
-    -webkit-animation-duration:12s;
-            animation-duration:12s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out; 
-    -webkit-animation-fill-mode: forwards; 
-            animation-fill-mode: forwards;  
-    }
-
-    @-webkit-keyframes flights-txt1 {
-    0%   {opacity:0%;}
-    10%  {opacity:100%;}
-    40%  {opacity:100%;}
-    50%  {opacity:0%;}
-    100% {visibility:hidden; opacity:0%;}
+    animation-name:flights-txt1;
+    animation-duration:12s;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards;  
     }
 
     @keyframes flights-txt1 {
@@ -1171,22 +1048,10 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 #flights-hero-title-1b {
     position:absolute;
     top:22%;
-    -webkit-animation-name:flights-txt1b;
-            animation-name:flights-txt1b;
-    -webkit-animation-duration:12s;
-            animation-duration:12s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out; 
-    -webkit-animation-fill-mode: forwards; 
-            animation-fill-mode: forwards; 
-    }
-
-    @-webkit-keyframes flights-txt1b {
-    0%   {opacity:0%;}
-    40%   {opacity:1%;}
-    50%  {opacity:100%;}
-    90%  {opacity:100%;}
-    100% {visibility:hidden; opacity:0%;}
+    animation-name:flights-txt1b;
+    animation-duration:12s;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards; 
     }
 
     @keyframes flights-txt1b {
@@ -1201,23 +1066,11 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 #flights-hero-title-2 {
     position:absolute;
     top:45%;
-    -webkit-animation-name:flights-txt2;
-            animation-name:flights-txt2;
-    -webkit-animation-duration:12s;
-            animation-duration:12s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;  
+    animation-name:flights-txt2;
+    animation-duration:12s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;  
      
-    }
-
-    @-webkit-keyframes flights-txt2 {
-    0%   {opacity:0%;}
-    10%   {opacity:1%;}
-    20%  {opacity:100%;}
-    90%  {opacity:100%;}
-    100% {visibility:hidden; opacity:0%;}
     }
 
     @keyframes flights-txt2 {
@@ -1231,22 +1084,10 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 #flights-hero-title-2b {
     position:absolute;
     top:62%;
-    -webkit-animation-name:flights-txt2b;
-            animation-name:flights-txt2b;
-    -webkit-animation-duration:12s;
-            animation-duration:12s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out; 
-    -webkit-animation-fill-mode: forwards; 
-            animation-fill-mode: forwards; 
-    }
-
-    @-webkit-keyframes flights-txt2b {
-    0%   {opacity:0%;}
-    60%   {opacity:1%;}
-    70%  {opacity:100%;}
-    90%  {opacity:100%;}
-    100% {visibility:hidden;opacity:0%;}
+    animation-name:flights-txt2b;
+    animation-duration:12s;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards; 
     }
 
     @keyframes flights-txt2b {
@@ -1261,22 +1102,10 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 #flights-hero-title-3 {
     position:absolute;
     top:80%;
-    -webkit-animation-name:flights-txt3;
-            animation-name:flights-txt3;
-    -webkit-animation-duration:12s;
-            animation-duration:12s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out; 
-    -webkit-animation-fill-mode: forwards; 
-            animation-fill-mode: forwards; 
-    }
-
-@-webkit-keyframes flights-txt3 {
-    0%   {opacity:0%;}
-    20%   {opacity:1%;}
-    30%  {opacity:100%;}
-    90%  {opacity:100%;}
-    100% {visibility:hidden;opacity:0%;}
+    animation-name:flights-txt3;
+    animation-duration:12s;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards; 
     }
 
 @keyframes flights-txt3 {
@@ -1294,22 +1123,11 @@ text-shadow:20px 20px 20px 20px #00d9ff;
     padding-left:0;
     right:5%;
     padding-right:3%;
-    -webkit-animation-name:flights-txt3b;
-            animation-name:flights-txt3b;
-    -webkit-animation-duration:12s;
-            animation-duration:12s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out; 
-    -webkit-animation-fill-mode: forwards; 
-            animation-fill-mode: forwards; 
+    animation-name:flights-txt3b;
+    animation-duration:12s;
+    animation-timing-function: ease-in-out; 
+    animation-fill-mode: forwards; 
     }
-
-    @-webkit-keyframes flights-txt3b {
-    0%   {opacity:0%;}
-    75%  {opacity:1%;}
-    80%  {opacity:100%;}
-    100% {opacity:100%;}
-}
 
     @keyframes flights-txt3b {
     0%   {opacity:0%;}
@@ -1324,8 +1142,6 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 #flights-row2-textquote {
     padding:2vh 3vh 2vh 3vh;
     text-align:center;
-    background-image: -webkit-gradient(linear, right top, left bottom, from(var(--paint3)),to(var(--ink0)));
-    background-image: -o-linear-gradient(top right, var(--paint3),var(--ink0));
     background-image: linear-gradient(to bottom left, var(--paint3),var(--ink0));
 
 }
@@ -1388,8 +1204,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 #trips-menu li:focus,
 #trips-menu li:active{
     background-color: var(--LED1);
-    -webkit-box-shadow: 20px 20px 100px 20px var(--glass1);
-            box-shadow: 20px 20px 100px 20px var(--glass1);
+    box-shadow: 20px 20px 100px 20px var(--glass1);
 }
 
 #trips-menu li:hover a,
@@ -1403,8 +1218,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
     color:var(--ink1);
     background-color:#00d9ff; /*--note hex value required as var equiv not taking effect when over-riding Bootstrap default --*/ 
     border-color:var(--glass1);
-    -webkit-box-shadow: 20px 20px 100px 20px var(--glass1);
-            box-shadow: 20px 20px 100px 20px var(--glass1);
+    box-shadow: 20px 20px 100px 20px var(--glass1);
   }
 
 
@@ -1479,8 +1293,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 
 
 #register-intro-wrapper {
-    -webkit-margin-before:2vw;
-            margin-block-start:2vw;  /*Bug fix horizontal margin collapse between parent and child - fix sourced from https://www.smashingmagazine.com/2019/07/margins-in-css/ --------*/
+    margin-block-start:2vw;  /*Bug fix horizontal margin collapse between parent and child - fix sourced from https://www.smashingmagazine.com/2019/07/margins-in-css/ --------*/
     border: solid 0.25vw var(--ink1);
     width:80vw;
     margin-left:auto;
@@ -1504,8 +1317,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 /*-------Register Membership table-------*/
 
 .membership-table {
-    -webkit-margin-before:2vw;
-            margin-block-start:2vw;
+    margin-block-start:2vw;
     width:80%;
     margin-left:auto;
     margin-right:auto;
@@ -1569,8 +1381,7 @@ font-size: var(--LEDstnd);
 
 .form-radio-membership, .form-radio-trip {
     border-style:inset;
-    -ms-flex-line-pack:left;
-        align-content:left;
+    align-content:left;
     padding:1vh;
 
 }
@@ -1601,26 +1412,12 @@ sourced from Mozilla (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
     margin-left:auto;
     margin-right:auto;
     background-image: 
-        -webkit-gradient(linear,
-                        right bottom, left top,
-                        from(rgba(0, 0, 0, .2)),
-                        color-stop(30%, rgba(0, 0, 0, .2)),
-                        to(rgba(0, 0, 0, 0)));
-    background-image: 
-        -o-linear-gradient(bottom right,
-                        rgba(0, 0, 0, .2),
-                        rgba(0, 0, 0, .2) 30%,
-                        rgba(0, 0, 0, 0));
-    background-image: 
         linear-gradient(to top left,
                         rgba(0, 0, 0, .2),
                         rgba(0, 0, 0, .2) 30%,
                         rgba(0, 0, 0, 0));
     
-    -webkit-box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px rgba(0, 0, 0, .6);
-    
-            box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
                 inset -2px -2px 3px rgba(0, 0, 0, .6);
 }
 
@@ -1629,9 +1426,7 @@ sourced from Mozilla (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 }
 
 .btn-register:active {
-    -webkit-box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                inset 2px 2px 3px rgba(0, 0, 0, .6);
-            box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
 
@@ -1653,37 +1448,16 @@ sourced from Mozilla (https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 
 
 
-@-webkit-keyframes light {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    background-color: orange;
-    opacity:0;
-    border-radius: 100%;
-  }
-
-  100% {
-    -webkit-transform: scale(15);
-            transform: scale(15);
-    opacity:1;
-    background-color: white;
-  }
-}
-
-
-
 @keyframes light {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
     background-color: orange;
     opacity:0;
     border-radius: 100%;
   }
 
   100% {
-    -webkit-transform: scale(15);
-            transform: scale(15);
+    transform: scale(15);
     opacity:1;
     background-color: white;
   }
@@ -1701,3 +1475,4 @@ FIXED: No - future fix required (attempted workarounds not sucessful)
 /*--------------------------------------------
 Testing purposes only below this line
 --------------------------------------------*/
+
