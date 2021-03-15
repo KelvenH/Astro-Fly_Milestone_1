@@ -84,17 +84,17 @@
     <!---close container A-->
     <div class="container-fluid align-items-center" id="home-container-B">
         <div class="row no-gutters HUD">
-            <div class="col HUD-left">
+            <div class="col-md-2 HUD-left">
                 <img id="dish1" src="./assets/images/final-images/FINAL1Dish.svg">
                 <img id="satellite1" src="./assets/images/final-images/FINAL1satellitesvg.svg">
                 <p class="LEDsmall holo-lft-txt"> Comms:
                     Connection.......Established<br>
-                    Signal Strength.........High<br>
-                    Encryption.....Quantum Coded<br>
-                    <span class="p-alarm">Live Feed......Hacked //ALARM//</span>
+                    Signal Strength.................................High<br>
+                    Encryption..............Quantum Coded<br>
+                    <span class="p-alarm">Live Feed........Hacked //ALARM//</span>
                 </p>
             </div>
-            <div class="col-7 HUD-center">
+            <div class="col-md-7 col-sm-12 HUD-center">
                 <img id="HUD-img" src="./assets/images/final-images/HUD1Asset-3.svg">
                 <div class="HUD-text">
                     <h3 class="logo">Welcome to<br>Astr<span class="iconify icon-planet align-self-center"
@@ -104,13 +104,13 @@
                 </div>
             </div>
             <!---close HUD center-->
-            <div class="col HUD-right">
+            <div class="col-md-2 HUD-right">
                 <img id="globe-holo-img" src="./assets/images/final-images/globe-holo-final-reduced.svg">
                 <p class="LEDsmall holo-rgt-txt">
-                    Ground Temp (Earth): 24.5<sup>o</sup><br>
-                    Lunar Base 5.......: -135 <sup>o</sup><br>
-                    Windspeed..........: 13.4km/ph<br>
-                    Launch Conditions..: CLEARED<br>
+                    Ground Temp (Earth):........... 24.5<sup>o</sup><br>
+                    Lunar Base 5:........................... -135 <sup>o</sup><br>
+                    Windspeed......................... 13.4km/ph<br>
+                    Launch Conditions...... CLEARED<br>
                 </p>
             </div>
         </div>
@@ -184,33 +184,31 @@
         <div class="row no-gutters justify-content-around" id="home-main-control-panel">
             <div class="col-md-4 col-sm-12" id="home-main-lower-left-pane">
                 <div id="Info-Screen-Selector">
-                    <h5>Please select one of the following for more information</h5>
+                    <h5 id="home-select-txt">Select for more information</h5>
                 </div>
-                <br>
                 <ul class="nav nav-pills flex-column nav-justified" id="home-menu-panel" role="tablist">
-                    <li class="nav-item active">
-                        <a class="nav-link" data-toggle="pill" href="#heading-mission">OUR MISSION</a>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="mission-tab" data-toggle="pill" href="#heading-mission" role="tab" aria-controls="our mission" aria-selected="true">OUR MISSION</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#heading-trips">ADVENTURES</a>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="trips-tab" data-toggle="pill" href="#heading-trips" role="tab" aria-controls="adventures" aria-selected="false">ADVENTURES</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#heading-media">MEDIA FEEDS</a>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="media-tab" data-toggle="pill" href="#heading-media" role="tab" aria-controls="media" aria-selected="false">MEDIA FEEDS</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#heading-countdown">COUNTDOWN TO LAUNCH</a>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="countdown-tab" data-toggle="pill" href="#heading-countdown" role="tab" aria-controls="countdown to launch" aria-selected="false">COUNTDOWN TO LAUNCH</a>
                     </li>
                 </ul>
             </div>
             <!-- close lower left panel - info selector -->
             <div class="col-md-7 col-sm-12 tab-content" id="home-main-lower-right-pane">
-                <div class="LEDh4" id="home-main-lower-right-pane-tempmsg">
-                    ... Awaiting user selection ...
-                </div>
-                <div id="heading-mission" class="container tab-pane fade active home-menu-text">
+                
+
+                <div id="heading-mission" class="tab-pane active fade show home-menu-text" role="tabpanel" aria-labelledby="mission-tab">
                     <br>
-                    <h2 class="LEDh2">The Universe is Yours!</h2>
-                    <p class="LEDstnd">Astro:Fly believes space exploration should be a possibilty for all - no longer
+                    <h2 class="LEDh2 active">The Universe is Yours!</h2>
+                    <p class="LEDstnd active">Astro:Fly believes space exploration should be a possibilty for all - no longer
                         limited to national space agencies. <br>
                         Leveraging from the technological advancements across the
                         Astro:Corp Group, we are in a unique position of being able to offer safe, reliable and
@@ -220,7 +218,8 @@
                         <br>Welcome - to a new dawn in space adventure!
                     </p>
                 </div>
-                <div id="heading-trips" class="container tab-pane fade home-menu-text">
+
+                <div id="heading-trips" class="tab-pane fade home-menu-text" role="tabpanel" aria-labelledby="trips-tab">
                     <br>
                     <h2 class="LEDh2">Flights and Adventures</h2>
                     <p class="LEDstnd">Astro:Fly have been operating Orbital flights of our home planet Earth and the
@@ -235,7 +234,8 @@
                         information.
                     </p>
                 </div>
-                <div id="heading-media" class="container tab-pane fade home-menu-text">
+
+                <div id="heading-media" class="tab-pane fade home-menu-text" role="tabpanel" aria-labelledby="media-tab">
                     <br>
                     <h2 class="LEDh2">Live Feed</h2>
                     <p class="LEDstnd"><span class="p-alarm">Connection : interrupted - unauthorised streaming take over
@@ -251,7 +251,8 @@
                         <p class="#yt-portrait-alert">Media playable in landscape mode only</p>
                     </div>
                 </div>
-                <div id="heading-countdown" class="container tab-pane fade home-menu-text">
+
+                <div id="heading-countdown" class="tab-pane fade home-menu-text" role="tabpanel" aria-labelledby="countdown-tab">
                     <br>
                     <h2 class="LEDh2">Countdown to Next Launch</h2>
                     <table id="countdown-info">
@@ -295,6 +296,7 @@
                         </tbody>
                     </table>
                 </div>
+
                 <!---close countdown-pane-->
                 <div id="home-main-lower-right-pane-decal">
                     <p class="LEDsmall mini-logo">ASTR<span class="iconify icon-planet align-self-center"

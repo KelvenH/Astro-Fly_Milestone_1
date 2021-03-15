@@ -322,6 +322,8 @@ to be reviewed prior to launch and remove any redundant ----*/
     position: relative;
     width:100%;
     height:auto;
+    max-height:550px;
+    min-height:150px;
     -webkit-animation-name:imgfadein;
             animation-name:imgfadein;               /*----detail of animation further below---*/
     -webkit-animation-delay:1.5s;
@@ -443,8 +445,7 @@ to be reviewed prior to launch and remove any redundant ----*/
 
     
     .HUD-text.logo, .HUD-text .LEDh4 {
-    margin-left:0;
-    margin-right:0;
+    text-align:center;
     font-size:14px  
     }
 
@@ -518,7 +519,7 @@ OUTCOME: Issue caused by the 'flashing' alarm text haing negative impact on anot
 }
 
 .HUD-left {
-margin-left:2vw;
+margin-left:1vw;
 margin-right:0vw;
 padding-top:1vw;
 position:relative;
@@ -528,23 +529,25 @@ position:relative;
 #satellite1 {
 top:1vw;
 right:0;
-width:65%;
+width:15vw;
 height:auto;
 position:absolute;
 }
 
 #dish1 {
 top:5vw;
-left:2vw;
+display:flex;
+align-self:flex-start;
 position:absolute;
-width:30%;
-height:auto;
+width:15vw;
+max-height:40%;
 }
 
 
 .holo-lft-txt {
-text-align:left;
+text-align:right;
 position:absolute;
+width:100%;
 bottom:0;
     }
 
@@ -560,8 +563,10 @@ height:auto;
 }
     
 .holo-rgt-txt {
+    height:100%;
     text-align:left;
     padding-top:1vw;
+    vertical-align:bottom;
 }
 
                 /*------------Home Page - Intro / Ticker---------*/
@@ -632,8 +637,10 @@ height:auto;
 /*--Media queries-Ticker-further reduce ticker to fill space by hidden HUD graphic--*/ 
 @media (max-width:767px) {
 
-    .intro-ticker {
-    line-height:26px;
+.intro-news-item  {
+    line-height:60%;
+    font-size:80%;
+   
     }
     }
   
@@ -685,6 +692,8 @@ OUTCOME: workaround adds a temporary message to the tab pane indicating input is
 
 #Info-Screen-Selector h5 {
     font-family:var(--LEDfont);
+    font-weight:bold;
+    padding-bottom:1vw;
     }
 
 #home-menu-panel.nav-item {
@@ -752,10 +761,10 @@ Resolved - Chrome developer tools showed path to nav.scss file which is now adde
 
 /*----DEFECT------------------------------
 Issue: a default tab selection is not showing in the tab pane despite class 'active' against a nav-item and it's nav pane. No HTML / CSS solution found on-line (some refered to JS which not yet familiar with). 
-FIXED: No – 
-OUTCOME: workaround adds a temporary message to the tab pane indicating input is required. Without JS i was unable to make this invisible upon selection, so time animation added to remove the message after 20secs, opacity added to message so as this does not 'bleed' through if content selected before timer completes. -----------------*/
+FIXED: YES  
+OUTCOME: Bootstrap requires additional class name of 'show' where using 'fade'. Temporary workaround (below) removed -----------------*/
 
-
+/*---
 #home-main-lower-right-pane-tempmsg {
  position: absolute;
  top: 50%;
@@ -782,13 +791,14 @@ OUTCOME: workaround adds a temporary message to the tab pane indicating input is
     99% {visibility:visible;}
     100% {visibility:hidden;}
 }
+---------*/
+
 
 /*----DEFECT------------------------------------------------------------------------
 Issue: Affects devices < md breakpoint. Column collapse results in tab panel being located below the tab selection pane and out of default view. Although content is visible (subject to the media defect below) poor UX design as not obvious what tab selections have done and need to scroll between sections to change.
 FIXED - No. Looked for a solution that would switch layout to a dropdown menu, but seem to require JS - other option considered was to have 2 versions (with media player but but unable to link two nav selector sections to the same content - would require duplication of c.120 lines of html.
 OUTCOME - Future change required, no workarounds deployed.
 --------------------------------------------------------------------------------------*/
-
 
 
 
