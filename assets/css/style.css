@@ -474,13 +474,9 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 /*----DEFECT------------------------------
 Issue: Alignment and layout of HUD graphics can result in poor outline - relates to aspect ratio as opposed to screen width alone.
-FIXED: No
+FIXED: NO
 OUTCOME: Some refinements made to positioning / sizes / paddings, etc for a 'best fit' - better suited to wider aspect ratios (a 
 -------------------------------------------*/
-
-
-
-
 
 
 .HUD-left {
@@ -488,31 +484,37 @@ OUTCOME: Some refinements made to positioning / sizes / paddings, etc for a 'bes
     padding-top:1vw;
 }
 
+
+/*--DEFECT--------------
+ISSUE: scrolling text (news ticker) stuttered - not smooth scroll.
+FIXED: Partly - workaround to reduce impact
+OUTCOME: Issue caused by the 'flashing' alarm text haing negative impact on another animation string. Changed alarm animation to switch in a shorter timeframe with only a single color change - no longer repeating flash.
+----------------------------------*/
+
+
 .p-alarm {
     -webkit-animation-name: alarm;
             animation-name: alarm;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
-    -webkit-animation-delay:10s;
-            animation-delay:10s;
+    -webkit-animation-duration: 0.1s;   /*--- Bug fix - timing shortened---*/
+            animation-duration: 0.1s;
+    -webkit-animation-iteration-count: 1; /*--- Bug fix - changed from infinite---*/
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay:14s;
+            animation-delay:14s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes alarm {
-  0% {color: var(--LED1);text-shadow:none;}
-  49% {color: var(--LED1);text-shadow:none;}
-  50% {color: red;text-shadow:10px 10px 10px var(--ink0);}
-  100% {color: red;text-shadow:10px 10px 10px var(--ink0);}
+  0% {color: var(--LED1);}
+  100% {color: red;font-weight:bold;}}
 }
 
 @keyframes alarm {
-  0% {color: var(--LED1);text-shadow:none;}
-  49% {color: var(--LED1);text-shadow:none;}
-  50% {color: red;text-shadow:10px 10px 10px var(--ink0);}
-  100% {color: red;text-shadow:10px 10px 10px var(--ink0);}
+  0% {color: var(--LED1);}
+  100% {color: red;font-weight:bold;}
 }
 
 .HUD-left {
