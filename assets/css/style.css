@@ -304,25 +304,24 @@ to be reviewed prior to launch and remove any redundant ----*/
 
 #home-container-A {
     width:100vw;
+    background-color: var(--ink0);
     
 }
 
 
                 /*------------Home Page - Container A Welcome-----------------*/
 
-.welcome {
+
+
+#welcome-hero-wrap {
     position:relative;
-    }
+    width:100vw;
+}
 
-
-
-.welcome-hero-img {
-    height: 35vw;
-    max-height:300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#welcome-hero-img {
     position: relative;
+    width:100%;
+    height:auto;
     -webkit-animation-name:imgfadein;
             animation-name:imgfadein;               /*----detail of animation further below---*/
     -webkit-animation-delay:1.5s;
@@ -336,44 +335,6 @@ to be reviewed prior to launch and remove any redundant ----*/
     border-bottom: 5px solid var(--glass1);
 }
 
-/*-----CHALLENGE ENCOUNTERED--------------
-Original image re-sized to enable media queries to determine most appropriate size (all have same aspect ratio). 
-Issue 1 - failed as unable to embed media query in html mark-up (<picture> and <object-fit> not returning rquired behaviour). 
-Outcome - Linger term action: follow-up post milestone project; short term - alternative sought.
-
-Issue 2 - retained media queries in CSS to be displayed as background image, but difficulties getting the image to display. 
-Cause -  div treated as 'empty' by browsers - requires a fixed height (100% not viable as 100% of nothing!)
-Outcome - used VW as variable (with overall max)- feel to be acceptable (responsive sizing / no 'white space') but recognise not desired approach.
---------------------------------------*/
-
-/*----image source XXXXXXXX -----*/
-@media (max-width:540px) {
-.welcome-hero-img {
-    background-image:url('../images/final-images/planet_earth-sm.jpeg'); /*---(s 540 x 193px)--*/
-    min-height:110px;
-}
-}    
-
-@media (min-width:541px) and (max-width:768px) {
-.welcome-hero-img {
-    background-image:url('../images/final-images/planet_earth-md.jpeg'); /*---(m 768 x 275px)--*/
-    }
-}   
-
-@media (min-width:769px) and (max-width:992px){
-.welcome-hero-img {
-    background-image:url('../images/final-images/planet_earth-lg.jpeg'); /*---(lg 992 x 355px)--*/
-    }
-}   
-
-/*--image will appear to zoom in above c.1400px, position changed to 20%off-top to adjust focus--*/ 
-@media (min-width:993px) {
-.welcome-hero-img {
-    background-image:url('../images/final-images/planet_earth-xl.jpeg'); /*---xl 1140 x 408px--*/
-    background-position: 0% 20%;
-}
-}   
-   
 
 
 .welcome-strapline {
@@ -406,9 +367,6 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     0%      {-webkit-filter: brightness(0) blur(10px);filter: brightness(0) blur(10px);}
     10%     {-webkit-filter: brightness(0.15) blur(5px);filter: brightness(0.15) blur(5px);}
     20%     {-webkit-filter: brightness(0.3) blur(2px);filter: brightness(0.3) blur(2px);}
-    30%     {-webkit-filter: brightness(0.45) blur(1px);filter: brightness(0.45) blur(1px);}
-    40%     {-webkit-filter: brightness(0.6) blur(0px);filter: brightness(0.6) blur(0px);}
-    50%     {-webkit-filter: brightness(0.75) blur(0px);filter: brightness(0.75) blur(0px);}
     60%     {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
     86%     {-webkit-filter: brightness(1.25) blur(0);filter: brightness(1.25) blur(0);}
     88%     {-webkit-filter: brightness(1.5) blur(0);filter: brightness(1.5) blur(0);}
@@ -422,9 +380,6 @@ Outcome - used VW as variable (with overall max)- feel to be acceptable (respons
     0%      {-webkit-filter: brightness(0) blur(10px);filter: brightness(0) blur(10px);}
     10%     {-webkit-filter: brightness(0.15) blur(5px);filter: brightness(0.15) blur(5px);}
     20%     {-webkit-filter: brightness(0.3) blur(2px);filter: brightness(0.3) blur(2px);}
-    30%     {-webkit-filter: brightness(0.45) blur(1px);filter: brightness(0.45) blur(1px);}
-    40%     {-webkit-filter: brightness(0.6) blur(0px);filter: brightness(0.6) blur(0px);}
-    50%     {-webkit-filter: brightness(0.75) blur(0px);filter: brightness(0.75) blur(0px);}
     60%     {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
     86%     {-webkit-filter: brightness(1.25) blur(0);filter: brightness(1.25) blur(0);}
     88%     {-webkit-filter: brightness(1.5) blur(0);filter: brightness(1.5) blur(0);}
@@ -1113,7 +1068,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 
 #fights-container-A {
     width:100vw;
-    background-color: ;
+    background-color: var(--ink0);
 }
 
 #flights-hero-col {
@@ -1565,6 +1520,10 @@ font-size: var(--LEDstnd);
     background-color: rgba(255,129,10,0.6);
     border-left:solid 2px rgb(245, 145, 87);
     border-top:solid 2px rgb(245, 145, 87);
+}
+
+#register-logo {
+    height:100%;
 }
 
 .form-radio-membership, .form-radio-trip {
