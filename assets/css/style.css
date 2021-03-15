@@ -353,8 +353,8 @@ to be reviewed prior to launch and remove any redundant ----*/
             animation-fill-mode: both;
     -webkit-animation-duration:6s;
             animation-duration:6s;
-    -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;  
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;  
     } 
 
     
@@ -364,29 +364,19 @@ to be reviewed prior to launch and remove any redundant ----*/
                 Acknowledgement: CCStricks.com animation article and demos-----*/
 
 @-webkit-keyframes imgfadein {
-    0%      {-webkit-filter: brightness(0) blur(10px);filter: brightness(0) blur(10px);}
-    10%     {-webkit-filter: brightness(0.15) blur(5px);filter: brightness(0.15) blur(5px);}
-    20%     {-webkit-filter: brightness(0.3) blur(2px);filter: brightness(0.3) blur(2px);}
-    60%     {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
-    86%     {-webkit-filter: brightness(1.25) blur(0);filter: brightness(1.25) blur(0);}
-    88%     {-webkit-filter: brightness(1.5) blur(0);filter: brightness(1.5) blur(0);}
-    89%     {-webkit-filter: brightness(1.4) blur(0);filter: brightness(1.4) blur(0);}
-    90%     {-webkit-filter: brightness(1.4) blur(0);filter: brightness(1.4) blur(0);}
-    95%     {-webkit-filter: brightness(1.2) blur(0);filter: brightness(1.2) blur(0);}
-    100%    {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
+    0%      {-webkit-filter: brightness(0);filter: brightness(0);}
+    50%     {-webkit-filter: brightness(1.0);filter: brightness(1.0);}
+    80%     {-webkit-filter: brightness(1.25);filter: brightness(1.25);}
+    90%     {-webkit-filter: brightness(1.5);filter: brightness(1.5);}
+    100%    {-webkit-filter: brightness(1.0);filter: brightness(1.0);}
     }
 
 @keyframes imgfadein {
-    0%      {-webkit-filter: brightness(0) blur(10px);filter: brightness(0) blur(10px);}
-    10%     {-webkit-filter: brightness(0.15) blur(5px);filter: brightness(0.15) blur(5px);}
-    20%     {-webkit-filter: brightness(0.3) blur(2px);filter: brightness(0.3) blur(2px);}
-    60%     {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
-    86%     {-webkit-filter: brightness(1.25) blur(0);filter: brightness(1.25) blur(0);}
-    88%     {-webkit-filter: brightness(1.5) blur(0);filter: brightness(1.5) blur(0);}
-    89%     {-webkit-filter: brightness(1.4) blur(0);filter: brightness(1.4) blur(0);}
-    90%     {-webkit-filter: brightness(1.4) blur(0);filter: brightness(1.4) blur(0);}
-    95%     {-webkit-filter: brightness(1.2) blur(0);filter: brightness(1.2) blur(0);}
-    100%    {-webkit-filter: brightness(1.0) blur(0);filter: brightness(1.0) blur(0);}
+    0%      {-webkit-filter: brightness(0);filter: brightness(0);}
+    50%     {-webkit-filter: brightness(1.0);filter: brightness(1.0);}
+    80%     {-webkit-filter: brightness(1.25);filter: brightness(1.25);}
+    90%     {-webkit-filter: brightness(1.5);filter: brightness(1.5);}
+    100%    {-webkit-filter: brightness(1.0);filter: brightness(1.0);}
     }   
 
 
@@ -505,8 +495,8 @@ OUTCOME: Some refinements made to positioning / sizes / paddings, etc for a 'bes
             animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
     -webkit-animation-delay:10s;
             animation-delay:10s;
 }
@@ -514,15 +504,15 @@ OUTCOME: Some refinements made to positioning / sizes / paddings, etc for a 'bes
 @-webkit-keyframes alarm {
   0% {color: var(--LED1);text-shadow:none;}
   49% {color: var(--LED1);text-shadow:none;}
-  50% {color: red;text-shadow:2px 2px 2px var(--ink0);}
-  100% {color: red;text-shadow:2px 2px 2px var(--ink0);}
+  50% {color: red;text-shadow:10px 10px 10px var(--ink0);}
+  100% {color: red;text-shadow:10px 10px 10px var(--ink0);}
 }
 
 @keyframes alarm {
   0% {color: var(--LED1);text-shadow:none;}
   49% {color: var(--LED1);text-shadow:none;}
-  50% {color: red;text-shadow:2px 2px 2px var(--ink0);}
-  100% {color: red;text-shadow:2px 2px 2px var(--ink0);}
+  50% {color: red;text-shadow:10px 10px 10px var(--ink0);}
+  100% {color: red;text-shadow:10px 10px 10px var(--ink0);}
 }
 
 .HUD-left {
@@ -603,14 +593,10 @@ height:auto;
     display: inline-block;
     white-space: nowrap;
     padding-right: 100%;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-name: animate;
-            animation-name: animate;
-    -webkit-animation-duration: 120s;
-            animation-duration: 120s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: animate;
+    animation-duration: 120s;
     min-width:0;
     }
 
@@ -635,9 +621,7 @@ height:auto;
 @-webkit-keyframes animate {
      0%  {-webkit-transform: translateX(0%);transform: translateX(0%);}
     100%  {-webkit-transform: translateX(-102%);transform: translateX(-102%);}
-    }   
-
-
+    }
 @keyframes animate {
      0%  {-webkit-transform: translateX(0%);transform: translateX(0%);}
     100%  {-webkit-transform: translateX(-102%);transform: translateX(-102%);}
