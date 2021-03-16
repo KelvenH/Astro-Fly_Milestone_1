@@ -1045,6 +1045,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 #flights-hero-img {
     width:100%;
     height:auto;
+    
     }
 
 #flights-hero-wrap{
@@ -1246,11 +1247,22 @@ text-shadow:20px 20px 20px 20px #00d9ff;
     background-image: linear-gradient(to bottom left, var(--paint3),var(--ink0));
 
 }
+#flights-intro-quote {
+    height:50vh;
+    width:50%;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    margin:0 auto;
+
+}
+
 
 #flights-intro-quote q {
     font-style:italic;
     
 }
+
 
             /*-----------Exploration - Section B Trips---------------*/
 
