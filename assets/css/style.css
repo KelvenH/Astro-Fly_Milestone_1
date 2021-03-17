@@ -1358,38 +1358,34 @@ margin-top:-250%;
 
 }
 
-
-
-.moon-img {
-    max-width:100%;
-    display:block;
-}
-
 #lunar-trips {
- 
-    height:100%;
+    background-color:var(--ink0);
+    min-height:300vh;
+    position:relative;
+}
+
+#moon-img {
     width:100%;
-    
-}
-
-
-#lunar-trips img {
-   height:100%;
-   width:100%;
-   
-   clip-path:polygon (0 50%, 100% 50%, 100% 100%, 0% 100%); 
-   object-fit:cover;
-   mask-size:cover;
-}
-
-.moon-img {
-   mask-image:url(../images/final-images/moon-clipped.png); 
+    height:auto;
+    position:sticky;
+    top:0;
+    padding-bottom:25vh;
 }
 
 #lunar-orbit {
-    padding-top:5vh;
-    padding-left:5vw;
-    padding-right:5vw;
+    position:absolute;
+    top:100vh;
+    display:block;
+    padding-left:10vw;
+    width:50vw;
+}
+
+#lunar-landing {
+    position:absolute;
+    top:175vh;
+    display:block;
+    padding-left:40vw;
+    padding-right:10vw;
 }
 
 
@@ -1408,12 +1404,7 @@ margin-top:-250%;
    height:70vw;
 }
 /*----
-.lunar-orbit {
 
-}
-.Lunar-Landing {
-
-}
 .space-safari { 
 
 }

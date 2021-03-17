@@ -164,10 +164,29 @@
         </div>
         <!--close Container A-->
 
-        <div class="container-fluid align-items-center" id="fights-container-B">
+        <div class="container-fluid" id="fights-container-B">
 
             <div id="lunar-trips">
-                <img class="moon-img" src="../images/final-images/moon-clipped.png">
+
+                <picture id="flights-moon-img">
+
+                    <source media="(min-width:1924px)" srcset="./assets/images/final-images/moon-half-1924px.png">
+
+                    <source media="(min-width:1200px)" srcset="./assets/images/final-images/moon-half-1200px.png">
+
+                    <source media="(min-width:992px)" srcset="./assets/images/final-images/moon-half-992px.png">
+
+                    <source media="(min-width:768px)" srcset="./assets/images/final-images/moon-half-768px.png">
+
+                    <source media="(min-width:540px)" srcset="./assets/images/final-images/moon-half-540px.png">
+
+                    <source media="(min-width:400px)" srcset="./assets/images/final-images/moon-half-400px.png">
+
+                    <img id="moon-img" src="../images/final-images/moon-half-400px.png" alt="the moon">
+
+                </picture>
+
+
                 <div id="lunar-orbit">
                     <h2 class="LEDh2">Lunar:ORBIT</h2>
                     <p class="LEDstnd">
@@ -219,7 +238,7 @@
                 </p>
             </div>
             <!---close trips earth-->
-            
+
             <div id="space-safari">
                 <h2 class="LEDh2">Space:Safari</h2>
                 <p class="LEDstnd">
