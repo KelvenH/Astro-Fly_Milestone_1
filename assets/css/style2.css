@@ -1254,7 +1254,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
     height:auto;
     object-fit: cover; 
     object-position: 50% 50%;
-    margin-top:-75vh;
+    margin-top:-70vh;
   
     }
 
@@ -1304,7 +1304,7 @@ align-self:center;
 margin-top:-80%;   
 }
 
-/*-------------Media Queries--------
+/*-------------Media Queries--!!!!!!!!!!!!!to be fixed!!!!!!------
 To address negative margin positioning of scrolling image and text ---*/
 
 /*----
@@ -1353,101 +1353,46 @@ margin-top:-250%;
 
 /*-----------Exploration - Section B Trips---------------*/
 
-#flights-sectionB-trips {
-    background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
-    background-size: cover;
-    background-attachment: fixed;
-    }
+#fights-container-B {
 
-
-#flights-panel-wrapper{
-    width:90vw;
-    margin:2vw 2vw 3vw 2vw;
 }
-  
 
-#trips-panel-selector {
-    border-left:10px solid var(--glass2);
-    border-bottom:10px solid var(--glass2);  
-    border-top:10px solid var(--glass1);
-    border-right:10px solid var(--glass1);
-    padding-top:1.5vw;
-    background-color: var(--glass2);
-    padding-bottom:1.5vw;
-    }
 
-#trips-menu {
-    text-align:center;
-    font-family:var(--LEDfont);
-    color: var(--LED1);
+
+.moon-img {
+    max-width:100%;
+    display:block;
+}
+
+#lunar-trips {
+ 
+    height:100%;
     width:100%;
-    border-bottom:none; /*--remove Bootclass default style--*/
-}
-
-#trips-menu li {
-    margin-left:1.5vw;
-    margin-right:1.5vw;
-    border:2px solid var(--glass1);
-    background-color: var(--glass2);
-    width:20vw;
-}
-
-#trips-menu a {
-    text-decoration:none;
-    color: var(--LED1);
-    padding-left:2vw;
-    padding-right:2vw;
     
 }
 
-#trips-menu li:hover,
-#trips-menu li:focus,
-#trips-menu li:active{
-    background-color: var(--LED1);
-    -webkit-box-shadow: 20px 20px 100px 20px var(--glass1);
-            box-shadow: 20px 20px 100px 20px var(--glass1);
+
+#lunar-trips img {
+   height:100%;
+   width:100%;
+   
+   clip-path:polygon (0 50%, 100% 50%, 100% 100%, 0% 100%); 
+   object-fit:cover;
+   mask-size:cover;
 }
 
-#trips-menu li:hover a,
-#trips-menu li:active a{
-    color:var(--ink1)
+.moon-img {
+   mask-image:url(../images/final-images/moon-clipped.png); 
 }
 
-/*--Note:additional styling to override Bootstrap defaults which were not being applied through the above --*/
-
-#trips-menu .nav-link.active {
-    color:var(--ink1);
-    background-color:#00d9ff; /*--note hex value required as var equiv not taking effect when over-riding Bootstrap default --*/ 
-    border-color:var(--glass1);
-    -webkit-box-shadow: 20px 20px 100px 20px var(--glass1);
-            box-shadow: 20px 20px 100px 20px var(--glass1);
-  }
-
-
-#flights-trips-display {
-    border-left:10px solid var(--glass2);
-    border-bottom:10px solid var(--glass2);  
-    border-top:10px solid var(--glass1);
-    border-right:10px solid var(--glass1);            
-    background-color:var(--glass2);
-    margin-top:1vw;
-    padding-top:1.5vw;
+#lunar-orbit {
+    padding-top:5vh;
     padding-left:5vw;
     padding-right:5vw;
 }
 
-#footer-buffer-row {
-    min-height: clamp(32px, 5vw, 48px);
-    background-color:var(--ink0);
-}
-          /*-------Trips - images--------------------*/
 
-#flights-row3-trips {
-    position:relative;
-    border-top:1vw solid var(--ink);
-}
-
-.earth-orbit {
+#earth-orbit {
     background-image:url(../images/final-images/earth-section.png);
     background-size:60vw auto;
     background-color:black;
@@ -1457,7 +1402,7 @@ margin-top:-250%;
     
 }
 
-.earth-orbit p {
+#earth-orbit p {
    width:70%;
    height:70vw;
 }
