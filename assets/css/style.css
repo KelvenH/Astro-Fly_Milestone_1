@@ -1348,19 +1348,34 @@ margin-top:-250%;
 
 
 }
+
+    
 ---*/
+
+#trips-blend-box {
+
+    background-image: linear-gradient(to bottom left, #1E212A, #1C1C1A);
+    background-size:100% auto;
+    height:3vh;
+}
 
 
 
 /*-----------Exploration - Section B Trips---------------*/
 
-#fights-container-B {
-
+.trip-text-panel {
+    border-left:10px solid var(--glass2);
+    border-bottom:10px solid var(--glass2);  
+    border-top:10px solid var(--glass1);
+    border-right:10px solid var(--glass1);            
+    background-color:var(--glass2);
+    padding: 2vw;
+ 
 }
 
 #lunar-trips {
     background-color:var(--ink0);
-    min-height:300vh;
+    min-height:350vh;
     position:relative;
 }
 
@@ -1370,38 +1385,92 @@ margin-top:-250%;
     position:sticky;
     top:0;
     padding-bottom:25vh;
+    margin-left:-0.5vw;
 }
 
-#lunar-orbit {
+#lunar-orbit-text {
     position:absolute;
     top:100vh;
     display:block;
-    padding-left:10vw;
+    margin-left:10vw;
     width:50vw;
 }
 
-#lunar-landing {
+#lunar-landing-text {
     position:absolute;
     top:175vh;
     display:block;
-    padding-left:40vw;
-    padding-right:10vw;
+    margin-left:40vw;
+    margin-right:10vw;
 }
 
-
-#earth-orbit {
-    background-image:url(../images/final-images/earth-section.png);
-    background-size:60vw auto;
-    background-color:black;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+#moon-img-wrapper {
     position:absolute;
+    bottom:10vh;
+    height:20vh;
+    width:80vw;
+    margin:0 10vw 50vw 10vw;
+    border-left:5px solid var(--glass2);
+    border-bottom:5px solid var(--glass2);  
+    border-top:5px solid var(--glass1);
+    border-right:5px solid var(--glass1);            
+    background-color:var(--glass2);
     
 }
 
-#earth-orbit p {
-   width:70%;
-   height:70vw;
+
+.mini-img {
+  
+    width:25vw;
+    height:100%;
+    max-width:25%;
+    background-color:var(--glass3);
+    padding-top:1vh;
+    padding-left:1vw;
+} 
+
+.mini-img img{
+    object-fit:scale-down;
+    height:75%;
+    width:auto;
+
+} 
+
+.mini-img-body {
+    height:25%;
+    width:auto;
+    padding:0;
+    background-color:var(--glass3);
+    text-align:center;
+    vertical-align:center;
+} 
+
+/*--acknowledge - pexels.com ---*/
+
+
+#earth-orbit {
+    background-color:var(--ink0);
+    min-height:300vh;
+    position:relative;
+}
+
+
+#earth-img {
+    width:100%;
+    height:auto;
+    position:sticky;
+    padding-left:60vw;
+    top:0;
+    padding-bottom:25vh;
+}
+
+
+#earth-orbit-text {
+   position:absolute;
+   top:100vh;
+   display:block;
+   margin-left:10vw;
+   width:40vw;
 }
 /*----
 
