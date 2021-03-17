@@ -1042,7 +1042,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
  position:relative;
  margin-top: 10vh;
  padding-left:5vw;
- height:80vh;
+ height:90vh;
  width:100vw;   
 }
 
@@ -1199,7 +1199,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 
 #flights-hero-title-3b {
     position:absolute;
-    top:80%;
+    bottom:3vw;
     padding-left:0;
     right:5%;
     padding-right:3%;
@@ -1227,6 +1227,10 @@ text-shadow:20px 20px 20px 20px #00d9ff;
     100% {opacity:100%;}
 }
 
+
+
+/*-----------------Flights - Sticky Frame with Scrolling images----------------*/
+
 #flights-hero-wrap {
   
   position: sticky;
@@ -1238,66 +1242,118 @@ text-shadow:20px 20px 20px 20px #00d9ff;
   flex-direction: column;
 }
 
-#flights-hero-frame {
-    width:100vw;
-    height:auto;
-    align-self: center; 
-    margin-top:-50vh;
-    }
-
 .frame-padding {
   flex: 1;
   background-color: black;
+  height:5vh;
 }
 
+
+#flights-hero-frame {
+    width:100vw;
+    height:auto;
+    object-fit: cover; 
+    object-position: 50% 50%;
+    margin-top:-75vh;
+  
+    }
+
+/*----DEFECT------------------------------------------------------------------------
+Issue: Unable to position text over scrolling images using position absolute as this had adverse affect on the frame (either disappears under image or text scrolls on top of frame).
+FIXED: Partial (workaround)
+OUTCOME: Initial attempts to use z-index did not work, so created both the scrolling image and text within the same grid cell and was able to use negative margin-top for positioning. This has created another side affect - negative margins based on VH values, but still results in different outcomes for responsive screen sizes. Additional media queries created to re-position at the common breakpoints. 
+ACKNOWLEDGEMENT: Referred to CSS Tricks for guidance https://css-tricks.com/snippets/css/complete-guide-grid/
+--------------------------------------------------------------------------------------*/
+
 .flights-hero-content {
-  margin-top: -120vh;
-  vertical-align:top;
-  object-fit: cover;
-  object-position: 50% 50%;
-  background-color: black; 
-  overflow:hidden;
+margin-top:-120vh;
+object-fit: contain;
+background-color: black; 
+overflow:hidden;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
 }
 
 .flights-hero-content img{
-height:100vh;
-width:auto;
-position:center;
-}
-
-
-
-
-        /*-----------------Flights - Quote Section-----------------*/
-
-#flights-row2-textquote {
-    padding:2vh 3vh 2vh 3vh;
-    text-align:center;
-    background-image: -webkit-gradient(linear, right top, left bottom, from(var(--paint3)),to(var(--ink0)));
-    background-image: -o-linear-gradient(top right, var(--paint3),var(--ink0));
-    background-image: linear-gradient(to bottom left, var(--paint3),var(--ink0));
+width:100vw;
+height:auto;
 
 }
+
 #flights-intro-quote {
-    height:50vh;
-    width:50%;
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-    margin:0 auto;
-
+/*--height:auto;--*/
+width:50%;
+justify-self:center;
+align-self:center;
+margin-top:-650%;    
 }
-
 
 #flights-intro-quote q {
-    font-style:italic;
+font-style:italic;
     
 }
 
+#flights-intro-tag {
+width:50%;
+justify-self:right;
+padding-right:0;
+align-self:center;
+margin-top:-80%;   
+}
 
-            /*-----------Exploration - Section B Trips---------------*/
+/*-------------Media Queries--------
+To address negative margin positioning of scrolling image and text ---*/
 
-#flights-row3-trips {
+/*----
+@media (max-width:400px) and (orientation:portrait) {
+
+#flights-hero-wrap {
+    height:90vh;
+}
+
+#flights-hero-text {
+
+}
+
+#flights-hero-title-3b {
+font-size:4vw;
+}
+
+
+
+.flights-hero-content {
+margin-top:0;
+
+}
+
+.flights-hero-content img {
+    
+content:url("../images/final-images/star-collage-768px.jpg");
+}
+
+#flights-hero-frame {
+content:url("../images/final-images/Explore-hero-frame-768px.png");
+transform: scale(2, 2);
+margin-top:60vh;
+}
+
+#flights-intro-quote {
+width:60%;
+margin-top:-250%;    
+}
+
+
+}
+---*/
+
+
+
+/*-----------Exploration - Section B Trips---------------*/
+
+#flights-sectionB-trips {
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
