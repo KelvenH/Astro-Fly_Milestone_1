@@ -1028,6 +1028,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 /*-------------------------FLIGHTS PAGE-----------------*/
 
 
+
 #fights-container-A {
     width:100vw;
     background-color: var(--ink0);
@@ -1038,24 +1039,15 @@ text-shadow:20px 20px 20px 20px #00d9ff;
     padding-right:0;
 }
 
-#flights-hero-wrap {
-    position:relative;
+#flights-hero-text {
+ position:relative;
+ margin-top: 10vh;
+ padding-left:5vw;
+ height:90vh;
+ width:100vw;   
 }
 
-#flights-hero-img {
-    width:100%;
-    height:auto;
-    
-    }
 
-#flights-hero-wrap{
-    position:relative;
-    }
-
-#flights-hero-wrap h1, p {
-    padding-left:5%;
-    
-    }
 
 #flights-hero-title-1 {
     position:absolute;
@@ -1208,7 +1200,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 
 #flights-hero-title-3b {
     position:absolute;
-    top:80%;
+    bottom:3vw;
     padding-left:0;
     right:5%;
     padding-right:3%;
@@ -1237,130 +1229,171 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 }
 
 
-        /*-----------------Flights - Quote Section-----------------*/
 
-#flights-row2-textquote {
-    padding:2vh 3vh 2vh 3vh;
-    text-align:center;
-    background-image: -webkit-gradient(linear, right top, left bottom, from(var(--paint3)),to(var(--ink0)));
-    background-image: -o-linear-gradient(top right, var(--paint3),var(--ink0));
-    background-image: linear-gradient(to bottom left, var(--paint3),var(--ink0));
+/*-----------------Flights - Sticky Frame with Scrolling images----------------*/
+
+#flights-hero-wrap {
+  
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display:flex;
+  flex-direction: column;
+}
+
+.frame-padding {
+  flex: 1;
+  background-color: black;
+  height:5vh;
+}
+
+
+#flights-hero-frame {
+    width:100vw;
+    height:auto;
+    object-fit: cover; 
+    object-position: 50% 50%;
+    margin-top:-70vh;
+  
+    }
+
+/*----DEFECT------------------------------------------------------------------------
+Issue: Unable to position text over scrolling images using position absolute as this had adverse affect on the frame (either disappears under image or text scrolls on top of frame).
+FIXED: Partial (workaround)
+OUTCOME: Initial attempts to use z-index did not work, so created both the scrolling image and text within the same grid cell and was able to use negative margin-top for positioning. This has created another side affect - negative margins based on VH values, but still results in different outcomes for responsive screen sizes. Additional media queries created to re-position at the common breakpoints. 
+ACKNOWLEDGEMENT: Referred to CSS Tricks for guidance https://css-tricks.com/snippets/css/complete-guide-grid/
+--------------------------------------------------------------------------------------*/
+
+.flights-hero-content {
+margin-top:-120vh;
+object-fit: contain;
+background-color: black; 
+overflow:hidden;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 1fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+
+.flights-hero-content img{
+width:100vw;
+height:auto;
 
 }
+
 #flights-intro-quote {
-    height:50vh;
-    width:50%;
-    display:flex;
-    justify-content:center;
-    flex-direction:column;
-    margin:0 auto;
-
+/*--height:auto;--*/
+width:50%;
+justify-self:center;
+align-self:center;
+margin-top:-650%;    
 }
-
 
 #flights-intro-quote q {
-    font-style:italic;
+font-style:italic;
     
 }
 
-
-            /*-----------Exploration - Section B Trips---------------*/
-
-#flights-row3-trips {
-    background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
-    background-size: cover;
-    background-attachment: fixed;
-    }
-
-
-#flights-panel-wrapper{
-    width:90vw;
-    margin:2vw 2vw 3vw 2vw;
+#flights-intro-tag {
+width:50%;
+justify-self:right;
+padding-right:0;
+align-self:center;
+margin-top:-80%;   
 }
-  
 
-#trips-panel-selector {
-    border-left:10px solid var(--glass2);
-    border-bottom:10px solid var(--glass2);  
-    border-top:10px solid var(--glass1);
-    border-right:10px solid var(--glass1);
-    padding-top:1.5vw;
-    background-color: var(--glass2);
-    padding-bottom:1.5vw;
-    }
+/*-------------Media Queries--!!!!!!!!!!!!!to be fixed!!!!!!------
+To address negative margin positioning of scrolling image and text ---*/
 
-#trips-menu {
-    text-align:center;
-    font-family:var(--LEDfont);
-    color: var(--LED1);
+/*----
+@media (max-width:400px) and (orientation:portrait) {
+
+#flights-hero-wrap {
+    height:90vh;
+}
+
+#flights-hero-text {
+
+}
+
+#flights-hero-title-3b {
+font-size:4vw;
+}
+
+
+
+.flights-hero-content {
+margin-top:0;
+
+}
+
+.flights-hero-content img {
+    
+content:url("../images/final-images/star-collage-768px.jpg");
+}
+
+#flights-hero-frame {
+content:url("../images/final-images/Explore-hero-frame-768px.png");
+transform: scale(2, 2);
+margin-top:60vh;
+}
+
+#flights-intro-quote {
+width:60%;
+margin-top:-250%;    
+}
+
+
+}
+---*/
+
+
+
+/*-----------Exploration - Section B Trips---------------*/
+
+#fights-container-B {
+
+}
+
+
+
+.moon-img {
+    max-width:100%;
+    display:block;
+}
+
+#lunar-trips {
+ 
+    height:100%;
     width:100%;
-    border-bottom:none; /*--remove Bootclass default style--*/
-}
-
-#trips-menu li {
-    margin-left:1.5vw;
-    margin-right:1.5vw;
-    border:2px solid var(--glass1);
-    background-color: var(--glass2);
-    width:20vw;
-}
-
-#trips-menu a {
-    text-decoration:none;
-    color: var(--LED1);
-    padding-left:2vw;
-    padding-right:2vw;
     
 }
 
-#trips-menu li:hover,
-#trips-menu li:focus,
-#trips-menu li:active{
-    background-color: var(--LED1);
-    -webkit-box-shadow: 20px 20px 100px 20px var(--glass1);
-            box-shadow: 20px 20px 100px 20px var(--glass1);
+
+#lunar-trips img {
+   height:100%;
+   width:100%;
+   
+   clip-path:polygon (0 50%, 100% 50%, 100% 100%, 0% 100%); 
+   object-fit:cover;
+   mask-size:cover;
 }
 
-#trips-menu li:hover a,
-#trips-menu li:active a{
-    color:var(--ink1)
+.moon-img {
+   mask-image:url(../images/final-images/moon-clipped.png); 
 }
 
-/*--Note:additional styling to override Bootstrap defaults which were not being applied through the above --*/
-
-#trips-menu .nav-link.active {
-    color:var(--ink1);
-    background-color:#00d9ff; /*--note hex value required as var equiv not taking effect when over-riding Bootstrap default --*/ 
-    border-color:var(--glass1);
-    -webkit-box-shadow: 20px 20px 100px 20px var(--glass1);
-            box-shadow: 20px 20px 100px 20px var(--glass1);
-  }
-
-
-#flights-trips-display {
-    border-left:10px solid var(--glass2);
-    border-bottom:10px solid var(--glass2);  
-    border-top:10px solid var(--glass1);
-    border-right:10px solid var(--glass1);            
-    background-color:var(--glass2);
-    margin-top:1vw;
-    padding-top:1.5vw;
+#lunar-orbit {
+    padding-top:5vh;
     padding-left:5vw;
     padding-right:5vw;
 }
 
-#footer-buffer-row {
-    min-height: clamp(32px, 5vw, 48px);
-    background-color:var(--ink0);
-}
-          /*-------Trips - images--------------------*/
 
-#flights-row3-trips {
-    position:relative;
-    border-top:1vw solid var(--ink);
-}
-
-.earth-orbit {
+#earth-orbit {
     background-image:url(../images/final-images/earth-section.png);
     background-size:60vw auto;
     background-color:black;
@@ -1370,7 +1403,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
     
 }
 
-.earth-orbit p {
+#earth-orbit p {
    width:70%;
    height:70vw;
 }
@@ -1392,6 +1425,9 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 .hub {
 
 }
+
+
+
 ---------------------Registration-----------------*/
 
 /*!!!!!---current bug - mobile view scrolls despite no further content - linked to fixed header and footer? or negactive panel margins?)!!!!!!-------*/

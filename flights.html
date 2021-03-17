@@ -26,7 +26,7 @@
 
     <header>
 
-        <nav class="navbar align-items-center">
+        <nav class="navbar fixed-top align-items-center">
             <!---Bootstrap class name mx-auto(margin left & right auto-size)--->
             <a class="mx-auto logo" href="index.html">
                 <h1>Astr<span class="iconify icon-planet align-self-center" data-icon="bx:bxs-planet"
@@ -75,77 +75,99 @@
 
                 <div class="col-12" id="flights-hero-col">
                     <div id="flights-hero-wrap">
-                        <picture>
-                            <source media="(min-width:993px)"
-                                srcset="./assets/images/final-images/explore-hero-img-xl.jpg">
-                            <source media="(min-width:769px)"
-                                srcset="./assets/images/final-images/explore-hero-img-lg.jpg">
-                            <source media="(min-width:541px)"
-                                srcset="./assets/images/final-images/explore-hero-img-md.jpg">
-                            <img id="flights-hero-img" src="./assets/images/final-images/explore-hero-img-sm.jpg"
+                        <div class="frame-padding">
+                        </div>
+                        <div id="flights-hero-text">
+                            <h1 id="flights-hero-title-1">SPACE</h1>
+                            <h1 id="flights-hero-title-2">TIME</h1>
+                            <h1 id="flights-hero-title-3">MATTER</h1>
+                            <p class="LEDh2" id="flights-hero-title-1b">Make your</p>
+                            <p class="LEDh2" id="flights-hero-title-2b">Really</p>
+                            <h1 id="flights-hero-title-3b" class="logo">Astr<span
+                                    class="iconify icon-planet align-self-center" data-icon="bx:bxs-planet"
+                                    data-inline="true"></span>:Fly</h1>
+                        </div>
+
+                        <picture class="flights-hero-frame">
+
+                            <source media="(min-width:1924px)"
+                                srcset="./assets/images/final-images/Explore-hero-frame-1924px.png">
+
+                            <source media="(min-width:1200px)"
+                                srcset="./assets/images/final-images/Explore-hero-frame-1200px.png">
+
+                            <source media="(min-width:992px)"
+                                srcset="./assets/images/final-images/Explore-hero-frame-992px.png">
+
+                            <source media="(min-width:768px)"
+                                srcset="./assets/images/final-images/Explore-hero-frame-768px.png">
+
+                            <source media="(min-width:540px)"
+                                srcset="./assets/images/final-images/Explore-hero-frame-540px.png">
+
+                            <source media="(min-width:400px)"
+                                srcset="./assets/images/final-images/Explore-hero-frame-400px.png">
+
+                            <img id="flights-hero-frame" src="./assets/images/final-images/Explore-hero-frame-400px.png"
                                 alt="astronaut looking into space">
 
                         </picture>
 
-                        <h1 id="flights-hero-title-1">SPACE</h1>
-                        <h1 id="flights-hero-title-2">TIME</h1>
-                        <h1 id="flights-hero-title-3">MATTER</h1>
-                        <p class="LEDh2" id="flights-hero-title-1b">Make your</p>
-                        <p class="LEDh2" id="flights-hero-title-2b">Really</p>
-                        <h1 id="flights-hero-title-3b" class="logo">Astr<span
-                                class="iconify icon-planet align-self-center" data-icon="bx:bxs-planet"
-                                data-inline="true"></span>:Fly
-                        </h1>
+                        <div class="frame-padding">
+
+                        </div>
                     </div>
-                    <!--close flights hero wrap content-->
+                    <!--close flights-hero-wrap -->
+
+                    <div class="flights-hero-content">
+
+                        <picture id="star-collage">
+                            <source media="(min-width:1924px)"
+                                srcset="./assets/images/final-images/star-collage-1924px.jpg">
+
+                            <source media="(min-width:1200px)"
+                                srcset="./assets/images/final-images/star-collage-1200px.jpg">
+
+                            <source media="(min-width:992px)"
+                                srcset="./assets/images/final-images/star-collage-992px.jpg">
+
+                            <source media="(min-width:768px)"
+                                srcset="./assets/images/final-images/star-collage-768px.jpg">
+
+                            <source media="(min-width:540px)"
+                                srcset="./assets/images/final-images/star-collage-540px.jpg">
+
+                            <source media="(min-width:400px)"
+                                srcset="./assets/images/final-images/star-collage-400px.jpg">
+
+                            <img src="./assets/images/final-images/star-collage-400px.jpg"
+                                alt="scrolling image of cosmic gases and galaxies">
+                        </picture>
+
+                        <div id="flights-intro-quote">
+                            <q class="LEDh2">The Earth is a very small stage in a vast cosmic arena</q>
+                            <span class="LEDh4">&nbsp;&nbsp;&nbsp;&nbsp;- Carl Sagan
+                            </span>
+                        </div>
+                        <!--close quote -->
+                        <div class="LEDh2" id="flights-intro-tag">Ready for your adventure?
+                        </div>
+                    </div>
+                    <!--close hero content -->
+
                 </div>
                 <!--close col1 -->
             </div>
             <!--close row1 -->
 
-            <div class="row" id="flights-row2-textquote">
-                <div id="flights-intro-quote">
-                    <q class="LEDh2">The Earth is a very small stage in a vast cosmic arena</q><span
-                        class="LEDh4">&nbsp;&nbsp;&nbsp;&nbsp;- Carl Sagan</span>
-                </div>
-                <!--close quote -->
-                <div class="col-12" id="flights-intro-text">
-                    <p class="LEDstnd">Will you be one of Earth's pioneers across the solar system? Launch a probe
-                        across the galaxy or maybe lunch on the moon.
-                        <br><br>
-                        Whether it's an orbital ride to see our home from the stars, or joining our scientific team
-                        aboard the new Astro:Observor studying dark matter - with us, well it doesn't matter - the sky's
-                        no longer your limit!
-                    </p>
-                </div>
-                
-            </div>
-            <!--close row2-->
-            <div class="row no gutters" id="flights-row3-trips">
 
+        </div>
+        <!--close Container A-->
 
-                <div class="earth-orbit">
-                    <h2 class="LEDh2">Earth:ORBIT</h2>
-                    <p class="LEDstnd">Many astronauts have remarked that one experience more incredible
-                        than looking out into space is to look down on our own home planet. From being so
-                        far from ground you’ll gain an appreciation of how small our world is. Being able to
-                        see the planet in a single view will take your breath away; from the snow capped
-                        tips of the poles, deepest of blues of our oceans, the lush green landscapes and
-                        yellow scorched sands of the hottest deserts overlaid with the ever changing swirls
-                        created by the global jet streams – the colours of which are amplified against the
-                        backdrop of deep dark space. each flight is guaranteed to provide two orbits of the
-                        Earth. The pre-determined trajectory path crosses the globe in a seemingly diagonal
-                        pattern ensuring visibility across all continents – passing over Earth’s equator
-                        up-to 4 times! Every flight also includes ‘Astro:Zero’ a unique opportunity to
-                        unshackle the harness and experience zero gravity. During this time you’ll be free
-                        to choose how you wish to mark the moment, whether that’s participating with the
-                        on-board Astro:Science team’s latest research, part-taking in a game of Zero:Ball or
-                        simply living out a child hood dream of ‘flying’. The onboard meal served at this
-                        time is also sure to become the most memorable meal of your life!
-                    </p>
-                </div>
-                <!---close trips earth-->
+        <div class="container-fluid align-items-center" id="fights-container-B">
 
+            <div id="lunar-trips">
+                <img class="moon-img" src="../images/final-images/moon-clipped.png">
                 <div id="lunar-orbit">
                     <h2 class="LEDh2">Lunar:ORBIT</h2>
                     <p class="LEDstnd">
@@ -159,7 +181,7 @@
                 </div>
                 <!---close trips lunar orbit-->
 
-                <div class="lunar-landing">
+                <div id="lunar-landing">
                     <h2 class="LEDh2">Lunar:Landing</h2>
                     <p class="LEDstnd">
                         For those with the strongest of passions to experience space!
@@ -173,93 +195,101 @@
                     </p>
                 </div>
                 <!---close trips lunar landing-->
-
-                <div class="space-safari">
-                    <h2 class="LEDh2">Space:Safari</h2>
-                    <p class="LEDstnd">
-                        The ultimate experience, combining all of the above with an onward journey to Astro:View
-                        (our solar observatory). This is strictly a 3 month stay (due to health regulations and
-                        advance scheduling), but this will seem too short as you immerse yourself with the deep
-                        space experience. You’ll be invited to join the scientific team which will see you; observe
-                        our planetary neighbours, measure radiation waves from far flung galaxies, sending (and
-                        listening for a reply!) to your own voice beamed out beyond our solar system, determine the
-                        path and take command of the launch of your own pathfinder probe (providing a lifetime
-                        direct view from space), as well as witness many of the thousands of cosmic displays from
-                        passing comets and astounding solar light shows. You’ll also continue training onboard the
-                        station with the aim of performing a space walk! If you’re lucky, you may also get the
-                        chance to meet with one of our crews bound for Mars who will be willing to take a personal
-                        time-capsule from you to place on the Red Planet!
-                    </p>
-                </div>
-                <!---close trips sace:safari-->
-
-                <div class="mars">
-                    <h2 class="LEDh2">The future’s bright, the future’s Mars!</h2>
-                    <p class="LEDstnd">
-                        Astro:Corp plans for manned flights to Mars are long established. The first of a series of
-                        unmanned flights have been in operation since early 2020. These initial flights have served
-                        a number of purposes, from conducting sample tests on the environment, providing real time
-                        weather reports and conducting explorations in search of minerals, water or signs of
-                        microbial or even historic life!
-                        But in addition to furthering our understanding of Mars, each flight has successfully
-                        delivered components of the Mars outpost (Camp Primus). Through a combination of automation
-                        / pre-programmed machinery and remote controlled robotics (principally operated from the
-                        team on Lunar 4 Base 5) a series of habitable domes have been constructed. Furthermore,
-                        flora is successfully being grown in oxygen sealed units.
-                        We have paved the way for the first of a series of our manned flights which are on-track to
-                        depart Earth by late 2022. Whilst the first few years will be exclusively dedicated to
-                        further our understanding of the red planet, plans are on schedule to activate our Mars
-                        tourism route by 2025. Please register your interest here and you will be contacted by one
-                        of the team.
-                    </p>
-                </div>
-
-                <!---close mars-->
-
-                <div class="hub">
-                    <h2 class="LEDh2">Astro:Hub</h2>
-                    <p class="LEDstnd">
-                        Where else would you start your adventure than the home of Astro:Fly. Our
-                        Astro:Hub is a technological marvel by itself. Home to our R&D labs, engineers, command
-                        centre in addition to being our launch base. Here you will undergo pre-flight medical
-                        assessments, be fitted for your bespoke fitted suits in addition to any pre-learning. You'll
-                        also get a taste of near zero-gravity - this is the closest place to space on Earth!
-                    </p>
-                </div>
-                <!---close hub-->
             </div>
-            <!---close trips row-->
+            <!---close lunar trips -->
 
+            <div id="earth-orbit">
+                <h2 class="LEDh2">Earth:ORBIT</h2>
+                <p class="LEDstnd">Many astronauts have remarked that one experience more incredible
+                    than looking out into space is to look down on our own home planet. From being so
+                    far from ground you’ll gain an appreciation of how small our world is. Being able to
+                    see the planet in a single view will take your breath away; from the snow capped
+                    tips of the poles, deepest of blues of our oceans, the lush green landscapes and
+                    yellow scorched sands of the hottest deserts overlaid with the ever changing swirls
+                    created by the global jet streams – the colours of which are amplified against the
+                    backdrop of deep dark space. each flight is guaranteed to provide two orbits of the
+                    Earth. The pre-determined trajectory path crosses the globe in a seemingly diagonal
+                    pattern ensuring visibility across all continents – passing over Earth’s equator
+                    up-to 4 times! Every flight also includes ‘Astro:Zero’ a unique opportunity to
+                    unshackle the harness and experience zero gravity. During this time you’ll be free
+                    to choose how you wish to mark the moment, whether that’s participating with the
+                    on-board Astro:Science team’s latest research, part-taking in a game of Zero:Ball or
+                    simply living out a child hood dream of ‘flying’. The onboard meal served at this
+                    time is also sure to become the most memorable meal of your life!
+                </p>
+            </div>
+            <!---close trips earth-->
+            
+            <div id="space-safari">
+                <h2 class="LEDh2">Space:Safari</h2>
+                <p class="LEDstnd">
+                    The ultimate experience, combining all of the above with an onward journey to Astro:View
+                    (our solar observatory). This is strictly a 3 month stay (due to health regulations and
+                    advance scheduling), but this will seem too short as you immerse yourself with the deep
+                    space experience. You’ll be invited to join the scientific team which will see you; observe
+                    our planetary neighbours, measure radiation waves from far flung galaxies, sending (and
+                    listening for a reply!) to your own voice beamed out beyond our solar system, determine the
+                    path and take command of the launch of your own pathfinder probe (providing a lifetime
+                    direct view from space), as well as witness many of the thousands of cosmic displays from
+                    passing comets and astounding solar light shows. You’ll also continue training onboard the
+                    station with the aim of performing a space walk! If you’re lucky, you may also get the
+                    chance to meet with one of our crews bound for Mars who will be willing to take a personal
+                    time-capsule from you to place on the Red Planet!
+                </p>
+            </div>
+            <!---close trips sace:safari-->
 
+            <div id="mars">
+                <h2 class="LEDh2">The future’s bright, the future’s Mars!</h2>
+                <p class="LEDstnd">
+                    Astro:Corp plans for manned flights to Mars are long established. The first of a series of
+                    unmanned flights have been in operation since early 2020. These initial flights have served
+                    a number of purposes, from conducting sample tests on the environment, providing real time
+                    weather reports and conducting explorations in search of minerals, water or signs of
+                    microbial or even historic life!
+                    But in addition to furthering our understanding of Mars, each flight has successfully
+                    delivered components of the Mars outpost (Camp Primus). Through a combination of automation
+                    / pre-programmed machinery and remote controlled robotics (principally operated from the
+                    team on Lunar 4 Base 5) a series of habitable domes have been constructed. Furthermore,
+                    flora is successfully being grown in oxygen sealed units.
+                    We have paved the way for the first of a series of our manned flights which are on-track to
+                    depart Earth by late 2022. Whilst the first few years will be exclusively dedicated to
+                    further our understanding of the red planet, plans are on schedule to activate our Mars
+                    tourism route by 2025. Please register your interest here and you will be contacted by one
+                    of the team.
+                </p>
+            </div>
 
+            <!---close mars-->
 
+            <div id="hub">
+                <h2 class="LEDh2">Astro:Hub</h2>
+                <p class="LEDstnd">
+                    Where else would you start your adventure than the home of Astro:Fly. Our
+                    Astro:Hub is a technological marvel by itself. Home to our R&D labs, engineers, command
+                    centre in addition to being our launch base. Here you will undergo pre-flight medical
+                    assessments, be fitted for your bespoke fitted suits in addition to any pre-learning. You'll
+                    also get a taste of near zero-gravity - this is the closest place to space on Earth!
+                </p>
+            </div>
+            <!---close hub-->
 
-
-
-
-
-
-
-
-
-
-
-
-
+            <div id="fleet">
+                <h2 class="LEDh2">Astro:Hub</h2>
+                <p class="LEDstnd">
+                    text text text
+                </p>
+            </div>
+            <!---close fleet-->
 
 
         </div>
-        <!--close row3 trips-->
+        <!--close container B-->
 
-        <div class="row" id="footer-buffer-row">
-
-        </div>
-        <!--close buffer row-->
-        </div>
-        <!--close Container A-->
 
     </section>
     <!--close Section-->
+
 
 
     <footer class="footer">
