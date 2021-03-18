@@ -55,16 +55,34 @@
             </div>
         </nav>
     </header>
+
+
     <section class="container-fluid register-container" id="page-content">
-        <div id="register-intro-wrapper">
-            <h1 id="register-header">Join the Astr<span class="iconify icon-planet align-self-center"
+        <div id="register-hero-wrap">
+            <picture>
+                <source media="(min-width:1924px)" srcset="./assets/images/final-images/cold-astronaught-2500px.png">    
+                <source media="(min-width:1200px)" srcset="./assets/images/final-images/cold-astronaught-1500px.png">
+                <source media="(min-width:992px)" srcset="./assets/images/final-images/cold-astronaught-992px.png">
+                <source media="(min-width:768px)" srcset="./assets/images/final-images/cold-astronaught-768px.png">
+                <source media="(min-width:540px)" srcset="./assets/images/final-images/cold-astronaught-540px.png">
+                <source media="(max-width:539px)" srcset="./assets/images/final-images/cold-astronaught-400px.png">
+                <img id="register-hero-img" src="./assets/images/final-images/cold-astronaught-400px.png" alt="astronaught on frozen meteorite above planet earth"/>
+            </picture>
+
+           <h3 id="register-hero-title1">Don't Be Left Out in the Cold,,,,</h3>     
+           <h1 id="register-hero-title2">Join the Astr<span class="iconify icon-planet align-self-center"
                     data-icon="bx:bxs-planet" data-inline="true"></span>:Fly family</h1>
+        </div> <!-- close register-hero-wrap-->    
+
+        <div id="register-intro-wrapper">
+ 
             <div class="h4" id="register-intro">Join the Astro:Fly family today! We have a tiered membership and it's
-                free to register as an Astro:Cadet. Click the link below!
+                free to register as an Astro:Cadet. <br>
+                Click the link below!
                 <br><br>
                 Or, if you're thinking of taking that one big step towards being an Astro:Pioneer, just indicate which
                 of our adventures you are most interested in and our team will be in touch with you.
-                Astro:Fly - pioneering commercial space travel.
+            
             </div>
         </div>
         <div class="container membership-table" aria-label="Table of Membership levels and benefits">
@@ -88,7 +106,7 @@
                 </ul>
                 <!-- Tab panes -->
                 <div class="tab-content" id="register-membership-content">
-                    <div id="cadet" class="container tab-pane fade active LEDstnd">
+                    <div id="cadet" class="container tab-pane fade show active LEDstnd">
                         <br>
                         <h5>Cadet</h5>
                         <p>Qualifying Criteria: None - Membership is FREE!! <br>
@@ -152,14 +170,19 @@
                 </div>
             </div>
         </div>
-
-        <!-- Registration Modal ---->
-        <!-- Button trigger modal -->
+       
+        <!-- Button trigger open of modal -->
         <button type="button" id="btn-open-form" class="btn btn-lg btn-block btn-register" data-toggle="modal"
             data-target="#register-modal">Click Here to Join!
         </button>
 
-        <!-- Modal ---------------->
+        <div id="pre-footer-buffer"></div>
+
+
+
+
+
+         <!-- Registration Modal ---->
         <div class="modal fade" id="register-modal" tabindex="-1" aria-labelledby="registration-modal"
             aria-hidden="true">
             <div class="modal-dialog">
@@ -168,8 +191,7 @@
                         <div class="logo" id="register-logo">Astr<span class="iconify icon-planet align-self-center"
                                 data-icon="bx:bxs-planet"></span>:Fly
                         </div>
-                        <h4 class="modal-title" id="register-modal-label">Looking to book an Astro:Adventure or become a
-                            member?
+                        <h4 class="modal-title" id="register-modal-label">Looking to book an Astro:Adventure or become a member?
                         </h4>
                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -270,6 +292,9 @@
         </div>
         <!-- Close Modal----------->
     </section>
+
+
+
     <footer class="footer">
         <div class="container-fluid footer-main">
             <div class="row no-gutters">
@@ -289,6 +314,8 @@
             </div>
         </div>
     </footer>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
