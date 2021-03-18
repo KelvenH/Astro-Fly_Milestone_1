@@ -1472,19 +1472,48 @@ margin-top:-250%;
    width:40vw;
 }
 
-/*----
 
-.space-safari { 
-
+#space-safari {
+background-color:var(--ink0);
+min-height:200vh;
+position:relative;
 }
 
-.mars { 
-
-} 
-
-.hub {
-
+#safari-img {
+    width:100%;
+    height:auto;
+    position:sticky;
+    top:0;
+    width:50vw;
+    padding-bottom:25vh;
 }
+
+#safari-text {
+   position:absolute;
+   top:100vh;
+   display:block;
+   margin-left:55vw;
+   width:40vw;  
+}
+
+#safari-img-wrapper {
+    position:absolute;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+    bottom:10vh;
+    width:90vw;
+    margin:0 5vw 50vh 5vw;
+    border-left:5px solid var(--glass2);
+    border-bottom:5px solid var(--glass2);  
+    border-top:5px solid var(--glass1);
+    border-right:5px solid var(--glass1);            
+    background-color:var(--glass2);
+    
+}
+
+
+
 
 
 
