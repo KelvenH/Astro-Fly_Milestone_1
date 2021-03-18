@@ -1406,10 +1406,12 @@ margin-top:-250%;
 
 #moon-img-wrapper {
     position:absolute;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
     bottom:10vh;
-    height:20vh;
-    width:80vw;
-    margin:0 10vw 50vw 10vw;
+    width:90vw;
+    margin:0 5vw 50vh 5vw;
     border-left:5px solid var(--glass2);
     border-bottom:5px solid var(--glass2);  
     border-top:5px solid var(--glass1);
@@ -1420,30 +1422,27 @@ margin-top:-250%;
 
 
 .mini-img {
-  
     width:25vw;
     height:100%;
     max-width:25%;
     background-color:var(--glass3);
-    padding-top:1vh;
-    padding-left:1vw;
+    padding:1vh;
+    display:inline-block;
+    text-align:center;
+    
+
 } 
+
 
 .mini-img img{
     object-fit:scale-down;
-    height:75%;
+    flex-grow:1;
+    max-width:100%;
     width:auto;
 
 } 
 
-.mini-img-body {
-    height:25%;
-    width:auto;
-    padding:0;
-    background-color:var(--glass3);
-    text-align:center;
-    vertical-align:center;
-} 
+
 
 /*--acknowledge - pexels.com ---*/
 
@@ -1472,6 +1471,7 @@ margin-top:-250%;
    margin-left:10vw;
    width:40vw;
 }
+
 /*----
 
 .space-safari { 
