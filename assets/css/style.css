@@ -1408,7 +1408,7 @@ margin-top:-250%;
     position:absolute;
     display:flex;
     justify-content:space-evenly;
-    align-items:center;
+    align-items:stretch;
     bottom:10vh;
     width:90vw;
     margin:0 5vw 50vh 5vw;
@@ -1483,7 +1483,7 @@ margin-top:-250%;
     position:sticky;
     top:10vh;
     width:50vw;
-    padding-bottom:25vh;
+    margin-bottom:30vh;
 }
 
 #safari-text {
@@ -1497,9 +1497,9 @@ margin-top:-250%;
 #safari-img-wrapper {
     position:absolute;
     display:flex;
-    align-items:flex-start;
+    align-items:stretch;
     flex-wrap:wrap;
-    bottom:10vh;
+    bottom:5vh;
     width:45vw;
     margin:50vw 5vw 50vh 50vw;
     border-left:5px solid var(--glass2);
@@ -1520,6 +1520,48 @@ margin-top:-250%;
     text-align:center;
 } 
 
+
+
+
+
+#mars {
+    background-color:var(--ink0);
+    min-height:400vh;
+    position:relative;
+}
+
+#mars-img {
+    width:100%;
+    height:auto;
+    position:sticky;
+    top:10vh;
+    width:50vw;
+    margin-bottom:30vh;
+}
+
+#mars-text {
+   position:absolute;
+   top:100vh;
+   display:block;
+   margin-left:55vw;
+   width:40vw;  
+}
+
+#mars-img-wrapper {
+    position:absolute;
+    display:flex;
+    align-items:stretch;
+    flex-wrap:wrap;
+    bottom:5vh;
+    width:45vw;
+    margin:50vw 5vw 50vh 50vw;
+    border-left:5px solid var(--glass2);
+    border-bottom:5px solid var(--glass2);  
+    border-top:5px solid var(--glass1);
+    border-right:5px solid var(--glass1);            
+    background-color:var(--glass2);
+    
+}
 
 
 
