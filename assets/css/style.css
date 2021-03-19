@@ -1248,7 +1248,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 .frame-padding {
   flex: 1;
   background-color: black;
-  height:5vh;
+  
 }
 
 
@@ -1257,7 +1257,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
     height:auto;
     object-fit: cover; 
     object-position: 50% 50%;
-    margin-top:-70vh;
+    margin-top:-50vh;
   
     }
 
@@ -1312,7 +1312,9 @@ margin-top:-80%;
 
     background-image: linear-gradient(to bottom left, #1E212A, #1C1C1A);
     background-size:100% auto;
-    height:3vh;
+    height:10vh;
+    padding-top:1vh;
+    text-align:center;
 }
 
 /*-------------Media Queries-----------*/
