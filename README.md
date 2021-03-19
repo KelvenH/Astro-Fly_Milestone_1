@@ -31,8 +31,8 @@
    
    [- Surface](#Surface)
    
-3. [Content & Design Features](#Content & Design Features)
-4. [Style](#Style)
+3. [Content & Design Features](#Content-&-Design-Features)
+4. [Styles](#Styles)
 5. [Technologies Used](#Technologies-Used)
 6. [Testing](#Testing)
 7. [Bugs, Defects & Key Challenges](#Bugs,-Defects-&-Key-Challenges)
@@ -47,7 +47,7 @@ Astro:Fly is a fictional company offering space tourism / commercial flights. In
 
 ---
 
-## 2. UX
+## UX
 
 ### User Stories 
 #### Business Requirements (Fictional Scenario)
@@ -65,7 +65,7 @@ Site visitors are expected to fall into 1 of 3 categories;
       - clear and easy navigation through the site
       - easy registration of personal details for more information / booking.  
 
-#### Personal Goals (Actual)
+### Personal Goals (Actual)
 Through this project I am looking to; 
 - Demonstrate understanding and application of HTML and CSS essential skills.
 - Broaden personal awareness of further capabilities of HTML and CSS which go beyond those covered in module 1.
@@ -106,7 +106,7 @@ Through this project I am looking to;
 ![Screenshots](README-docs/Screenshots.png)
 
 ---
-## 3. Content & Design Features
+## Content & Design Features
 Content & features initially considered and indication where incorporated into build or held-back as potential future developments and why.
 
 
@@ -120,7 +120,7 @@ Gallery |animated scroll through of images|No - animation requires JS|Opted to e
 
 
 ---
-## 4. Styles
+## Styles
 
 ### Site Theme
 
@@ -139,7 +139,7 @@ Extract of Balsamiq design elements;
 
 
 ---
-## 5. Technologies Used
+## Technologies Used
 Bootstrap 4.5
 Google Fonts
 Font Awesome
@@ -148,20 +148,22 @@ Adobe Illustrator
 
 
 ---
-## 6. Testing
+## Testing
 
 ---
 
-## 7. Bugs, Defects & Key Challenges
+## Bugs, Defects & Key Challenges
 
 ---
 
-## 8. Deployment
+## Deployment
 
 ---
 
-### 9. Acknowledgements
+### Acknowledgements
 - slack community 
+- mentor
+- Whatsapp group
 - Balsamiq introduction tutorials for wireframes
 - getbootstrap.com
 - csstricks.com
