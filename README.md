@@ -14,24 +14,30 @@
 
 ***
 
-Contents
+## Contents
 
-1. Overview
-2. UX;
-   - User Stories
-   - Personal Goals
-   - Scope
-   - Structure
-   - Skeleton
-   - Surface
+1. [Overview](#Overview)
+2. [UX;](#UX)
+
+   [- User Stories](#User-Stories)
    
-3. Content & Design Features
-4. Style
-5. Technologies Used
-6. Testing
-7. Bugs, Defects & Key Challenges
-8. Deployment
-9. Acknowledgements
+   [- Personal Goals](#Personal-Goals)
+   
+   [- Scope](#Scope)
+   
+   [- Structure](#Structure)
+   
+   [- Skeleton](#Skeleton)
+   
+   [- Surface](#Surface)
+   
+3. [Content & Design Features](#Content & Design Features)
+4. [Style](#Style)
+5. [Technologies Used](#Technologies-Used)
+6. [Testing](#Testing)
+7. [Bugs, Defects & Key Challenges](#Bugs,-Defects-&-Key-Challenges)
+8. [Deployment](#Deployment)
+9. [Acknowledgements](#Acknowledgements)
 
 
 
