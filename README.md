@@ -35,7 +35,7 @@
 4. [Styles](#Styles)
 5. [Technologies Used](#Technologies-Used)
 6. [Testing](#Testing)
-7. [Bugs, Defects and Key Challenges](#Bugs,-Defects-and-Key-Challenges)
+7. [Bugs and Defects](#Bugs-and-Defects)
 8. [Deployment](#Deployment)
 9. [Acknowledgements](#Acknowledgements)
 
@@ -159,7 +159,7 @@ Adobe Illustrator
 
 ---
 
-## Bugs, Defects and Key Challenges
+## Bugs and Defects
 
 ---
 
