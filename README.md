@@ -1,73 +1,49 @@
 # Astro:Fly - Milestone Project 1
----
-## Overview
-Astro:Fly is a fictional company set to offer space tourism / commercial flights. In this scenario, the service is under development and a web site is being launched to garner public interest, provide information and register details of potential clientele. This project has been undertaken for educational purposes to demonstrate HTML and CSS essential skills (Code Institute Milestone Project 1). Any referrences to technologies are purely fictional and are not based on scientifc fact.  
+
+Table of Contents
+
+1. Overview
+2. UX;
+   - User Stories
+   - Personal Goals
+   - Scope
+   - Structure
+   - Skeleton
+   - Surface
+   -
+3. Content & Design Features
+4. Style
+5. Technologies Used
+6. Testing
+7. Bugs, Defects & Key Challenges
+8. Deployment
+9. Acknowledgements
 
 
 
 ---
-## README Version History
-#|Date|Key Changes|Notes
--|----|-----------|-----
-1|4/01/21|Initial outline of README content| Outline to be discussed with mentor
-1.1 |04/01/21|Added personal, business and client goals ||
-1.2 |19/01/21|General updates to reflect ongoing development through initial build of core||
-1.3 |12/02/21|Added key points of feedback from mentor 1:1, updated tasks, content and themes with developments||
-1.4 |XX/XX/21|XXXXXXXXXX||
-1.5 |XX/XX/21|XXXXXXXXXX||
-
-
+## 1. Overview
+Astro:Fly is a fictional company offering space tourism / commercial flights. In this scenario, the service has recently launched some routes with additional offerings to come and a web site is being launched to garner public interest, provide information and register details of potential clientele. This project has been undertaken for educational purposes to demonstrate HTML and CSS essential skills (Code Institute Milestone Project 1). Any referrences to technologies are purely fictional and are not based on scientific fact.  
 
 ---
-## Engagement with Mentor 
-Record of key outcomes from discussions with mentor
 
-Session # | Date | Key Questions / Points to Raise | Key Points of Feedback |
---------- | ---- | ------------------------------- | ---------------------- |
-1 | 20/01/21 | Review wireframes, UX & README | Keep simple, use Figma for MS2, include images in early mock-ups, use media queries for respsonsiveness challenges, achieve c. 65% completion by 2nd mentor 1:1 |
-2 | 17/02/21 | Current bugs; accordion drop-down off-screen | - |
-3 | Kelv to schedule | TBC | - |
+## 2. UX
 
----
-*Note: High Level Plan and Key Tasks are captured to keep central record & track activities during design and development and will not be present in the final documentation.*
+### User Stories 
+#### Business Requirements (Fictional Scenario)
+Astro:Fly require a site which;
+- generates buzz and excitement to the general public and media
+- conveys image of a safe and ethical brand (despite the slight irony the service could have on planet earth / airspace)
+- provides prospective clients with summary of planned voyages tus leading to the registration of potential clientele
 
-## High Level Plan
-
-Wk | Focus |
----|-------|
-1 | Preparation (Plan, Research, Review further materials) |
-1 | Initiate documentation (ReadMe, Wireframes, UX) |
-2-4 | Build core structure of site |
-2-4 | Style enhancements |
-5 | Test, Feedback, Finalisation  |
-6 | Finalise Documentation and Deploy |
-
----
-## Key Tasks 
-
-
-Task | Additional Details | Status| Notes
------|--------------------|-------|------
-UX Design | Revisit 5 planes of UX design prior to progressing ideas | Done | Additional sub-headings added to UX section in README - may opt to truncate these when finalising materials |
-Initiate Repository and README file | - | Done | - |
-Determine Project Subject | Considertions and outcome tabled below | Done | Opted for ficticiuous space tourism company site|  
-Conduct Research | Refer to existing sites for examples of content structure and features | Done | - |
-Develop Wireframes / Balsamiq | Review course materials / Slack guides prior to commencing | In Progress | Largely complete, but adjustments in initial build will require adjustments to the final documentation |
-Schedule sessions with mentor | To take place after wireframes developed, mid-development and towards end of final build | In Progress | 2nd 1:1 booked |
-Revisit course materials, projects and assessment criteria to ensure requirements addressed | - | Weekly CheckPoint (On-going) | - |
-Initiate site skeleton based on wireframes | - | In Progress | - |
-Futher actions to be added as activity progresses | - | - | - |
-- | - | - | - |
-
-
----
-## UX
-
-*Temporary sub headings & notes for 5 planes of UX to be consistently referred to - to be truncated to outcomes in final write-up*
-
-Form should follow function- intuitive and simple to use delivers positive emotional experience
-
-### Strategy / Purpose;
+#### Client Goals (Fictional Scenario)
+Site visitors are expected to fall into 1 of 3 categories;
+- media; the new service is expected to create attention due to this being an extreme niche service / limited rivals
+- general public; seeking latest information on the planned service such as timelines, what services will be offered and images 
+- prospective clients, who are; 
+      - able to find information about the services provided
+      - clear and easy navigation through the site
+      - easy registration of personal details for more information / booking.  
 
 #### Personal Goals (Actual)
 Through this project I am looking to; 
@@ -79,21 +55,9 @@ Through this project I am looking to;
 - The subject chosen for this project is to be fun, engaging but also on an area where broad range of dramatic / exaggerated design elements can be employed and have relevance - as opposed to a more traditional retail site where these would be out of place (e.g. use of transitional effects, fonts, color palette).
 - Be proud of the final output!
 
-#### Business Goals (Fictional Scenario)
-Astro:Fly require a site which;
-- generates buzz and excitement to the general public and media
-- conveys image of a safe and ethical brand (despite the slight irony the service could have on planet earth / airspace)
-- provides prospective clients with summary of planned voyages tus leading to the registration of potential clientele
-
-#### Client Goals (Fictional Scenario)
-Site visitors are expected to fall into 1 of 3 categories;
-- media; the new service is expected to create attention due to this being an extreme niche service / limited rivals
-- general public; seeking latest information on the planned service such as timelines, what services will be offered and images 
-- prospective clients; to whet the appetite for client base who would need to have pockets as deep as their enthusiasm for deep space! 
-
 ### Scope - what's on the table for inclusion (or not)
-  - landing / home page - welcome, intro and flavour
-  - detail of services - what, where, where.
+  - landing / home page - welcome, intro and enticement to remain on site
+  - detail of services - what, where, how?
   - gallery - images
   - client registration (modal form)
   
@@ -101,66 +65,37 @@ Site visitors are expected to fall into 1 of 3 categories;
   - consistent theme across sites
   - header / navigation menu and footer mirrored across all pages
   - central / main content to remain same theme / branding but adapted to suit requirements of that page and be interesting / exciting to the users.
+  - content over minimu of 3 pages to include Home, Sales and Gallery
 
 ### Skeleton - how information will be presented / navigated
  - all pages must be responsive 
  - navigation will primarily be through the menu (to appear as drop down on small screen devices and potentially permanent sidebar for larger screens)
  - additional links added to act as shortcuts 
+ - outine available in Balsamiq - example shown below
+ -  
 
 ### Surface - what will the finished product look like; color palette, fonts, images and other design elements
-  - refer to balsamiq documentation during development
+  - initial outline developed in Balsamiq <link here> with example shown below
+  - mock-up of final rendering (screen grabs)
 
-### User Stories
-The business (Astro:Fly) require a site which;
-- generates brand awareness, buzz and excitement to the general public and media.
-- lead to sales through enticing prospective clients to register for further information.
-
-The customer goals are;
-- able to find information about the services provided
-- clear and easy navigation through the site
-- easy registration of personal details for more information / booking. 
-
-### Links to wireframes
-
-Links to be added
 
 
 ---
-## Content & Features
+## 3. Content & Design Features
 Content & features initially considered and indication where incorporated into build or held-back as potential future developments and why.
 
-Page | Content | Features | In Build | Comments |
------|---------|----------|----------|----------|
-Home | About, Navigation Bar | static background image, interactive Nav bar, transition effects | Nav bar developed for mobie, need to refine and develop version for larger screen sizes. Some content to be finalised. | Some content to be finalised. |
-Home| Timeline conception to launch| TBC | No | Dropped as requires additional development - viewed as nice to have and not neccessity to the site  |
-Home | Countdown Timer to maiden launch| TBC | TBC | -
-Voyage Overview| Pre-voyage (medical, training, quarantine)  | Expandable List | TBC | - |
-Voyage Overview| Voyage Route | Map | TBC | - |
-Voyage Overview| Ship Facilities | Interactive List, Floorplan with hover over text | TBC | - |
-Voyage Overview| Premium Upgrades | Interactive List | TBC | - |
-Voyage Overview| - | TBC | TBC | - |
-Gallery| stock images / artist impressions of departure port, ships, moon base, crew and celestial images | TBC | TBC | - Some content to be finalised.
-Register Interest | - | modal form | TBC | - |
-Careers | - | - | Dropped | Over and above project requirements | referrence left within navigation menus to retain asthetics |
-News | - | Ficticious news stories and links to live external sites (e.g. NASA, Space-X, Virgin Galactic) | Dropped - but added news style ticker to homepage | - |
+
+Page | Features | In Build | Comments |
+-----|----------|----------|----------|
+General | Navigation menu and footer to social media links| Yes | 
+Home | Intro, Countdown timer to next launch, news ticker | Yes | Majority of features included although some 'workarounds' e.g. countdown timer only counts down for a speciic time and resets on page load.
+Flights|Oerview of the services provided with embedded images| Yes | Scaled back initial plans due to overall volume and some design elements which would have relied upon JS|
+Sign-Up|Modal Form to register for details| Yes | in addiiton to sale enquiries page was also used to highlight and register for membership|
+Gallery |animated scroll through of images|No - animation requires JS|Opted to embed images within Flights page|
 
 
 ---
-## Styles
-
-### Color palette 
-
-Opting for smart, sophisticated visual branding. Pre-build looking for primary colouring from group 1 and secondary / accent from group 2. 
-
-Group | Considered | Selected | Notes |
-------|-----------|----------| ------|
-1|Metallic|TBD|May require use of external textures?
-1|Black|TBD|
-1|Grey|TBD|
-2|UV (purple)|TBD|
-2|Blue|TBD|
-2|Orange|TBD|
-2|Red|TBD|
+## 4. Styles
 
 ### Site Theme
 
@@ -170,25 +105,37 @@ Cyberpunk | No | Whilst preferred to style selected, expect this would require a
 Vintage (e.g. 70's prediction of future) | No | For same reasons as given above.
 Futuristic | Yes | Expect these to be more easily available and achieved through basic shapes / easily available images |
 
+### Color palette 
+
+Opting for smart, sophisticated visual branding with futuristic styling. 
+
+Extract of Balsamiq design elements;
+
+
 
 ---
-## Technologies Used
-Bootstrap 4
+## 5. Technologies Used
+Bootstrap 4.5
 Google Fonts
 Font Awesome
 Adobe Photoshop
+Adobe Illustrator
+
 
 ---
-## Testing
+## 6. Testing
 
 ---
-## Deployment
+
+## 7. Bugs, Defects & Key Challenges
 
 ---
-## Credits
-### Content
-### Media
-### Acknowledgements
+
+## 8. Deployment
+
+---
+
+### 9. Acknowledgements
 - slack community 
 - Balsamiq introduction tutorials for wireframes
 - getbootstrap.com
