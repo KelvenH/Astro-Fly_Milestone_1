@@ -135,13 +135,17 @@ Cyberpunk | No | Whilst preferred to style selected, expect this would require a
 Vintage (e.g. 70's prediction of future) | No | For same reasons as given above.
 Futuristic | Yes | Expect these to be more easily available and achieved through basic shapes / easily available images |
 
-### Color palette 
-
-Opting for smart, sophisticated visual branding with futuristic styling. 
-
-Extract of Balsamiq design elements;
+Extract of Balsamiq design elements - initial considerations;
 
 ![Mood Board](README-docs/Mood_Board.png)
+
+
+### Color palette 
+
+Opted for smart, sophisticated visual branding with futuristic styling. Image below displays colors used. These are partially shown against a dark background to indicate transparency levels.
+
+![Color Palette](README-docs/Color-Palette.png)
+
 
 ### Fonts and Typography
 In keeping with the futuristc theme, the basic text uses font types sourced from GoogleFonts.
@@ -156,15 +160,22 @@ A more dramatic font was sourced for the company logo and H1 headings.
 ('Ethnocentric' licence purchased for usage via fontspring.com)
 
 ![Font-Ethnocentric](README-docs/FONT-ethnocentric.png)
+
 ![Font-Ethnocentric](README-docs/FONT-Ethnocentric-2.png)
 
 Special fonts were used for particular purposes; the digital countdown clock and digital news ticker. 
 (Digital & LED fonts available on free license for non-commercial use via dafont.com)
 
 ![FONT-digital-7.png](README-docs/FONT-digital-7.png)
+
 ![FONT-AdvancedDotDigital7](README-docs/FONT-AdvancedDotDigital7.png)
 
+### Responsive Font Groups
 
+Font types, colors and sizes were added to the Root Directory (see style.css for details). Additionaly, i took this one stage further by creating responsive font groupings. Each grouping comprises of a font family, font size, color and in some cases varaition on font weight. 'Clamp' was also applied to the font size to set min / max size and retain better control through responsive resizings. Example shown below. This enabled consistent application across content.
+Note, these are shown on single lines (as opposed to standard line by line property) as found this easier to refer to. 
+
+![Responsive-Font-Groups](README-docs/Responsive-Font-Groups.png)
 
 ### Special note on SVGs - intention was to provide a sci-fi themed User Interface. Inspiration was from combination of Sci-Fi films / tv, PC games and search on Sci Fi / Concept User Interfaces via Pinterest. Specific sites useful for research;
 https://sciencefictioninterfaces.tumblr.com/
