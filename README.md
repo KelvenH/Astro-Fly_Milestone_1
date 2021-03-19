@@ -143,7 +143,30 @@ Extract of Balsamiq design elements;
 
 ![Mood Board](README-docs/Mood_Board.png)
 
-Note on SVG useage: intention was to provide a sci-fi themed User Interface. Inspiration was from combination of Sci-Fi films / tv, PC games and search on Sci Fi / Concept User Interfaces via Pinterest. Specific sites useful for research;
+### Fonts and Typography
+In keeping with the futuristc theme, the basic text uses font types sourced from GoogleFonts.
+
+![Font-Baumans](README-docs/FONT-Baumans.png)
+
+Another GooleFont was used for a slight difference appearance where looking to imply digital display
+![Font-Orbitron](README-docs/FONT-Orbitron.png)
+
+
+A more dramatic font was sourced for the company logo and H1 headings.
+('Ethnocentric' licence purchased for usage via fontspring.com)
+
+![Font-Ethnocentric](README-docs/FONT-ethnocentric.png)
+![Font-Ethnocentric](README-docs/FONT-Ethnocentric-2.png)
+
+Special fonts were used for particular purposes; the digital countdown clock and digital news ticker. 
+(Digital & LED fonts available on free license for non-commercial use via dafont.com)
+
+![FONT-digital-7.png](README-docs/FONT-digital-7.png)
+![FONT-AdvancedDotDigital7](README-docs/FONT-AdvancedDotDigital7.png)
+
+
+
+### Special note on SVGs - intention was to provide a sci-fi themed User Interface. Inspiration was from combination of Sci-Fi films / tv, PC games and search on Sci Fi / Concept User Interfaces via Pinterest. Specific sites useful for research;
 https://sciencefictioninterfaces.tumblr.com/
 https://www.saji8k.com/kit-fui/movie/
 Initially, time was invested in understanding clip-paths to style the element borders. However, upon imlementing challenges arose due to responsive and dynamic re-sizing of elements resulting in squashed / stretched elements. 
@@ -170,11 +193,18 @@ https://mastery.games/post/dynamic-svg-components/
 
 ---
 ## Technologies Used
+
+Languages:
+HTML5
+CSS3
+(whist Javascript has not been used directly, there are aspects applied through use of Bootstrap)
+
 Bootstrap 4.5
 Google Fonts
 Font Awesome
 Adobe Photoshop
 Adobe Illustrator
+Blendr
 
 
 ---
