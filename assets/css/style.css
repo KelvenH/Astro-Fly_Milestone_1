@@ -81,7 +81,7 @@ body, div, p {font-size:16px;font-family: var(--standardfont);color: var(--ink2)
 h1 {font-size:clamp(28px, 5vw, 44px);font-family: var(--titlefont);color: var(--ink1);}
 h2 {font-size:clamp(16px, 3vw, 36px);font-family: var(--titlefont);color: var(--ink1);}
 h3 {font-size:clamp(16px, 2vw, 28px);font-family: var(--titlefont);color: var(--ink2);}
-h4 {font-size:clamp(16px, 20px, 24px);font-family: var(--standardfont);color: var(--ink2);}
+h4 {font-size:clamp(16px, 4vw, 24px);font-family: var(--standardfont);color: var(--ink2);}
 h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: var(--ink2);}
 .LEDh2 {font-size:clamp(16px, 3vw, 29px);font-family: var(--titlefont);color: var(--LED1);}
 .LEDh4 {font-size:clamp(16px, 20px, 24px);font-family: var(--LEDfont);color: var(--LED1);font-weight:700;}
@@ -416,6 +416,8 @@ to be reviewed prior to launch and remove any redundant ----*/
     position:relative;
     margin-left:1vw;
     margin-right:1vw;
+    padding-top:1vh;
+    padding-bottom:1vh;
     }
 
 
@@ -430,46 +432,6 @@ to be reviewed prior to launch and remove any redundant ----*/
     text-shadow:2px 2px 2px var(--ink0);
     }
 
-/*--Media queries------HUD-remove graphics from small screens & algnment adjustments to prevent overflow with ticker--*/ 
-
-    @media (max-width:767px) {
-
-    #HUD-img, .HUD-right, .HUD-left {
-    display:none;
-    }
-
-       
-    .HUD-text.logo, .HUD-text .LEDh4 {
-    text-align:center;
-    font-size:14px  
-    }
-
-    .HUD-text {
-    top:0;
-    width:100vw;
-    }
-
-    .HUD-center {
-    padding-bottom:10vh;
-    }
-    } 
-
-
-/*--Further media query to remove text conent for small screens in landscape due to overflow---*/
-
-@media (max-width:767px) and (orientation:landscape) {
-
-    .HUD-text {
-    display:none;
-    }
-
-    .HUD-center {
-    padding-bottom:0;   
-    }
-
-}
-
-/*--END HUD Media Queries--*/ 
 
 
 /*----DEFECT------------------------------
@@ -541,7 +503,7 @@ padding-left:35%;
 position:absolute;
 padding-top:50%;
 bottom:0;
-left:0;
+left:1vw;
 }
 
 .HUD-right {
@@ -561,6 +523,49 @@ text-align:left;
 padding-top:1vw;
 vertical-align:bottom;
 }
+
+
+/*--Media queries------HUD-remove graphics from small screens & algnment adjustments to prevent overflow with ticker--*/ 
+
+    @media (max-width:767px) {
+
+    #HUD-img, .HUD-right, .HUD-left {
+    display:none;
+    }
+
+       
+    .HUD-text.logo, .HUD-text .LEDh4 {
+    text-align:center;
+    font-size:14px  
+    }
+
+    .HUD-text {
+    top:0;
+    width:100vw;
+    }
+
+    .HUD-center {
+    padding-bottom:10vh;
+    }
+    } 
+
+
+/*--Further media query to remove text conent for small screens in landscape due to overflow---*/
+
+@media (max-width:767px) and (orientation:landscape) {
+
+    .HUD-text {
+    display:none;
+    }
+
+    .HUD-center {
+    padding-bottom:0;   
+    }
+
+}
+
+/*--END HUD Media Queries--*/ 
+
 
                 /*------------Home Page - Intro / Ticker---------*/
 .home-main-ticker {
@@ -1572,17 +1577,47 @@ margin-top:-250%;
 
 .register-container {
     width:100vw;
-    height:100vh;
+    height:auto;
     background:url(../images/final-images/tiled-hex_black.svg); /*----image source XXXXXXXX -----*/
     background-size: cover;
     background-attachment: fixed;
-    
+}
+
+#register-hero-wrap {
+    width:100vw;
+    height:auto;
+    position:relative;
+    border-bottom:8px solid var(--glass1);
+}
+
+#register-hero-img {
+    width:100vw;
+    height:auto;
+    position:relative;
+}
+
+#register-hero-title1 {
+    position:absolute;
+    width:90%;
+    top:5%;
+    left:0;
+    right:0;
+    text-align:center;
+    margin:0 auto;
+    font-weight:700;
+    color:var(--LED1);
+}
+
+#register-hero-title2 {
+    position:absolute;
+    bottom:0;
+    right:5%;
 }
 
 
 #register-intro-wrapper {
-    -webkit-margin-before:2vw;
-            margin-block-start:2vw;  /*Bug fix horizontal margin collapse between parent and child - fix sourced from https://www.smashingmagazine.com/2019/07/margins-in-css/ --------*/
+   -webkit-margin-before:2vw;
+    margin-block-start:2vw;  /*Bug fix horizontal margin collapse between parent and child - fix sourced from https://www.smashingmagazine.com/2019/07/margins-in-css/ --------*/
     border: solid 0.25vw var(--ink1);
     width:80vw;
     margin-left:auto;
@@ -1590,25 +1625,30 @@ margin-top:-250%;
     background-color:var(--glass3);
 }
 
-#register-header {
-    margin-top:4vw;   
-    font-weight:700;
-    line-height:6vh;
-    text-align:center;
-}
 
 #register-intro {
     padding: 2vw;
     text-align:center;
 }
 
+/*-------DEFECT-------------
+ISSUE: Font-size not responding to responsive font-groups in style.css - being overidden by '_rfs.scss' "only render static font-size if no fluid font size available" - (Bootstrap?)
+Resolved: Workaround
+Outcome: Media query targetting specific text
+---------------*/
+
+@media  (max-width: 767px) {
+#register-intro {
+    font-size:16px;
+}
+}
 
 /*-------Register Membership table-------*/
 
 .membership-table {
     -webkit-margin-before:2vw;
             margin-block-start:2vw;
-    width:80%;
+    width:80vw;
     margin-left:auto;
     margin-right:auto;
     border-left:10px solid var(--glass2);
@@ -1653,6 +1693,13 @@ font-size: var(--LEDstnd);
  font-size: var(--LEDh2);   
 }
 
+#pre-footer-buffer {
+    height:5vh;
+}
+
+
+/*------------Registration Modal------------------------*/
+
 .modal-content {
     text-align:left;
     background-color:black;
@@ -1660,18 +1707,24 @@ font-size: var(--LEDstnd);
 
 .modal-header {
     text-align:center;
+    display:flex;
     text-shadow:0px 0px 1px rgb(245, 145, 87);
 }
+#register-logo {
+    flex-wrap:nowrap;
+}
 
+.modal-title {
+    width:70%;
+    
+}
 .modal-header .btn-close {
     background-color: rgba(255,129,10,0.6);
     border-left:solid 2px rgb(245, 145, 87);
     border-top:solid 2px rgb(245, 145, 87);
 }
 
-#register-logo {
-    height:100%;
-}
+
 
 .form-radio-membership, .form-radio-trip {
     border-style:inset;
