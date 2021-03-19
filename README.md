@@ -78,13 +78,15 @@ Through this project I am looking to;
 - The subject chosen for this project is to be fun, engaging but also on an area where broad range of dramatic / exaggerated design elements can be employed and have relevance - as opposed to a more traditional retail site where these would be out of place (e.g. use of transitional effects, fonts, color palette).
 - Be proud of the final output!
 
-### Scope - what's on the table for inclusion (or not)
+### Scope 
+(what's on the table for inclusion?)
   - landing / home page - welcome, intro and enticement to remain on site
   - detail of services - what, where, how?
   - gallery - images
   - client registration (modal form)
   
-### Structure - how is information structured and logically grouped
+### Structure
+(how is information structured and logically grouped?)
   - consistent theme across sites
   - header / navigation menu and footer mirrored across all pages
   - central / main content to remain same theme / branding but adapted to suit requirements of that page and be interesting / exciting to the users.
@@ -92,7 +94,8 @@ Through this project I am looking to;
 
 ![SitePlan](README-docs/Wireframe-SitePlan.png)
 
-### Skeleton - how information will be presented / navigated
+### Skeleton 
+(how information will be presented / navigated)
  - all pages must be responsive 
  - navigation will primarily be through the menu (to appear as drop down on small screen devices and potentially permanent sidebar for larger screens)
  - additional links added to act as shortcuts 
@@ -102,8 +105,9 @@ Through this project I am looking to;
  ![MidLevelDesign](README-docs/Wireframe-Mid-Level-Design.png)
  ![HigherSpecMock-up](README-docs/Wireframe-HigherSpecMock-up.png)
 
-### Surface - what will the finished product look like; color palette, fonts, images and other design elements
-  - initial outline developed in Balsamiq <link here> with example shown below
+### Surface
+(what will the finished product look like; color palette, fonts, images and other design elements)
+  - initial outline developed in Balsamiq with extracts shown above)
   - mock-up of final rendering (screen grabs)
 
 ![Screenshots](README-docs/Screenshots.png)
