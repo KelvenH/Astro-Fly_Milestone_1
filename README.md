@@ -2,12 +2,17 @@
 
 
 
-##Links to;
+## Links to;
 
 [Astro:Fly - Live Site](https://kelvenh.github.io/Astro-Fly_Milestone_1/index.html)
+
 [GitHub Repo](https://github.com/KelvenH/Astro-Fly_Milestone_1/)
+
 [Wireframes - v.Balsamiq](README-docs/Wireframe-Astrofly-Full-v.Balsamiq.bmpr)
+
 [Wireframes - v.PDF](README-docs/Wireframe-Astrofly-Full.pdf)
+
+***
 
 Contents
 
