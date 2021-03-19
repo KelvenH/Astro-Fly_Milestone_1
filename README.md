@@ -215,35 +215,37 @@ Note, these are shown on single lines (as opposed to standard line by line prope
 
 ### Images
 
-Page | Image - Description | Filename | Source | Notes |
-Multiple | hex tiled pattern | tiled-hex_black.svg |Xxxxxxxxxxx | |
+ Page    | Image - Description                    |                             Filename |                   Source |                               Notes |
+---------|----------------------------------------|--------------------------------------|--------------------------|-------------------------------------|
+Multiple | hex tiled pattern                      |                  tiled-hex_black.svg |              Xxxxxxxxxxx |                                     |
 
-Home | Globe (hero img) |planet_earth.jpeg| xxxxxxxxx| |
-Home | Satellite & Dish |INAL1Dish.svg, INAL1satellitesvg.svg| XXXXXXXXX | |
-Home | Globe (hologram)  |globe-holo-final-reduced.svg| XXXXXXXX | |
-Home | central HUD  |HUD1Asset-3.svg| SVG created in Adobe Illustrator | (see svg notes below)|
-Flights | Astronaut and initial 'gas cloud' |flights-hero-frame-6000px.png | XXXXXXXXX |
-Flights | Other images (in order)  |star-collage| XXXXXXXX | merged and blended in Photoshop to create a continuous scroll |
-Flights | Moon |moon-half.png| XXXXXXXX | |
-Flights | (Moon) footprint |moonprint.jpg | xxxxxxxx | |
-Flights | (Moon) base  |moonbase-5.jpg | Xxxxxxxxxx| |
-Flights | (Moon) spacecraft  |craft1.jpg| xxxxxxxx | |
-Flights | (Moon) ship interior  |ship-seating.jpg| xxxxxxxx | |
+Home     | Globe (hero img)                       |planet_earth.jpeg                     | xxxxxxxxx                |                                     |
+Home     | Satellite & Dish                       |INAL1Dish.svg, INAL1satellitesvg.svg. | XXXXXXXXX                |                                     |
+Home     | Globe (hologram)                       |globe-holo-final-reduced.svg          | XXXXXXXX                 |                                     |
+Home     | central HUD                            |HUD1Asset-3.svg                       | SVG created in Adobe Illustrator |        (see svg notes below)|
+Flights  | Astronaut and initial 'gas cloud'      |flights-hero-frame-6000px.png         | XXXXXXXXX |
+Flights  | Other images (in order)                |star-collage                       | XXXXXXXX | merged + blended in Photoshop to create a continuous scroll |
+Flights  | Moon                                   |moon-half.png                         | XXXXXXXX                  |                                     |
+Flights  | (Moon) footprint                       |moonprint.jpg                         | xxxxxxxx                  |                                     |
+Flights  | (Moon) base                            |moonbase-5.jpg                        | Xxxxxxxxxx                |                                     |
+Flights  | (Moon) spacecraft                      |craft1.jpg                            | xxxxxxxx                  |                                     |
+Flights  | (Moon) ship interior                   |ship-seating.jpg                      | xxxxxxxx                  |                                     |
 
-Flights | Earth  |earth-half.png| xxxxxxxx | |
+Flights  | Earth                                  |earth-half.png                        | xxxxxxxx                  |                                     |
 
-Flights | (Space Safari) model - 2 images  |Observor.png, spacestation2.jpg| xxxxxxxx | |
-Flights | (Space Safari)  corridor  |spacestation5.jpg| xxxxxxxx | |
-Flights | (Space Safari) spacecraft  |craft-2.jpg| xxxxxxxx | |
-Flights | (Space Safari) 'probe'  |probe.jpg| xxxxxxxx | This is a Photoshopped collection of parts of a building model|
+Flights  | (Space Safari) model - 2 images        |Observor.png, spacestation2.jpg       | xxxxxxxx                  |                                     |
+Flights  | (Space Safari)  corridor               |spacestation5.jpg                     | xxxxxxxx                  |                                     |
+Flights  | (Space Safari) spacecraft              |craft-2.jpg                           | xxxxxxxx                  |                                     |
+Flights  | (Space Safari) 'probe'                 |probe.jpg                             | xxxxxxxx | Photoshopped collection of parts of a building model|
 
 
-Flights | Mars  |mars.png| mars-settlement.jpg | |
-Flights | (Mars) Mars camp - 2 images  |Mars-camp2.jpg| xxxxxxxx | |
-Flights | (Mars) rover  |mars-rover.png| xxxxxxxx | |
-Flights | (Mars) local native  |mars-alien.jpg| xxxxxxxx | |
+Flights | Mars                                    |mars.png|   mars-settlement.jpg       |                           |                                      | 
+Flights | (Mars) Mars camp - 2 images             |Mars-camp2.jpg                        | xxxxxxxx                  |                                      |
+Flights | (Mars) rover                            |mars-rover.png                        | xxxxxxxx                  |                                      |
+Flights | (Mars) local native                     |mars-alien.jpg                        | xxxxxxxx                  |                                      |
 
-Registration | hero img | cold-astronaught-2500px.png | (Earth), (Astronaut), (rock), (spacecraft) | Photoshopped collection of 4 images| 
+Registration | hero img                           | cold-astronaught-2500px.png | (Earth), (Astronaut), (rock), (spacecraft) | Photoshopped collection of 4 images| 
+
 
 ### Special note on SVGs - intention was to provide a sci-fi themed User Interface. Inspiration was from combination of Sci-Fi films / tv, PC games and search on Sci Fi / Concept User Interfaces via Pinterest. Specific sites useful for research;
 https://sciencefictioninterfaces.tumblr.com/
