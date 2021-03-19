@@ -94,7 +94,6 @@ h5 {font-size:clamp(15px, 18px, 20px);font-family: var(--standardfont);color: va
 /*-Challenge: Responsive page-sizing meant no fixed footer height. Attempts at calc() a 'buffer row / bottom-margin' (to sit behind footer) was not working and still resulted in either gap (content to footer) or overlap (footer over content). This mainly affected pages where content is dynamic (e.g. nav panes with different sized content).
 Solution: Fix found on CSStricks.com (https://css-tricks.com/couple-takes-sticky-footer/). Using the flexbox method, have utilised <section> (already added to pages) to grow to fill space, and shrink on the footer to meet each other.
 EDIT: applying this fix introduced the original problem on the home page. The overarching page wrapper has been removed from index.html so although 2 different approaches both now display appropriately.
-
 Code fix for fixed footer:----*/
 
 html, body {
@@ -650,11 +649,9 @@ vertical-align:bottom;
 }
 
 /*----Note on SVGs: 
-
 Inspiration from combination of Sci-Fi films / tv, PC games and search on Sci Fi / Concept User Interfaces ovia Pinterest. Specific sites considered;
 https://sciencefictioninterfaces.tumblr.com/
 https://www.saji8k.com/kit-fui/movie/
-
 Background images were self-created in Adobe Illustrator and exported as SVGs.
 Opted to incorporate as seperate SVG files (opposed to inline HTML) to keep code cleaner. ---*/
 
@@ -984,7 +981,6 @@ Acknowledgment: Fix sourced from https://avexdesigns.com/blog/responsive-youtube
     }
 
 /*----------DECALS REMOVED - adding unneccessary page height
-
 #home-main-lower-right-pane-decal {
   height: 5vw;
   width: auto;
