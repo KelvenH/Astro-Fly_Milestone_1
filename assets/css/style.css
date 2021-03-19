@@ -1329,13 +1329,21 @@ margin-top:-80%;
     text-align:center;
 }
 
-/*-------------Media Queries-----------*/
+/*--------DEFECT-----
+ISSUE: nature of the sticky frme with scrolling images beneath does not work on small devices as frame too small (portrait mode) plus adds unneccessary scroll on touch screen devices - poor UX.
+Resolved: Yes
+Outcome: Media query removes this section from small devices.
+-----*/
+
+/*--Media Queries-----------*/
 
 
 @media (max-width:767px) {
 #flights-container-A {
 display:none;
 }
+
+/*--counter-act removal of fake navbar due to the above query---*/
 
 #trips-blend-box {
     margin-top:10vh;
@@ -1545,7 +1553,201 @@ display:none;
     
 }
 
+/*----MEDIA Queries----*/
 
+
+@media (max-width:767px) {
+#lunar-trips {
+display:flex;    
+}
+
+#moon-img {
+padding-bottom:25vh;   
+
+}
+
+#lunar-orbit-text {
+    top:40vh;
+    width:90vw;
+    margin-left:5vw;
+    margin-right:5vw;
+}
+
+
+#lunar-landing-text {
+    top:90vh;
+    display:block;
+    width:90vw;
+    margin-left:5vw;
+    margin-right:5vw;
+}
+
+#moon-img-wrapper {
+    top:150vh;
+    width:90vw;
+    height:auto;
+    flex:1 1 auto;
+    overflow:auto;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:2vw;
+}    
+
+.mini-img {
+   width:auto;
+   max-width:90%; 
+   max-height:20%;
+   object-fit:contain;
+   
+} 
+
+
+
+} 
+
+
+}
+
+/*--- duplicates for media Q---
+
+
+
+
+
+.mini-img img{
+    object-fit:contain;
+    flex-grow:1;
+    max-width:100%;
+    width:auto;
+
+
+
+
+
+
+
+
+
+
+#earth-orbit {
+    background-color:var(--ink0);
+    min-height:300vh;
+    position:relative;
+}
+
+
+#earth-img {
+    width:100%;
+    height:auto;
+    position:sticky;
+    padding-left:60vw;
+    top:0;
+    padding-bottom:25vh;
+}
+
+
+#earth-orbit-text {
+   position:absolute;
+   top:100vh;
+   display:block;
+   margin-left:10vw;
+   width:40vw;
+}
+
+
+#space-safari {
+    background-color:var(--ink0);
+    min-height:400vh;
+    position:relative;
+}
+
+#safari-img {
+    width:100%;
+    height:auto;
+    position:sticky;
+    top:10vh;
+    width:50vw;
+    margin-bottom:30vh;
+}
+
+#safari-text {
+   position:absolute;
+   top:100vh;
+   display:block;
+   margin-left:55vw;
+   width:40vw;  
+}
+
+#safari-img-wrapper {
+    position:absolute;
+    display:flex;
+    align-items:stretch;
+    flex-wrap:wrap;
+    bottom:5vh;
+    width:45vw;
+    margin:50vw 5vw 50vh 50vw;
+    border-left:5px solid var(--glass2);
+    border-bottom:5px solid var(--glass2);  
+    border-top:5px solid var(--glass1);
+    border-right:5px solid var(--glass1);            
+    background-color:var(--glass2);
+    
+}
+
+.mini-img-v2 {
+   
+    height:100%;
+    width:50%;
+    background-color:var(--glass3);
+    padding:1vh;
+    display:inline-block;
+    text-align:center;
+} 
+
+
+
+
+
+#mars {
+    background-color:var(--ink0);
+    min-height:400vh;
+    position:relative;
+}
+
+#mars-img {
+    width:100%;
+    height:auto;
+    position:sticky;
+    top:10vh;
+    width:50vw;
+    margin-bottom:30vh;
+}
+
+#mars-text {
+   position:absolute;
+   top:100vh;
+   display:block;
+   margin-left:55vw;
+   width:40vw;  
+}
+
+#mars-img-wrapper {
+    position:absolute;
+    display:flex;
+    align-items:stretch;
+    flex-wrap:wrap;
+    bottom:5vh;
+    width:45vw;
+    margin:50vw 5vw 50vh 50vw;
+    border-left:5px solid var(--glass2);
+    border-bottom:5px solid var(--glass2);  
+    border-top:5px solid var(--glass1);
+    border-right:5px solid var(--glass1);            
+    background-color:var(--glass2);
+    
+}
+
+---*/
 
 /*---------------------Registration-----------------*/
 
