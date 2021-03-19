@@ -1242,7 +1242,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
   bottom: 0;
   display:flex;
   flex-direction: column;
-  height:100vh;
+  
 }
 
 .frame-padding {
@@ -1256,8 +1256,8 @@ text-shadow:20px 20px 20px 20px #00d9ff;
     width:100vw;
     height:auto;
     object-fit: cover; 
-    object-position:bottom center;
-    
+    object-position: 50% 50%;
+    margin-top:-70vh;
   
     }
 
@@ -1279,6 +1279,7 @@ grid-template-rows: 1fr;
 grid-column-gap: 0px;
 grid-row-gap: 0px;
 }
+
 
 .flights-hero-content img{
 width:100vw;
@@ -1305,6 +1306,13 @@ justify-self:right;
 padding-right:0;
 align-self:center;
 margin-top:-80%;   
+}
+
+#trips-blend-box {
+
+    background-image: linear-gradient(to bottom left, #1E212A, #1C1C1A);
+    background-size:100% auto;
+    height:3vh;
 }
 
 /*-------------Media Queries-----------*/
