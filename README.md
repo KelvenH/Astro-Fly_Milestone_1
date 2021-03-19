@@ -90,8 +90,8 @@ Through this project I am looking to;
  - outine available in Balsamiq - example shown below
  
  ![InitialConcepts](README-docs/Wireframe-InitialConcepts.png)
- ![MidLevelDesign](RREADME-docs/Wireframe-Mid-Level-Design.png)
- ![HigherSpecMock-up](RREADME-docs/Wireframe-HigherSpecMock-up.png)
+ ![MidLevelDesign](README-docs/Wireframe-Mid-Level-Design.png)
+ ![HigherSpecMock-up](README-docs/Wireframe-HigherSpecMock-up.png)
 
 ### Surface - what will the finished product look like; color palette, fonts, images and other design elements
   - initial outline developed in Balsamiq <link here> with example shown below
