@@ -1601,12 +1601,51 @@ padding-bottom:25vh;
    
 } 
 
+#earth-orbit {
+    height:175vh;
+}
+
+#earth-img {
+    
+    padding-left:60vw;
+    top:30vh;
+    padding-bottom:50vh;
+}
+
+#earth-orbit-text {
+   position:absolute;
+   top:50vh;
+   
+   margin-left:4vw;
+   width:50vw;
+}
+
+
+#space-safari {
+    background-color: var(--ink0);
+    z-index:100;
+}
+
+#safari-img {
+    top:20vh;
+    width:50vw;
+}
+
+#safari-text {
+   margin-left:5vw;
+   width:90vw; 
+   z-index:-50; 
+}
+
+#safari-img-wrapper {
+    width:90vw;
+    margin:5vw;
+}
 
 
 } 
 
 
-}
 
 /*--- duplicates for media Q---
 
@@ -1629,30 +1668,6 @@ padding-bottom:25vh;
 
 
 
-#earth-orbit {
-    background-color:var(--ink0);
-    min-height:300vh;
-    position:relative;
-}
-
-
-#earth-img {
-    width:100%;
-    height:auto;
-    position:sticky;
-    padding-left:60vw;
-    top:0;
-    padding-bottom:25vh;
-}
-
-
-#earth-orbit-text {
-   position:absolute;
-   top:100vh;
-   display:block;
-   margin-left:10vw;
-   width:40vw;
-}
 
 
 #space-safari {
