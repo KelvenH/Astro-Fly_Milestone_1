@@ -50,13 +50,15 @@ Astro:Fly is a fictional company offering space tourism / commercial flights. In
 ## UX
 
 ### User Stories 
-#### Business Requirements (Fictional Scenario)
+(Fictional Scenarios)
+
+#### Business Requirements 
 Astro:Fly require a site which;
 - generates buzz and excitement to the general public and media
 - conveys image of a safe and ethical brand (despite the slight irony the service could have on planet earth / airspace)
 - provides prospective clients with summary of planned voyages tus leading to the registration of potential clientele
 
-#### Client Goals (Fictional Scenario)
+#### Client Goals 
 Site visitors are expected to fall into 1 of 3 categories;
 - media; the new service is expected to create attention due to this being an extreme niche service / limited rivals
 - general public; seeking latest information on the planned service such as timelines, what services will be offered and images 
@@ -65,7 +67,8 @@ Site visitors are expected to fall into 1 of 3 categories;
       - clear and easy navigation through the site
       - easy registration of personal details for more information / booking.  
 
-### Personal Goals (Actual)
+### Personal Goals 
+(Actual)
 Through this project I am looking to; 
 - Demonstrate understanding and application of HTML and CSS essential skills.
 - Broaden personal awareness of further capabilities of HTML and CSS which go beyond those covered in module 1.
