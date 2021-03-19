@@ -1,6 +1,15 @@
 # Astro:Fly - Milestone Project 1
 
-Table of Contents
+
+
+##Links to;
+
+[Astro:Fly - Live Site](https://kelvenh.github.io/Astro-Fly_Milestone_1/index.html)
+[GitHub Repo](https://github.com/KelvenH/Astro-Fly_Milestone_1/)
+[Wireframes - v.Balsamiq](README-docs/Wireframe-Astrofly-Full-v.Balsamiq.bmpr)
+[Wireframes - v.PDF](README-docs/Wireframe-Astrofly-Full.pdf)
+
+Contents
 
 1. Overview
 2. UX;
@@ -10,7 +19,7 @@ Table of Contents
    - Structure
    - Skeleton
    - Surface
-   -
+   
 3. Content & Design Features
 4. Style
 5. Technologies Used
@@ -67,18 +76,23 @@ Through this project I am looking to;
   - central / main content to remain same theme / branding but adapted to suit requirements of that page and be interesting / exciting to the users.
   - content over minimu of 3 pages to include Home, Sales and Gallery
 
+![SitePlan](README-docs/Wireframe-SitePlan.png)
+
 ### Skeleton - how information will be presented / navigated
  - all pages must be responsive 
  - navigation will primarily be through the menu (to appear as drop down on small screen devices and potentially permanent sidebar for larger screens)
  - additional links added to act as shortcuts 
  - outine available in Balsamiq - example shown below
- -  
+ 
+ ![InitialConcepts](README-docs/Wireframe-InitialConcepts.png)
+ ![MidLevelDesign](RREADME-docs/Wireframe-Mid-Level-Design.png)
+ ![HigherSpecMock-up](RREADME-docs/Wireframe-HigherSpecMock-up.png)
 
 ### Surface - what will the finished product look like; color palette, fonts, images and other design elements
   - initial outline developed in Balsamiq <link here> with example shown below
   - mock-up of final rendering (screen grabs)
 
-
+![Screenshots](README-docs/Screenshots.png)
 
 ---
 ## 3. Content & Design Features
