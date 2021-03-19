@@ -1246,6 +1246,7 @@ text-shadow:20px 20px 20px 20px #00d9ff;
   bottom: 0;
   display:flex;
   flex-direction: column;
+  height:100vh;
 }
 
 .frame-padding {
@@ -1259,15 +1260,15 @@ text-shadow:20px 20px 20px 20px #00d9ff;
     width:100vw;
     height:auto;
     object-fit: cover; 
-    object-position: 50% 50%;
-    margin-top:-70vh;
+    object-position:bottom center;
+    
   
     }
 
 /*----DEFECT------------------------------------------------------------------------
 Issue: Unable to position text over scrolling images using position absolute as this had adverse affect on the frame (either disappears under image or text scrolls on top of frame).
 FIXED: Partial (workaround)
-OUTCOME: Initial attempts to use z-index did not work, so created both the scrolling image and text within the same grid cell and was able to use negative margin-top for positioning. This has created another side affect - negative margins based on VH values, but still results in different outcomes for responsive screen sizes. Additional media queries created to re-position at the common breakpoints. 
+OUTCOME: Initial attempts to use z-index did not work, so created both the scrolling image and text within the same grid cell and was able to use negative margin-top for positioning. This has created another side affect - negative margins based on VH values, but still results in different outcomes for responsive screen sizes. Unabel to fix these appropriately for obile and portrait devices so section A is removed from small screens through media query.
 ACKNOWLEDGEMENT: Referred to CSS Tricks for guidance https://css-tricks.com/snippets/css/complete-guide-grid/
 --------------------------------------------------------------------------------------*/
 
@@ -1310,60 +1311,14 @@ align-self:center;
 margin-top:-80%;   
 }
 
-/*-------------Media Queries--!!!!!!!!!!!!!to be fixed!!!!!!------
-To address negative margin positioning of scrolling image and text ---*/
+/*-------------Media Queries-----------*/
 
-/*----
-@media (max-width:400px) and (orientation:portrait) {
 
-#flights-hero-wrap {
-    height:90vh;
+@media (max-width:767px) {
+#flights-container-A {
+display:none;
 }
-
-#flights-hero-text {
-
 }
-
-#flights-hero-title-3b {
-font-size:4vw;
-}
-
-
-
-.flights-hero-content {
-margin-top:0;
-
-}
-
-.flights-hero-content img {
-    
-content:url("../images/final-images/star-collage-768px.jpg");
-}
-
-#flights-hero-frame {
-content:url("../images/final-images/Explore-hero-frame-768px.png");
-transform: scale(2, 2);
-margin-top:60vh;
-}
-
-#flights-intro-quote {
-width:60%;
-margin-top:-250%;    
-}
-
-
-}
-
-    
----*/
-
-#trips-blend-box {
-
-    background-image: linear-gradient(to bottom left, #1E212A, #1C1C1A);
-    background-size:100% auto;
-    height:3vh;
-}
-
 
 
 /*-----------Exploration - Section B Trips---------------*/
