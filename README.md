@@ -124,6 +124,21 @@ Sign-Up|Modal Form to register for details| Yes | in addiiton to sale enquiries 
 Gallery |animated scroll through of images|No - animation requires JS|Opted to embed images within Flights page|
 404 Error Page|Mock 404 page to be linked to for inactive links in Navigation | No | Page built with auto-forward to index page but removed on advice of mentor not to have redundant links.
 
+Outline of key features delivered;
+
+### HOME PAGE:
+
+- animated hero banner - animation applied on page load to fade globe image into view and at the same time adjust the color brightness. The rise to over-saturatin before reducing is to simulate the appearance of the sun risisng over the horizon to mark the start of a new day - in keeping with the strapline "A New Dawn in Space Adventure"
+
+- ticker news bar - used as a means of portraying the ethos of the ficticious company. In addition to prompts for visitors to sign-up / register for seats, news articles include, court case outcome whereby the parent corporate Group no longer has to pay any domestic taxes (or staff) as company now registered on the moon. Subsequent news article (as a cuase of a potential new global financial crisis) used to also show how the Corporation intends to use this for further financial gain through their off-planetary banking and fincial systems. I debated whether to retain this ticker as pro-longed reading (eyes moving right as text scrolls left) can be straining on the eyes. But i made adjustments (text size, scroll speed, font color) to minimise as wanted to retain (this was a huge challenge to develop - referrenced in acknowledgments section).   
+
+- media feed - mentor suggested the inclusion of a YouTube clip. As no actual company exists i added a link to a recent NASA feed but made a couple of remarks on the page (with text changing to red) to indicate the media feed has been hacked - otherwise would not be appropriate to be showcasing competitors achievements. Also subtle nod to the news ticker story (come back from the US government?!)
+
+-  launch countdown - another tricky feature to develop. When I discovered animation property i initially thought i could use a series of hide/show numbers over staggered timings to replicate LED time changing. But i was unable to do this in a way that would reveal the digits in the same location or be fully hidden / not impact digits which were being displayed. After reasearching on-line, this seems as though this would normally be accomplised through the use of JavaScript. But as not familiar nor considered through the assessment of milestone1, I located an alternative CSS approach (referrenced in acknowledgments section).  
+
+- 
+- 
+
 ---
 ## Styles
 
