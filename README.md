@@ -33,11 +33,12 @@
    
 3. [Content & Design Features](#Content-and-Design-Features)
 4. [Styles](#Styles)
-5. [Technologies Used](#Technologies-Used)
-6. [Testing](#Testing)
-7. [Bugs and Defects](#Bugs-and-Defects)
-8. [Deployment](#Deployment)
-9. [Acknowledgements](#Acknowledgements)
+5. [Images](#Images)
+6. [Technologies Used](#Technologies-Used)
+7. [Testing](#Testing)
+8. [Bugs and Defects](#Bugs-and-Defects)
+9. [Deployment](#Deployment)
+10. [Acknowledgements](#Acknowledgements)
 
 
 
@@ -128,16 +129,35 @@ Outline of key features delivered;
 
 ### HOME PAGE:
 
-- animated hero banner - animation applied on page load to fade globe image into view and at the same time adjust the color brightness. The rise to over-saturatin before reducing is to simulate the appearance of the sun risisng over the horizon to mark the start of a new day - in keeping with the strapline "A New Dawn in Space Adventure"
+- Animated hero banner - animation applied on page load to fade globe image into view and at the same time adjust the color brightness. The rise to over-saturatin before reducing is to simulate the appearance of the sun risisng over the horizon to mark the start of a new day - in keeping with the strapline "A New Dawn in Space Adventure"
 
-- ticker news bar - used as a means of portraying the ethos of the ficticious company. In addition to prompts for visitors to sign-up / register for seats, news articles include, court case outcome whereby the parent corporate Group no longer has to pay any domestic taxes (or staff) as company now registered on the moon. Subsequent news article (as a cuase of a potential new global financial crisis) used to also show how the Corporation intends to use this for further financial gain through their off-planetary banking and fincial systems. I debated whether to retain this ticker as pro-longed reading (eyes moving right as text scrolls left) can be straining on the eyes. But i made adjustments (text size, scroll speed, font color) to minimise as wanted to retain (this was a huge challenge to develop - referrenced in acknowledgments section).   
+- Ticker news bar - used as a means of portraying the ethos of the ficticious company. In addition to prompts for visitors to sign-up / register for seats, news articles include, court case outcome whereby the parent corporate Group no longer has to pay any domestic taxes (or staff) as company now registered on the moon. Subsequent news article (as a cuase of a potential new global financial crisis) used to also show how the Corporation intends to use this for further financial gain through their off-planetary banking and fincial systems. I debated whether to retain this ticker as pro-longed reading (eyes moving right as text scrolls left) can be straining on the eyes. But i made adjustments (text size, scroll speed, font color) to minimise as wanted to retain (this was a huge challenge to develop - referrenced in acknowledgments section).   
 
-- media feed - mentor suggested the inclusion of a YouTube clip. As no actual company exists i added a link to a recent NASA feed but made a couple of remarks on the page (with text changing to red) to indicate the media feed has been hacked - otherwise would not be appropriate to be showcasing competitors achievements. Also subtle nod to the news ticker story (come back from the US government?!)
+- Media feed - mentor suggested the inclusion of a YouTube clip. As no actual company exists i added a link to a recent NASA feed but made a couple of remarks on the page (with text changing to red) to indicate the media feed has been hacked - otherwise would not be appropriate to be showcasing competitors achievements. Also subtle nod to the news ticker story (come back from the US government?!)
 
--  launch countdown - another tricky feature to develop. When I discovered animation property i initially thought i could use a series of hide/show numbers over staggered timings to replicate LED time changing. But i was unable to do this in a way that would reveal the digits in the same location or be fully hidden / not impact digits which were being displayed. After reasearching on-line, this seems as though this would normally be accomplised through the use of JavaScript. But as not familiar nor considered through the assessment of milestone1, I located an alternative CSS approach (referrenced in acknowledgments section).  
+-  Launch countdown - another tricky feature to develop. When I discovered animation property i initially thought i could use a series of hide/show numbers over staggered timings to replicate LED time changing. But i was unable to do this in a way that would reveal the digits in the same location or be fully hidden / not impact digits which were being displayed. After reasearching on-line, this seems as though this would normally be accomplised through the use of JavaScript. But as not familiar nor considered through the assessment of milestone1, I located an alternative CSS approach (referrenced in acknowledgments section).  I had to adapt as example counted down from 100 whereas time needs to countdown in tens (e.g. 10 individual seconds to change the 10's digit) and by 6 (i.e. 6 x 10s = 1 minute. To achieve this i effectively created two sub-groups for the animation properties which i assigned to digits or 10's. Note this is not an actual countdown (it resets when page loaded / tab expanded).
 
-- 
-- 
+- central graphic - sci-fi user interface inspired feature. Please refer to the notes (Styles) regarding SVGs and how these had to be scaled back from original plans.
+
+
+Flights:
+
+- the main feature here is the static (sticky) foreground image and the scrolling images and text which go under the astronaut. Intention here was to try and portray a personal experience of adventure. Please refer to Bugs and Defects section regarding unresolved challanges which can affect certain screens. If you experience problems viewing this page please re-size the browser and it should work! The main challange here was understanding the relationship and complexities between fixed, relative and absolute positioning.  For the animated text to be displayed on-top of the scrolling image, these had to be positioned absolute. But as this takes them out of the flow of the content, their existence is not acknowledged by the forground image. The only solution able to make this work was to use a negative margin to 'pull' the forground image into place. However, this combined with fixed header (also responsive sizing) do not go together well. The images themselves are sourced online (see acknowledgements). The initial image was 'cut' in Photoshop and filled with a repeating pattern to cover the gap caused by the removal of the astronaught.
+
+- Trips - As this page was being developed i opted to drop the use of a seperate gallery page as felt there was more of a realistic useage if used in relation to the services offered than simply a stand alone gallery wuld achieve. Most images are taken straight from royalty free stock images or Adobe Stock (have license through Creative Cloud account). Particular mentions to;
+   (lunar rides) - attention to detail - look closely as you will see some very subtle 'Astro:Fly logos on the spacecraft wing tips and embroided into the seat backs. These are screenshots of the home page logo edited in PhotoShop to apply natural curves, colorings and texture effects for realism.
+   (space safari) - the vehicle 'newest addition' was built by me in a 3d modelling program 'Blender'. Unexperienced in this field too - so a short intro course taken to enable me to do the basics. I then took an image of a real NASA concept (NASA N3 X - see image below) although this was demoed as an electric plane - not space-craft. Originally i had planned to make more use of the model within my site but there was not enough time to develop more content.
+   
+![NASA N3 X](README-docs/NASAN3-X.png) 
+
+
+- Registration Page - the main purpose of this page was to anchor a modal form. I opted to host this on it's own page as a) only 2 page links on a nav bar didn;t seem sufficient) and b) opportunity to embelish the Astro: story further through the creative tiered memberships which are revealed through the use of linked tabs and panels (based on Bootsrap example). 
+- The form itself supports useage for both potential bookings and membership joining and links to a 4th page which was created to replicate a sense of submitting the form actually executing an action - as there is no actual mailbox / database linked. This was intentionally left simple with a navigation button returning to the Home page.
+- The hero image is a photoshop collection of 4 images to which the Astro:Fly logo was added (as mentioned above), a rock was filtered to look like a frozen meteorite and reflection of the Earth image was applied to the astronauts visor. 
+
+404 Error Page - original plan was that a couple of further links would be added to give a more realistic list of content for the nav bar but these pages would not actually exist (as not required for this project). Instead they linked to a 404 error page. On mentor's advice these were removed as not felt appropriate to create 'dead links'. But the page itself still exists but can only be seen by navigating to the html page directly - it is not set to appear as a 404 error page is intended as did not have time to develop. This page was also going to link to a news article linking secret purchase of Area51 by the corporation and create suspicion to the technological deveopments. But opted not to include when the 404 page was not shown anyway.
+
+
 
 ---
 ## Styles
@@ -191,6 +211,39 @@ Font types, colors and sizes were added to the Root Directory (see style.css for
 Note, these are shown on single lines (as opposed to standard line by line property) as found this easier to refer to. 
 
 ![Responsive-Font-Groups](README-docs/Responsive-Font-Groups.png)
+
+
+### Images
+
+Page | Image - Description | Filename | Source | Notes |
+Multiple | hex tiled pattern | tiled-hex_black.svg |Xxxxxxxxxxx | |
+
+Home | Globe (hero img) |planet_earth.jpeg| xxxxxxxxx| |
+Home | Satellite & Dish |INAL1Dish.svg, INAL1satellitesvg.svg| XXXXXXXXX | |
+Home | Globe (hologram)  |globe-holo-final-reduced.svg| XXXXXXXX | |
+Home | central HUD  |HUD1Asset-3.svg| SVG created in Adobe Illustrator | (see svg notes below)|
+Flights | Astronaut and initial 'gas cloud' |flights-hero-frame-6000px.png | XXXXXXXXX |
+Flights | Other images (in order)  |star-collage| XXXXXXXX | merged and blended in Photoshop to create a continuous scroll |
+Flights | Moon |moon-half.png| XXXXXXXX | |
+Flights | (Moon) footprint |moonprint.jpg | xxxxxxxx | |
+Flights | (Moon) base  |moonbase-5.jpg | Xxxxxxxxxx| |
+Flights | (Moon) spacecraft  |craft1.jpg| xxxxxxxx | |
+Flights | (Moon) ship interior  |ship-seating.jpg| xxxxxxxx | |
+
+Flights | Earth  |earth-half.png| xxxxxxxx | |
+
+Flights | (Space Safari) model - 2 images  |Observor.png, spacestation2.jpg| xxxxxxxx | |
+Flights | (Space Safari)  corridor  |spacestation5.jpg| xxxxxxxx | |
+Flights | (Space Safari) spacecraft  |craft-2.jpg| xxxxxxxx | |
+Flights | (Space Safari) 'probe'  |probe.jpg| xxxxxxxx | This is a Photoshopped collection of parts of a building model|
+
+
+Flights | Mars  |mars.png| mars-settlement.jpg | |
+Flights | (Mars) Mars camp - 2 images  |Mars-camp2.jpg| xxxxxxxx | |
+Flights | (Mars) rover  |mars-rover.png| xxxxxxxx | |
+Flights | (Mars) local native  |mars-alien.jpg| xxxxxxxx | |
+
+Registration | hero img | cold-astronaught-2500px.png | (Earth), (Astronaut), (rock), (spacecraft) | Photoshopped collection of 4 images| 
 
 ### Special note on SVGs - intention was to provide a sci-fi themed User Interface. Inspiration was from combination of Sci-Fi films / tv, PC games and search on Sci Fi / Concept User Interfaces via Pinterest. Specific sites useful for research;
 https://sciencefictioninterfaces.tumblr.com/
