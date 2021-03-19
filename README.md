@@ -231,7 +231,7 @@ Flights  | (Moon) ship interior                   |ship-seating.jpg             
 Flights  | Earth                                  |earth-half.png                        | pexels.com                |                                     |
 Flights  | (Space Safari) model - 2 images        |Observor.png, spacestation2.jpg       | turbosquid.com            |                                     |
 Flights  | (Space Safari)  corridor               |spacestation5.jpg                     | turbosquid.com            |                                     |
-Flights  | (Space Safari) spacecraft              |craft-2.jpg                           | turbosquid.com            |                                     |
+Flights  | (Space Safari) spacecraft              |craft-2.jpg                           | self made - Blender       |                                     |
 Flights  | (Space Safari) 'probe'                 |probe.jpg                             | turbosquid.com | Photoshopped collection of parts of a building model|
 Flights | Mars                                    |mars.png,                             | Depositphotos.com       |                                      | 
 Flights | (Mars) Mars camp - 2 images             |Mars-camp2.jpg, mars-settlement.jpg   | Depositphotos.com        |                                      |
@@ -284,26 +284,85 @@ Blendr
 ---
 ## Testing
 
+Testing was primarily being conducted through the development of the site. As a 'first build' there was ongoing trial and error. Significant challanges were encountered with some taking number of days to resolve (or find an alternative workaround). Therefore  thorough testing at the end of the development was largely akin to testing through-out the development with some exceptions as noted below.Refer also the Bugs and Defects for a full inventory of the more significant challanges which were identified and where these remain as defects, have been partially resoled (e.g. through use of workarounds or media queries as opposed to application of a more appropriate fix. 'Testing' toards the latter phases included;
+
+- re-checking site content (e.g. links, images loading)
+- layout (specifically across multiple screen sizes and aspects)
+- consistency in code (for example a trend was self noted where there had been a default behaviour to apply an ID to every element. Whhilst this was helpful when it came to the .css styling (especially as ID names followed a logic whereby they pin-pointed to the page/section/level/type) it had also meant some styles may potentially have been delivered through more efficient use of classes. As a result examples were identified where chunks of .css was effectively duplicated with only a few of those properties being of difference to another version.
+- Chrome developer tools - used through-out development to;
+   - see how layouts differed across screen sizes
+   - understand why code was not having a desired effect which could be for a variety of reasons (specificity order, Bootstrap default styling, clash of direct and inherited requirements, compatability (for example sizing, positioning and alignment - can have different and / or no affect due to relation of another property (such as position (relative vs. absolute) or display (block, inline, flex, etc) may require diferent property namings / values.
+ - HTML and CSS validation tools (copy not retained, but whilst HTML was relatively fine, there were a seemingly high number of aspects flagged within .css. However I did not feel unduly alarmed as most seemed to relate to Bootstrap references (which i assume is customised terms not being part of the formal language) and instances where use of variable namings seemed to be respinsible - primarily all uses of 'linear gradient' with color (var--XXX, var--YYY).
+ - Lighthouse (Chrome Developer tool) - identified aspects which i am not familiar with and / or not clear how these should be managed (area for further development). One change was made, which was to respond to a prompt to call out imported fonts within the HTML head so as these are pre-loaded. Note, i did not include similar pre-loading which was prompted from pre-loading other links as conscious style.css must be loaded last as it over rides a number of pre-built Bootstrap styles and would not want the order of these being loaded as impacting their outcome.
+ - Accessability tool - identified early habbit of failing to include alt descriptions for images which was fully resolved.
+ - Auto-prefixer - I was aware that these tools existed and could be run towards the end of development so a conscious decision was made not to include browser pr-fixers - now that these are applied some aspects of the code have almost doubled in length and more chllanging to understand.
+
 ---
 
 ## Bugs and Defects
 
----
 
-## Deployment
 
 ---
 
-### Acknowledgements
+## Git and Deployment
+
+Build and deployment was delivered through GitHub, GitPod, GitPages and to a lesser extent GitDektop.
+
+Day to day development is performed through GitPod which is used to interact with the repository on GitHub.
+The terminal console within GitPod is used to synchronise changes between the two. Key commands are;
+
+### Git Status 
+- overview of current files in GitPod which are either waiting to be committed (unsent changes), untracked (new) or files deleted in GitPod but still held in current repo.
+
+###Git add <file / folder name> 
+- adds the new / updated file to a staging area ready to be committed. Where files share similarity in path and naming convention (e.g. multiple sized versions of same image) an asterick can be added against part of the name (such as assets/images/landscape* would add multiple versions of the image which started with the same name.
+
+### Git add .  
+- will add all files and folders to be committed including those where no changes are pending for upload. Note that early on this was misunderstood for meanining this was a shortcut for adding all files waiting to be committed. It was not until around mid-way through development that this was realised and whilst it has no adverse affect on the files content, it has meant that the same accompanying comments are loaded against all files where they have no relevance.
+
+### Git commit -m "<comments>"
+sends all files in the staging area to the GitHub repo.   
+
+### Git rm <file / folder name> 
+- removes any files currently staged (changes are not lost, just not held in the staging area)
+
+### Git restore <file / folder name>  
+- restores uncomitted files back to align with the version held in the main branch. For example, this could be used to 'undo' changes which have been saved locally but not yet committed or restore a file which has been deleted in GitPod (but remains available to retrieve from GitHub).
+
+### Git push
+- after changes have been comitted, this command will synchronise the changes with the main branch, bringing workspace, local repository and main (remote repository) in alignment.
+
+##Forking 
+Is the process by which versions of the files can be made. Whilst this is normal practice for web / app / software development, it enables mutiple users to work on aspects of the files at the same time. This was not something i needed to do as part of this project. However, GitHub allows forks to be created of any users repos (if made public) so a couple of other users repos were made to understand how this worked.
+
+##Cloning 
+This enables a complete clone of a repo to be made. Having installed GitDesktop i made a clone so as i could manage updates without having to pull from GitHub. However, this is an area to explore further as I failed to realise what benefit this was providing and feared risk of creating conflicts / multiple versions.
+
+##Deployment 
+Admittedly not found to be so intuitive and found there to be a lack of clear steps (early confusion as Git documentation switches referrences between GitHub, GitPages and GitDesktop without clarryfing specific roles. Ultimately the steps are quite forward once known.
+
+- User starts from Github repository
+- go to repo settings - cog icon displayed above repo information (not settings cog displayed slightly to the side of the repo which is general Github settings)
+- scroll down to section "Github Pages"
+- Source will display 'none' prior to the site being deployed.This is changed by clicking on the dropdown and selecting 'Master' (i noted Git documentation used the term 'main' so may be either or(?)
+- Save the change. The site will then be generated (via GitPages) and the lik will be displayed. 
+- Note, during development internal links (i.e. to assets file, images, css, etc) is through a localised referrence path known as 'relative'. Whilst this is fine during development (as this is operating via the repo the directory is housed in) for links to internal files (including other web pages on the site) the path needs to expand to include the path from the root directory. For example, a .css stylesheet maybe housed in the same folder as an image it is styling - the relative path is within the sane folder so there is no need for the path to include where in the directory that image file resides. However, when the site is published the links need to include the full path from the root directory.This is termed the 'absolute' path. 
+
+---
+
+### Acknowledgements - key sources and references 
 - slack community 
-- mentor
-- Whatsapp group
+- mentor (Seun Owonikoko)
+- Whatsapp 'November-20 CodeInstitute' group
 - Balsamiq introduction tutorials for wireframes
 - getbootstrap.com
 - csstricks.com
 - codepen.io
 - w3schools.com
+- mozilla.com
+- stackoverflow.com
 - Github community
-- YouTube (Kevin Powell and Dani Krossing) - 
-- image sources - Adobe Stock, Shutterstock, Pexels and Depositphotos?
+- YouTube (Kevin Powell and Dani Krossing)
+
 
