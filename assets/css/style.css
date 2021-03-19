@@ -1640,129 +1640,55 @@ padding-bottom:25vh;
 #safari-img-wrapper {
     width:90vw;
     margin:5vw;
+    bottom:30vh;
 }
-
-
-} 
-
-
-
-/*--- duplicates for media Q---
-
-
-
-
-
-.mini-img img{
-    object-fit:contain;
-    flex-grow:1;
-    max-width:100%;
-    width:auto;
-
-
-
-
-
-
-
-
-
-
-
-
-#space-safari {
-    background-color:var(--ink0);
-    min-height:400vh;
-    position:relative;
-}
-
-#safari-img {
-    width:100%;
-    height:auto;
-    position:sticky;
-    top:10vh;
-    width:50vw;
-    margin-bottom:30vh;
-}
-
-#safari-text {
-   position:absolute;
-   top:100vh;
-   display:block;
-   margin-left:55vw;
-   width:40vw;  
-}
-
-#safari-img-wrapper {
-    position:absolute;
-    display:flex;
-    align-items:stretch;
-    flex-wrap:wrap;
-    bottom:5vh;
-    width:45vw;
-    margin:50vw 5vw 50vh 50vw;
-    border-left:5px solid var(--glass2);
-    border-bottom:5px solid var(--glass2);  
-    border-top:5px solid var(--glass1);
-    border-right:5px solid var(--glass1);            
-    background-color:var(--glass2);
-    
-}
-
-.mini-img-v2 {
-   
-    height:100%;
-    width:50%;
-    background-color:var(--glass3);
-    padding:1vh;
-    display:inline-block;
-    text-align:center;
-} 
-
-
-
 
 
 #mars {
-    background-color:var(--ink0);
-    min-height:400vh;
+    min-height:450vh;
     position:relative;
 }
 
 #mars-img {
-    width:100%;
+    width:40vw;
     height:auto;
     position:sticky;
-    top:10vh;
+    top:30vh;
     width:50vw;
     margin-bottom:30vh;
 }
 
 #mars-text {
    position:absolute;
-   top:100vh;
+   top:90vh;
    display:block;
-   margin-left:55vw;
-   width:40vw;  
+   margin-left:45vw;
+   width:50vw;  
 }
+
 
 #mars-img-wrapper {
-    position:absolute;
-    display:flex;
+    top:250vh;
+    width:90vw;
+    height:auto;
+    flex:1 1 auto;
+    overflow:auto;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:2vw;
     align-items:stretch;
     flex-wrap:wrap;
-    bottom:5vh;
-    width:45vw;
-    margin:50vw 5vw 50vh 50vw;
-    border-left:5px solid var(--glass2);
-    border-bottom:5px solid var(--glass2);  
-    border-top:5px solid var(--glass1);
-    border-right:5px solid var(--glass1);            
-    background-color:var(--glass2);
-    
-}
+    margin:50vw 5vw 50vh 5vw;
 
----*/
+
+
+}    
+
+
+
+
+} 
+
 
 /*---------------------Registration-----------------*/
 
