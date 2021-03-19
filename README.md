@@ -31,7 +31,7 @@
    
    [- Surface](#Surface)
    
-3. [Content & Design Features](#Content-&-Design-Features)
+3. [Content & Design Features](#Content-and-Design-Features)
 4. [Styles](#Styles)
 5. [Technologies Used](#Technologies-Used)
 6. [Testing](#Testing)
@@ -113,7 +113,7 @@ Through this project I am looking to;
 ![Screenshots](README-docs/Screenshots.png)
 
 ---
-## Content & Design Features
+## Content and Design Features
 Content & features initially considered and indication where incorporated into build or held-back as potential future developments and why.
 
 
