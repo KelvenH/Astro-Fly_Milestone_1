@@ -218,7 +218,6 @@ Note, these are shown on single lines (as opposed to standard line by line prope
  Page    | Image - Description                    |                             Filename |                   Source |                               Notes |
 ---------|----------------------------------------|--------------------------------------|--------------------------|-------------------------------------|
 Multiple | hex tiled pattern                      |                  tiled-hex_black.svg |              Xxxxxxxxxxx |                                     |
-
 Home     | Globe (hero img)                       |planet_earth.jpeg                     | xxxxxxxxx                |                                     |
 Home     | Satellite & Dish                       |INAL1Dish.svg, INAL1satellitesvg.svg. | XXXXXXXXX                |                                     |
 Home     | Globe (hologram)                       |globe-holo-final-reduced.svg          | XXXXXXXX                 |                                     |
@@ -230,20 +229,15 @@ Flights  | (Moon) footprint                       |moonprint.jpg                
 Flights  | (Moon) base                            |moonbase-5.jpg                        | Xxxxxxxxxx                |                                     |
 Flights  | (Moon) spacecraft                      |craft1.jpg                            | xxxxxxxx                  |                                     |
 Flights  | (Moon) ship interior                   |ship-seating.jpg                      | xxxxxxxx                  |                                     |
-
 Flights  | Earth                                  |earth-half.png                        | xxxxxxxx                  |                                     |
-
 Flights  | (Space Safari) model - 2 images        |Observor.png, spacestation2.jpg       | xxxxxxxx                  |                                     |
 Flights  | (Space Safari)  corridor               |spacestation5.jpg                     | xxxxxxxx                  |                                     |
 Flights  | (Space Safari) spacecraft              |craft-2.jpg                           | xxxxxxxx                  |                                     |
 Flights  | (Space Safari) 'probe'                 |probe.jpg                             | xxxxxxxx | Photoshopped collection of parts of a building model|
-
-
 Flights | Mars                                    |mars.png|   mars-settlement.jpg       |                           |                                      | 
 Flights | (Mars) Mars camp - 2 images             |Mars-camp2.jpg                        | xxxxxxxx                  |                                      |
 Flights | (Mars) rover                            |mars-rover.png                        | xxxxxxxx                  |                                      |
 Flights | (Mars) local native                     |mars-alien.jpg                        | xxxxxxxx                  |                                      |
-
 Registration | hero img                           | cold-astronaught-2500px.png | (Earth), (Astronaut), (rock), (spacecraft) | Photoshopped collection of 4 images| 
 
 
