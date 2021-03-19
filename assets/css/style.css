@@ -1028,6 +1028,19 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 
 /*-------------------------FLIGHTS PAGE-----------------*/
 
+/*-------Defect------
+ISSUE: Fixed navbar was creating alignment issues particularly for the sticky 'frame' - initially factored into subsequent div top-margin, as navbar responsive, alignments were thrown out across screen sizes.
+Resolved: Yes (workaround)
+Outcome: A shadow div disguised as a Nav mirrors the same sizing attribute as the nav but resides underneath. Position made sticky to prevent initial early scroll of following absolute and sticky elements - also placed as sibling to these elements. Attriute of visiblity:hidden retains the space although not seen (as opposed to display:none as this would collapse). Positoned as a sibling  same div as absolute.  
+------------------*/
+
+#flights-nav-buffer {
+    position:sticky;
+    visibility:hidden;
+    border-bottom: 8px solid transparent;
+    width:100vw;
+}
+
 
 
 #fights-container-A {
@@ -1042,7 +1055,6 @@ text-shadow:20px 20px 20px 20px #00d9ff;
 
 #flights-hero-text {
  position:relative;
- margin-top: 10vh;
  padding-left:5vw;
  height:90vh;
  width:100vw;   
@@ -1323,6 +1335,10 @@ margin-top:-80%;
 @media (max-width:767px) {
 #flights-container-A {
 display:none;
+}
+
+#trips-blend-box {
+    margin-top:10vh;
 }
 }
 

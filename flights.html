@@ -67,19 +67,34 @@
 
 
 
+
     <section class="container-fluid align-items-center" id="page-content">
+
+
 
         <div class="container-fluid align-items-center" id="flights-container-A">
 
+
+
             <div class="row" id="flights-row1-hero">
+
 
                 <div class="col-12" id="flights-hero-col">
 
+
+ 
+
                     <div id="flights-hero-wrap">
-                       
+
+                        <!--BUG FIX - buffer to prevent alignment issues of sticky frame due to fixed navbar - see CSS for details-->
+                        
+                        <div id="flights-nav-buffer" class="navbar">
+                            <h1>fake nav for responsive buffering</h1>
+                        </div>
+
                         <div class="frame-padding">
                         </div>
-                        
+
                         <div id="flights-hero-text">
                             <h1 id="flights-hero-title-1">SPACE</h1>
                             <h1 id="flights-hero-title-2">TIME</h1>
@@ -102,15 +117,15 @@
                                             ./assets/images/final-images/flights-hero-frame-600px.png 600w,
                                             ./assets/images/final-images/flights-hero-frame-400px.png 400w">
 
-                            <img id="flights-hero-frame" 
-                                src="./assets/images/final-images/flights-hero-frame-400px.png"
+                            <img id="flights-hero-frame" src="./assets/images/final-images/flights-hero-frame-400px.png"
                                 alt="astronaut looking into space">
                         </picture>
 
                         <div class="frame-padding">
                         </div>
-                    
-                    </div> <!--close flights-hero-wrap -->
+
+                    </div>
+                    <!--close flights-hero-wrap -->
 
                     <div class="flights-hero-content">
 
@@ -139,24 +154,20 @@
                         <div class="LEDh2" id="flights-intro-tag">Ready for your adventure?
                         </div>
 
-                    </div> <!--close hero content -->
-                </div>    <!--close col1 -->
-            </div>        <!--close row1 -->
-        </div>              <!--close Container A-->
+                    </div>
+                    <!--close hero content -->
+                </div>
+                <!--close col1 -->
+            </div>
+            <!--close row1 -->
+        </div>
+        <!--close Container A-->
+
 
         <div id="trips-blend-box">
             <h1>Our Flights and Adventures</h1>
         </div>
         <!--close blend-box-->
-
-
-
-
-
-
-
-
-
 
 
         <div class="container-fluid" id="fights-container-B">
