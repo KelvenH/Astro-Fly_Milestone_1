@@ -113,9 +113,7 @@ Through this project I am looking to;
 ![Screenshots](README-docs/Screenshots.png)
 
 ---
-## Content and Design Features
-Content & features initially considered and indication where incorporated into build or held-back as potential future developments and why.
-
+## Content and Key Design Features
 
 Page | Features | In Build | Comments |
 -----|----------|----------|----------|
@@ -124,7 +122,7 @@ Home | Intro, Countdown timer to next launch, news ticker | Yes | Majority of fe
 Flights|Oerview of the services provided with embedded images| Yes | Scaled back initial plans due to overall volume and some design elements which would have relied upon JS|
 Sign-Up|Modal Form to register for details| Yes | in addiiton to sale enquiries page was also used to highlight and register for membership|
 Gallery |animated scroll through of images|No - animation requires JS|Opted to embed images within Flights page|
-
+404 Error Page|Mock 404 page to be linked to for inactive links in Navigation | No | Page built with auto-forward to index page but removed on advice of mentor not to have redundant links.
 
 ---
 ## Styles
@@ -144,6 +142,31 @@ Opting for smart, sophisticated visual branding with futuristic styling.
 Extract of Balsamiq design elements;
 
 ![Mood Board](README-docs/Mood_Board.png)
+
+Note on SVG useage: intention was to provide a sci-fi themed User Interface. Inspiration was from combination of Sci-Fi films / tv, PC games and search on Sci Fi / Concept User Interfaces via Pinterest. Specific sites useful for research;
+https://sciencefictioninterfaces.tumblr.com/
+https://www.saji8k.com/kit-fui/movie/
+Initially, time was invested in understanding clip-paths to style the element borders. However, upon imlementing challenges arose due to responsive and dynamic re-sizing of elements resulting in squashed / stretched elements. 
+In researching how these could be over-come, I learnt about SVGs and the benefits of these for responsiveness. Time was then spent on constructing some very effective SVGs and whilst these were more flexible, they also suffered due to the dynamic sizing. For example, the content of drop-down tabs differs, which again impacted the display of the SVG (i.e. strecthed / overflow for longer content and empty spacing for shorter content). Thorough research was conducted to try and retain these artefacts. A basic understanding of SVGs properties specifically ViewBox, sizng and 'retainAspectRatio'. 
+I then discovered the 'border-image' property. The challenges here was that i wanted to use an axiting 'frame' (SVG) whereas this property seemed to be more appropriate for using images as repeating patterns. Initially i thought the border-slice property would enable me to accomplish the task. But although i could define which parts of the SVG should be used for which part of the border, it still resulted in stretch / collapse of the SVG sides (dynamic content)  and some sideways adjustments for the responsive sizings.
+The final route i looked at was to split the SVG into three parts - a top, middle and bottom. Logic here was that as most of the movement was in the height, if i kept the styling to the top and bottom sections changes in the height (which would only be straight sections) would not be compromised - especially when i discovered properties on the individual SVG code can instruct not to change the line thickness. After trials, this seemed to be workabe - but then i encountered challenges with implementing these particularly the CSS behaviour. The top and bottom sections would be considered as empty divs by CSS (if loaded as background-images) which meant applying fixed heights (not responsive) so would need to be coded as images.Whilst the middle panel would have text, the combination of image and background-images were not aligning correctly (and due to the partial transparency overlaps / gaps would be seen. Additionally this resulted in very small top/bottom sections (as no text). Loading all 3 parts as images was also fruitless as to displaying text over the image required it to be positioned absolutely which i was unable to retain alignment for the three parts (typically the bottom panel would extend over the text as this had been taken out of the flow.
+
+Unfortunately the only route which seemed to make these workable, would be to have a whole series of different sized SVGs to select from. Whilst initially looked to proceed it became apparent that this was overly burdensome (both in terms of their construction, allocation and ID tagging) and significant time invested vs. the benefit - which was afterall only cosmetic! 
+
+Therefore, the key text panels are not using SVGs but merely make use of background-color, border and opactity along with 'digital' styled font to create a semi-illusion of being displayed on a glass digital surface. Additional box and text shadows applied with hover and active states to give an impression of being lit.
+
+There has been some useage of SVGs retained. A few small graphics (satellite, dish and globe on home screen - sourced from Adobe Stock) were acceptable as not used to hold text. A few self built SVGs were retained, these can be seen as background panels in the nav bar, and as a HUD style graphic (Home page) which only houses a company logo.  
+The self-built SVGs were inspired by examples seen on Adobe Stock and built in Adobe Illustrator. I then exported the code and to try and minimise file size and loading times, ran these through an on-line tool https://jakearchibald.github.io/svgomg/.
+I opted to load these as seperate files (as opposed to adding the code into the HTML mark-up) to keep the HTML and CSS sheets manageable!
+In some instances, further adjustments were required to get the SVG sizing correct. For these i used an SVG viewbox generator (https://codepen.io/designcourse/live/mdydjBa) which allowed me to visually see the adjustments needed to the viewbox properties to either take part of an SVG file (i.e. dish and satellite were uploaded initially on same file). 
+
+A significant number of on-line articles were referred to, but particulalry useful referrences were;
+
+https://svgontheweb.com/#implementation
+https://css-tricks.com/mega-list-svg-information/ (a number of useful articles linked from here)
+https://mastery.games/post/dynamic-svg-components/
+
+
 
 ---
 ## Technologies Used
