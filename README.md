@@ -179,7 +179,7 @@ Extract of Balsamiq design elements - initial considerations;
 
 Opted for smart, sophisticated visual branding with futuristic styling. Image below displays colors used. These are partially shown against a dark background to indicate transparency levels.
 
-![Color Palette](README-docs/Color-Palette.png)
+![Color Palette](Color Palette.pdf)
 
 
 ### Fonts and Typography
@@ -269,16 +269,25 @@ https://mastery.games/post/dynamic-svg-components/
 ## Technologies Used
 
 Languages:
+
 HTML5
+
 CSS3
+
 (whist Javascript has not been used directly, there are aspects applied through use of Bootstrap)
 
 Bootstrap 4.5
+
 Google Fonts
+
 Font Awesome
+
 Adobe Photoshop
+
 Adobe Illustrator
+
 Blendr
+
 
 
 ---
