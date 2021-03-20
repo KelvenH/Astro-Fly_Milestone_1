@@ -303,7 +303,7 @@ Testing was primarily being conducted through the development of the site. As a 
 
 Please refer to the linked table below summarising bugs and defects. Note that item 1 has impacted upon ability to reflect some final ammendments to the html and css files - from a housekeeping perspective and not site content or layout related.
 
-![Bugs and Defects](README-docs/Bugs-and-Defects.pdf)
+![Bugs and Defects](README-docs/MS1-Bugs-and-Defects.pdf)
 
 ---
 
