@@ -179,7 +179,7 @@ Extract of Balsamiq design elements - initial considerations;
 
 Opted for smart, sophisticated visual branding with futuristic styling. Image below displays colors used. These are partially shown against a dark background to indicate transparency levels.
 
-![Color Palette](Color-Palette.pdf)
+![Color Palette](Color-Palette.png)
 
 
 ### Fonts and Typography
