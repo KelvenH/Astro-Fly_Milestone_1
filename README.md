@@ -148,7 +148,7 @@ Flights:
    (lunar rides) - attention to detail - look closely as you will see some very subtle 'Astro:Fly logos on the spacecraft wing tips and embroided into the seat backs. These are screenshots of the home page logo edited in PhotoShop to apply natural curves, colorings and texture effects for realism.
    (space safari) - the vehicle 'newest addition' was built by me in a 3d modelling program 'Blender'. Unexperienced in this field too - so a short intro course taken to enable me to do the basics. I then took an image of a real NASA concept (NASA N3 X - see image below) although this was demoed as an electric plane - not space-craft. Originally i had planned to make more use of the model within my site but there was not enough time to develop more content.
    
-![NASA N3 X](README-docs/NASAN3-X.png) 
+![NASA N3 X](README-docs/NASA-N3-X.png) 
 
 
 - Registration Page - the main purpose of this page was to anchor a modal form. I opted to host this on it's own page as a) only 2 page links on a nav bar didn;t seem sufficient) and b) opportunity to embelish the Astro: story further through the creative tiered memberships which are revealed through the use of linked tabs and panels (based on Bootsrap example). 
